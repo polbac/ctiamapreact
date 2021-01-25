@@ -1,0 +1,141 @@
+@import '~styles/config';
+
+.mobile {
+  $size: 280px;
+
+  padding-bottom: 120px;
+
+  @media (min-width: $min-960) {
+    float: right;
+
+    margin-right: -25%;
+    padding-bottom: 100px;
+    padding-left: 20px;
+  }
+
+  @media (min-width: $min-1200) {
+    margin-right: -50%;
+  }
+
+  &__bubble {
+    @include will-animate(false);
+
+    position: relative;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    width: $size;
+    height: $size;
+
+    background-color: #fff;
+
+    border-radius: 50%;
+    box-shadow: 0 19px 50px 0 rgba(53, 54, 66, 0.1);
+
+    transform: scale(0);
+
+    @media (min-width: $min-720) {
+      width: $size * 1.35;
+      height: $size * 1.35;
+    }
+  }
+
+  &__wrapper {
+    @include will-animate;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100%;
+
+    transform: translateY(-80px);
+  }
+
+  &__number {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 20px;
+
+    height: 100px;
+    max-width: 100%;
+
+    font-size: 70px;
+  }
+
+  &__copy {
+    @include reset-paragraph;
+    @include responsive-font(18, 20);
+
+    padding-left: 60px;
+    padding-right: 60px;
+
+    width: 100%;
+
+    color: $color-dark;
+    text-align: center;
+  }
+
+  &__phones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+
+    width: $size;
+
+    transform: translateX(-50%);
+
+    @media (min-width: $min-720) {
+      width: $size * 1.28;
+    }
+  }
+
+  &__image1 {
+    @include will-animate;
+
+    position: relative;
+    top: -60px;
+    left: 20px;
+
+    width: 25%;
+
+    @media (min-width: $min-720) {
+      top: -70px;
+
+      width: 133px;
+    }
+  }
+
+  &__image2 {
+    @include will-animate;
+    position: relative;
+    top: -20px;
+    width: 25%;
+
+    @media (min-width: $min-720) {
+      width: 117px;
+    }
+  }
+
+  &__image3 {
+    @include will-animate;
+
+    position: relative;
+    top: -40px;
+    left: -20px;
+
+    width: 25%;
+
+    @media (min-width: $min-720) {
+      top: -60px;
+
+      width: 122px;
+    }
+  }
+}

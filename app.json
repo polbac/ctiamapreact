@@ -1,0 +1,45 @@
+{
+  "name": "CTIA www",
+  "description": "",
+  "keywords": [
+    "www"
+  ],
+  "scripts": {},
+  "website": "https://github.com/CTIA-IT/ctia-www",
+  "repository": "https://github.com/CTIA-IT/ctia-www.git",
+  "env": {
+    "ALGOLIASEARCH_APPLICATION_ID": {
+      "required": true
+    },
+    "ALGOLIASEARCH_API_KEY_SEARCH": {
+      "required": true
+    },
+    "BASE_URL": {
+      "required": true
+    },
+    "PASSWORD_PROTECT": {
+      "required": true
+    },
+    "NODE_ENV": {
+      "description": "Environment to build",
+      "required": false
+    }
+  },
+  "environments": {
+    "test": {
+      "env": {
+        "NODE_ENV": "test"
+      }
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [],
+  "image": "heroku/nodejs",
+  "buildpacks": [{
+    "url": "heroku/nodejs"
+  }]
+}

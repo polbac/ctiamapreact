@@ -1,0 +1,14 @@
+@import '~styles/config';
+
+.icon {
+  margin: 0 0 5px;
+
+  text-align: center;
+
+  &__img {
+    display: inline-block;
+
+    width: 60px;
+    max-height: 50px;
+  }
+}

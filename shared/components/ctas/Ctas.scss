@@ -1,0 +1,26 @@
+@import '~styles/config';
+
+.ctas {
+  @include segment(140px, 200px, 60px, 60px);
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+
+    display: flex;
+    flex-direction: column;
+
+    @media print, (min-width: $min-720) {
+      flex-direction: row;
+    }
+
+    // Adding breakpoint. Image in 2nd CTA is getting cut off
+    // between 540px and 1280px, creating column layout to make room for image.
+    @media print, (min-width: $min-540) and (max-width: $max-1280) {
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import '~styles/config';
+
+.shortcuts {
+  @include segment(0, $segment-padding, 0, $segment-padding-mobile);
+
+  background-color: $color-blue-light;
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row($grid-gutter: 4px);
+  }
+
+  &__col {
+    @include grid-col;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @media (min-width: $min-880) {
+      @include grid-col($grid-gutter: 4px);
+
+      &:nth-child(1) {
+        width: percentage(4.5 / 12);
+      }
+
+      &:nth-child(2) {
+        width: percentage(3.5 / 12);
+      }
+
+      &:nth-child(3) {
+        width: percentage(4 / 12);
+      }
+
+      &:nth-child(4) {
+        @include grid-offset-left(3);
+
+        width: percentage(6 / 12);
+      }
+    }
+  }
+}

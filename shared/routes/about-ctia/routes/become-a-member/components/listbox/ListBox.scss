@@ -1,0 +1,102 @@
+/* stylelint-disable max-nesting-depth, selector-max-type */
+
+@import '~styles/config';
+
+.listBox {
+  padding: 30px 30px 15px;
+
+  border-radius: $border-radius;
+  background: #fff;
+
+  @media print, (min-width: $min-720) {
+    padding: 40px 40px 25px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    @include responsive-font(14, 16);
+    margin: 0;
+
+    font-weight: 600;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    margin-right: 13px;
+
+    svg { // stylelint-disable-line
+      width: 23px;
+    }
+  }
+
+  &__content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      display: none;
+    }
+
+    b, strong { // stylelint-disable-line
+      font-weight: bold;
+    }
+
+    i, em { // stylelint-disable-line
+      font-style: italic;
+    }
+
+    a { // stylelint-disable-line
+      @include link-hover;
+
+      color: $color-primary;
+      text-decoration: none;
+    }
+
+    ul,
+    ol {
+      @include reset-list;
+    }
+
+    p {
+      @include reset-paragraph;
+    }
+
+    li,
+    p {
+      @include responsive-font(16, 18);
+
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 15px;
+
+      line-height: (30 / 18);
+      font-style: italic;
+      color: $color-gray-dark;
+
+
+      &::before {
+        content: '';
+
+        position: absolute;
+
+        top: 0.6em;
+        left: 0;
+
+        width: 9px;
+        height: 9px;
+
+        background: $color-primary;
+
+        border-radius: 9px;
+      }
+    }
+  }
+}

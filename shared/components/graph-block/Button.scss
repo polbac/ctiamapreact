@@ -1,0 +1,95 @@
+@import '~styles/config';
+
+.wrap {
+  display: inline-block;
+  position: relative;
+}
+
+.button {
+  $btn-height: 44px;
+
+  @include reset-button;
+  @include responsive-font(12, 14);
+
+  display: inline-flex;
+  position: relative;
+
+  padding: 0 20px;
+  margin-bottom: 10px;
+
+  height: $btn-height;
+
+  line-height: $btn-height - 2;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  border-radius: 25px;
+  background: $color-dark;
+
+  transform: translate3d(0, 0, 0);
+  transition: 180ms;
+  transition-property: background-color, color, opacity;
+
+  &:focus,
+  &:hover {
+    outline: 0;
+  }
+
+  &:focus {
+    box-shadow: 0 0 3pt 2pt $color-blue;
+  }
+
+  &:hover {
+    background-color: darken($color-dark, 10%);
+  }
+
+  &.primary {
+    background: $color-primary;
+
+    &:hover {
+      background-color: darken($color-primary, 10%);
+    }
+  }
+}
+
+.dropdown {
+  position: absolute;
+
+  margin: 10px 0 0;
+
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(#000, 0.15);
+
+  &__list {
+    @include reset-list;
+  }
+
+  &__item {
+    border-bottom: 1px solid #ddd;
+  }
+
+
+  &__link {
+    @include reset-anchor;
+    @include reset-button;
+
+    display: block;
+
+    padding: 6px 12px;
+
+    @include responsive-font(14, 16);
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    &:hover {
+      background: #fafafa;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import '~styles/config';
+
+.documents {
+  @include segment(100px, 100px, 50px, 50px);
+
+  position: relative;
+  z-index: 2;
+
+  &.noWrapper {
+    padding-top: 0;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    @include h2;
+
+    margin-bottom: 40px;
+
+    @media print, (min-width: $min-720) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+  }
+
+  &__content {
+    border-radius: $border-radius;
+    background-color: #fff;
+    box-shadow: 0 0 46px 0 rgba(62, 62, 62, 0.09);
+
+    .noWrapper & {
+      border-radius: 0;
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+
+  &__button {
+    margin-top: 100px;
+
+    text-align: center;
+  }
+}

@@ -1,0 +1,61 @@
+@import '~styles/config';
+
+.slide {
+  min-height: 100%;
+  position: relative;
+
+  &__externalLink {
+    text-decoration: none;
+    color: #000;
+  }
+
+  &__imgContainer {
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    position: relative;
+    max-height: 25%;
+    overflow: hidden;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
+
+    & img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__source {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: #000;
+
+    @media print, (min-width: $min-tablet) {
+      text-align: left;
+    }
+  }
+
+  &__heading {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+
+    @media print, (min-width: $min-tablet) {
+      text-align: left;
+    }
+  }
+
+  &__blurb {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    color: #000;
+
+    @media print, (min-width: $min-tablet) {
+      text-align: left;
+    }
+  }
+}

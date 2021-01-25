@@ -1,0 +1,20 @@
+@import '~styles/config';
+
+.copy {
+  @include reset-all;
+  @include responsive-font(20, 24);
+
+  color: $color-gray;
+
+  &.enableAnim {
+    @include will-animate;
+  }
+
+  &.isLoading {
+    @include loading;
+  }
+
+  &.isInversed {
+    color: #fff;
+  }
+}

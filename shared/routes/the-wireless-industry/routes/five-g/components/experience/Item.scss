@@ -1,0 +1,32 @@
+@import '~styles/config';
+
+.item {
+  &__icon {
+    margin: 20px 0 15px;
+    height: 50px;
+    width: 50px;
+
+    @media print, (min-width: $min-tablet) {
+      margin-bottom: 15px 0 25px;
+      height: 58px;
+      width: 58px;
+    }
+  }
+
+  &__heading {
+    @include h1(36, 42);
+
+    margin-bottom: $gutter;
+
+    color: $color-dark;
+    font-weight: bold;
+    line-height: 1.333;
+  }
+
+  &__copy {
+    @include responsive-font(18, 20);
+    color: $color-dark;
+    line-height: 2.1;
+    font-family: $font-serif;
+  }
+}

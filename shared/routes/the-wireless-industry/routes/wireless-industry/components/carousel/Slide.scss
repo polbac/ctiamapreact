@@ -1,0 +1,65 @@
+@import '~styles/config';
+
+.slide {
+  position: absolute;
+  top: 90px;
+  z-index: 2;
+
+  @media (min-width: $min-1080) {
+    top: 50%;
+
+    transform: translateY(-50%);
+  }
+
+  &.hasExtraSpacing {
+    @media (min-width: $min-1080) {
+      transform: translateY(-50%) translateX(-25%);
+    }
+
+    @media (min-width: $min-1800) {
+      transform: translateY(-50%);
+    }
+  }
+
+  &__number {
+    margin-bottom: 10px;
+
+    height: 36px;
+
+    svg { // stylelint-disable-line
+      margin-right: 2px;
+    }
+  }
+
+  &__heading {
+    @include reset-heading;
+    @include responsive-font(32, 36);
+
+    margin-bottom: 1em;
+
+    color: $color-dark;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    line-height: (46 / 36);
+  }
+
+  &__copy {
+    @include reset-paragraph;
+    @include responsive-font(20, 24);
+
+    margin-bottom: 1em;
+
+    color: rgba($color-dark, 0.8);
+    letter-spacing: -0.02em;
+    line-height: (36 / 24);
+  }
+
+  &__arrow {
+    width: 20px;
+    height: 20px;
+
+    path { // stylelint-disable-line
+      fill: #fff;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44"
+  role="img"
+  aria-labelledby="downloadIconTitle downloadIconDesc">
+  <title>Download file</title>
+  <desc>Icon for file downloads</desc>
+  <defs><style>.cls-1{fill-rule:evenodd;}.cls-2{fill:#fff;}</style></defs><title>action-icons</title><g><g data-name="Layer 58"><path class="cls-1" d="M22,0h0A22,22,0,0,1,44,22h0A22,22,0,0,1,22,44h0A22,22,0,0,1,0,22H0A22,22,0,0,1,22,0Z"/><path class="cls-2" d="M22,26a1,1,0,0,1-.6-.2l-4-3a1,1,0,0,1,1.2-1.6L22,23.75l3.4-2.55a1,1,0,1,1,1.2,1.6l-4,3A1,1,0,0,1,22,26Z"/><path class="cls-2" d="M22,25a1,1,0,0,1-1-1V13a1,1,0,0,1,2,0V24A1,1,0,0,1,22,25Z"/><path class="cls-2" d="M27,30H17a1,1,0,0,1,0-2H27a1,1,0,0,1,0,2Z"/></g></g></svg>

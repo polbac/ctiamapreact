@@ -1,0 +1,292 @@
+@import '~styles/config';
+
+$height: 90px;
+$numberWidth: 115px;
+
+.customNavBar {
+  // display: none;
+
+  @media print, (min-width: $min-768) {
+    position: sticky;
+  }
+  top: -1px;
+  z-index: $z-index-nav-bar;
+
+  // height: $height;
+
+  backface-visibility: hidden;
+
+  @media print, (min-width: $min-1200) {
+    display: block;
+  }
+
+  &.white {
+    background: #fff;
+  }
+
+  &.gray {
+    background: $color-gray-light;
+  }
+
+  &.blue {
+    background: $color-powder-blue;
+  }
+
+  &.dotted {
+    background-image: url('!file-loader!assets/images/dots.svg');
+  }
+
+  &.blue.dotted {
+    background-image: url('!file-loader!assets/images/dots-gray.svg');
+  }
+
+  &__container {
+    @include container;
+
+    position: relative;
+    z-index: 1;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col(6);
+    @include grid-offset-left(3);
+  }
+
+  &__current {
+    display: flex;
+
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    background: #fff;
+    border-left: 1px solid transparent;
+
+    transition-property: box-shadow, border;
+    transition-duration: 200ms;
+
+    .isVisible & {
+      border-color: #ccc;
+    }
+  }
+
+  &__left {
+    display: flex;
+    justify-content: center;
+
+    width: $numberWidth;
+  }
+
+
+  &__title {
+    @include reset-paragraph;
+    @include responsive-font(14, 18);
+    @include ellipsis;
+
+    font-weight: 600;
+    line-height: $height;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+
+    padding: 0 $gutter * 2;
+    margin-left: auto;
+  }
+
+  &__arrow {
+    height: 6px;
+  }
+
+  &__mask {
+    position: relative;
+    top: 1px;
+
+    margin: 0 -20px -20px;
+    padding: 0 19px 19px;
+
+    overflow: hidden;
+
+    pointer-events: none;
+  }
+
+  &__list {
+    @include reset-list;
+    max-height: 80vh;
+    overflow-y: auto;
+
+    background: #fff;
+    box-shadow: 6px 0 16px rgba(#000, 0.05);
+
+    transform: translateY(-100%);
+
+  }
+
+  &__item {
+    @include reset-button;
+    @include underline(0.15);
+
+    position: relative;
+
+    width: 100%;
+    height: $height;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+
+  &__link {
+    @include reset-anchor;
+    @include responsive-font(14, 18);
+
+    display: flex;
+    align-items: center;
+
+    padding-left: $numberWidth;
+
+    height: $height;
+
+    font-weight: 600;
+
+    transition: opacity 300ms ease;
+
+    &:hover {
+      background: rgba(#000, 0.025);
+    }
+
+    .active & {
+      opacity: 0.2;
+    }
+
+    &Share {
+      padding-left: 50px;
+    }
+  }
+
+  &__full {
+    display: flex;
+    align-items: center;
+
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // bottom: -1px;
+
+    opacity: 0;
+
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+
+    transition-property: box-shadow, opacity;
+    transition-duration: 0.2s;
+
+    .isVisible & {
+      opacity: 1;
+
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  &__name {
+    @include reset-paragraph;
+    @include responsive-font(18, 26);
+    @include ellipsis;
+
+    padding-left: $container-gutter-desktop;
+    padding-right: $container-gutter-desktop;
+
+    font-weight: 600;
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 1200px;
+
+    @media print, (min-width: $min-768) {
+      width: calc(100% - 105px);
+    }
+    padding: 1rem;
+  }
+
+  &__share {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 105px;
+    z-index: 20;
+    min-width: 200px;
+    width: 20%;
+
+    border-left: 1px solid #ccc;
+  }
+
+  &__shareRow {
+    display: flex;
+    align-items: center;
+
+    padding-left: 50px;
+
+    height: $height;
+
+    cursor: pointer;
+  }
+
+  &__circleIcon {
+    width: 30px;
+  }
+
+  &__text {
+    @include reset-paragraph;
+    @include responsive-font(14, 18);
+
+    margin-left: 15px;
+
+    font-weight: 600;
+  }
+
+  &__return {
+    @include reset-anchor;
+
+    display: none;
+    @media print, (min-width: $min-768) {
+      display: flex;
+    }
+
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    width: 105px;
+
+    border-left: 1px solid $color-border;
+  }
+
+  &__icon {
+    width: 27px;
+    height: 22px;
+  }
+}

@@ -1,0 +1,7 @@
+@import '~styles/config';
+
+.staggerer {
+  &__block {
+    @include will-animate;
+  }
+}

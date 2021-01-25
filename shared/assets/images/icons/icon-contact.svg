@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 55.5 40.5" width="32" height="23"
+  role="img"
+  aria-labelledby="footerEmailIconTitle footerEmailIconDesc">
+  <title>Email icon</title>
+  <desc>Email icon that appears in the footer</desc>
+  <path fill-rule="evenodd" stroke="rgb(255, 255, 255)" stroke-width="3px" stroke-linecap="round" stroke-linejoin="miter" fill="none" d="M44.500,9.500 L27.500,20.500 L9.500,9.500 "/><path fill-rule="evenodd" stroke="rgb(255, 255, 255)" stroke-width="3px" stroke-linecap="round" stroke-linejoin="miter" opacity="0.988" fill="none" d="M1.500,22.500 C1.500,12.861 1.500,6.500 1.500,6.500 C1.500,3.739 3.739,1.500 6.500,1.500 L47.500,1.500 C50.261,1.500 52.500,3.739 52.500,6.500 L52.500,32.500 C52.500,35.261 50.261,37.500 47.500,37.500 C47.500,37.500 21.196,37.500 9.500,37.500 "/><path fill-rule="evenodd" stroke="rgb(120, 205, 209)" stroke-width="3px" stroke-linecap="round" stroke-linejoin="miter" fill="none" d="M27.500,26.500 L42.500,26.500 "/>
+</svg>

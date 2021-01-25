@@ -1,0 +1,128 @@
+@import '~styles/config';
+
+.speaker {
+  // @include reset-anchor;
+
+  flex: 0 0 50%;
+
+  position: relative;
+
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
+  margin-bottom: 60px;
+  color: #78cdd1;
+  text-decoration:none;
+
+  flex: 0 0 50%;
+
+
+
+  &.isWide {
+    @media print, (min-width: $min-720) {
+      flex: 0 0 33.3%;
+    }
+
+    @media print, (min-width: $min-1200) {
+      flex: 0 0 25%;
+    }
+  }
+
+  &.hasVideo:hover {
+    .speaker__src {
+      transform: scale(1.03);
+      opacity: .7;
+    }
+    // .playHover {
+    //   display:block;
+
+    //   &img {
+    //     position : absolute;
+    //     display:none;
+    //     top:40px;
+    //     width:100%;
+    //     margin:0 auto;
+    //     left:0px;
+    //     right:0px;
+    //     opacity: 1;
+    //   }
+    // }
+  }
+
+  &__playHover img {
+    filter: none !important;
+  }
+
+  // &:nth-child(odd) {
+  //   padding-left: 0;
+  // }
+
+  // &:nth-child(even) {
+  //   padding-right: 0;
+  // }
+
+  &__link {
+    @include reset-anchor;
+  }
+
+  &__image {
+    position: relative;
+
+    margin-bottom: $gutter;
+    padding-bottom: 100%;
+
+    height: 0; // 230px;
+
+    overflow: hidden;
+
+
+    border-radius: 50%; // $border-radius;
+    mask-image: radial-gradient(#fff, #000);
+
+    &.isActive img {
+      filter: none !important;
+    }
+  }
+
+  &__src {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: top center;
+
+    transform: scale(1);
+    transition: transform 400ms;
+
+  }
+
+  &__name {
+    @include reset-heading;
+    @include responsive-font(22, 28);
+
+    margin-bottom: $gutter;
+
+    line-height: (32 / 28);
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__position {
+    @include reset-paragraph;
+    @include responsive-font(16, 18);
+
+    color: $color-gray;
+    text-align: center;
+  }
+
+  &__bioButton {
+    margin-top: $gutter;
+    text-align: center;
+  }
+
+  &__videoButton {
+    @include reset-button;
+    cursor: pointer;
+  }
+}

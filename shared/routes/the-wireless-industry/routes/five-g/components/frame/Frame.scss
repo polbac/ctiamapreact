@@ -1,0 +1,13 @@
+@import '~styles/config';
+
+.frame {
+  overflow: hidden;
+
+  @media print, (min-width: $min-720) {
+    padding: 0 30px;
+  }
+
+  @media print, (min-width: $min-1440) {
+    padding: 0 30px 90px;
+  }
+}

@@ -1,0 +1,135 @@
+@import '~styles/config';
+
+.wireless {
+  position: relative;
+
+  // background-image: linear-gradient(#eaf3f3 0, #f6f6f6 100%);
+  background-color: #CBE8E9;
+
+  background: linear-gradient(180deg, rgba(#CBE8E9,1) 0%, rgba(#DEEFF0,1) 100%);
+
+  padding-bottom: 80px;
+  margin-bottom: -80px;
+
+  @media print, (min-width: $min-tablet) {
+    padding-bottom: percentage(strip-unit(240px) / strip-unit($page-limit));
+    margin-bottom: -(percentage(strip-unit(240px) / strip-unit($page-limit)));
+  }
+
+  @media print, (min-width: $page-limit) {
+    padding-bottom: strip-unit(240px) * 1px;
+    margin-bottom: -(strip-unit(240px) * 1px);
+  }
+
+  &__flow {
+    position: absolute;
+    top: -25px;
+    left: 0;
+
+    @media print, (min-width: $min-720) {
+      top: -50px;
+    }
+
+    @media print, (min-width: $min-1080) {
+      top: percentage(-100px / $page-limit);
+    }
+  }
+
+  &__content {
+    // padding-bottom: 80px;
+
+    overflow: hidden;
+
+    @media print, (min-width: $min-1080) {
+      padding-bottom: 0;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+
+    padding-top: 80px;
+    padding-bottom: 0; //120px;
+
+    @media print, (min-width: $min-560) {
+      padding-top: 120px;
+      // padding-bottom: 160px;
+    }
+
+    @media print, (min-width: $min-720) {
+      // padding-bottom: 260px;
+    }
+
+    @media print, (min-width: $min-880) {
+      padding-top: 180px;
+      // padding-bottom: 320px;
+    }
+
+    @media print, (min-width: $min-1080) {
+      padding-bottom: 0;
+    }
+
+    @media print, (min-width: $min-1440) {
+      padding-top: 260px;
+    }
+  }
+
+  &__left {
+    @include will-animate;
+
+
+    // left: -50px;
+    // bottom: percentage(-120px / $page-limit);
+
+    width: 75%;
+    margin-top: 25px;
+
+    // transform: translateX(-250px);
+
+    @media print, (min-width: $min-880) {
+      width: 45%;
+    }
+
+    @media print, (min-width: $min-1080) {
+      margin-top: 0;
+      position: absolute;
+      @include widthify(700px);
+
+      // bottom: 35px;
+      bottom: auto;
+      top: percentage(300px / $page-limit);
+      left: -200px;
+    }
+
+    @media print, (min-width: $min-1280) {
+      bottom: auto;
+      top: percentage(300px / $page-limit);
+      left: -200px;
+    }
+  }
+
+  &__right {
+    @include will-animate;
+
+    position: relative;
+    right: -50px;
+    bottom: percentage(-100px / $page-limit);
+
+    width: 50%;
+
+    transform: translateX(-250px);
+
+    @media print, (min-width: $min-1080) {
+      position: absolute;
+      @include widthify(480px);
+
+      right: -100px;
+      bottom: 35px;
+    }
+
+    @media print, (min-width: $min-1280) {
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

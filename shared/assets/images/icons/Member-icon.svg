@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-3{fill:#fff}
+    </style>
+  </defs>
+  <path fill="#78cdd1" fill-rule="evenodd" d="M960.5 514.5a25 25 0 1 1-25 25 25 25 0 0 1 25-25z" transform="translate(-935.5 -514.5)"/>
+  <path fill="#fff" fill-rule="evenodd" d="M962 542.5h3a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z" transform="translate(-935.5 -514.5)"/>
+  <path d="M958.54 550.52h-10v-1c0-12 5.93-13 12-13 5.81 0 12 1 12 13v1h-1zm-8-2h20c-.29-9.23-4.69-10-10-10-5.54-.02-9.75.74-10.02 9.98z" class="cls-3" transform="translate(-935.5 -514.5)"/>
+  <path d="M960.5 538.5a7 7 0 1 1 7-7 7 7 0 0 1-7 7zm0-12a5 5 0 1 0 5 5 5 5 0 0 0-5-5z" class="cls-3" transform="translate(-935.5 -514.5)"/>
+</svg>

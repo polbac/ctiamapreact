@@ -1,0 +1,95 @@
+@import '~styles/config';
+
+.column {
+  margin-bottom: 80px;
+
+  max-width: 390px;
+
+  text-align: center;
+
+  @media (min-width: $min-1080) {
+    margin-bottom: 0;
+
+    &:nth-child(1) {
+      padding-left: 0;
+      padding-right: 60px;
+    }
+
+    &:nth-child(2) {
+      margin-top: -100px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &:nth-child(3) {
+      padding-left: 60px;
+      padding-right: 0;
+    }
+  }
+
+  @media (min-width: $min-1280) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__image {
+    @include will-animate;
+
+    margin-bottom: 30px;
+
+    background-color: #fff;
+
+    border-radius: 50%;
+    box-shadow: 0 19px 76px 0 rgba(53, 54, 66, 0.15);
+
+    transform: scale(0);
+  }
+
+  &__infos {
+    @include will-animate;
+
+    transform: translate(-60px);
+  }
+
+  &__header {
+    margin-bottom: 15px;
+
+    line-height: (36 / 36);
+  }
+
+  &__year {
+    @include responsive-font(28, 36);
+
+    color: $color-gray;
+
+    &::after {
+      content: '•';
+
+      padding-left: 6px;
+      padding-right: 6px;
+
+      font-size: 28px;
+      color: $color-blue;
+    }
+  }
+
+  &__heading {
+    @include responsive-font(28, 36);
+
+    color: $color-dark;
+    font-weight: 600;
+  }
+
+  //this is for the copy paragraph
+  &__copy {
+    @include reset-paragraph;
+    @include responsive-font(18, 20);
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    color: $color-dark;
+    letter-spacing: -0.005em;
+    line-height: (30 / 20);
+  }
+}

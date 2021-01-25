@@ -1,0 +1,43 @@
+@import '~styles/config';
+
+.subheading {
+  flex: 0 1 auto;
+
+  margin-top: -1.2em;
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    @media (min-width: $min-720) {
+      @include grid-offset-left(2);
+      @include grid-col(8);
+    }
+
+    @media (min-width: $min-1200) {
+      @include grid-col(6);
+      @include grid-offset-left(3);
+    }
+  }
+
+  &__content {
+    @include copy(20, 28);
+
+    margin-bottom: 3.3em;
+
+    font-style: italic;
+    line-height: (48 / 28);
+    color: rgba($color-shuttle-gray, 0.8);
+
+    .hasAnimation & {
+      @include will-animate;
+    }
+  }
+}

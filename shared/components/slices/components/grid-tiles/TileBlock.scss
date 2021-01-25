@@ -1,0 +1,282 @@
+@import '~styles/config';
+
+.tileBlock {
+  @include reset-all;
+
+  display: flex;
+
+  z-index: 1;
+
+  perspective: 1500px;
+
+  transition: z-index 1200ms;
+
+  &.useTwoColumns {
+    @media print, (min-width: $min-tablet) {
+      grid-column: span 2;
+    }
+  }
+
+  &.wide {
+    grid-column: span 3;
+
+    &:not(:last-child) {
+      margin-bottom: $gutter;
+    }
+
+    @include no-supports-grid {
+      width: 100%;
+    }
+  }
+
+  &.flipped {
+    z-index: 2;
+
+    transition: z-index 0ms;
+  }
+
+  &__wrapper {
+    flex: 0 1 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    box-shadow: 0 0 0 2px rgba($color-border-light, 1);
+
+    transition: transform 600ms, box-shadow 900ms;
+    transform-style: preserve-3d;
+
+    // IE: 11
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      display: block;
+    }
+  }
+
+  &.wide &__wrapper {
+    flex-direction: row;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      display: flex;
+    }
+  }
+
+  &.flipped &__wrapper {
+    box-shadow: 0 14px 60px rgba(#000, 0.15);
+
+    transform: rotateY(-180deg);
+  }
+
+  &__front,
+  &__back {
+    flex: 0 1 auto;
+    background: #fff;
+
+    border-radius: $border-radius;
+
+    backface-visibility: hidden;
+
+    // IE: 11
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      backface-visibility: visible;
+    }
+  }
+
+  &__front {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 100%;
+
+    position: relative;
+
+    z-index: 2;
+    transform: rotateY(0deg);
+
+    // IE: 11
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      display: block;
+    }
+  }
+
+  &.wide &__front {
+    flex: 0 0 66%;
+  }
+
+  &__back {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    transform: rotateY(180deg);
+
+    // IE: 11
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      transition: z-index 500ms;
+
+      .flipped & {
+        z-index: 3;
+      }
+    }
+  }
+
+  &.wide &__back {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    width: 100%;
+
+    border-left: 2px solid $color-border-light;
+
+    transform: rotateY(0);
+  }
+
+  &__container {
+    flex: 0 1 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__header {
+    flex: 0 1 auto;
+
+    padding: 25px 85px 0 $gutter;
+
+    @media print, (min-width: $min-tablet) {
+      padding: 32px 85px 0 ($gutter * 2);
+    }
+  }
+
+  & &__title {
+    @include h3;
+    word-break: break-word;
+  }
+
+  .wide &__front &__title {
+    display: none;
+  }
+
+  & &__content {
+    flex: 1 1 auto;
+
+    padding: 0 $gutter;
+    // overflow: auto;
+    // height: 100%;
+
+    // @supports (display: grid) {
+    //   overflow: auto;
+    // }
+
+    @media print, (min-width: $min-tablet) {
+      padding: 0 ($gutter * 2);
+    }
+
+    p {
+      @include reset-paragraph;
+      @include responsive-font(18, 20);
+
+      margin: 0 0 1.5em;
+
+      font-weight: 100;
+
+      line-height: 1.5;
+    }
+
+    &.graph {
+      display: flex;
+      flex-direction: column;
+      // justify-content: flex-end;
+
+      padding-bottom: $gutter;
+
+      @media print, (min-width: $min-tablet) {
+        padding-bottom: 36px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &.showFullTileImage &__childwrap {
+    height: 100%;
+    min-height: 350px;
+  }
+
+  &.showFullTileImage &__content.graph {
+    padding: 0;
+  }
+
+  // &.number &__content.graph,
+  // &.bars &__content.graph,
+  // &.Hills &__content.graph,
+  // &.hill &__content.graph,
+  // &.hills &__content.graph {
+  //   justify-content: flex-end;
+  // }
+
+  &__bottom {
+    flex: 0 1 auto;
+
+    padding: $gutter;
+
+    @media print, (min-width: $min-tablet) {
+      padding: 36px 40px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    // flex: 0 0 (44px + ($gutter * 2));
+
+
+    padding: $gutter;
+    max-width: 100%;
+    min-height: 44px;
+
+    @media print, (min-width: $min-tablet) {
+      padding: 36px 40px;
+    }
+
+    &Inner {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__trigger {
+    @include reset-button;
+
+    position: absolute;
+
+    top: 26px;
+    right: 26px;
+
+    cursor: pointer;
+
+    user-select: none;
+  }
+
+  &__icon {
+    position: relative;
+    z-index: $z-index-base;
+  }
+
+  &.wide &__trigger {
+    display: none;
+  }
+
+  &__link {
+    @include link-button;
+  }
+}

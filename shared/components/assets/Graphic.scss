@@ -1,0 +1,337 @@
+@import '~styles/config';
+
+$graphic-gutter: 40px;
+
+.graphic {
+  position: absolute;
+  z-index: 0;
+
+  pointer-events: none;
+
+  @media print {
+    display: none;
+  }
+
+  // About
+  &About__left {
+    $width: 544.09px;
+
+    @include widthify($width);
+
+    top: percentage(($graphic-gutter * 14) / $graphic-limit);
+    left: percentage(-200px / $graphic-limit);
+
+    &.leftAlign {
+      display: none;
+    }
+  }
+
+  &About__right {
+    $width: 406.63px;
+
+    @include widthify($width);
+
+    top: percentage(($graphic-gutter * 8) / $graphic-limit);
+    right: percentage(-110px / $graphic-limit);
+  }
+
+  // Article
+  &Article__left {
+    $width: 396.92px;
+
+    @include widthify($width);
+
+    top: percentage(($graphic-gutter * 9) / $graphic-limit);
+    left: percentage(-200px / $graphic-limit);
+
+    &.leftAlign {
+      display: none;
+    }
+
+    @media (min-width: $graphic-limit) {
+      left: -200px; 
+    }    
+  }
+
+  &Article__right {
+    $width: 403.26px;
+
+    @include widthify($width);
+
+    bottom: percentage(-$graphic-gutter / $graphic-limit);
+    right: percentage(-220px / $graphic-limit);
+
+    @media (min-width: 1200px) {
+      bottom: (2%);
+    }
+
+    @media (min-width: $graphic-limit) {
+      right: -220px; 
+    }
+  }
+
+  // Channel
+  &Channel__left {
+    $width: 559.32px;
+
+    @include widthify($width);
+
+    top: percentage(($graphic-gutter * 9) / $graphic-limit);
+    left: percentage(-160px / $graphic-limit);
+
+    &.leftAlign {
+      display: none;
+    }
+
+    @media (min-width: $graphic-limit-xl) {
+      left: -160px; 
+    }    
+  }
+
+  &Channel__right {
+    $width: 672px;
+
+    @include widthify($width);
+
+    bottom: percentage($graphic-gutter / $graphic-limit);
+    right: percentage(-240px / $graphic-limit);
+
+    @media (min-width: $graphic-limit-xl) {
+      right: -240px; 
+    }        
+
+  }
+
+  // Consumer
+  &Consumer__left {
+    $width: 578.25px;
+
+    @include widthify($width);
+
+    top: percentage(($graphic-gutter * 12) / $graphic-limit);
+    left: percentage(-100px / $graphic-limit);
+
+    &.leftAlign {
+      display: none;
+    }
+
+    @media (min-width: $graphic-limit-xl) {
+      left: -100px;
+    }
+  }
+
+  &Consumer__right {
+    $width: 849.6px;
+
+    @include widthify($width);
+
+    bottom: percentage(($graphic-gutter * 3) / $graphic-limit);
+    right: percentage(-380px / $graphic-limit);
+
+    @media (min-width: $graphic-limit-xl) {
+      right: -500px;
+    }
+        
+  }
+
+  // Home
+  &Home__left {
+    $width: 560.3px;
+
+    @include widthify($width);
+
+    top: percentage(($graphic-gutter * 9) / $graphic-limit);
+    left: percentage(-160px / $graphic-limit);
+
+    &.leftAlign {
+      display: none;
+    }
+  }
+
+  &Home__right {
+    $width: 694px;
+
+    @include widthify($width);
+
+    bottom: percentage(($graphic-gutter * 3) / $graphic-limit);
+    right: percentage(-280px / $graphic-limit);
+  }
+
+  // Industry
+  &Industry__left {
+    $width: 315.85px;
+
+    @include widthify($width);
+
+    top: percentage(($graphic-gutter * 12) / $graphic-limit);
+    left: 0;
+
+    &.leftAlign {
+      display: none;
+    }
+  }
+
+  &Industry__right {
+    $width: 239.75px;
+
+    @include widthify($width);
+
+    top: percentage(($graphic-gutter * 18) / $graphic-limit);
+    right: percentage(80px / $graphic-limit);
+  }
+
+  // JoinUs
+  &JoinUs__left {
+    $width: 458.99px;
+
+    @include widthify($width);
+
+    bottom: percentage((-$graphic-gutter * 3) / $graphic-limit);
+    left: percentage(-100px / $graphic-limit);
+
+    &.leftAlign {
+      display: none;
+    }
+  }
+
+  &JoinUs__right {
+    $width: 677.94px;
+
+    @include widthify($width);
+
+    top: percentage((-$graphic-gutter * 6) / $graphic-limit);
+    right: percentage(-260px / $graphic-limit);
+  }
+
+  // News
+  &News__left {
+    $width: 560.41px;
+
+    @include widthify($width);
+
+    top: percentage(($graphic-gutter * 9) / $graphic-limit);
+    left: percentage(-160px / $graphic-limit);
+
+    &.leftAlign {
+      display: none;
+    }
+    
+    @media (min-width: $graphic-limit-xl) {
+      left: $width / -160px;
+    }
+
+  }
+
+  &News__right {
+    $width: 490.3px;
+
+    @include widthify($width);
+
+    bottom: percentage(($graphic-gutter * 3) / $graphic-limit);
+    right: percentage(-160px / $graphic-limit);
+
+    @media (min-width: $graphic-limit-xl) {
+      right: $width / -160px;
+    }
+
+  }
+
+  // Our members
+  &OurMembers__left {
+    $width: 536.02px;
+
+    @include widthify($width);
+
+    bottom: percentage((-$graphic-gutter * 3) / $graphic-limit);
+    left: percentage(-220px / $graphic-limit);
+
+    &.leftAlign {
+      display: none;
+    }
+  }
+
+  &OurMembers__right {
+    $width: 507.19px;
+
+    @include widthify($width);
+
+    top: percentage((-$graphic-gutter * 2) / $graphic-limit);
+    right: percentage(-140px / $graphic-limit);
+  }
+
+  // Our mission
+  &OurMission__left {
+    $width: 644.69px;
+
+    @include widthify($width);
+
+    bottom: percentage(($graphic-gutter * 2) / $graphic-limit);
+    left: percentage(-360px / $graphic-limit);
+
+    &.leftAlign {
+      display: none;
+    }
+  }
+
+  &OurMission__right {
+    $width: 866.64px;
+
+    @include widthify($width);
+
+    top: percentage(($graphic-gutter * 9) / $graphic-limit);
+    right: percentage(-460px / $graphic-limit);
+  }
+
+  // Positions
+  &Positions__left {
+    $width: 449.98px;
+
+    @include widthify($width);
+
+    top: percentage(($graphic-gutter * 4) / $graphic-limit);
+    left: percentage(-100px / $graphic-limit);
+
+    &.leftAlign {
+      display: none;
+    }
+  }
+
+  &Positions__right {
+    $width: 320.36px;
+
+    @include widthify($width);
+
+    bottom: percentage(-$graphic-gutter / $graphic-limit);
+    right: percentage(-85px / $graphic-limit);
+  }
+
+  // ThisWeekIn5G
+  &ThisWeekIn5G__left {
+    $width: 560.41px;
+
+    @include widthify($width);
+
+    // top: percentage(($graphic-gutter * 14) / $graphic-limit);
+    left: percentage(-160px / $graphic-limit);
+
+    top: 60%;
+    transform: translateY(-39%);
+
+    &.leftAlign {
+      display: none;
+    }
+  }
+
+  &ThisWeekIn5G__right {
+    $width: 490.3px;
+
+    @include widthify($width);
+
+    // bottom: percentage(($graphic-gutter * 3) / $graphic-limit);
+    right: percentage(-160px / $graphic-limit);
+
+    top: 60%;
+    transform: translateY(-39%);
+    
+  }
+}

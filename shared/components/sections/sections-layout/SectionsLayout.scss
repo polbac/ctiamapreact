@@ -1,0 +1,11 @@
+@import '~styles/config';
+
+.sectionsLayout {
+  &:not(:last-child) {
+    @include segment($padding-top: 0, $padding-top-mobile: 0);
+  }
+
+  &__container {
+    @include container;
+  }
+}

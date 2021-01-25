@@ -1,0 +1,21 @@
+@import '~styles/config';
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  &.isCenter {
+    justify-content: center;
+  }
+
+  &__heading {
+    @include h2;
+
+    margin-bottom: 40px;
+
+    @media print, (min-width: $min-720) {
+      margin-bottom: 60px;
+    }
+  }
+}

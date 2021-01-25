@@ -1,0 +1,166 @@
+/* stylelint-disable max-nesting-depth, selector-max-specificity */
+
+@import '~styles/config';
+
+.dropdown {
+  padding: 20px 30px;
+
+  background-color: #fff;
+
+  box-shadow: 0 12px 28px 0 rgba(#000, 0.08);
+
+  @media print {
+    border: 1px solid $color-border;
+    box-shadow: none;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    @include responsive-font(14, 18);
+
+    margin-bottom: 5px;
+    color: $color-light;
+  }
+
+  &__select {
+    @include reset-input;
+    @include responsive-font(22, 28);
+
+    margin-bottom: 5px;
+    width: 100%;
+
+    background: #fff url('!file-loader!assets/images/icons/icon-down-crop.svg') no-repeat;
+    background-position: right center;
+    background-size: 13px 8px;
+
+
+    &.isDate {
+      //margin: 0 -25px -10px -10px;
+      margin: 0 -13px 0 -13px;
+      width: auto;
+
+      background: none;
+
+      :global {
+        .DateRangePickerInput {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+        }
+
+        .DateInput {
+          flex: 1;
+        }
+
+        .DateRangePickerInput_arrow {
+          flex: 0;
+        }
+
+        .DateInput_input {
+          @include responsive-font(22, 28);
+
+          font-weight: 400;
+          color: #000;
+
+          cursor: pointer;
+          padding-left: 8px;
+          padding-right: 8px;
+        }
+
+        .DateRangePickerInput_clearDates:hover {
+          background: none;
+        }
+
+        .DateRangePickerInput__showClearDates {
+          padding-right: 0;
+        }
+
+        .DateRangePickerInput_arrow_svg {
+          width: 35px;
+
+          @media (max-width: $mobile-breakpoint) {
+            width: 13px;
+          }
+        }
+
+      }
+
+      display: flex;
+
+      :global {
+
+        .react-datepicker__input-container {
+
+          input {
+            @include responsive-font(16, 28);
+            font-weight: 400;
+            color: #000;
+
+            border-width: 0;
+            width: 100%;
+            min-width: 125px;
+
+            @media (max-width: $mobile-breakpoint) {
+              min-width: 110px;
+            }
+
+            &:focus {
+              outline: none;
+              box-shadow: 0 0 3pt 2pt $color-blue;
+            }
+            &.selectEndDate {
+              text-align: right;              
+            }
+
+          }
+        }
+
+
+        @media (max-width: $mobile-breakpoint) {
+          div:first-child {
+            .react-datepicker__input-container {
+              padding: 0 0 0 13px;
+            }
+          }
+          div:last-child {
+            .react-datepicker__input-container {
+              padding: 0 0 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+:global {
+  .DateRangePicker_picker,
+  .DateRangePicker_picker__portal,
+  .DateRangePicker_picker__fullScreenPortal {
+    top: 0 !important;
+    z-index: 999999 !important;
+  }
+}
+
+:global {
+  .react-datepicker__portal {
+    background-color: rgba(0,0,0,.3) !important;
+  }
+
+  .react-datepicker__day--in-selecting-range:not(.react-datepicker__day--in-range) {
+    background-color: $color-blue !important;
+  }
+
+  .react-datepicker__day--selected, .react-datepicker__day--in-selecting-range, .react-datepicker__day--in-range, .react-datepicker__day--keyboard-selected {
+    background-color: darken($color-blue, 20) !important;
+  }
+
+  .react-datepicker__day--selected:hover, .react-datepicker__day--in-selecting-range:hover, .react-datepicker__day--in-range:hover {
+    background-color: darken($color-blue, 25%) !important;
+  }
+
+}

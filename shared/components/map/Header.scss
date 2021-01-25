@@ -1,0 +1,106 @@
+@import '~styles/config';
+
+.header {
+  @include grid-row($justify: space-between);
+
+  &__col {
+    &Left {
+      @include grid-col;
+
+      z-index: 101;
+
+      @media (min-width: $min-tablet) {
+        @include grid-col(5);
+        @include grid-offset-right(1);
+      }
+
+      @media (min-width: $min-desktop) {
+        @include grid-col(4);
+        @include grid-offset-right(4);
+      }
+    }
+
+    &Right {
+      @include grid-col;
+
+      display: flex;
+      justify-content: center;
+      z-index: 101;
+
+      @media (min-width: $min-tablet) {
+        @include grid-col(6);
+      }
+
+      @media (min-width: $min-desktop) {
+        @include grid-col(4);
+
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: $gutter * 2;
+
+    @media (min-width: $min-desktop) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__heading {
+    @include h1(28, 38);
+
+    margin: 0;
+
+    letter-spacing: -0.01em;
+    line-height: (32 / 38);
+  }
+
+  &__coinWrapper {
+    margin-right: 20px;
+  }
+
+  &__coin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 12px;
+
+    width: 72px;
+    height: 72px;
+
+    border-radius: 50%;
+    background: $color-blue;
+  }
+
+  &__svg {
+    width: 44px;
+    height: 53px;
+  }
+
+  &__close {
+    @include reset-button;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 10px;
+
+    height: 70px;
+    min-width: 70px;
+    cursor: pointer;
+
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 8px 120px rgba(0, 0, 0, 0.1);
+
+    &Svg {
+      width: 13px;
+    }
+  }
+}

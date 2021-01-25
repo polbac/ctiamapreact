@@ -1,0 +1,61 @@
+@import '~styles/config';
+
+.link {
+  display: inline-block;
+
+  position: relative;
+
+  &.hasAnimation {
+    @include will-animate;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col(6);
+    @include grid-offset-left(3);
+
+    flex-wrap: wrap;
+  }
+
+  &__button {
+    @include link-button;
+
+    margin-right: 0;
+    max-width: 200px;
+  }
+
+  &__success {
+    @include responsive-font(12, 14);
+
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    opacity: 0;
+
+    padding: 2px 12px;
+
+    color: #fff;
+
+    pointer-events: none;
+
+    border-radius: 14px;
+    background-color: $color-dark;
+
+    transition: opacity 100ms, transform 100ms;
+    transform: translateX(-50%) translateY(15px);
+
+    &.toggleSuccess {
+      opacity: 1;
+
+      transition-duration: 175ms;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+}

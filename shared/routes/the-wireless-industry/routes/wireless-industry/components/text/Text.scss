@@ -1,0 +1,151 @@
+@import '~styles/config';
+
+.text {
+  flex: 0 1 auto;
+
+  &.hasAnimation {
+    @include will-animate;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    &.aside {
+      @include grid-col;
+
+      order: 2;
+
+      @media print, (min-width: $min-720) {
+        @include grid-col(8);
+        @include grid-offset-left(2);
+      }
+
+      @media print, (min-width: $min-1200) {
+        @include grid-col(3);
+        @include grid-offset-left(0);
+
+        order: 0;
+
+        .isCenter & { // stylelint-disable-line
+          @include grid-col(3);
+          @include grid-offset-left(0);
+        }
+      }
+    }
+
+    &.primary {
+      @include grid-col;
+
+      @media print, (min-width: $min-720) {
+        @include grid-col(8);
+        @include grid-offset-left(2);
+      }
+
+      @media print, (min-width: $min-1200) {
+        @include grid-col(6);
+        @include grid-offset-left(2);
+
+        .isCenter & { // stylelint-disable-line
+          @include grid-offset-left(3);
+        }
+      }
+    }
+  }
+
+  &__content {
+    @include content;
+
+    position: relative;
+
+    sup { //stylelint-disable-line
+      margin-left: 0.1em;
+      font-size: 0.65em;
+    }
+
+    .isLoading & {
+      @include loading(#e6e6e6, #dedede);
+    }
+
+    :global {
+      .document,
+      .glossary {
+        $size: 27px;
+
+        position: relative;
+
+        margin-right: $size + 10;
+        padding-bottom: 8px;
+
+        background-image: linear-gradient(to right, rgba($color-dark, 0.75) 25%, rgba(#fff, 0) 0%);
+        background-position: bottom left;
+        background-size: 8px 2px;
+        background-repeat: repeat-x;
+
+        &::after { // stylelint-disable-line
+          content: attr(index);
+
+          display: inline-block;
+          position: relative;
+          top: -2px;
+          right: 2px;
+
+          margin-right: -$size - 10;
+          margin-left: 10px;
+
+          width: $size;
+          height: $size;
+
+          font-family: $font-default;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: $size - 4;
+          text-align: center;
+
+          border: 2px solid $color-primary;
+          border-left-color: $color-orange;
+          border-bottom-color: $color-orange;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 2em;
+
+    @media print, (min-width: $min-600) {
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: $gutter;
+      grid-auto-columns: auto;
+
+      justify-content: space-between;
+      align-items: flex-start;
+
+      margin-top: 2em;
+    }
+
+    @media print, (min-width: $min-1200) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 0;
+    }
+
+    .isCenter & { // stylelint-disable-line
+      @media print, (min-width: $min-1200) {
+        align-items: flex-end;
+      }
+    }
+  }
+}

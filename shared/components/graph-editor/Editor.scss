@@ -1,0 +1,246 @@
+@import '~styles/config';
+
+$btn-height: 44px;
+
+.editor {
+  display: flex;
+  flex-direction: column;
+
+  &__list {
+    @include reset-list;
+    margin-bottom: 28px;
+  }
+
+  &__item {
+    margin-bottom: 8px;
+  }
+
+  &__button,
+  &__remove {
+    @include reset-button;
+    @include responsive-font(12, 14);
+
+    display: inline-flex;
+    position: relative;
+
+    padding: 0 20px;
+
+    height: $btn-height;
+
+    line-height: $btn-height - 2;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    border-radius: 25px;
+    background: $color-dark;
+
+    transform: translate3d(0, 0, 0);
+    transition: 180ms;
+    transition-property: background-color, color, opacity;
+
+    &:focus,
+    &:hover {
+      outline: 0;
+    }
+
+    &:focus {
+      box-shadow: 0 0 3pt 2pt $color-blue;
+    }
+
+    &:hover {
+      background-color: darken($color-dark, 10%);
+    }
+
+    &.primary {
+      background: $color-primary;
+
+      &:hover {
+        background-color: darken($color-primary, 10%);
+      }
+    }
+
+    &.isActive {
+      opacity: 0.5;
+    }
+  }
+
+  &__buttons {
+    margin: 0 0 $gutter - 5;
+
+    > * {
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__content {
+    ul { // stylelint-disable-line
+      @include reset-list;
+
+      font-size: 18px;
+      line-height: 1.2;
+
+      li { // stylelint-disable-line
+        display: inline-block;
+
+        margin: 5px 5px 0 0;
+        padding: 2px 6px;
+
+        min-height: 27px;
+
+        font-family: 'Courier New', Courier, monospace;
+
+        vertical-align: bottom;
+
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        background: #fafafa;
+      }
+    }
+  }
+
+  &__output {
+    margin-bottom: 36px;
+  }
+
+  &__textarea {
+    @include reset-input;
+    display: block;
+
+    padding: $gutter;
+
+    width: 100%;
+    height: 20px + ($gutter * 2);
+    overflow: hidden;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    white-space: pre;
+
+    border-radius: $border-radius;
+    background: $color-border-light;
+
+    resize: none;
+  }
+
+  &__functions {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) repeat(2, 44px);
+  grid-gap: 8px;
+
+  &.isDonut {
+    grid-template-columns: repeat(3, 1fr) repeat(2, 44px);
+  }
+
+  .isMeta & {
+    grid-template-columns: 100px auto;
+  }
+
+  &__input {
+    @include reset-input;
+    padding: 0 10px;
+    min-width: 50px;
+    background-color: $color-border-light;
+
+    &.isMultiline {
+      height: 100px;
+
+      white-space: nowrap;
+    }
+  }
+
+  &__color {
+    position: relative;
+
+    &Button {
+      @include reset-button;
+
+      width: 100%;
+      height: 100%;
+
+      text-indent: -9999px;
+      cursor: pointer;
+    }
+
+    &Picker {
+      position: absolute;
+      z-index: 10001;
+
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(#000, 0.25);
+
+      transform: translate(-50%, 55px);
+    }
+
+    &Overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10000;
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__remove {
+    @include reset-button;
+    @include responsive-font(18, 22);
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    padding: 0;
+
+    width: $btn-height;
+    height: $btn-height;
+
+    line-height: $btn-height - 2;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    border-radius: 25px;
+    background: $color-dark;
+
+    transform: rotate(45deg);
+    transition: 180ms;
+    transition-property: background-color, color, opacity;
+
+    &:focus,
+    &:hover {
+      outline: 0;
+    }
+
+    &:focus {
+      box-shadow: 0 0 3pt 2pt $color-blue;
+    }
+
+    &:hover {
+      background-color: darken($color-dark, 10%);
+    }
+  }
+}

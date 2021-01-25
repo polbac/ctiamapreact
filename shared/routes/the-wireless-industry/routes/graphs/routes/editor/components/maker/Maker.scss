@@ -1,0 +1,129 @@
+@import '~styles/config';
+
+.maker {
+  @include segment(0, 90px, 0, 30px);
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    @media print, (min-width: $min-840) {
+      @include grid-col(10);
+      @include grid-offset-left(1);
+    }
+
+    @media print, (min-width: $min-1080) {
+      @include grid-col(8);
+      @include grid-offset-left(2);
+    }
+  }
+
+  &.wide &__col {
+    @include grid-col;
+
+    @media print, (min-width: $min-840) {
+      @include grid-col;
+      @include grid-offset-left(0);
+    }
+
+    @media print, (min-width: $min-1080) {
+      @include grid-col(10);
+      @include grid-offset-left(1);
+    }
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: $gutter;
+
+    @media print, (min-width: $min-720) { // stylelint-disable-line
+      grid-auto-flow: column;
+    }
+  }
+}
+
+.dropdown {
+  padding: 20px 30px;
+
+  background-color: #fff;
+
+  box-shadow: 0 12px 28px 0 rgba(#000, 0.08);
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    @include responsive-font(14, 18);
+    margin-bottom: 5px;
+    color: $color-light;
+  }
+
+  &__select {
+    @include reset-input;
+    @include responsive-font(22, 28);
+    margin-bottom: 5px;
+
+    background: #fff url('!file-loader!assets/images/icons/icon-down-crop.svg') no-repeat;
+    background-position: right center;
+    background-size: 13px 8px;
+  }
+}
+
+.button {
+  @include reset-button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 106px;
+
+  cursor: pointer;
+
+  border-bottom: 3px solid transparent;
+
+  background-color: #fff;
+  box-shadow: 0 12px 28px 0 rgba(#000, 0.08);
+
+
+  & + & {
+    border-left: 1px solid $color-border-light;
+  }
+
+  &.active {
+    border-bottom: 3px solid $color-primary;
+  }
+
+  &:hover {
+    background-color: darken(#fff, 1%);
+  }
+
+  &:active {
+    background-color: darken(#fff, 2%);
+  }
+
+  &__title {
+    @include responsive-font(20, 24);
+    opacity: 0.6;
+
+    text-transform: lowercase;
+    color: $color-font;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &.active &__title {
+    font-weight: 600;
+  }
+}

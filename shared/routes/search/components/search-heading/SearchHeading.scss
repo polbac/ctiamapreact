@@ -1,0 +1,45 @@
+@import '~styles/config';
+
+.bar {
+  @include segment(120px, 0, 40px, 0);
+
+  &__container {
+    @include container;
+  }
+
+  &__inside {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    padding-bottom: 40px;
+
+    border-bottom: 1px solid #ccc;
+  }
+
+  &__query {
+    @include reset-button;
+    @include h2;
+    @include ellipsis(90%);
+
+    margin-bottom: 0;
+
+    text-align: left;
+    line-height: 1.2;
+
+    cursor: pointer;
+
+    transition: color 300ms ease;
+
+    &:hover {
+      color: lighten($color-dark, 15%);
+    }
+  }
+
+  &__results {
+    @include reset-paragraph;
+    @include responsive-font(18, 24);
+
+    opacity: 0.7;
+  }
+}

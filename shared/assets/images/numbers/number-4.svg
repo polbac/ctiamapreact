@@ -1,0 +1,5 @@
+<svg viewBox="0 0 46.68 64.01">
+  <path class="color-primary" d="M34.07,64h0a4,4,0,0,1-4-4l.24-56a4,4,0,0,1,4-4h0a4,4,0,0,1,4,4l-.24,56A4,4,0,0,1,34.07,64Z"/>
+  <path class="color-primary" d="M42.7,48.93h0L4,48.92a4,4,0,0,1,0-8H4L42.7,41a4,4,0,0,1,0,8Z"/>
+  <path class="color-secondary" style="mix-blend-mode: multiply" d="M4,48.92a4,4,0,0,1-3.2-6.35l30.33-41a4,4,0,1,1,6.4,4.74l-30.33,41A4,4,0,0,1,4,48.92Z"/>
+</svg>

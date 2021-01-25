@@ -1,0 +1,302 @@
+@import '~styles/config';
+
+.hero {
+  position: relative;
+
+  overflow: hidden;
+
+  @media print, (min-width: $min-1080) {
+    height: calc(100vh - 115px);
+  }
+
+  &__container {
+    // @include container;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+  }
+
+  // &__streak {
+  //   display: none;
+
+  //   position: absolute;
+  //   top: 120px;
+  //   left: 0;
+  //   z-index: 25;
+
+  //   transform: translateX(-100%);
+
+  //   @media print, (min-width: $min-1080) {
+  //     display: block;
+  //   }
+  // }
+
+  // &__drone {
+  //   @include will-animate($opacity: false);
+  //   @include widthify(160px);
+
+  //   display: none;
+
+  //   position: absolute;
+  //   top: 110px;
+  //   right: -25%;
+  //   z-index: 30;
+
+  //   @media print, (min-width: $min-1080) {
+  //     display: block;
+  //   }
+  // }
+
+  // &__cloud {
+  //   @include widthify(355px);
+
+  //   display: none;
+
+  //   position: absolute;
+  //   top: 250px;
+  //   right: -25%;
+  //   z-index: 25;
+
+  //   @media print, (min-width: $min-1080) {
+  //     display: block;
+  //   }
+  // }
+
+  // &__streakHeadingLeft {
+  //   @include will-animate;
+  //   @include widthify(315px, 200px);
+
+  //   position: absolute;
+  //   top: 40%;
+  //   left: percentage(-225px / $page-width);
+  //   z-index: 20;
+
+  //   @media print, (min-width: $min-840) {
+  //     top: 33%;
+  //     left: 18%;
+  //   }
+
+  //   @media print, (min-width: $min-1080) {
+  //     left: 22%;
+  //   }
+
+  //   @media print, (min-width: $min-1280) {
+  //     top: 36%;
+  //     left: 25%;
+  //   }
+  // }
+
+  // &__heading {
+  //   @include will-animate;
+  //   @include widthify(400px, 250px);
+
+  //   position: relative;
+  //   z-index: 22;
+
+  //   margin: 100px auto 80px;
+
+  //   @media print, (min-width: $min-1080) {
+  //     position: absolute;
+  //     top: percentage(150px / $page-width);
+  //     left: 50%;
+
+  //     margin: 0;
+
+  //     transform: translateX(-50%);
+  //   }
+  // }
+
+  // &__streakHeadingRight {
+  //   @include will-animate;
+  //   @include widthify(315px, 200px);
+
+  //   position: absolute;
+  //   top: 30%;
+  //   right: percentage(-225px / $page-width);
+  //   z-index: 20;
+
+  //   @media print, (min-width: $min-840) {
+  //     top: 25%;
+  //     right: 14%;
+  //   }
+
+  //   @media print, (min-width: $min-1080) {
+  //     right: 17%;
+  //   }
+
+  //   @media print, (min-width: $min-1280) {
+  //     top: 28%;
+  //     right: 21%;
+  //   }
+  // }
+
+  // &__carLeft {
+  //   @include will-animate($opacity: false);
+  //   @include widthify(495px);
+
+  //   display: none;
+
+  //   position: absolute;
+  //   bottom: 100px;
+  //   left: 0;
+  //   z-index: 20;
+
+  //   transform: translateX(-100%);
+
+  //   @media print, (min-width: $min-1080) {
+  //     display: block;
+  //   }
+  // }
+
+  // &__manLeft {
+  //   @include will-animate($opacity: false);
+  //   @include widthify(500px);
+
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   z-index: 15;
+
+  //   transform: translateX(-100%);
+
+  //   @media print, (min-width: $min-1080) {
+  //     bottom: 190px;
+  //     left: -30px;
+  //   }
+  // }
+
+  // &__carRight {
+  //   @include will-animate($opacity: false);
+  //   @include widthify(630px);
+
+  //   display: none;
+
+  //   position: absolute;
+  //   right: 0;
+  //   bottom: 100px;
+  //   z-index: 30;
+
+  //   transform: translateX(100%);
+
+  //   @media print, (min-width: $min-1080) {
+  //     display: block;
+  //   }
+  // }
+
+  // &__womanRight {
+  //   @include will-animate($opacity: false);
+  //   @include widthify(410px);
+
+  //   position: absolute;
+  //   right: 30px;
+  //   bottom: 0;
+  //   z-index: 25;
+
+  //   transform: translateX(150%);
+
+  //   @media print, (min-width: $min-1080) {
+  //     bottom: 103px;
+  //   }
+  // }
+
+  // &__cityBack {
+  //   @include will-animate;
+
+  //   position: absolute;
+  //   bottom: percentage(-50px / $page-width);
+  //   left: 0;
+  //   z-index: 5;
+
+  //   transform-origin: 40% 0%;
+  //   transform: translate3d(300px, 150px, 0) scale(4);
+  // }
+
+  // &__cityFront {
+  //   @include will-animate;
+
+  //   position: absolute;
+  //   bottom: percentage(-150px / $page-width);
+  //   left: 0;
+  //   z-index: 10;
+
+  //   transform-origin: 50% 0%;
+  //   transform: translate3d(150px, 75px, 0) scale(4);
+
+  //   @media print, (min-width: $min-720) {
+  //     bottom: percentage(-300px / $page-width);
+  //   }
+  // }
+
+  &__background {
+    position: relative;
+    z-index: 8;
+    object-fit: cover;
+    object-position: center bottom;
+    max-height: calc(50vh - 70px);
+
+    @media print, (min-width: $min-720) {
+      max-height: calc(100vh - 115px);
+    }
+  }
+
+  &__title {
+    @include responsive-font(72, 110);
+    @include responsive-line-height(72, 110);
+    background-color: $color-background;
+    font-weight: 900;
+    text-align: center;
+    position: relative;
+    z-index: 9;
+
+    // @include will-animate;
+    // @include widthify(800px, 375px);
+    width: 100%;
+    max-width: 800px;
+    padding: 40px 40px 60px;
+
+    position: relative;
+
+    // margin: 100px auto 80px;
+    margin: 0 auto 80px;
+
+    @media print, (min-width: $min-720) {
+      padding: 60px 60px 90px;
+      position: absolute;
+      // top: percentage(350px / $page-width);
+      // top: calc(50vh - 115px);
+      top: calc(50vh - 75px);
+      left: 50%;
+
+      margin: 0;
+
+      // transform: translateX(-50%);
+      transform: translate(-50%, -50%);
+    }
+
+  }
+
+  // &__arrow {
+  //   position: absolute;
+  //   z-index: 10;
+  //   left: 50%;
+  //   // top: 79%;
+
+  //   margin-bottom: 40px;
+
+  //   @media print, (min-width: $min-768) {
+  //     // top: 67%;
+  //     top: percentage(950px / $page-width);
+  //     position: absolute;
+  //     margin-bottom: 0;
+  //   }
+  // }
+
+  &__arrow {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: calc(100% - 45px);
+  }
+}

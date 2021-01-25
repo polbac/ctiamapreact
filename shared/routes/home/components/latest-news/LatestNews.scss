@@ -1,0 +1,55 @@
+@import '~styles/config';
+
+.news {
+  @include grid-col;
+
+  @media print, (min-width: $min-1200) {
+    @include grid-col(8);
+  }
+
+  &__heading {
+    @include h2;
+
+    margin-bottom: 40px;
+
+    @media print, (min-width: $min-720) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__row {
+    @include no-supports-grid {
+      @include grid-row;
+
+      margin-bottom: -$gutter;
+    }
+
+    @include supports-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column-gap: $gutter;
+      grid-row-gap: $gutter;
+      grid-auto-flow: dense;
+
+      @media print, (min-width: $min-720) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  &__col {
+    @include grid-col;
+
+    @media print, (min-width: $min-720) {
+      @include grid-col(6);
+
+      &:nth-child(3) {
+        @include grid-col;
+      }
+    }
+
+    > * {
+      margin-bottom: $gutter;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@charset 'UTF-8';
+/*
+Theme Name: CTIA
+Text Domain: twentysixteen
+*/
+
+//  Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+//  Base stuff
+@import
+  'base/typography',
+  'base/base';
+
+//  Layout-related sections
+@import
+  'layout/header',
+  'layout/footer';
+
+//  Components
+@import
+  'components/button',
+  'components/animations',
+  'components/forms';
+
+//  Modules
+@import
+  'modules/map';
+
+//  Pages
+  @import
+    'pages/map';

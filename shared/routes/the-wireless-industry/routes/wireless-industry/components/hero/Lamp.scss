@@ -1,0 +1,164 @@
+@import '~styles/config';
+
+@keyframes circles {
+  0% {
+    opacity: 0;
+    transform: scaleX(0.85) scaleY(0.25);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scaleX(1.2) scaleY(0.35);
+  }
+}
+
+.lamp {
+  @include will-animate;
+
+  position: absolute;
+  z-index: 3;
+
+  transform: translateY(-40px);
+
+  &.lamp-1 {
+    @include widthify(24px);
+
+    position: absolute;
+    top: percentage(140px / $page-limit);
+    left: percentage(200px / $page-limit);
+  }
+
+  &.lamp-2 {
+    @include widthify(23px);
+
+    position: absolute;
+    top: percentage(440px / $page-limit);
+    left: percentage(340px / $page-limit);
+  }
+
+  &.lamp-3 {
+    @include widthify(31px);
+
+    position: absolute;
+    top: percentage(600px / $page-limit);
+    right: percentage(280px / $page-limit);
+  }
+
+  &.lamp-4 {
+    @include widthify(14px);
+
+    position: absolute;
+    top: percentage(260px / $page-limit);
+    right: percentage(180px / $page-limit);
+  }
+
+  &__src {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__circles {
+    position: absolute;
+
+    margin-top: -12px;
+  }
+
+  &__circle {
+    @include will-animate;
+
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+    background-color: rgba($color-green, 0.25);
+
+    transform: scaleX(1) scaleY(0.3);
+    animation: circles 2s ease-in 1 forwards;
+
+    .color-green & {
+      background-color: rgba($color-green, 0.25);
+    }
+
+    .color-blue & {
+      background-color: rgba($color-blue, 0.25);
+    }
+
+    .color-orange & {
+      background-color: rgba($color-orange, 0.25);
+    }
+
+    &.circle-1 {
+      top: 0;
+      left: -10px;
+
+      width: 25px;
+      height: 25px;
+
+      animation-delay: 0.5s;
+
+      @media (min-width: $min-880) {
+        top: -13px;
+        left: -13px;
+
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    &.circle-2 {
+      top: -12px;
+      left: -23px;
+
+      width: 50px;
+      height: 50px;
+
+      animation-delay: 1s;
+
+      @media (min-width: $min-880) {
+        top: -38px;
+        left: -38px;
+
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    &.circle-3 {
+      display: none;
+
+      top: -63px;
+      left: -63px;
+
+      width: 150px;
+      height: 150px;
+
+      animation-delay: 1.5s;
+
+      @media (min-width: $min-880) {
+        display: block;
+      }
+    }
+
+    &.circle-4 {
+      display: none;
+
+      top: -88px;
+      left: -88px;
+
+      width: 200px;
+      height: 200px;
+
+      animation-delay: 2s;
+
+      @media (min-width: $min-880) {
+        display: block;
+      }
+    }
+  }
+}

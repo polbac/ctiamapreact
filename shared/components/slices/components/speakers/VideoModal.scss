@@ -1,0 +1,49 @@
+@import '~styles/config';
+
+.modal {
+  display: block;
+
+  width: 100vw;
+  max-width: 740px;
+
+  min-height: 400px;
+
+  @media print, (min-width: $min-840) {
+    display: flex;
+  }
+
+  &__content {
+    padding: 120px 0;
+    width: 100%;
+    overflow: hidden;
+
+    @media print, (min-width: $min-840) {
+      flex: 1 0 100%;
+    }
+
+    @media print, (min-width: $min-720) {
+      padding: 80px 0;
+    }
+
+    @media print, (min-width: $min-1080) {
+      padding: 80px 0 50px;
+    }
+  }
+
+  &__overlay {
+    @include fit;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1;
+
+    padding: $gutter * 2;
+
+    text-align: center;
+
+    background: rgba(#fff, 0.9);
+  }
+}

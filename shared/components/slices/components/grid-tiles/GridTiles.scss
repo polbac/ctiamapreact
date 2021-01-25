@@ -1,0 +1,72 @@
+@import '~styles/config';
+
+.gridTiles {
+  @include segment(40px, 40px, 20px, 20px);
+
+  &.isWide {
+    width: 100%;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    @media print, (min-width: $min-720) {
+      @include grid-col(8);
+      @include grid-offset-left(2);
+    }
+
+    @media print, (min-width: $min-1200) {
+      @include grid-col(6);
+      @include grid-offset-left(5);
+
+      .isCenter & {
+        @include grid-offset-left(3);
+      }
+    }
+
+    .isWide & {
+      @include grid-offset-left(0);
+      @include grid-col(12);
+    }
+  }
+
+  &__grid {
+    @include no-supports-grid {
+      @include grid-row;
+
+      > * {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        width: calc(#{percentage(1 / 2)} - 20px);
+      }
+    }
+
+    @include supports-grid {
+      display: grid;
+      grid-gap: $gutter;
+      grid-template-columns: 1fr;
+      grid-auto-flow: dense;
+
+      @media print, (min-width: $min-tablet) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media print, (min-width: $min-desktop) {
+        grid-template-columns: repeat(2, 1fr);
+
+        .isWide & {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    }
+  }
+}

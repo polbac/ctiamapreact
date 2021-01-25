@@ -1,0 +1,53 @@
+@import '~styles/config';
+
+.competitive {
+  @include segment(260px, 120px, 50px, 50px);
+
+  position: relative;
+
+  &__background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    overflow: hidden;
+
+    width: 100%;
+  }
+
+  &__mask {
+    @include will-animate(false);
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+
+    width: 100%;
+
+    background-color: $color-gray-light;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $min-1080) {
+      flex-direction: row;
+    }
+  }
+}

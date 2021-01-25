@@ -1,0 +1,32 @@
+@import "~styles/config";
+
+.banner {
+  background-color: $color-blue;
+
+  &__container {
+    @include container;
+    padding: $gutter;
+  }
+
+  &__row {
+    font-weight: 600;
+    color: white;
+    text-align: center;
+
+    & a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    p { margin: 0; }
+  }
+
+  &__content {
+    opacity: 0;
+
+    &.isVisible {
+      opacity: 1;
+      transition: opacity 200ms;
+    }
+  }
+}

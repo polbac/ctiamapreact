@@ -1,0 +1,27 @@
+@import '~styles/config';
+
+.contactForm {
+  @include segment($padding-top: 0, $padding-top-mobile: 0);
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    @media print, (min-width: $min-840) {
+      @include grid-col(10);
+      @include grid-offset-left(1);
+    }
+
+    @media print, (min-width: $min-desktop) {
+      @include grid-col(8);
+      @include grid-offset-left(2);
+    }
+  }
+}

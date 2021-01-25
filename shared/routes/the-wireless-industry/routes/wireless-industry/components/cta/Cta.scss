@@ -1,0 +1,120 @@
+@import '~styles/config';
+
+.cta {
+  height: 480px;
+
+  background-color: #ecf1f1;
+  background-image: linear-gradient(#f0f4f4 0, #ecf1f1 100%);
+
+  @media (min-width: $min-720) {
+    height: 520px;
+  }
+
+  @media (min-width: $min-1080) {
+    height: 600px;
+  }
+
+  &__wrapper {
+    position: relative;
+
+    height: 100%;
+
+    overflow: hidden;
+  }
+
+  &__streakHeadingLeft {
+    @include widthify(315px, 200px);
+
+    position: absolute;
+    top: 40%;
+    left: percentage(-225px / $page-width);
+    z-index: 20;
+
+    @media (min-width: $min-840) {
+      top: 33%;
+      left: 18%;
+    }
+
+    @media (min-width: $min-1080) {
+      left: 22%;
+    }
+
+    @media (min-width: $min-1280) {
+      top: 55%;
+    }
+  }
+
+  &__heading {
+    @include widthify(350px, 250px);
+
+    position: relative;
+    z-index: 22;
+    top: 50%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    transform: translateY(-50%);
+
+    @media (min-width: $min-1080) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      margin: 0;
+
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  &__streakHeadingRight {
+    @include widthify(315px, 200px);
+
+    position: absolute;
+    top: 30%;
+    right: percentage(-225px / $page-width);
+    z-index: 20;
+
+    @media (min-width: $min-840) {
+      top: 25%;
+      right: 14%;
+    }
+
+    @media (min-width: $min-1080) {
+      right: 17%;
+    }
+
+    @media (min-width: $min-1280) {
+      top: 28%;
+      right: 21%;
+    }
+  }
+
+  &__left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 60%;
+  }
+
+  &__right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+
+    width: 45%;
+  }
+
+  &__button {
+    position: relative;
+    z-index: 3;
+
+    top: -25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+}

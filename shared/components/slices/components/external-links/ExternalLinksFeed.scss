@@ -1,0 +1,28 @@
+@import '~styles/config';
+
+.ExternalLinksFeed {
+
+  &__container {
+    @include container;
+
+  }
+
+  &__row {
+    @include grid-row;
+    min-height: 1300px; // Height when tiles are shortest
+  }
+
+  &__col {
+    @include grid-col;
+
+  }
+
+  .linksFeedHeader {
+    @include responsive-font(32,38);
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,104 @@
+/* stylelint-disable selector-max-compound-selectors */
+
+@import '~styles/config';
+
+@mixin themes() {
+  .blue-purple & {
+    :global {
+      .color-primary { fill: $color-blue; }
+      .color-secondary { fill: $color-purple; }
+    }
+  }
+
+  .green-blue & {
+    :global {
+      .color-primary { fill: $color-green; }
+      .color-secondary { fill: $color-blue; }
+    }
+  }
+
+  .blue-orange & {
+    :global {
+      .color-primary { fill: $color-blue; }
+      .color-secondary { fill: $color-orange; }
+    }
+  }
+}
+
+.number {
+  display: flex;
+
+  height: 60px;
+  font-size: 30px;
+
+  &__fallback {
+    font-weight: 700;
+
+    .blue-purple & {
+      color: $color-blue;
+    }
+
+    .green-blue & {
+      color: $color-green;
+    }
+
+    .blue-orange & {
+      color: $color-blue;
+    }
+  }
+
+  &__svg {
+    @include themes;
+
+    margin-right: 6px;
+
+    height: 100%;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &.char-dot {
+      margin-top: auto;
+
+      height: 15%;
+    }
+
+    &.char-dollar {
+      height: 65%;
+    }
+
+    &.char-percentage {
+      height: 60%;
+    }
+    &.char-ghz {
+      margin-top: auto;
+
+      height: 60%;
+    }
+    &.char-mhz {
+      margin-top: auto;
+
+      height: 60%;
+    }
+    &.char-x {
+      margin-top: auto;
+
+      height: 60%;
+    }
+
+    &.char-space {
+      width: 6px;
+    }
+
+    &.char-I {
+      margin-left: 4px;
+      margin-right: 10px;
+    }
+
+    &.char-L {
+      margin-left: 2px;
+      margin-right: 8px;
+    }
+  }
+}

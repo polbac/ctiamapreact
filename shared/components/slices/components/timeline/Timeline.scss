@@ -1,0 +1,189 @@
+@import '~styles/config';
+
+.timeline {
+  @include segment(0, 60px, 0, 20px);
+
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 40px;
+  break-inside: avoid;
+  position: relative;
+
+  @media (min-width: $min-768) {
+    height: auto;
+    min-height: 395px;
+  }
+
+  &__container {
+    @include container;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @media (min-width: $min-768) {
+      padding-left: 26px;
+      padding-right: 36px;
+      max-height: 800px;
+    }
+    @media (min-width: $min-1080) {
+      padding-left: 46px;
+      padding-right: 56px;
+    }
+  }
+
+  &__row {
+    @include grid-row;
+
+    // @media (min-width: $min-720) {
+
+    //   &:before {
+    //     position: absolute;
+    //     content: "";
+    //     height: 1px;
+    //     width: calc(100% - 30px);
+    //     top: 0;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     background-color: $color-border;
+    //     max-width: 1390px;
+    //   }
+    // }
+    // @media (min-width: 1281px) {
+    //   &:before {
+    //     width: calc(100% - 160px);
+    //   }
+    // }
+  }
+
+  &__col {
+    @include grid-col;
+    position: relative;
+  }
+
+&__rightArrow,
+&__leftArrow{
+  height: 4rem;
+  pointer-events: none;
+}
+  &__rightArrow{
+    transform: rotate(-90deg);
+  }
+  &__leftArrow{
+    transform: rotate(90deg);
+  }
+
+  .title {
+    @include responsive-font(32,38);
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    margin-bottom: 10px;
+
+  }
+
+  .description {
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media (max-width: $max-768) {
+      display: none;
+    }
+  }
+
+  .instructions {
+    // margin-left: 75px;
+    text-align: center;
+    @media print, (max-width: $max-768) {
+      margin-left: 0px;
+      // text-align: center;
+    }
+
+    @media (max-width: $max-768) {
+      display: none;
+    }
+  }
+
+  .innerWrapper {
+    display: flex;
+    flex-direction: row;
+
+    .navButtonWrapper {
+      text-align: center;
+      @media (max-width: $max-768) {
+        position: absolute;
+        top: calc(50%);
+        z-index: 2;
+        top: 284px;
+        &.next {
+          right:3%;
+        }
+      }
+    }
+
+    .navButton {
+      @include responsive-font(80, 100);
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding-top:15px;
+
+      @media screen and(max-width: 720px) {
+        padding:0;
+      }
+    }
+
+    .timelineTrack {
+      flex-grow: 1;
+      margin-left: 50px;
+      margin-right: 50px;
+      .innerTrackWrapper {
+        position: relative;
+        height: 100%;
+        &:before , &:after{
+          content: '';
+          display: block;
+          height: 42px;
+          border:1px solid black;
+          position:absolute;
+          top: calc(50% - 14px);
+        }
+        &:before {
+          left: -3%;
+        }
+        &:after {
+          right: -3%;
+        }
+
+        .track, .years {
+          position: absolute;
+          width: 106%;
+          left: -3%;
+        }
+
+        .track {
+          top: 55%;
+          border: 1px solid black;
+        }
+
+        .years {
+          font-size: 16px;
+          font-weight: 400;
+          color: #000;
+          bottom: -10px;
+          // left: -5%;
+          display:flex;
+          justify-content: space-between;
+          .newestYear {
+            right: -5%;
+          }
+        }
+      }
+
+      @media (max-width: $max-768) {
+        display: none;
+      }
+    }
+  }
+}

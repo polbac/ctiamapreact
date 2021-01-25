@@ -1,0 +1,56 @@
+@import '~styles/config';
+
+.checkbox {
+  position: relative;
+
+  &__label {
+    @include responsive-font(14, 18);
+    @include ellipsis(230px);
+
+    display: block;
+
+    color: $color-dark;
+
+    cursor: pointer;
+    user-select: none;
+
+    transition: color 300ms ease;
+
+    &:hover {
+      color: lighten($color-dark, 25%);
+    }
+  }
+
+  &__input {
+    @include reset-input;
+
+    display: none;
+  }
+
+  &__box {
+    display: inline-block;
+
+    position: relative;
+
+    width: 1em;
+    height: 1em;
+
+    vertical-align: -10%;
+
+    border: 1px solid #cdcdcd;
+
+    .hasLabel & {
+      margin-right: 1.1em;
+    }
+  }
+
+  &__input:checked + &__box::after {
+    @include fit;
+
+    content: '';
+
+    background-image: url('!file-loader!assets/images/icons/checkmark.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

@@ -1,0 +1,62 @@
+@import '~styles/config';
+
+.connectingCards {
+  @include segment(120px, 620px, 50px, 250px);
+  position: relative;
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @media print, (min-width: $min-880) {
+      flex-direction: row;
+    }
+
+    &.width-2 {
+      @include grid-col;
+
+      @media print, (min-width: $min-1080) {
+        @include grid-col(10);
+        @include grid-offset-left;
+      }
+
+      // @media print, (min-width: $min-1280) {
+      //   @include grid-col(8);
+      //   @include grid-offset-left(2);
+      // }
+    }
+
+    &.width-3 {
+      @include grid-col;
+
+      @media print, (min-width: $min-1280) {
+        @include grid-col(10);
+        @include grid-offset-left;
+      }
+    }
+  }
+
+  &__bottomIllu {
+    margin-top: -13%;
+    position: absolute;
+    bottom: -1px;
+    right: -5.5%;
+    z-index: -1;
+    scale: 1.15;
+    transform-origin: 47% bottom;
+  }
+
+  &__block {
+    @include will-animate;
+    margin-bottom: 50px;
+  }
+}

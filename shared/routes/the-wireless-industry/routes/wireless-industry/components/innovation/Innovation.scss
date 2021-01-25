@@ -1,0 +1,232 @@
+@import '~styles/config';
+
+.innovation {
+  $circleWidth: 2655px;
+  $circleHeight: 770px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+
+    position: relative;
+    z-index: 3;
+
+    padding-top: percentage(130px / $circleHeight);
+
+    @media (min-width: $min-1024) {
+      padding-top: percentage(90px / $circleHeight);
+    }
+  }
+
+  &__col {
+    @include grid-col;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $min-tablet) {
+      @include grid-col(12);
+
+      flex-direction: row;
+
+      margin-bottom: $gutter * 4;
+    }
+
+    @media (min-width: $min-1024) {
+      @include grid-col(10);
+      @include grid-offset-left;
+
+      flex-direction: row;
+
+      margin-bottom: $gutter * 6;
+    }
+
+    @media (min-width: $min-desktop) {
+      @include grid-col(8);
+      @include grid-offset-left(2);
+    }
+  }
+
+  &__heading {
+    @include will-animate;
+    @include responsive-font(30, 42);
+
+    margin: $gutter auto $gutter * 2;
+
+    color: #282828;
+    font-weight: bold;
+
+    @media (min-width: $min-desktop) {
+      margin-bottom: $gutter * 4;
+    }
+  }
+
+  &__illustrations {
+    position: relative;
+
+    z-index: 0;
+    margin: 150px auto 0;
+
+    @media (min-width: $min-720) {
+      margin-top: 300px;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 15%;
+
+      height: 100%;
+      width: 100%;
+
+      pointer-events: none;
+      background-color: $color-blue-light;
+
+      @media (min-width: $min-tablet) {
+        top: 50%;
+      }
+
+      @media (min-width: $graphic-limit) {
+        display: none;
+      }
+    }
+  }
+
+  &__illu1 {
+    @include will-animate;
+    @include widthify(392px);
+
+    position: absolute;
+    top: percentage(-90px / $page-width);
+    left: percentage(30px / $circleWidth);
+    z-index: 3;
+
+    @media (min-width: $min-tablet) {
+      top: percentage(-100px / $page-width);
+    }
+
+    @media (min-width: $min-desktop) {
+      top: percentage(-160px / $page-width);
+    }
+  }
+
+  &__illu2 {
+    @include will-animate;
+    @include widthify(280px);
+
+    position: absolute;
+    top: percentage(-120px / $page-width);
+    left: percentage(580px / $circleWidth);
+    z-index: 3;
+
+    @media (min-width: $min-tablet) {
+      top: percentage(-250px / $page-width);
+    }
+
+    @media (min-width: $min-desktop) {
+      top: percentage(-320px / $page-width);
+    }
+  }
+
+  &__illu3 {
+    @include will-animate;
+    @include widthify(392px);
+
+    position: absolute;
+    top: percentage(-180px / $page-width);
+    left: 40%;
+    z-index: 3;
+
+    @media (min-width: $min-tablet) {
+      top: percentage(-350px / $page-width);
+    }
+
+    @media (min-width: $min-desktop) {
+      top: percentage(-450px / $page-width);
+    }
+
+    @media (min-width: $min-1440) {
+      top: percentage(-550px / $page-width);
+    }
+
+    @media (min-width: $graphic-limit) {
+      top: percentage(-600px / $page-width);
+    }
+  }
+
+  &__illu4 {
+    @include will-animate;
+    @include widthify(392px);
+
+    position: absolute;
+    right: percentage(480px / $circleWidth);
+
+    top: percentage(-160px / $page-width);
+    z-index: 3;
+
+    @media (min-width: $min-tablet) {
+      top: percentage(-300px / $page-width);
+    }
+
+    @media (min-width: $min-desktop) {
+      top: percentage(-450px / $page-width);
+    }
+  }
+
+  &__illu5 {
+    @include will-animate;
+    @include widthify(392px);
+
+    position: absolute;
+    top: percentage(-80px / $page-width);
+    right: percentage(30px / $circleWidth);
+    z-index: 3;
+
+    @media (min-width: $min-tablet) {
+      top: percentage(-150px / $page-width);
+    }
+
+    @media (min-width: $min-desktop) {
+      top: percentage(-250px / $page-width);
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+
+    left: percentage(-598px / $circleWidth);
+    width: 145%;
+    max-width: none;
+  }
+
+  &__mask {
+    display: none;
+    position: absolute;
+    z-index: 2;
+
+    top: -100%;
+    left: -50%;
+    bottom: 0;
+
+    height: 200%;
+    width: 200%;
+
+    background: $color-gray-light;
+
+    @media (min-width: $min-tablet) {
+      display: block;
+    }
+  }
+}

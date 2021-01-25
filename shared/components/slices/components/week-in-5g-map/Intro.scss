@@ -1,0 +1,95 @@
+@import '~styles/config';
+
+.intro {
+  padding: $gutter 0;
+  width: 100%;
+
+  text-align: center;
+
+  &__header {
+    @include responsive-font(34, 56);
+
+    margin: 0 auto 2em;
+    max-width: 10em;
+  }
+
+  &__heading {
+    @include h2(34, 56);
+
+    margin-bottom: 0;
+
+    font-weight: bold;
+    letter-spacing: -0.015em;
+    line-height: (58 / 56);
+  }
+
+  &__subline {
+    @include responsive-font(18, 24);
+  }
+
+  &__numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__wrapper {
+    margin-bottom: $gutter * 3;
+
+    width: 400px;
+    max-width: 100%;
+
+    @media (min-width: $min-desktop) {
+      margin-bottom: $gutter * 5;
+    }
+  }
+
+  &.blue {
+    .map__wrapper {
+      border-right: 2px solid $color-blue;
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+
+  &.green {
+    .map__wrapper {
+      border-right: 2px solid $color-orange;
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+
+  &__number {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 15px;
+  }
+
+  &__numberSvg {
+    display: flex;
+
+    height: 52px;
+
+    svg { // stylelint-disable-line
+      margin-right: 8px;
+    }
+
+    @media (min-width: $min-tablet) {
+      height: 62px;
+    }
+  }
+
+  &__copy {
+    @include reset-paragraph;
+    @include responsive-font(18, 24);
+
+    color: $color-dark;
+    text-align: center;
+  }
+}

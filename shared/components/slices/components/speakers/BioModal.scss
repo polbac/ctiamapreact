@@ -1,0 +1,81 @@
+@import '~styles/config';
+
+.modal {
+  display: block;
+
+  width: 100%;
+  max-width: 740px;
+
+  min-height: 400px;
+
+  @media print, (min-width: $min-840) {
+    display: flex;
+  }
+
+  &__content {
+    padding: 120px $gutter * 2;
+
+    @media print, (min-width: $min-840) {
+      flex: 1 0 100%;
+    }
+
+    @media print, (min-width: $min-720) {
+      padding: 80px $gutter * 2;
+    }
+
+    @media print, (min-width: $min-1080) {
+      padding: 80px 80px 50px;
+    }
+  }
+
+  &__name {
+    @include reset-heading;
+    @include responsive-font(22, 28);
+
+    margin-bottom: $gutter;
+
+    line-height: (32 / 28);
+    font-weight: 600;
+    // text-align: center;
+  }
+
+  &__position {
+    @include reset-paragraph;
+    @include responsive-font(16, 18);
+
+    color: $color-gray;
+    // text-align: center;
+  }
+
+  &__copy {
+    @include responsive-font(16, 20);
+
+    margin: 0 0 $gutter * 2;
+    max-width: 600px;
+
+    line-height: 1.6;
+    color: #000;
+
+    @media print, (min-width: $min-1080) {
+      min-height: 130px;
+    }
+  }
+
+  &__overlay {
+    @include fit;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1;
+
+    padding: $gutter * 2;
+
+    text-align: center;
+
+    background: rgba(#fff, 0.9);
+  }
+
+}

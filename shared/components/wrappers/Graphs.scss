@@ -1,0 +1,37 @@
+@import '~styles/config';
+
+.graphs {
+  @include segment($padding-top: 0, $padding-top-mobile: 0);
+
+  &__container {
+    @include container;
+  }
+
+  &__grid {
+    @include no-supports-grid {
+      @include grid-row;
+
+      > * {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        width: calc(#{percentage(1 / 2)} - 20px);
+      }
+    }
+
+    @include supports-grid {
+      display: grid;
+      grid-gap: $gutter;
+      grid-template-columns: 1fr;
+      grid-auto-flow: dense;
+
+      @media print, (min-width: $min-tablet) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media print, (min-width: $min-desktop) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}

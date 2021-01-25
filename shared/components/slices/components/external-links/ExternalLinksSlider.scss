@@ -1,0 +1,109 @@
+@import '~styles/config';
+
+.externalLinks {
+  margin-bottom: 20px;
+  margin-top: 10px;
+  @media print, (min-width: $min-720) {
+    margin-bottom: 2rem;
+  }
+
+  &.isWide {
+    width: 100%;
+  }
+
+  &__container {
+    @include container;
+
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    @media print, (min-width: $min-720) {
+      @include grid-col(8);
+      @include grid-offset-left(2);
+    }
+
+    @media print, (min-width: $min-1200) {
+      @include grid-col(6);
+      // @include grid-offset-left(5);
+
+      .isCenter & {
+        @include grid-offset-left(3);
+      }
+    }
+
+    .isWide & {
+      @include grid-offset-left(0);
+      @include grid-col(12);
+    }
+  }
+
+  &__carousel {
+    padding: 0 50px;
+  }
+
+  &__header {
+    @include responsive-font(32,38);
+    font-weight: 600;
+    text-align: center;
+    width: 65%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    color: #000;
+  }
+
+  &__buttonLeft, &__buttonRight {
+    @include reset-button;
+    opacity: .8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 70px;
+    height: 70px;
+
+    cursor: pointer;
+
+    // border-radius: 50%;
+    transform: translateX(50px) rotate(270deg);
+
+    &.isHidden {
+      cursor:not-allowed;
+    }
+  }
+
+  &__buttonLeft {
+    transform: translateX(-60px) rotate(-270deg);
+  }
+
+  &__ytImgWrap {
+    filter: grayscale(100%);
+    transition: filter 250ms linear;
+    overflow: hidden;
+    height: 0;
+    position: relative;
+    padding-bottom: 56%; /* 16:9 */
+
+    img {
+      transform: translateY(-50%);
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+    }
+
+    &:hover {
+      filter: grayscale(50%);
+    }
+
+    &.activeSlide {
+      filter: none;
+    }
+ }
+}

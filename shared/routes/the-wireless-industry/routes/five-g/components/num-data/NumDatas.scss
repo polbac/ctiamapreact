@@ -1,0 +1,119 @@
+@import '~styles/config';
+
+.numDatas {
+  @include segment(80px, 80px, 0, 60px);
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+
+    .single & {
+      justify-content: center;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @media print, (min-width: $min-880) {
+      flex-direction: row;
+    }
+
+    &.width-2 {
+      @include grid-col;
+
+      @media print, (min-width: $min-1080) {
+        @include grid-col(10);
+        @include grid-offset-left;
+      }
+
+      // @media print, (min-width: $min-1280) {
+      //   @include grid-col(8);
+      //   @include grid-offset-left(2);
+      // }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(50% - 1px);
+        width: 80%;
+        height: 2px;
+        background-color: #DAE2E2;
+        z-index: 1;
+      }
+
+      @media print, (min-width: $min-880) {
+        &::after {
+          top: 15%;
+          left: calc(50% - 1px);
+          height: 85%;
+          width: 2px;
+        }
+      }
+    }
+
+    &.width-3 {
+      @include grid-col;
+
+      @media print, (min-width: $min-1280) {
+        @include grid-col(10);
+        @include grid-offset-left;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(33.33% - 1px);
+        width: 80%;
+        height: 2px;
+        background: #DAE2E2;
+        background: linear-gradient(180deg, rgba(#DAE2E2,1) 0%, rgba(#E2E8E8,.5) 100%);
+        z-index: 1;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(66.66% - 1px);
+        width: 80%;
+        height: 2px;
+        background: #DAE2E2;
+        background: linear-gradient(180deg, rgba(#DAE2E2,1) 0%, rgba(#E2E8E8,.5) 100%);
+        z-index: 1;
+      }
+
+      @media print, (min-width: $min-880) {
+        &::before {
+          top: 15%;
+          left: calc(33.33% - 1px);
+          height: 85%;
+          width: 2px;
+        }
+
+        &::after {
+          top: 15%;
+          left: calc(66.66% - 1px);
+          height: 85%;
+          width: 2px;
+        }
+      }
+    }
+  }
+
+  &__block {
+    @include will-animate;
+    // padding-top: 30px;
+    padding-bottom: 40px;
+  }
+}

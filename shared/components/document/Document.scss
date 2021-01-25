@@ -1,0 +1,131 @@
+@import '~styles/config';
+
+.document {
+  @include reset-all;
+
+  position: relative;
+
+  margin-bottom: 3em;
+
+  padding: 0 30px;
+
+  padding: 0 30px;
+  max-width: 280px;
+
+  page-break-inside: avoid;
+
+  @media print, (max-width: $min-600) {
+    margin-top: 20px;
+  }
+
+  @media print, (min-width: $min-1024) {
+    padding: 0;
+    max-width: 220px;
+  }
+
+  @media print, (min-width: $min-1200) {
+    margin-top: 20px;
+  }
+
+  &__link {
+    @include reset-anchor;
+    display: block;
+  }
+
+  &__background {
+    position: relative;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: -20px;
+      left: -30px;
+      right: -30px;
+      bottom: 30%;
+
+      background: #fff;
+
+      border: 2px solid #f6f6f6;
+    }
+  }
+
+  &__header {
+    display: flex;
+    position: relative;
+
+    margin-bottom: ($gutter * 1.25);
+  }
+
+  &__image {
+    position: relative;
+
+    margin-bottom: 1.8em;
+
+    min-height: 220px;
+    width: 220px;
+    max-width: 100%;
+
+    background: #f7f7f7;
+
+    box-shadow: 0 20px 50px 10px rgba(0, 0, 0, 0.06);
+
+    img { // stylelint-disable-line
+      width: 100%;
+    }
+  }
+
+  &__number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    margin-right: 11px;
+
+    width: 27px;
+    height: 27px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      border: 2px solid $color-primary;
+      border-left-color: $color-orange;
+      border-bottom-color: $color-orange;
+      border-radius: 100%;
+
+      transform: rotate(-25deg);
+    }
+  }
+
+  &__type {
+    @include responsive-font(14, 16);
+
+    font-weight: 600;
+  }
+
+  &__content {
+    @include responsive-font(16, 18);
+
+    line-height: (30 / 18);
+  }
+
+  &__title {
+    font-weight: 600;
+  }
+
+  &__text {
+    font-style: italic;
+    color: $color-gray-dark;
+  }
+}

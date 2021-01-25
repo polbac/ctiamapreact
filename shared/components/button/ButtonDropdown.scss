@@ -1,0 +1,149 @@
+@import '~styles/config';
+
+.buttonDropdown {
+  display: inline-block;
+  position: relative;
+
+  &__button {
+    $btn-height: 44px;
+
+    @include reset-button;
+    @include responsive-font(12, 14);
+
+    display: inline-flex;
+    position: relative;
+
+    padding: 0 20px;
+
+    height: $btn-height;
+
+    line-height: $btn-height - 2;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    border-radius: 25px;
+    background: $color-dark;
+
+    transform: translate3d(0, 0, 0);
+    transition: 180ms;
+    transition-property: background-color, color, opacity;
+
+    &:focus,
+    &:hover {
+      outline: 0;
+    }
+
+    &:focus {
+      box-shadow: 0 0 3pt 2pt $color-blue;
+    }
+
+    &:hover {
+      background-color: darken($color-dark, 10%);
+    }
+
+    &.primary {
+      background: $color-primary;
+
+      &:hover {
+        background-color: darken($color-primary, 10%);
+      }
+    }
+
+    &.icon {
+      @include responsive-font(16, 18);
+      padding: 0;
+      color: #000;
+      font-weight: 400;
+      background: transparent;
+    }
+
+    &.icon:hover {
+      opacity: 0.8;
+      background-color: transparent;
+    }
+
+    svg { // stylelint-disable-line
+      margin-right: 13px;
+      width: 44px;
+
+    }
+
+    &.empty svg { // stylelint-disable-line
+      margin-right: 0;
+    }
+  }
+
+  & + & {
+    margin-left: 10px;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  left: ($gutter * -1);
+
+  z-index: $z-index-modal;
+
+  margin: 10px 0 0;
+
+  background: #fff;
+  border: 1px solid $color-border;
+
+  &__list {
+    @include reset-list;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child)::after {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      height: 2px;
+
+      background-image: linear-gradient(to right, rgba($color-dark, 0.25) 25%, rgba(#fff, 0) 0%);
+      background-position: left;
+      background-size: 8px 2px;
+      background-repeat: repeat-x;
+    }
+  }
+
+  &__link {
+    @include reset-anchor;
+    @include reset-button;
+    @include responsive-font(16, 18);
+
+    display: flex;
+    align-items: center;
+
+    padding: $gutter ($gutter * 2) $gutter $gutter;
+    width: 100%;
+
+    white-space: nowrap;
+
+    color: #000;
+    font-weight: 400;
+    text-align: left;
+
+    cursor: pointer;
+
+    &:hover {
+      background: #fafafa;
+    }
+
+    svg { // stylelint-disable-line
+      margin-right: 13px;
+      width: 33px;
+    }
+  }
+}

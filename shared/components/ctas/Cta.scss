@@ -1,0 +1,161 @@
+/* stylelint-disable max-nesting-depth */
+
+@import '~styles/config';
+
+$offset: 180px;
+
+.cta {
+  @include grid-col;
+
+  margin-bottom: 20px;
+
+  @media print, (min-width: $min-720) {
+    margin-bottom: 0;
+  }
+
+  &:first-of-type {
+    .cta__content {
+      @media print, (min-width: $min-720) {
+        margin-left: -$offset;
+        padding-left: $offset;
+      }
+      // Image on second CTA on homepage gets cutoff between 540px and 1280px.
+      // Adjusting layout to make room for image.
+      @media print, (min-width: $min-540) and (max-width: $max-1280) {
+        margin: 0 0 20px 0;
+        padding: 0;
+      }
+    }
+  }
+
+  &:last-of-type {
+    .cta__content {
+      @media print, (min-width: $min-720) {
+        margin-right: -$offset;
+      }
+      // Image on second CTA on homepage gets cutoff between 540px and 1280px.
+      // Adjusting layout to make room for image.
+      @media print, (min-width: $min-540) and (max-width: $max-1280) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @for $i from 1 through 12 {
+    &.width-#{$i} {
+      @include grid-col;
+
+      @media print, (min-width: $min-720) {
+        @include grid-col($i);
+      }
+
+      // Adjusting alignment for content in first CTA
+      &:first-of-type {
+        .cta__content {
+          @media print, (min-width: 540px) and (max-width: 1280px)  {
+            padding-left: percentage(1/$i);
+          }
+        }
+      }
+
+      &:last-of-type {
+        .cta__content {
+          @media print, (min-width: $min-720) {
+            padding-left: percentage(1/$i);
+          }
+        }
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 60px percentage(1/12);
+
+    overflow: hidden;
+
+    border-radius: $border-radius;
+    background-color: #fff;
+
+    @media print, (min-width: $min-540) {
+      flex-direction: row;
+    }
+
+    @media print, (min-width: $min-720) {
+      padding-top: 0;
+      padding-bottom: 0;
+
+      min-height: 525px;
+    }
+  }
+
+  &__image {
+    position: relative;
+
+    margin-top: 80px;
+
+    // @media print, (min-width: $min-540) {
+    //   margin-top: 0;
+    //   margin-right: -200px;
+    // }
+
+    @media print, (min-width: $min-540) and (max-width: 1279px) {
+      margin-top: 0;
+      margin-right: -40px;
+    }
+
+    // @media print, (min-width: $min-720) {
+    //   margin-right: -100px;
+    // }
+
+    @media print, (min-width: $min-1280) {
+      margin-right: 110px;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+
+      position: absolute;
+
+      background-size: cover;
+      background-image: url('assets/images/circle.png');
+      background-repeat: no-repeat;
+    }
+
+    &::before {
+      top: -20px;
+      right: -60px;
+
+      width: 220px;
+      height: 220px;
+    }
+
+    &::after {
+      bottom: -140px;
+      left: -80px;
+
+      width: 280px;
+      height: 280px;
+    }
+
+    &Src {
+      position: relative;
+      z-index: 1;
+
+      height: 370px;
+      max-width: inherit;
+
+      border-radius: 6px;
+      box-shadow: 0 27px 54px 0 rgba(0, 0, 0, 0.19);
+
+      // Change size of image so it doesn't get cut off between 540px and 1279px
+      @media (min-width: $min-540) and (max-width: $max-1280) {
+        height: 300px;
+      }
+    }
+  }
+}

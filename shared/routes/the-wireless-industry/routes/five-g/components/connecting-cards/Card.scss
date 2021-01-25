@@ -1,0 +1,33 @@
+@import '~styles/config';
+
+.card {
+  width: 100%;
+  background-color: #D9EFEF;
+  background: linear-gradient(180deg, rgba(#D9EFEF,1) 0%, rgba(#E8F3F3,1) 100%);
+
+  @media print, (min-width: $min-880) {
+    margin: 0 $gutter;
+  }
+
+  &__image {
+    min-height: 1px; // IE 11 flex bug workaround
+  }
+
+  &__wrapper {
+    width: 100%;
+    // margin: 0 35px 35px 35px;
+    padding: 0 35px 35px 35px;
+    text-align: center;
+
+    .hasSeparation & {
+      margin-top: 35px;
+    }
+  }
+
+  &__heading {
+    @include responsive-font(25, 30);
+    font-weight: 700;
+    margin-top: 0;
+  }
+
+}

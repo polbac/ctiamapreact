@@ -1,0 +1,137 @@
+@import '~styles/config';
+
+.economic {
+  @include segment(180px, 0, 90px, 0);
+
+  overflow: hidden;
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    @media (min-width: $min-720) {
+      @include grid-col(8);
+      @include grid-offset-left(2);
+    }
+
+    @media (min-width: $min-1080) {
+      @include grid-col(6);
+      @include grid-offset-left(3);
+    }
+  }
+
+  &__wrapper {
+    text-align: center;
+  }
+
+  &__number {
+    @include will-animate;
+
+    justify-content: center;
+    //flex-wrap: wrap;
+
+    height: 35px;
+    font-size: 100px;
+    line-height: 1;
+
+    transform: translateY(60px);
+
+    @media (min-width: $min-720) {
+      height: 120px;
+    }
+  }
+
+  &__copy {
+    @include will-animate;
+    @include reset-paragraph;
+    @include responsive-font(36, 42);
+
+    margin-top: 20px;
+
+    font-weight: 700;
+    letter-spacing: -0.015em;
+
+    transform: translateY(60px);
+
+    @media (min-width: $min-1080) {
+      margin-top: 40px;
+    }
+  }
+
+  &__illustrations {
+    position: relative;
+
+    margin-top: 150px;
+
+    @media (min-width: $min-720) {
+      margin-top: 300px;
+    }
+  }
+
+  &__illu1 {
+    @include will-animate;
+    @include widthify(614px);
+
+    position: absolute;
+    top: -50%;
+    left: percentage(-260px / $graphic-limit);
+    z-index: 1;
+
+    transform: translateX(-120px) translateY(120px);
+  }
+
+  &__illu2 {
+    @include will-animate;
+    @include widthify(592px);
+
+    position: absolute;
+    left: 50%;
+    bottom: 14%;
+    z-index: 1;
+
+    transform: translateX(-50%) translateY(120px);
+  }
+
+  &__illu3 {
+    @include will-animate;
+    @include widthify(396px);
+
+    position: absolute;
+    top: -25%;
+    right: 0;
+    z-index: 1;
+
+    transform: translateX(120px);
+  }
+
+  &__front {
+    @include will-animate;
+
+    position: relative;
+    z-index: 2;
+
+    transform: translateY(60px);
+  }
+
+  &__back {
+    @include will-animate;
+
+    position: absolute;
+    left: -50px;
+    bottom: -50px;
+    z-index: 0;
+
+    transform: translateY(60px);
+
+    @media (min-width: $min-720) {
+      bottom: -100px;
+    }
+  }
+}

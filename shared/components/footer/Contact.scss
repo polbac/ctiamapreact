@@ -1,0 +1,96 @@
+@import '~styles/config';
+
+.contact {
+  &__content {
+    display: flex;
+    justify-content: flex-start;
+
+    @media print, (min-width: $min-1440) {
+      justify-content: space-between;
+    }
+  }
+
+  &__heading {
+    @include responsive-font(16, 18);
+
+    margin: 0 0 $gutter;
+
+    color: #fff;
+    font-weight: normal;
+    line-height: 1.5;
+  }
+
+  &__list {
+    @include reset-list;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media print, (min-width: $min-tablet) {
+      margin-right: 25px;
+    }
+
+    a {
+      display: inline-block;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 3pt 2pt $color-blue;
+      }
+    }
+  }
+
+  &__icon {
+    display: flex;
+  }
+
+  &__link {
+    @include reset-anchor;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    padding-left: 25px;
+    margin-left: 25px;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+
+      height: 25px;
+      width: 2px;
+
+      vertical-align: middle;
+      background: $color-oxford-blue;
+    }
+
+    &Text {
+      display: none;
+
+      @media print, (min-width: $min-1440) {
+        display: inline-flex;
+
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+
+    &Icon {
+      display: inline-flex;
+      margin-right: 10px;
+    }
+  }
+}

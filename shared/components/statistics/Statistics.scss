@@ -1,0 +1,76 @@
+@import '~styles/config';
+
+.statistics {
+  &__row {
+    @include grid-row($grid-gutter: 0);
+  }
+
+  &__col {
+    @include grid-col($grid-gutter: 0);
+
+    @media print, (min-width: $min-480) {
+      @include grid-col(6, $grid-gutter: 0);
+    }
+  }
+
+  &__block {
+    display: block;
+
+    margin-bottom: $gutter * 2;
+
+    @media (min-width: $min-tablet) {
+      margin-right: 0;
+      margin-bottom: $gutter * 2;
+
+      padding: 0 $gutter * 2 0 0;
+
+      *:nth-child(even) > & {
+        padding: 0 $gutter * 2 0 $gutter * 2;
+
+        border: 0 solid #e5e6e6;
+        border-left-width: 2px;
+      }
+    }
+
+    @media (min-width: $min-desktop) {
+      padding: 0 $gutter * 2 0 $gutter * 2;
+
+      border: 0 solid #e5e6e6;
+      border-left-width: 2px;
+
+      *:nth-child(even) > & {
+        padding: 0 $gutter * 2 0 $gutter * 2;
+      }
+    }
+  }
+
+  &__number {
+    @include responsive-font(40, 48);
+
+    margin: 0 0 0.4em;
+
+    color: $color-blue;
+    line-height: (46 / 48);
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+
+  &__pipe {
+    height: 35px;
+  }
+
+  &__copy {
+    @include reset-paragraph;
+    @include responsive-font(18, 20);
+
+    max-width: 140px;
+
+    color: $color-gray;
+  }
+
+  sup { //stylelint-disable-line
+    margin-left: 0.1em;
+    font-size: 0.65em;
+    vertical-align: super;
+  }
+}

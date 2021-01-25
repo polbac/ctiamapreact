@@ -1,0 +1,227 @@
+@import '~styles/config';
+
+.hero {
+  position: relative;
+
+  height: 550px;
+
+  background-color: #e0eced;
+
+  @media print, (min-width: $min-720) {
+    height: 795px;
+  }
+
+  &__bar {
+    display: none;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+
+    @media print, (min-width: $min-1080) {
+      display: block;
+    }
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__content {
+    display: flex;
+
+    position: relative;
+
+    margin-bottom: -95px;
+
+    height: 190px;
+
+    border-radius: $border-radius;
+    background-color: #fff;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      height: 4px;
+
+      background-color: #dadada;
+    }
+  }
+
+  &__item {
+    @include reset-button;
+
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 100%;
+
+    position: relative;
+
+    padding: 25px 35px 30px 45px;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    @media print, (min-width: $min-1080) {
+      padding: 25px 25px 30px;
+    }
+
+    @media print, (min-width: $min-1280) {
+      padding: 25px 35px 30px 45px;
+    }
+
+    &:hover {
+      .hero__heading {
+        opacity: 1;
+      }
+
+      .hero__svg {
+        opacity: 1;
+
+        filter: grayscale(0);
+      }
+    }
+
+    &:first-of-type {
+      &::before {
+        display: none;
+      }
+    }
+
+    &::before {
+      content: '';
+
+      display: block;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: -10px;
+
+      width: 10px;
+      height: 100%;
+
+      box-shadow: 5px 0 80px 5px rgba(212, 215, 222, 0.6);
+    }
+  }
+
+  &__label {
+    @include label(14, 18);
+  }
+
+  &__heading {
+    @include h3(20, 24);
+
+    opacity: 0.6;
+
+    margin-bottom: 0;
+
+    max-width: 12em;
+
+    line-height: (28 / 24);
+    letter-spacing: -0.015em;
+
+    transition: opacity 300ms ease;
+
+    .active & {
+      opacity: 1;
+    }
+  }
+
+  &__svg {
+    opacity: 0.6;
+
+    margin-top: auto;
+    margin-right: auto;
+
+    height: 20px;
+
+    filter: grayscale(100%);
+
+    transition: opacity 300ms ease, filter 300ms ease;
+
+    .active & {
+      opacity: 1;
+
+      filter: grayscale(0);
+    }
+
+    svg { // stylelint-disable-line
+      margin-right: 2px;
+    }
+  }
+
+  &__progress {
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+
+    width: 0;
+    height: 4px;
+
+    background-color: $color-purple;
+  }
+
+  &__arrows {
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    left: 0;
+    z-index: 100;
+
+    @media print, (min-width: $min-1080) {
+      display: none;
+    }
+  }
+
+  &__arrow {
+    display: flex;
+
+    &Left,
+    &Right {
+      @include reset-button;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 40px;
+      height: 40px;
+
+      cursor: pointer;
+
+      border-radius: 50%;
+      background-color: #c0c6c7;
+
+      &.enable {
+        background-color: $color-dark;
+      }
+    }
+
+    &Left {
+      margin-right: 10px;
+
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__icon {
+    position: relative;
+    left: 1px;
+  }
+}

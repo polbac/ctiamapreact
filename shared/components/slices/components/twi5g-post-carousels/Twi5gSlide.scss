@@ -1,0 +1,166 @@
+@import '~styles/config';
+
+.slide {
+  @include reset-anchor;
+
+  display: flex;
+  flex: 0 1 auto;
+  padding: 15px;
+  height: 100%;
+  min-height: fit-content;
+  background-color: #fff;
+  border: 1px solid rgba(62, 62, 62, 0.09);
+  border-bottom: 1px solid rgba(62, 62, 62, 0.09);
+  transition: transform 300ms ease;
+
+  @media print, (min-width: $min-720) {
+    min-height: 350px;
+  }
+
+  @media print {
+    border: 1px solid $color-border;
+  }
+
+  &.image {
+    display: none;
+    flex-direction: column;
+
+    @supports (display: grid) {
+      display: flex;
+    }
+
+    &.horizontal {
+      @media print, (min-width: $min-720) {
+        grid-column: span 2;
+        flex-direction: row;
+      }
+    }
+
+    &.vertical {
+      @media print, (min-width: $min-720) {
+        grid-row: span 2;
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  &__image {
+      overflow: hidden;
+      width: 100%;
+      border-radius: $border-radius;
+      box-shadow: 0px 0px 5px 0px rgba(62, 62, 62, 0.12);
+      object-fit: fill;
+      object-position: 0% 50%;
+      margin: 0 auto 10px  auto;
+    }
+
+    .horizontal & {
+      @media print, (min-width: $min-720) {
+        width: 50%;
+      }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    width: 100%;
+    // justify-content: space-between;
+
+    .horizontal & {
+      @media print, (min-width: $min-720) {
+        flex: 0 1 auto;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: auto;
+    bottom: 5px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+  }
+
+  // &__heading + &__bottom{
+  //   margin-top: auto;
+  // }
+
+  &__type {
+    @include label;
+    @include ellipsis(165px);
+    @include responsive-font(13,14);
+    font-weight: 400;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: $color-dark;
+
+    @media print, (min-width: $min-1080) {
+      margin-left: 15px;
+    }
+
+    &.author {
+      @include ellipsis(190px);
+      max-width: none;
+
+      margin-left: 0;
+      margin-right: 0;
+
+      @media print, (min-width: $min-720) {
+        @include ellipsis(250px);
+      }
+    }
+  }
+
+  &__heading {
+    @include h3;
+    @include responsive-font(22, 24);
+    @include responsive-line-height(22,24);
+    margin:0;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    flex: 0 0 auto;
+    font-weight: 600;
+    color: #000;
+  }
+
+  &__copy {
+    @include responsive-font(17,18);
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-bottom: 10px;
+    margin-top: 4px;
+    flex: 1 1 auto;
+  }
+
+  &__tags {
+    @include reset-list;
+
+    display: flex;
+    flex-flow: wrap;
+
+    &Item {
+      @include responsive-font(14,15);
+      font-weight: 400;
+      color: #78cdd1;
+      margin-right: 20px;
+      color: $color-blue;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__membersOnly {
+    @include responsive-font(16, 18);
+
+    color: $color-light;
+  }
+}

@@ -1,0 +1,8 @@
+@import '~styles/config';
+
+.button {
+  @include segment(0, 90px, 0, 90px);
+
+  display: flex;
+  justify-content: center;
+}

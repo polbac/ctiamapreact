@@ -1,0 +1,22 @@
+@import '~styles/config';
+
+.pages {
+  @include segment(0, 190px, 0, 90px);
+  margin-top: -46px;
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+  }
+
+  &__content {
+    display: block;
+  }
+}

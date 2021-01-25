@@ -1,0 +1,62 @@
+@import '~styles/config';
+
+.firsts {
+  @include segment(200px, 190px, 50px, 50px);
+
+  position: relative;
+
+  overflow: hidden;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    top: 13%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    background-color: $color-blue-light;
+
+    @media (min-width: $min-1080) {
+      top: 28%;
+    }
+  }
+
+  &__streak {
+    display: none;
+
+    position: absolute;
+    top: 180px;
+    left: 0;
+    z-index: 25;
+
+    transform: translateX(-100%);
+
+    @media (min-width: $min-1080) {
+      display: block;
+    }
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $min-1080) {
+      flex-direction: row;
+    }
+  }
+}

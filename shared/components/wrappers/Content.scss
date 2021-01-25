@@ -1,0 +1,43 @@
+@import '~styles/config';
+
+.content {
+  @include segment(100px, 100px, 50px, 50px);
+
+  position: relative;
+  z-index: 2;
+
+  &__container {
+    @include container;
+  }
+
+  &__heading {
+    @include h2;
+
+    margin-bottom: 40px;
+
+    @media print, (min-width: $min-720) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__row {
+    @include supports-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column-gap: $gutter;
+      grid-row-gap: $gutter;
+
+      @media print, (min-width: $min-720) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media print, (min-width: $min-1080) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}
+
+.skip-nav {
+  font-size: 300px;
+}

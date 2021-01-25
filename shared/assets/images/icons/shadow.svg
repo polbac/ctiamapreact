@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="243" height="147">
+  <defs>
+    <filter x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceGraphic" dx="20" dy="20" />
+      <feBlend in="SourceGraphic" in2="offOut" mode="normal" />
+    </filter>
+  </defs>
+</svg>

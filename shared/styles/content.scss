@@ -1,0 +1,253 @@
+/* stylelint-disable max-nesting-depth selector-max-type */
+
+@mixin content($isWide: false) {
+  h1 {
+    @include h2;
+  }
+
+  h2 {
+    @include h2(30, 36);
+  }
+
+  h3,
+  h4,
+  h6,
+  h5 {
+    @include h3;
+  }
+
+  p {
+    @include copy;
+  }
+
+  b, strong { // stylelint-disable-line
+    font-weight: bold;
+  }
+
+  i, em { // stylelint-disable-line
+    font-style: italic;
+  }
+
+  a { // stylelint-disable-line
+    @include link-hover;
+
+    color: $color-primary;
+    text-decoration: none;
+  }
+
+  ul {
+    @include ul;
+  }
+
+  ol {
+    @include ol;
+  }
+
+  meta + br { // stylelint-disable-line
+    display: none;
+  }
+
+  u {
+    @include underline;
+
+    margin-right: 30px;
+
+    text-decoration: initial; // stylelint-disable-line
+
+    &::before {
+      @include responsive-font(12, 14);
+
+      content: counter(glossary);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      bottom: 0;
+      right: -30px;
+
+      width: 25px;
+      height: 25px;
+
+      font-family: $font-default;
+      color: $color-dark;
+      line-height: (46 / 14);
+      font-weight: 700;
+
+      background-image: url('!file-loader!assets/images/glossary-circle.svg');
+      background-repeat: no-repeat;
+
+      counter-increment: glossary;
+    }
+
+    &::after { // stylelint-disable-line
+      bottom: -10px;
+    }
+  }
+
+  hr { // stylelint-disable-line
+    @include reset-all;
+    @include copy;
+    margin-top: 96px;
+    margin-bottom: 96px;
+
+    border-bottom: 1px solid $color-border;
+  }
+
+  blockquote { // stylelint-disable-line
+    @include reset-all;
+    @include responsive-font(20, 26);
+
+    margin: ((46 / 26) * 2em) auto ((46 / 26) * 1em);
+    padding-left: calc(1em + #{$gutter});
+
+    break-inside: avoid;
+
+    @media print, (min-width: $min-1024) {
+      padding-left: 0;
+    }
+
+    p { // stylelint-disable-line
+      @include reset-paragraph;
+
+      display: inline-block;
+      position: relative;
+
+      margin-bottom: ((46 / 26) * 1em);
+
+      line-height: (46 / 26);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+
+      &:first-child::before { // stylelint-disable-line
+        content: '';
+
+        position: absolute;
+
+        top: 0;
+        left: calc(-1em - #{$gutter});
+
+        width: 1em;
+        height: (18 / 26) * 1em;
+
+        background: url('!file-loader!assets/images/icons/quote-left.svg') no-repeat;
+        background-size: contain;
+      }
+
+      &:last-child::after { // stylelint-disable-line
+        content: '';
+
+        display: none;
+
+        margin-left: -1em;
+
+        width: 1em;
+        height: (18 / 26) * 1em;
+
+        background: url('!file-loader!assets/images/icons/quote-right.svg') no-repeat center right;
+        background-size: contain;
+
+        box-sizing: content-box;
+
+        transform: translateX(calc(1em + 20px));
+      }
+    }
+  }
+
+  table {
+    margin-bottom: 56px;
+
+    border: 1px solid $color-border;
+
+    break-inside: avoid;
+
+    td { // stylelint-disable-line
+      padding: 5px 10px;
+
+      border: 1px solid $color-border;
+    }
+  }
+
+  :global {
+    [class*='wp-image'] {
+      margin-bottom: 36px;
+      max-width: 100% !important; // override wordpress inline style
+    }
+
+    .wp-caption-text {
+      @include reset-paragraph;
+
+      margin-top: -16px;
+      margin-bottom: 36px;
+    }
+
+    .wp-caption {
+      margin-bottom: 36px;
+    }
+
+    @media print, (min-width: $min-880) {
+      [class*='wp-image'].alignleft,
+      .wp-caption.alignleft {
+        float: left;
+        margin-top: 6px;
+        @if $isWide == true {
+          margin-left: 0; //calc(#{percentage(1 / 8) * -1} - #{$gutter / 6});
+          margin-right: 40px; //was 10px //60px;
+          width: calc(#{percentage(2 / 6)} - #{$gutter / 2});
+        } @else {
+        margin-left: calc(#{percentage(1 / 8) * -1} - #{$gutter / 6});
+        margin-right: 60px;
+        width: calc(#{percentage(4 / 8)} - #{$gutter / 2});
+        }
+      }
+
+      [class*='wp-image'].alignright,
+      .wp-caption.alignright {
+        float: right;
+        margin-top: 6px;
+        @if $isWide == true {
+          margin-right: 0px; //calc(#{percentage(1 / 8) * -1} - #{$gutter / 6});
+          margin-left: 40px; //was 10px //60px;
+          width: calc(#{percentage(2 /6)} - #{$gutter / 3});
+        } @else {
+        margin-right: calc(#{percentage(1 / 8) * -1} - #{$gutter / 6});
+        margin-left: 60px;
+        width: calc(#{percentage(4 / 8)} - #{$gutter / 3});
+        }
+      }
+    }
+
+    @media print, (min-width: $min-1200) {
+      [class*='wp-image'].alignleft,
+      .wp-caption.alignleft {
+        float: left;
+        margin-top: 6px;
+        @if $isWide == true {
+          margin-left: 0; //calc(#{percentage(2 / 6) * -1} - #{$gutter / 3});
+          margin-right: 60px; //was 10px //80px;
+          width: calc(#{percentage(2 / 6)} - #{$gutter / 3});
+        } @else {
+        margin-left: calc(#{percentage(2 / 6) * -1} - #{$gutter / 3});
+        margin-right: 80px;
+        width: calc(#{percentage(4 / 6)} - #{$gutter / 3});
+        }
+      }
+
+      [class*='wp-image'].alignright,
+      .wp-caption.alignright {
+        float: right;
+        margin-top: 6px;
+        @if $isWide == true {
+          margin-right: 0; //calc(#{percentage(2 / 6) * -1} - #{$gutter / 3});
+          margin-left: 60px; //was 10px //80px;
+          width: calc(#{percentage(2 / 6)} - #{$gutter / 3});
+        } @else {
+        margin-right: calc(#{percentage(2 / 6) * -1} - #{$gutter / 3});
+        margin-left: 80px;
+        width: calc(#{percentage(4 / 6)} - #{$gutter / 3});
+        }
+      }
+    }
+  }
+}

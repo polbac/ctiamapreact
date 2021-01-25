@@ -1,0 +1,190 @@
+
+@import '~styles/config';
+
+.portrait {
+  flex: 0 1 auto;
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    @media print, (min-width: $min-720) {
+      @include grid-col(8);
+      @include grid-offset-left(2);
+    }
+
+    @media print, (min-width: $min-1200) {
+      @include grid-col(4);
+      @include grid-offset-left(0);
+      order: 0;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+  }
+
+  &__block {
+    margin-top: 0;
+    margin-bottom: 2.1em;
+
+    @media print, (min-width: $min-1200) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: 16px;
+      width: 100%;
+    }
+  }
+
+  &__info {
+    position: relative;
+    margin-bottom: -20px;
+    padding: 25px 25px 0;
+    background: #fff;
+
+    @media print, (min-width: $min-720) {
+      padding: 45px 45px 0;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+
+    top: 0;
+    left: 45px;
+
+    width: 50px;
+    height: 50px;
+
+    transform: translateY(-50%);
+  }
+
+  &__name {
+    @include h3;
+    margin-bottom: 0.1em;
+  }
+
+  &__title {
+    @include reset-paragraph;
+    @include responsive-font(16, 18);
+
+    margin-bottom: 25px;
+
+    letter-spacing: 0.01em;
+    line-height: (28 / 18);
+    color: $color-gray;
+  }
+
+  &__description {
+    @include reset-paragraph;
+    @include responsive-font(16, 18);
+
+    margin-bottom: 25px;
+    font-style: italic;
+
+    line-height: (32 / 18);
+    color: $color-gray-dark;
+  }
+
+  &__link {
+    @include reset-anchor;
+    @include responsive-font(16, 18);
+    @include link-hover;
+
+    margin-bottom: 25px;
+    font-weight: 600;
+
+    color: $color-primary;
+  }
+
+  &__frame {
+    position: relative;
+    margin: 25px;
+
+    @media print, (min-width: $min-720) {
+      margin: 45px 45px 0;
+    }
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      z-index: -1;
+
+      top: -25px;
+      left: -25px;
+      right: -25px;
+      bottom: 40%;
+
+      border-radius: $border-radius;
+
+      background: #fff;
+
+      box-shadow: 0 20px 50px rgba(#000, 0.06);
+
+      @media print, (min-width: $min-720) {
+        top: -45px;
+        left: -45px;
+        right: -45px;
+      }
+    }
+  }
+
+  &__download {
+    position: absolute;
+
+    bottom: 15px;
+    right: 15px;
+
+    width: 44px;
+    height: 44px;
+  }
+
+  &__image {
+    display: block;
+    position: relative;
+
+    margin-bottom: 60px;
+    padding-bottom: 118%;
+
+    width: 100%;
+    height: 0;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+
+  &__social {
+    @include reset-list;
+
+    display: flex;
+
+    &Item {
+      width: 30px;
+      height: 30px;
+
+      & + & {
+        margin-left: 25px;
+      }
+    }
+  }
+
+  &.isReverse {
+    order: 1;
+    margin-top: 2em;
+
+    @media print, (min-width: $min-1200) {
+      order: 0;
+      margin-top: 0;
+    }
+  }
+}

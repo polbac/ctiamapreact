@@ -1,0 +1,39 @@
+/* stylelint-disable max-nesting-depth */
+
+@import '~styles/config';
+
+$offset: 180px;
+
+.pageLink {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border-radius: $border-radius;
+  background-color: #fff;
+
+  @media print, (min-width: $min-540) {
+    flex-direction: row;
+  }
+
+  &__content {
+    flex: 0 1 auto;
+    padding: 40px 30px 60px 40px;
+
+    @media print, (min-width: $min-1200) {
+      padding: 60px 30px 80px 60px;
+    }
+  }
+
+  &__image {
+    flex: 1 1 auto;
+    align-self: flex-end;
+    justify-content: flex-end;
+
+    &Src {
+      margin-left: auto;
+    }
+  }
+}

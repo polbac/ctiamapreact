@@ -1,0 +1,26 @@
+@import '~styles/config';
+
+.tags {
+  @include reset-list;
+
+  display: flex;
+  justify-content: flex-start;
+
+  &.enableAnim {
+    @include will-animate;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+
+  &__tag {
+    @include responsive-font(18, 22);
+
+    color: $color-primary;
+
+    & + & {
+      margin-left: (30 / 22) * 1em;
+    }
+  }
+}

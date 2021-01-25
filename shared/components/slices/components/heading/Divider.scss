@@ -1,0 +1,23 @@
+/* stylelint-disable selector-max-type */
+
+@import '~styles/config';
+
+.divider {
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  &.blue-purple {
+    path:nth-child(1) { fill: $color-blue; }
+    path:nth-child(2) { fill: $color-purple; }
+  }
+
+  &.green-blue {
+    path:nth-child(1) { fill: $color-green; }
+    path:nth-child(2) { fill: $color-blue; }
+  }
+
+  &.blue-orange {
+    path:nth-child(1) { fill: $color-blue; }
+    path:nth-child(2) { fill: $color-orange; }
+  }
+}

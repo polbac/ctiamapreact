@@ -1,0 +1,73 @@
+@import '~styles/config';
+
+.pagination {
+  font-size: 10px;
+  max-width: 40em;
+  margin: 0 auto 5em;
+
+  @media print, (max-width: 719px) {
+    display: none;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__leftArrow {
+    width: 50px;
+    transform: rotate(90deg);
+  }
+
+  &__rightArrow {
+    width: 50px;
+    transform: rotate(-90deg);
+  }
+
+  &__pageList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__listItem {
+    float: left;
+    display: inline-block;
+
+    & button {
+      font-size: 16px;
+      font-weight: 400;
+      color: #000;
+      background-color: transparent;
+      border: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__prevButton,
+  &__nextButton {
+    background-color: transparent;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appeareance: none;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}

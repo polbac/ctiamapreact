@@ -1,0 +1,92 @@
+@import '~styles/config';
+
+.report {
+  @include reset-anchor;
+
+  position: relative;
+
+  margin-bottom: 40px;
+
+  &:hover {
+    .report__copy {
+      color: $color-dark;
+    }
+  }
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 0;
+
+    height: 2px;
+
+    background-color: #d7d7d7;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    @media print, (min-width: $min-1200) {
+      flex-direction: row;
+    }
+  }
+
+  &__left {
+    @include grid-col;
+
+    margin-bottom: 15px;
+
+    @media print, (min-width: $min-1200) {
+      @include grid-col(percentage(1/3));
+
+      margin-bottom: 30px;
+    }
+  }
+
+  &__image {
+    min-width: 100%;
+    border-radius: 2px;
+  }
+
+  &__placeholder {
+    height: 130px;
+    overflow: hidden;
+
+    border-radius: 2px;
+    background-color: $color-placeholder;
+  }
+
+  &__right {
+    @include grid-col;
+
+    @media print, (min-width: $min-1200) {
+      @include grid-col(percentage(2/3));
+    }
+  }
+
+  &__heading {
+    @include h3(20, 24);
+
+    margin-top: -8px;
+    margin-bottom: 15px;
+  }
+
+  &__copy {
+    @include copy(16, 18);
+
+    color: $color-gray;
+    line-height: (26 / 18);
+
+    transition: color 300ms ease;
+  }
+}

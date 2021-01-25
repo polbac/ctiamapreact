@@ -1,0 +1,141 @@
+@import '~styles/config';
+
+.list {
+  &.segment {
+    @include segment;
+  }
+
+  &__headline {
+    margin: 0 0 $gutter;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__list {
+    @include reset-list;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: $gutter;
+
+    @media print, (min-width: $min-768) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media print, (min-width: $min-1440) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+.item {
+  $bottom-offset: $gutter * 3;
+
+  display: flex;
+  padding-bottom: $bottom-offset * 2;
+
+  height: 100%;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    padding: ($gutter * 2) ($gutter * 2) 0;
+    width: 100%;
+
+    background: #fff;
+
+    .shadow & {
+      box-shadow: 0 0 46px rgba(#3e3e3e, 0.09);
+    }
+
+    @media print, (min-width: $min-480) {
+      padding: ($gutter * 3) ($gutter * 3) 0;
+    }
+
+    @media print, (min-width: $min-1280) {
+      padding: ($gutter * 5) ($gutter * 5) 0;
+    }
+  }
+
+  &__number {
+    margin: 0 0 $gutter;
+
+    height: 30px;
+    width: 50px;
+  }
+
+  &__title {
+    @include h1(20, 24);
+
+    margin: 0 0 $gutter;
+  }
+
+  &__copy {
+    position: relative;
+
+    margin: 0 0 $gutter;
+    padding-bottom: 20px;
+    overflow: hidden;
+
+    @include responsive-font(16, 18);
+    font-weight: 200;
+    line-height: 18 / 24;
+
+    &Wrap {
+      max-height: (24px * 8);
+    }
+
+    &::after {
+      content: '';
+      display: block;
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      height: 20px;
+
+      background: linear-gradient(rgba(#fff, 0), rgba(#fff, 1));
+    }
+  }
+
+  &__button {
+    margin-bottom: $gutter * 2;
+
+    @media print, (min-width: $min-480) {
+      margin-bottom: $gutter * 3;
+    }
+
+    @media print, (min-width: $min-1280) {
+      margin-bottom: $gutter * 5;
+    }
+  }
+
+  &__image {
+    @include reset-anchor;
+
+    margin: auto auto (-$bottom-offset) auto;
+
+    max-width: 260px;
+    cursor: pointer;
+
+    background: #ddebed;
+    box-shadow: 0 28px 73px rgba(#ddd, 0);
+
+    transition: box-shadow 300ms;
+
+    > img { // stylelint-disable-line
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &.shadow &__image,
+  &:hover &__image {
+    box-shadow: 0 28px 73px rgba(#ddd, 1);
+  }
+}

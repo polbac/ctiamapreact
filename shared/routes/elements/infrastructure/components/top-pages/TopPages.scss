@@ -1,0 +1,28 @@
+@import '~styles/config';
+
+.top {
+  @include segment(100, 100, 50, 50);
+
+  &__container {
+    @include container;
+  }
+
+  &__heading {
+    @include h2;
+
+    margin-bottom: 80px;
+  }
+
+  &__grid {
+    @include supports-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column-gap: $gutter;
+      grid-row-gap: $gutter;
+
+      @media print, (min-width: $min-720) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}

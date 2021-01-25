@@ -1,0 +1,36 @@
+@import '~styles/config';
+
+.toggles {
+  margin: 0 auto;
+
+  min-height: 106px;
+  width: 100%;
+  max-width: 500px;
+
+  background-color: #fff;
+  box-shadow: 0 12px 28px 0 rgba(#000, 0.08);
+
+  @media print {
+    border: 1px solid $color-border;
+    box-shadow: none;
+  }
+
+  @include no-supports-grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: stretch;
+    justify-content: flex-start;
+
+    > * {
+      flex: 1 1 auto;
+      width: 50%;
+    }
+  }
+
+  @include supports-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}

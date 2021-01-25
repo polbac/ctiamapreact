@@ -1,0 +1,250 @@
+@import '~styles/config';
+
+.news {
+  @include reset-anchor;
+
+  display: flex;
+  flex: 0 1 auto;
+
+  min-height: 290px;
+  min-width: 0;
+
+  border-radius: $border-radius;
+  background-color: #fff;
+  box-shadow: 0 0 46px 0 rgba(62, 62, 62, 0.09);
+
+  transition: transform 300ms ease, box-shadow 300ms ease;
+
+  @media print, (min-width: $min-720) {
+    min-height: 350px;
+  }
+
+  @media print {
+    border: 1px solid $color-border;
+    box-shadow: none;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 46px 0 rgba(62, 62, 62, 0.16);
+  }
+
+  &.image {
+    display: none;
+    flex-direction: column;
+
+    @supports (display: grid) {
+      display: flex;
+    }
+
+    &.horizontal {
+      @media print, (min-width: $min-720) {
+        grid-column: span 2;
+        flex-direction: row;
+      }
+    }
+
+    &.vertical {
+      @media print, (min-width: $min-720) {
+        grid-row: span 2;
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  &__image {
+    padding: 10px;
+
+    &Src {
+      height: 100%;
+      width: 100%;
+
+      max-height: 260px;
+
+      border-radius: $border-radius;
+      box-shadow: 6px 5px 16px 0 rgba(62, 62, 62, 0.12);
+
+      object-fit: cover;
+
+      @media print, (min-width: $min-720) {
+        max-height: inherit;
+      }
+    }
+
+    .horizontal & {
+      @media print, (min-width: $min-720) {
+        width: 50%;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 1 100%;
+
+    padding: 40px;
+
+    @media print, (min-width: $min-1080) {
+      padding: 50px;
+    }
+
+    .horizontal & {
+      @media print, (min-width: $min-720) {
+        flex: 0 1 auto;
+        width: 50%;
+      }
+    }
+  }
+
+  &__top {
+    flex: 0 1 auto;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 1 auto;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 40px;
+  }
+
+  &__authorImage {
+    position: relative;
+    z-index: 1;
+
+    margin-right: 20px;
+
+    width: 45px;
+    height: 45px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-color: $color-placeholder;
+
+    border-radius: 50%;
+
+    -webkit-print-color-adjust: exact;
+
+    flex-shrink: 0;
+
+    &::after {
+      content: '';
+
+      display: block;
+
+      position: relative;
+
+      width: 54px;
+      height: 54px;
+
+      background: transparent;
+
+      border-radius: 50%;
+
+      border: 4px solid transparent;
+      border-bottom-color: $color-primary;
+      border-right-color: $color-primary;
+
+      transform: translate(-5px, -5px);
+    }
+
+    &.hasSecondAuthor {
+      z-index: 2;
+
+      margin-right: -8px;
+
+      &::after {
+        width: 53px;
+        height: 53px;
+
+        border-width: 3px;
+
+        border-bottom-color: #fff;
+        border-right-color: #fff;
+      }
+    }
+  }
+
+  &__authorNameWrapper {
+    flex-shrink: 1;
+  }
+
+  &__type {
+    @include label;
+    @include ellipsis(165px);
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+    color: $color-dark;
+
+    @media print, (min-width: $min-1080) {
+      margin-left: 15px;
+    }
+
+    &.author {
+      @include ellipsis(190px);
+      max-width: none;
+
+      margin-left: 0;
+      margin-right: 0;
+
+      @media print, (min-width: $min-720) {
+        @include ellipsis(250px);
+      }
+    }
+  }
+
+  &__date {
+    @include label;
+  }
+
+  &__heading {
+    @include h3;
+
+    margin-bottom: 20px;
+
+    letter-spacing: -0.02em;
+  }
+
+  &__copy {
+    @include copy(16, 18);
+
+    color: $color-gray;
+    letter-spacing: 0;
+    line-height: (30 / 18);
+  }
+
+  &__tags {
+    @include reset-list;
+
+    display: flex;
+    flex-flow: wrap;
+
+    &Item {
+      @include responsive-font(16, 18);
+
+      margin-right: 20px;
+
+      color: $color-blue;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__membersOnly {
+    @include responsive-font(16, 18);
+
+    color: $color-light;
+  }
+}

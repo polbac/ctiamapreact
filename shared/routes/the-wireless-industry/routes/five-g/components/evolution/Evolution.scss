@@ -1,0 +1,30 @@
+@import '~styles/config';
+
+.evolution {
+  margin-top: 4rem;
+  @media print, (min-width: $min-1080) {
+    margin-top: 0;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    position: relative;
+  }
+
+  &__graph {
+    display: none;
+
+    @media print, (min-width: $min-1080) {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import '~styles/config';
+
+.stateMap {
+  position: relative;
+
+  pointer-events: none;
+
+  &.isInteractive {
+    pointer-events: all;
+  }
+
+  &__map {
+    path { // stylelint-disable-line
+      cursor: pointer;
+
+      fill: #fff;
+      stroke: #fff;
+      stroke-width: 1px;
+
+      .isNew5g & {
+        fill: #EFF5F5;
+        stroke: #EFF5F5;
+      }
+    }
+  }
+
+  &__overlay {
+    @include fit;
+
+    opacity: 0.1;
+
+    pointer-events: none;
+  }
+}

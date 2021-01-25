@@ -1,0 +1,73 @@
+@import '~styles/config';
+
+.column {
+  @include will-animate;
+
+  position: relative;
+  z-index: 1;
+
+  margin-bottom: 80px;
+
+  max-width: 390px;
+
+  text-align: center;
+
+  @media (min-width: $min-1080) {
+    margin-bottom: 0;
+
+    &:nth-child(1) {
+      padding-left: 0;
+      padding-right: 60px;
+    }
+
+    &:nth-child(2) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &:nth-child(3) {
+      padding-left: 60px;
+      padding-right: 0;
+    }
+  }
+
+  @media (min-width: $min-1280) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__image {
+    margin-bottom: 30px;
+
+    background-color: #fff;
+
+    border-radius: 50%;
+    box-shadow: 0 19px 76px 0 rgba(53, 54, 66, 0.15);
+  }
+
+  &__percentage {
+    @include reset-heading;
+    @include responsive-font(82, 100);
+
+    color: $color-dark;
+    font-weight: 700;
+    line-height: (100 / 100);
+  }
+
+  &__char {
+    @include responsive-font(32, 48);
+
+    font-weight: 600;
+  }
+
+  &__copy {
+    @include reset-paragraph;
+    @include responsive-font(16, 28);
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    color: $color-dark;
+    line-height: (40 / 28);
+  }
+}

@@ -1,0 +1,278 @@
+ .map_content {
+   float: left;
+   width: 100%;
+   background: $bg-light;
+   padding: 0 50px 0 100px;
+
+   @include responsive('desktop-m') {
+    padding: 0 10px 0 30px;
+}
+
+   @include responsive('tablet-v') {
+       padding: 0 10px;
+   }
+
+   &__home {
+     background: #C3E5E6;
+   }
+
+      & img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+      }
+
+      &__intro {
+          position: absolute;
+          top:0;
+          left:0px;
+          z-index: 90;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          color:$black;
+          background:rgba(255, 255, 255, 0);
+
+          .button {
+            text-transform: none;
+            line-height: 50px;
+          }
+
+          @include responsive('tablet-h') {
+            background: #D4ECED;
+            padding: 0 51px;
+          }
+
+          @include responsive('mobile-s') {
+            padding: 0 30px;
+          }
+
+          &__title {
+              font-size: 65px;
+              font-weight: 700;
+              margin-bottom: 25px;
+
+              @include responsive('tablet-h') {
+                text-align: center;
+                line-height: 56px;
+              }
+
+              @include responsive('mobile-s') {
+                font-size: 40px;
+                line-height: normal;
+              }
+
+            &--mobile {
+              width: 100%;
+             float: left;
+             text-align: center;
+             color: #439FA1;
+             text-transform: uppercase;
+             letter-spacing: 1px;
+             display: none;
+             font-weight: 700;
+             margin-bottom: 13px;
+
+               @include responsive('tablet-h') {
+                 display: block;
+               }
+            }
+          }
+          & p {
+              text-align: center;
+              font-size: 18px;
+              line-height: 1.5;
+              max-width: 590px;
+              margin-bottom: 30px;
+
+              @include responsive ("tablet-h"){
+                  padding: 0 15px;
+                  margin-bottom: 57px;
+              }
+
+              @include responsive('mobile-s') {
+                margin-bottom: 30px;
+              }
+          }
+
+          &__numbers {
+
+            @include responsive('tablet-h') {
+                display: none;
+            }
+             .box {
+              float: left;
+            }
+          }
+          & .button {
+            color: #4ca9ab;
+            background: #ffffff;
+            font-size: 20px;
+          }
+      }
+  }
+
+  .map_box{
+    position: relative;
+    min-height: calc(100vh);
+
+    @include responsive('tablet-h') {
+        display: none;
+    }
+
+    .map_picture{
+        display: flex;
+        width: 1200px !important;
+        height: calc(100vh);
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        @include responsive ("mobile-h"){
+
+        }
+
+        & .map_picture__title {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top:40px;
+            left:15%;
+            @include responsive("desktop-m"){
+                left:10%;
+            }
+            @include responsive ("tablet-h"){
+                left:0;
+                display: flex;
+                width: 100%;
+                padding: 0 15px;
+            }
+            @include responsive ("tablet-h"){
+                left: 0;
+                display: flex;
+                width: 100%;
+                padding: 0 15px;
+                align-items: center;
+
+            }
+
+            h2 {
+                font-weight: 700;
+                color:$black;
+                line-height: 1.1;
+                font-size: 28px;
+                @include responsive("desktop-m"){
+                    font-size: 23px;
+                }
+                @include responsive ("tablet-h"){
+                    font-size: 21px;
+                }
+            }
+         & span {
+             width: 50px;
+             height: 50px;
+             background: #77CDD1;
+             border-radius: 50%;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             margin-right: 10px;
+             & img {
+                 width: 30px;
+                 height: auto;
+             }
+             @include responsive ("tablet-h"){
+                width: 35px;
+                height: 35px;
+                & img {
+                    width: 20px;
+                    height: auto;
+                }
+             }
+         }
+        }
+    }
+    .map_picture svg {
+        width:100%;
+        height: auto;
+        max-height: 80vh;
+
+        #states {
+            border: 1px solid red;
+
+            path,
+            polygon
+            {
+                cursor: pointer;
+                fill: #B0DDDE;
+                stroke: #d4eced;
+                stroke-width: 1px;
+                stroke-opacity: 0.8;
+                clip-path: none;
+                stroke-linejoin:round;
+                transition: all 0.25s ease-out;
+                transform: translateY(0);
+
+                &:hover
+                {
+                    stroke-opacity: 0.4;
+                    fill: rgb(196, 212, 56) !important;
+                    transform: translateY(-5px);
+                }
+            }
+        }
+
+        #metro_areas {
+            g[data-metro] {
+
+                .hover {
+                    display: none;
+                    transform: translate(15px,-13px);
+                }
+
+                circle {
+                    stroke-width: 7px;
+                    stroke:transparent;
+                    transition: all .25s ease;
+                    &:hover {
+                      cursor: pointer;
+                    }
+                }
+
+                &:hover {
+                    circle {
+                        stroke:#84C4C6;
+                        fill:#ffffff;
+                    }
+                    .hover {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+
+  }
+.map_hover {
+    position: absolute;
+    top:50%;
+    left:50%;
+    background: #fff url('!file-loader!assets/images/map/pin.svg') 10px 10px no-repeat;
+    border-radius: 14px;
+    padding: 8px 10px 10px 30px;
+
+    .text {
+        font-size: 18px;
+        color:#000;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44"
+  role="img"
+  aria-labelledby="linkIconTitle linkIconDesc"
+  >
+  <title>External link</title>
+  <desc>Icon for external link</desc>
+  <defs><style>.cls-1{fill-rule:evenodd;}.cls-2{fill:#fff;}</style></defs><title>action-icons</title><g><g data-name="Share : TW"><path class="cls-1" d="M22,0A22,22,0,1,1,0,22,22,22,0,0,1,22,0Z"/><path class="cls-2" d="M28.5,20.69a1,1,0,0,0-1,1v7H15.29V16.5h7a1,1,0,1,0,0-2H15a1.76,1.76,0,0,0-1.75,1.75V29A1.76,1.76,0,0,0,15,30.71H27.75A1.76,1.76,0,0,0,29.5,29V21.69A1,1,0,0,0,28.5,20.69Z"/><path class="cls-2" d="M29.71,13.29H25.33a1,1,0,0,0,0,2h1.91l-6.83,6.83a1,1,0,0,0,1.41,1.42l6.89-6.89v2a1,1,0,0,0,2,0V14.29A1,1,0,0,0,29.71,13.29Z"/></g></g></svg>

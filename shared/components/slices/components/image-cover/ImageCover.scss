@@ -1,0 +1,167 @@
+@import '~styles/config';
+
+.image {
+  position: relative;
+
+  margin-top: 6px;
+  margin-bottom: 50px;
+
+  @media print, (min-width: $min-720) {
+    margin-top: 44px;
+    margin-bottom: 90px;
+  }
+
+  &.isHero {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @media print, (min-width: $min-720) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &__image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .isContained & {
+      padding: 78px 0;
+      border-top: 2px solid $color-gray-light;
+      border-bottom: 2px solid $color-gray-light;
+    }
+  }
+
+  &__container {
+    @include container;
+    // position: relative; //set for .coverImage, which is position: absolute
+  }
+
+  &__img {
+    display: block;
+    margin: auto;
+    max-height: 700px;
+  }
+
+  &.isAspect &__img {
+    width: 100%;
+    max-height: none;
+  }
+
+  &__aspect {
+    padding-bottom: 52.817%;
+
+    width: 100%;
+    height: 0;
+  }
+
+  &__coverImageContainer {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 35.5%;
+    overflow: hidden;
+  }
+
+  &__coverImage {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+  }
+
+  @supports(object-fit: cover) {
+    &__coverImage {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  @media print {
+    display: none;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    @media print, (min-width: $min-720) {
+      @include grid-col(8);
+      @include grid-offset-left(3);
+
+      .isCenter & {
+        @include grid-offset-left(2);
+      }
+    }
+
+    @media print, (min-width: $min-1200) {
+      @include grid-col(6);
+      @include grid-offset-left(5);
+
+      .isCenter & {
+        @include grid-offset-left(3);
+      }
+    }
+
+    .isWide & {
+      @include grid-col(12);
+      @include grid-offset-left(0);
+    }
+  }
+
+  &__caption {
+    @include underline(0.2);
+
+    &Icon {
+      position: relative;
+      z-index: 3;
+
+      margin-top: -25px;
+
+      width: 50px;
+      height: 50px;
+    }
+
+    &Text {
+      @include reset-all;
+      @include responsive-font(16, 18);
+
+      display: flex;
+
+      padding-top: 15px;
+      padding-bottom: 20px;
+
+      color: $color-dark;
+      line-height: (30 / 18);
+    }
+
+    &Type {
+      @include responsive-font(16, 18);
+
+      flex: 0 1 auto;
+
+      margin-right: 20px;
+
+      color: #ccc;
+      line-height: (30 / 18);
+      text-transform: capitalize;
+    }
+
+    &Content {
+      @include reset-paragraph;
+      flex: 1 1 auto;
+    }
+  }
+}

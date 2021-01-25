@@ -1,0 +1,112 @@
+@import '~styles/config';
+
+.nav {
+  @include fit;
+
+  z-index: 1000;
+  opacity: 0;
+
+  padding-top: $height-mobile;
+
+  overflow-y: auto;
+  pointer-events: none;
+  height: 100vh;
+
+  background-color: #fff;
+
+  transform: translateY(-20px);
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+  }
+
+  &__menu {
+    position: relative;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  }
+
+  &__header {
+    @include reset-button;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    text-align: left;
+
+    cursor: pointer;
+  }
+
+  &__heading {
+    @include reset-paragraph;
+    @include responsive-font(24, 26);
+
+    color: $color-dark;
+    font-weight: 600;
+    line-height: (64 / 24);
+  }
+
+  &__arrow {
+    width: 10px;
+  }
+
+  &__expandable {
+    position: absolute;
+    top: 95px;
+  }
+
+  &__text {
+    @include reset-paragraph;
+    @include responsive-font(18, 20);
+
+    opacity: 0;
+
+    color: $color-gray;
+  }
+
+  &__list {
+    @include reset-list;
+
+    opacity: 0;
+
+    margin-top: 40px;
+    padding-left: 40px;
+
+    pointer-events: none;
+  }
+
+  &__item {
+    @include reset-anchor;
+    @include responsive-font(18, 20);
+
+    display: block;
+
+    margin-bottom: 16px;
+
+    color: $color-dark;
+
+    cursor: pointer;
+  }
+
+  &__sideitem {
+    display: block;
+
+    opacity: 0;
+
+    pointer-events: none;
+  }
+}

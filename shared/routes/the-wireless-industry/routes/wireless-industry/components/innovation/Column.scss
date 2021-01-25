@@ -1,0 +1,79 @@
+@import '~styles/config';
+
+.column {
+  @include will-animate;
+  align-self: flex-start;
+
+  position: relative;
+  z-index: 1;
+
+  margin: 0 auto 50px;
+
+  max-width: 380px;
+
+  text-align: center;
+
+  @media (min-width: $min-tablet) {
+    margin-bottom: 80px;
+  }
+
+
+  @media (min-width: $min-1080) {
+    margin-bottom: 0;
+
+    &:nth-child(1) {
+      padding-left: 0;
+      padding-right: $gutter;
+    }
+
+    &:nth-child(2) {
+      padding-left: $gutter/2;
+      padding-right: $gutter/2;
+    }
+
+    &:nth-child(3) {
+      padding-left: $gutter;
+      padding-right: 0;
+    }
+  }
+
+  @media (min-width: $min-1280) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__heading {
+    @include reset-heading;
+    @include responsive-font(42, 80);
+
+    margin-bottom: 5px;
+
+    color: #000;
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  &__subheading {
+    @include reset-heading;
+    @include responsive-font(18, 28);
+
+    margin-bottom: 15px;
+
+    color: #000;
+    line-height: 1.357;
+  }
+
+
+  &__copy {
+    @include reset-paragraph;
+    @include responsive-font(18, 20);
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    color: #000;
+    line-height: 1.5;
+    text-align: center;
+
+  }
+}

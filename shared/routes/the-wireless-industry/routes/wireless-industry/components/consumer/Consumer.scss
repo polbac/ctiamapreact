@@ -1,0 +1,64 @@
+@import '~styles/config';
+
+.consumer {
+  @include segment(200px, 120px, 50px, 50px);
+
+  position: relative;
+
+  &__dots {
+    @include will-animate(false);
+
+    position: absolute;
+    top: 12%;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+
+    background-image: url('!file-loader!assets/images/underline.svg');
+    background-repeat: repeat-x;
+
+    @media (min-width: $min-1080) {
+      top: 38%;
+    }
+  }
+
+  &__background {
+    @include will-animate(false);
+
+    position: absolute;
+    top: 12%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 0;
+
+    background: repeating-linear-gradient(to right, $color-blue-light, $color-blue-light 40px, rgba($color-blue-light, 0.8) 40px, rgba($color-blue-light, 0.8) 80px);
+
+    @media (min-width: $min-1080) {
+      top: 38%;
+    }
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $min-1080) {
+      flex-direction: row;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import '~styles/config';
+
+.experienceCards {
+  @include segment(90px, 0, 50px, 0);
+  margin-bottom: -50px;
+  position: relative;
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @media print, (min-width: $min-880) {
+      flex-direction: row;
+    }
+
+    &.width-2 {
+      @include grid-col;
+
+      @media print, (min-width: $min-1080) {
+        @include grid-col(10);
+        @include grid-offset-left;
+      }
+
+      // @media print, (min-width: $min-1280) {
+      //   @include grid-col(8);
+      //   @include grid-offset-left(2);
+      // }
+    }
+
+    &.width-3 {
+      @include grid-col;
+
+      @media print, (min-width: $min-1280) {
+        @include grid-col(10);
+        @include grid-offset-left;
+      }
+    }
+  }
+
+  &__block {
+    @include will-animate;
+    margin-bottom: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+  }
+
+  &__cta {
+    position: relative;
+    bottom: -25px;
+    margin: 0 auto;
+
+    text-align: center;
+  }
+}

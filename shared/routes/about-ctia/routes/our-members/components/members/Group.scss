@@ -1,0 +1,58 @@
+@import '~styles/config';
+
+.group {
+  @include segment(0, 100px, 0, 40px);
+
+  &:last-child {
+    @include segment(0, 0, 0, 0);
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    @media print, (min-width: $min-tablet) {
+      @include grid-col(8);
+      @include grid-offset-left(2);
+    }
+
+    @media print, (min-width: $min-desktop) {
+      @include grid-col(6);
+      @include grid-offset-left(3);
+    }
+  }
+
+  &__symbol {
+    // @include h1;
+    // margin-bottom: 35px;
+    @include h1(26, 30);
+    text-transform: capitalize !important;
+    margin-bottom: 35px;
+    @media print, (min-width: $min-desktop) {
+      margin-bottom: 75px;
+    }
+
+
+    text-transform: uppercase;
+    color: $color-primary;
+
+    transform: translateX(-0.05em);
+  }
+
+  &__list {
+    @include reset-list;
+
+    @media print, (min-width: $min-mobile) {
+      display: grid;
+      grid-gap: $gutter;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

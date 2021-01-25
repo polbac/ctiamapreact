@@ -1,0 +1,121 @@
+@import '~styles/config';
+
+.slideText {
+
+  position: relative;
+  height: auto;
+  margin-bottom: 75px;
+  
+  @media print, (min-width: 550px) {
+    position: absolute;
+    top: 40%;
+  }
+
+  @media print, (min-width: 590px){
+    top:50%;
+  }
+
+  @media print, (min-width: 950px) {
+      @include grid-col(12);
+  }
+
+  @media print, (min-width: $page-width) {
+    left: 2%;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+  }
+
+  &__infoWrapper {
+    font-size: 10px;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #282828;
+    transition: all .3s;
+
+    @media print, (min-width: 550px) {
+      color: #fff;
+      text-align: left;
+      bottom: 0;
+    }
+
+    @media print, (min-width: 550px) {
+      @include grid-col(11);
+      @include grid-offset-right(1);
+    }
+
+    @media print, (min-width: 1024px) {
+      font-size: 11px;
+    }
+
+    @media print, (min-width: 1500px){
+      font-size: 14px;
+    }
+  }
+
+  &__source {
+    visibility: hidden;
+
+    @media print, (min-width: 550px) {
+      visibility: visible;
+      font-size: 1.4em;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    @media print, (min-width: $min-tablet) {
+      font-size: 2em;
+    }
+  }
+
+  &__heading {
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 0;
+
+    @media print, (min-width: 550px) {
+      font-size: 2.5em;
+      margin-bottom: 0;
+    }
+
+    @media print, (min-width: 720px) {
+      font-size: 3.2em;
+    }
+
+    @media print, (min-width: 900px) {
+      font-size: 4em;
+    }
+
+    @media print, (min-width: 1200px) {
+      font-size: 5em;
+    }
+  }
+
+  &__blurb {
+    font-size: 1.8em;
+    font-weight: 400;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @media print, (min-width: 550px) {
+      font-size: 1.7em;
+    }
+
+    @media print, (min-width: 800px) {
+      font-size: 2.2em;
+    }
+  }
+}

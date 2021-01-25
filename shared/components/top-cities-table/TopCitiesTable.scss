@@ -1,0 +1,7 @@
+@import '~styles/config';
+
+.topCitiesTable {
+  &__container {
+    @include container;
+  }
+}

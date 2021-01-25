@@ -1,0 +1,13 @@
+@import '~styles/config';
+
+.grid {
+  @include segment(260px, 180px, 100px, 40px);
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+}

@@ -1,0 +1,134 @@
+@import '~styles/config';
+
+$chartHeight: 650px;
+
+.readiness {
+  @include segment(170px, 200px, 60px, 60px);
+
+  position: relative;
+
+  margin-top: $gutter * 3;
+
+  overflow: hidden;
+
+  background: #eaf3f3 url('!file-loader!assets/images/5g/readiness/chart.svg') no-repeat;
+  background-size: contain;
+  background-position: bottom center;
+
+  @media print, (min-width: $min-720) {
+    margin: 0 30px;
+  }
+
+  @media print, (min-width: $min-1024) {
+    margin-top: 90px;
+    padding-bottom: 50px;
+  }
+
+  @media print, (min-width: $min-1440) {
+    padding-bottom: 150px;
+
+    background: #eaf3f3 url('!file-loader!assets/images/5g/readiness/chart-flow.svg') no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+  }
+
+  &__list {
+    @include reset-list;
+    position: relative;
+
+    margin-top: 50px;
+
+    @media print, (min-width: $min-720) {
+      @include grid-offset-left(2);
+    }
+
+    @media print, (min-width: $min-1024) {
+      right: 50px;
+      margin: 0 auto;
+
+      height: $chartHeight - 100;
+      width: 830px;
+    }
+
+    @media print, (min-width: $min-1440) {
+      right: 140px;
+
+      height: $chartHeight;
+      width: auto;
+    }
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__race {
+    @include will-animate;
+
+    position: absolute;
+    top: percentage(-120px / $chartHeight);
+    right: 70px;
+
+    transform: translateY(120px);
+
+    &Flag {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      transform: translateX(70px);
+    }
+
+    @media print, (min-width: $min-1024) {
+      top: percentage(-70px / $chartHeight);
+      right: percentage(25px / $page-width);
+    }
+
+    @media print, (min-width: $min-1440) {
+      top: percentage(-100px / $chartHeight);
+      right: percentage(50px / $page-width);
+    }
+  }
+
+  &__endline {
+    display: block;
+    max-width: 120px;
+
+    text-align: right;
+
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  &__hint {
+    @include reset-paragraph;
+    @include responsive-font(14, 16);
+
+    opacity: 0.6;
+
+    margin-top: 40px;
+
+    color: $color-dark;
+
+    @media print, (min-width: $min-720) {
+      @include grid-offset-left(2);
+    }
+
+    @media (min-width: $min-1024) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import '~styles/config';
+
+.showMoreButton {
+  display: block;
+  margin: 0 auto;
+
+  @media print, (min-width: $min-720) {
+    display: none;
+  }
+}

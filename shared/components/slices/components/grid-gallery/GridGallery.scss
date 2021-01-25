@@ -1,0 +1,34 @@
+@import '~styles/config';
+
+.gridgallery {
+  margin-top: 6px;
+  margin-bottom: 50px;
+
+  @media print, (min-width: $min-720) {
+    margin-top: 44px;
+    margin-bottom: 90px;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include will-animate;
+    @include grid-col;
+
+    display: flex;
+    @media print, (min-width: $min-720) {
+   	  width: 50%;
+    }
+    @media print, (min-width: $min-1080) {
+   	  width: 33.33%;
+    }
+
+  }
+
+}

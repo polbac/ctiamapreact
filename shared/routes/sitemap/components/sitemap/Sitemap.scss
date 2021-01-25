@@ -1,0 +1,42 @@
+@import '~styles/config';
+
+.sitemap {
+  @include segment;
+
+  &__container {
+    @include container;
+  }
+
+  h2 {
+    @include reset-heading;
+    @include h4(20, 30);
+  }
+
+  ul {
+    @include reset-list;
+  }
+
+  a {
+    @include reset-anchor;
+
+    &:hover { // stylelint-disable-line
+      text-decoration: underline;
+    }
+  }
+
+  &__container > ul { // stylelint-disable-line
+    // display: flex;
+    // flex-flow: wrap;
+    // flex-direction: row;
+
+    padding: 0 25%;
+
+    text-align: center;
+  }
+
+  &__container > ul > li { // stylelint-disable-line
+    // flex: 1 50%;
+    margin: 0 0 $gutter * 2;
+    // background: #fff;
+  }
+}

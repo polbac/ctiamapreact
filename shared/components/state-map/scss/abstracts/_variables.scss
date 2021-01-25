@@ -1,0 +1,93 @@
+
+/// @type List
+$default-font: 'Source Sans Pro', sans-serif !default;
+
+/// @type Color
+$primary-color: #4ca9ab!default;
+$secondary-color: #231f20 !default;
+$featured-color:#d4eced!default;
+
+$bg-light:#d4eced;
+$bg-dark:#021e39;
+
+
+$text-dark:#000;
+$text-light:#fff;
+$text-blue:#012954;
+
+
+$white: #ffffff !default;
+$black: #000 !default;
+
+/// @type Length
+$site-widths: (
+  'full-width': 100%,
+  'max-width': 1700px,
+) !default;
+
+$font-sizes: (
+  'h1': 50px,
+  'h2': 25px,
+  'h3': 25px,
+  'h4': 18px,
+  'h5': 16px,
+  'h6': 16px,
+) !default;
+
+$font-sizes-desktop-m: (
+
+) !default;
+
+$font-sizes-tablet: (
+  'h1': 40px,
+  'h2': 25px,
+  'h3': 20px,
+  'h4': 18px,
+  'h5': 16px,
+  'h6': 18px,
+) !default;
+
+$font-sizes-mobile: (
+  'h1': 30px,
+  'h2': 18px,
+  'h3': 18px,
+  'h4': 18px,
+  'h5': 16px,
+  'h6': 16px,
+  ) !default;
+
+$font-weights: (
+  'light': 300,
+  'regular': 400,
+  'medium': 500,
+  'semibold': 600,
+  'demi': 600,
+  'bold': 700,
+) !default;
+
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+
+$breakpoints: (
+'mobile-s': 320px,
+'mobile-v': 440px,
+'mobile-h': 750px,
+'tablet-v': 900px,
+'tablet-pro': 1024px,
+'tablet-h': 1150px,
+'desktop': 1200px,
+'desktop-m': 1300px,
+'desktop-l': 1500px,
+'desktop-xl': 1700px,
+) !default;
+
+@mixin mobile-landscape {
+  @media (max-width:768px) and ( orientation: landscape ) {
+    @content;
+  }
+}
+@mixin tablet-landscape {
+  @media (min-width:769px) and (max-width:1050px) and ( orientation: landscape ) {
+    @content;
+  }
+}

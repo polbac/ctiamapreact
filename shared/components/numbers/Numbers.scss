@@ -1,0 +1,54 @@
+@import '~styles/config';
+
+.numbers {
+  @include segment(80px, 120px, 0, 60px);
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+
+    .single & {
+      justify-content: center;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+
+    @media print, (min-width: $min-880) {
+      flex-direction: row;
+    }
+
+    &.width-2 {
+      @include grid-col;
+
+      @media print, (min-width: $min-1080) {
+        @include grid-col(10);
+        @include grid-offset-left;
+      }
+
+      @media print, (min-width: $min-1280) {
+        @include grid-col(8);
+        @include grid-offset-left(2);
+      }
+    }
+
+    &.width-3 {
+      @include grid-col;
+
+      @media print, (min-width: $min-1280) {
+        @include grid-col(10);
+        @include grid-offset-left;
+      }
+    }
+  }
+
+  &__block {
+    @include will-animate;
+  }
+}

@@ -1,0 +1,95 @@
+@import '~styles/config';
+
+$btn-height: 50px;
+
+.button {
+  @include reset-button;
+
+  display: inline-flex;
+  position: relative;
+
+  padding: 0 30px;
+
+  height: $btn-height;
+
+  font-size: $font-size;
+  line-height: $btn-height - 2;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+
+  white-space: nowrap;
+  cursor: pointer;
+
+  border-radius: 25px;
+  background-color: $color-dark;
+
+  transform: translate3d(0, 0, 0);
+
+  transition: background-color 320ms, color 420ms, opacity 180ms;
+  timing-function: ease-in-out;
+
+  & + & {
+    margin-left: $gutter / 2;
+  }
+
+  &:focus,
+  &:hover {
+    outline: 0;
+  }
+
+  &:focus {
+    box-shadow: 0 0 3pt 2pt $color-blue;
+  }
+
+  &:hover {
+    background-color: $color-blue;
+  }
+
+  &.blue {
+    background-color: $color-primary;
+
+    &:hover {
+      background-color: darken($color-primary, 10%);
+    }
+  }
+
+  &.disabled {
+    cursor: default;
+
+    background-color: #bbb;
+  }
+
+  &__inner {
+    display: flex;
+
+    pointer-events: none;
+  }
+
+  &__line {
+    position: absolute;
+    left: 22px;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: $color-primary;
+
+    transition: background-color 420ms ease-in-out;
+  }
+
+  &__border {
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+
+    path { // stylelint-disable-line
+      stroke: $color-primary;
+
+      transition: stroke 420ms ease-in-out;
+    }
+  }
+}

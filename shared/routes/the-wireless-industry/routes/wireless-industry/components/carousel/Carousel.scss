@@ -1,0 +1,151 @@
+@import '~styles/config';
+
+.carousel {
+  position: relative;
+
+  margin-top: 80px;
+
+  height: 600px;
+
+  background-color: #fff;
+
+  @media (min-width: $min-720) {
+    height: 750px;
+  }
+
+  @media (min-width: $min-1080) {
+    margin-top: 225px;
+
+    height: 800px;
+  }
+
+  &__timeline {
+    @include fit;
+
+    overflow: hidden;
+  }
+
+  &__illu1 {
+    position: absolute;
+    z-index: 2;
+    bottom: -2px;
+    left: percentage(-200px / $page-limit);
+
+    @media (min-width: $min-1080) {
+      left: -30%;
+
+      max-height: 80%;
+    }
+  }
+
+  &__illu3 {
+    @include will-animate(false);
+    @include widthify(580px);
+
+    position: absolute;
+    z-index: 2;
+    top: 70%;
+    left: 50%;
+
+    transform: translateX(-50%) translateY(-50%) scale(0);
+
+    @media (min-width: $min-1080) {
+      top: 50%;
+      left: 20%;
+
+      transform: translateY(-50%) scale(0);
+    }
+  }
+
+  &__illu4 {
+    @include will-animate(false);
+
+    position: absolute;
+    z-index: 2;
+    bottom: -1px;
+
+    transform: translateX(100%);
+  }
+
+  &__illu5 {
+    @include will-animate(false);
+
+    position: absolute;
+    z-index: 2;
+    bottom: -2px;
+
+    transform: translateX(100%);
+  }
+
+  &__illu6 {
+    @include will-animate;
+    @include widthify(740px);
+
+    position: absolute;
+    bottom: percentage(-140px / $page-limit);
+    left: 18%;
+
+    transform: translateX(60%);
+
+    @media (min-width: $min-720) {
+      left: 50%;
+
+      transform: translateX(-50%);
+    }
+
+    @media (min-width: $min-1080) {
+      left: 18%;
+
+      transform: translateX(0);
+    }
+  }
+
+  &__dots,
+  &__lines {
+    @include fit;
+
+    height: 100%;
+  }
+
+  &__container {
+    @include container;
+
+    height: 100%;
+  }
+
+  &__row {
+    @include grid-row;
+
+    height: 100%;
+  }
+
+  &__col {
+    @include grid-col;
+
+    height: 100%;
+
+    @media (min-width: $min-720) {
+      @include grid-col(8);
+      @include grid-offset-left(2);
+    }
+
+    @media (min-width: $min-1080) {
+      @include grid-col(5);
+      @include grid-offset-left(7);
+    }
+
+    @media (min-width: $min-1200) {
+      @include grid-col(4);
+      @include grid-offset-left(8);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    height: 100%;
+  }
+}

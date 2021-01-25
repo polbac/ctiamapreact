@@ -1,0 +1,19 @@
+@import '~styles/config';
+
+.sidebarText {
+  flex: 0 1 auto;
+  order: 1;
+
+  a {
+      color: #78cdd1;
+      text-decoration: none;
+  }
+  
+  @media print, (min-width: $min-1200) {
+    order: 0;
+  }
+
+  // &__content {
+  //   @include content;
+  // }
+}

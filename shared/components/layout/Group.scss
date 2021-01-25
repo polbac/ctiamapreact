@@ -1,0 +1,159 @@
+@import '~styles/config';
+
+.group {
+  display: block;
+
+  position: relative;
+  //z-index: $z-index-group;
+  overflow: hidden;
+
+  &.isRevealing, &.overflowVisible {
+    overflow: visible;
+  }
+
+  &:last-child {
+    flex: 1 1 auto;
+  }
+
+  &.top {
+    z-index: 50;
+  }
+
+  &:not(.noZIndex) {
+    z-index: $z-index-group;
+  }
+
+  &.loZIndex {
+    z-index: 0;
+  }
+
+  &.isLoading {
+    min-height: 650px;
+  }
+
+  &.white {
+    background: #fff;
+  }
+
+  &.gray {
+    background: $color-gray-light;
+  }
+
+  &.blue {
+    background: $color-pastel-blue;
+  }
+
+  &.powder {
+    background: $color-powder-blue;
+  }
+
+  &.green {
+    background: #f1faee;
+  }
+
+  &.dotted {
+    background-image: url('!file-loader!assets/images/dots.svg');
+  }
+
+  &.blue.dotted {
+    background-image: url('!file-loader!assets/images/dots-gray.svg');
+  }
+
+  &.shadow {
+    /* Reducing Spread Value due to iOS 13.4 box-shadow rendering bug */
+    /* https://bugs.webkit.org/show_bug.cgi?id=209930 */
+
+    box-shadow: inset 0 177px 161px -100px rgba(#d4d7de, 0.5);
+
+    @media print {
+      box-shadow: none;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &.isContent &__content,
+  &.hasPadding &__content {
+    @include segment(190px, 190px, 50px, 50px);
+  }
+
+  &.isRevealing {
+    position: relative;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      z-index: 0;
+
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 50px;
+
+      pointer-events: none;
+
+      background: inherit;
+
+      box-shadow: 0 0 150px rgba(#000, 0.25);
+
+      backface-visibility: hidden;
+    }
+
+    @supports (display: grid) {
+      &:not(:first-child) {
+        display: grid;
+        grid-template-rows: auto 60vh;
+        margin-top: -60vh;
+      }
+    }
+
+    // &:not(:first-child) {
+    //   display: grid;
+    //   grid-template-rows: auto 60vh;
+    //   margin-top: -60vh;
+
+    //   @supports (-ms-ime-align: auto) {
+    //     display: block;
+    //     margin-top: 0;
+    //   }
+    // }
+
+    // @supports (-ms-ime-align: auto) {
+    //   & {
+    //     display: block;
+    //     margin-top: 0;
+    //   }
+    // }
+
+    // _:-ms-fullscreen, :root .ie11up {
+    //   & {
+    //     display: block;
+    //     margin-top: 0;
+    //   }
+    // }
+  }
+
+  @supports (display: grid) {
+    &.isRevealing &__content {
+      position: sticky;
+      z-index: 1;
+      top: 40vh;
+      min-height: 60vh;
+      background: inherit;
+    }
+  }
+
+  // @supports (-ms-ime-align: auto) {
+  //   &.isRevealing &__content {
+  //     position: static;
+  //   }
+  // }
+
+  // _:-ms-fullscreen, :root .ie11up &.isRevealing &__content {
+  //   position: static;
+  // }
+}

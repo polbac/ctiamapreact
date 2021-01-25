@@ -1,0 +1,11 @@
+@import '~styles/config';
+
+.layout {
+  @include segment($padding-top: $segment-padding, $padding-top-mobile: 20px);
+  display: flex;
+  flex-direction: column;
+
+  @media print, (min-width: $min-1200) {
+    min-height: 100vh;
+  }
+}

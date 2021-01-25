@@ -1,0 +1,19 @@
+@import '~styles/config';
+
+.field {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: $gutter;
+
+  &.split2 {
+    @media print, (min-width: $min-600) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &.split3 {
+    @media print, (min-width: $min-600) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@import '~styles/config';
+
+.meta {
+  @include responsive-font(20, 24);
+
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  margin-bottom: 1em;
+
+  line-height: 1.5;
+
+  @media print, (min-width: $min-880) {
+    align-items: center;
+  }
+
+  &.enableAnim {
+    @include will-animate;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+
+  &__icon {
+    margin-right: 15px;
+    margin-bottom: 8px;
+
+    &.isInversed {
+      filter: invert(100%) brightness(500%);
+    }
+  }
+
+  &__title {
+    @include reset-paragraph;
+    @include ellipsis(245px);
+
+    margin-right: 0.8em;
+
+    @media print, (min-width: $min-1080) {
+      max-width: 100%;
+    }
+  }
+
+  &__date {
+    @include reset-paragraph;
+    @include ellipsis(165px);
+
+    color: $color-light;
+
+    .isInversed & {
+      color: #fff;
+    }
+
+    @media print, (min-width: $min-1080) {
+      max-width: 100%;
+    }
+  }
+
+  &.isInversed {
+    color: #fff;
+  }
+}

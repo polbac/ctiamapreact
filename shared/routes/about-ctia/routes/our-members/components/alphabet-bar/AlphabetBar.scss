@@ -1,0 +1,137 @@
+@import '~styles/config';
+
+.alphabetBar {
+  display: none;
+
+  position: sticky;
+  top: 0;
+  z-index: $z-index-nav-bar;
+  opacity: 0;
+
+  height: 0;
+
+  transition: opacity 300ms;
+
+  @media print, (min-width: $min-desktop) {
+    display: block;
+  }
+
+  &.isVisible {
+    opacity: 1;
+  }
+
+  &__inner {
+    position: relative;
+    border-bottom: 1px solid $color-border;
+    background: #fff;
+
+    box-shadow: 0 6px 23px 10px rgba(#000, 0.05);
+
+    transform: translateY(-100%);
+
+    transition: transform 300ms;
+
+    .isVisible & {
+      transform: translateY(0);
+    }
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    @media print, (min-width: $min-tablet) {
+      @include grid-col(8);
+      @include grid-offset-left(2);
+    }
+
+    @media print, (min-width: $min-desktop) {
+      @include grid-col(6);
+      @include grid-offset-left(3);
+    }
+  }
+
+  &__title {
+    @include h3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    left: 30px;
+    bottom: 0;
+
+    margin: 0;
+
+    letter-spacing: -0.02em;
+  }
+
+  &__return {
+    @include reset-button;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 105px;
+
+    cursor: pointer;
+
+    border-left: 1px solid $color-border;
+  }
+
+  &__icon {
+    width: 27px;
+    height: 22px;
+  }
+
+  &__alphabet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+    height: 100px;
+
+    border-left: 1px solid $color-border;
+    border-right: 1px solid $color-border;
+  }
+
+  &__link {
+    @include reset-anchor;
+    @include responsive-font(16, 18);
+
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+
+    font-weight: 600;
+    color: $color-border;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    &.active {
+      color: $color-font;
+    }
+  }
+}
+
+.wrapper {
+  position: relative;
+}

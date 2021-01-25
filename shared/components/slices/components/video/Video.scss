@@ -1,0 +1,82 @@
+@import '~styles/config';
+
+.video {
+  flex: 0 1 auto;
+
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    @media print, (min-width: $min-1024) {
+      @include grid-col(10);
+      @include grid-offset-left;
+    }
+
+    .isWide & {
+      @include grid-col(12);
+      @include grid-offset-left(0);
+    }
+  }
+
+  &__content {
+    padding-bottom: 250px;
+
+    border-radius: $border-radius;
+    background-color: #fff;
+    box-shadow: 0 0 46px 0 rgba(62, 62, 62, 0.09);
+  }
+
+
+  &__wrapper {
+    @include grid-col(percentage(8/10));
+    @include grid-offset-left(percentage(1/10));
+  }
+
+  &__icon {
+    margin-top: -25px;
+    margin-bottom: 25px;
+
+    width: 50px;
+    height: 50px;
+  }
+
+  &__label {
+    @include label;
+
+    margin-bottom: 10px;
+  }
+
+  &__heading {
+    @include h3;
+  }
+
+  &__media {
+    margin-top: -250px;
+  }
+
+  &__aspect {
+    position: relative;
+
+    padding-bottom: 56.25%;
+  }
+
+  &__iframe {
+    @include fit;
+  }
+
+  &__caption {
+    @include underline(0.2);
+
+    padding-bottom: 20px;
+  }
+}

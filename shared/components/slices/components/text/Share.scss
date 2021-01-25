@@ -1,0 +1,75 @@
+@import '~styles/config';
+
+.share {
+  display: flex;
+
+  position: absolute;
+  z-index: 100;
+
+  &__twitter {
+    @include reset-button;
+
+    display: flex;
+    align-items: center;
+
+    height: 44px;
+
+    text-align: left;
+    cursor: pointer;
+
+    border-radius: 22px;
+    background-color: #000;
+
+    transition: background-color 400ms;
+
+    &:hover {
+      background-color: $color-blue;
+
+      .share__icon path:first-of-type { // stylelint-disable-line
+        fill: $color-blue;
+      }
+    }
+  }
+
+  &__copy {
+    @include reset-paragraph;
+    @include responsive-font(16, 18);
+
+    position: relative;
+    top: -2px;
+
+    padding-left: 24px;
+    padding-right: 0;
+
+    color: rgba(#fff, 0.5);
+
+    span { // stylelint-disable-line
+      color: #fff;
+      font-weight: 700;
+    }
+  }
+
+  &__button {
+    @include reset-button;
+
+    cursor: pointer;
+
+    &:hover {
+      .share__icon path:first-of-type { // stylelint-disable-line
+        fill: $color-blue;
+      }
+    }
+  }
+
+  &__icon {
+    margin-left: 8px;
+
+    height: 44px;
+
+    path:first-of-type { // stylelint-disable-line
+      transition: fill 400ms;
+
+      fill: #000;
+    }
+  }
+}

@@ -1,0 +1,213 @@
+@import '~styles/config';
+
+.navbar {
+  position: relative;
+  z-index: $z-index-base + 2;
+
+  &__container {
+    @include container;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+
+    height: $height-mobile;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+
+    .transparent & {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    }
+
+    .isDetached & {
+      border-bottom-color: transparent;
+    }
+
+    @media print, (min-width: $mobile-breakpoint) {
+      position: relative;
+      z-index: $z-index-base + 10;
+
+      height: $height-desktop;
+    }
+  }
+
+  &__logo {
+    @include reset-anchor;
+
+    display: block;
+
+    width: 70px;
+
+    box-shadow: 0 0 0 15px rgba(#fff, 0);
+
+    transition-property: background-color box-shadow;
+    transition-duration: 0ms;
+
+    @media print, (min-width: $mobile-breakpoint) {
+      width: 110px;
+    }
+
+    &.dotted {
+      background-color: #fff;
+      box-shadow: 0 0 0 15px #fff;
+    }
+
+    &.blue.dotted {
+      background-color: $color-pastel-blue;
+      box-shadow: 0 0 0 15px $color-pastel-blue;
+    }
+
+    &.gray.dotted {
+      background-color: $color-gray-light;
+      box-shadow: 0 0 0 15px $color-gray-light;
+    }
+
+    .isDetached &.dotted {
+      background-color: #fff;
+      box-shadow: none;
+    }
+
+    &Svg {
+      display: block;
+
+      width: 100%;
+
+      :global {
+        .logo path { // stylelint-disable-line
+          fill: #231f20;
+        }
+
+        .dots path { // stylelint-disable-line
+          fill: $color-blue;
+        }
+      }
+    }
+  }
+
+  &.notTransparent &__logo {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  &__navigation {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: 100%;
+
+    white-space: nowrap;
+
+    @media print, (min-width: $mobile-breakpoint) {
+      display: flex;
+    }
+  }
+
+  &__list {
+    @include reset-list;
+
+    display: flex;
+    align-items: stretch;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    padding: 0 10px;
+
+    line-height: $height-desktop;
+
+    @media print, (min-width: $min-1080) {
+      padding: 0 20px;
+    }
+  }
+
+  &__side {
+    display: flex;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    @media print, (min-width: $mobile-breakpoint) {
+      position: static;
+    }
+  }
+
+  &__search {
+    @include reset-button;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    &Icon {
+      display: block;
+
+      width: 26px;
+    }
+
+    &Label {
+      display: none;
+
+      margin-left: 10px;
+
+      @include responsive-font(16, 20);
+      font-weight: 600;
+
+      @media print, (min-width: $min-1080) {
+        display: block;
+      }
+    }
+  }
+
+  &__burger {
+    width: 24px;
+  }
+
+  &__menu {
+    @include reset-button;
+
+    display: block;
+
+    margin-left: 20px;
+
+    width: $height-mobile;
+    height: 100%;
+
+    cursor: pointer;
+
+    border-left: 1px solid #e8f0f1;
+
+    @media print, (min-width: $mobile-breakpoint) {
+      display: none;
+    }
+  }
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
+}

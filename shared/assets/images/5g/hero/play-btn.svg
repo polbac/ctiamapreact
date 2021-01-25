@@ -1,0 +1,6 @@
+<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65"
+  role="img"
+  aria-labelledby="playBtnIconTitle playBtnIconDesc">
+  <title>Play button icon</title>
+  <desc>Icon for the play button</desc>
+  <defs><style>.cls-1{fill:#fa7a47;fill-rule:evenodd;}.cls-2{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><title>Play-btn</title><path class="cls-1" d="M713,507.5h0a32.5,32.5,0,0,1,0,65h0a32.5,32.5,0,0,1,0-65Z" transform="translate(-680.5 -507.5)"/><path class="cls-2" d="M709.4,548.54l-2.47,1.51V528.94l17.14,10.56-10.76,6.62" transform="translate(-680.5 -507.5)"/></svg>

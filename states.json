@@ -1,0 +1,4748 @@
+[
+  {
+    "name": "Alabama",
+    "abbreviation": "AL",
+    "citiesData": [
+      {
+        "city": "Birmingham",
+        "population": "209,880",
+        "estimatedNetworkInvestment": "$173",
+        "estimatedGDPGrowth": "$320",
+        "estimatedJobsCreated": "1,959",
+        "selectSmartCityBenefits": "$121.15"
+      },
+      {
+        "city": "Montgomery",
+        "population": "198,218",
+        "estimatedNetworkInvestment": "$163",
+        "estimatedGDPGrowth": "$302",
+        "estimatedJobsCreated": "1,850",
+        "selectSmartCityBenefits": "$114.41"
+      },
+      {
+        "city": "Huntsville",
+        "population": "197,318",
+        "estimatedNetworkInvestment": "$162",
+        "estimatedGDPGrowth": "$300",
+        "estimatedJobsCreated": "1,842",
+        "selectSmartCityBenefits": "$113.89"
+      },
+      {
+        "city": "Mobile",
+        "population": "189,572",
+        "estimatedNetworkInvestment": "$156",
+        "estimatedGDPGrowth": "$289",
+        "estimatedJobsCreated": "1,770",
+        "selectSmartCityBenefits": "$109.42"
+      },
+      {
+        "city": "Tuscaloosa",
+        "population": "101,113",
+        "estimatedNetworkInvestment": "$83",
+        "estimatedGDPGrowth": "$154",
+        "estimatedJobsCreated": 944,
+        "selectSmartCityBenefits": "$58.36"
+      },
+      {
+        "city": "Hoover",
+        "population": "85,108",
+        "estimatedNetworkInvestment": "$70",
+        "estimatedGDPGrowth": "$130",
+        "estimatedJobsCreated": 794,
+        "selectSmartCityBenefits": "$49.13"
+      },
+      {
+        "city": "Dothan",
+        "population": "68,247",
+        "estimatedNetworkInvestment": "$56",
+        "estimatedGDPGrowth": "$104",
+        "estimatedJobsCreated": 637,
+        "selectSmartCityBenefits": "$39.39"
+      },
+      {
+        "city": "Auburn",
+        "population": "65,738",
+        "estimatedNetworkInvestment": "$54",
+        "estimatedGDPGrowth": "$100",
+        "estimatedJobsCreated": 614,
+        "selectSmartCityBenefits": "$37.94"
+      },
+      {
+        "city": "Decatur",
+        "population": "54,264",
+        "estimatedNetworkInvestment": "$45",
+        "estimatedGDPGrowth": "$83",
+        "estimatedJobsCreated": 507,
+        "selectSmartCityBenefits": "$31.32"
+      },
+      {
+        "city": "Madison",
+        "population": "50,440",
+        "estimatedNetworkInvestment": "$41",
+        "estimatedGDPGrowth": "$77",
+        "estimatedJobsCreated": 471,
+        "selectSmartCityBenefits": "$29.11"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 46566.71775476212,
+      "GCP": 3907301820.707891,
+      "mobileWireless": 5000000,
+    "adultsInWirelessOnly": 0.576,
+      "householdsWithSmartphones": 0.7191805963558788,
+      "totalWagesDependentOnWireless": 1798017108.105064
+    }
+  },
+  {
+    "name": "Alaska",
+    "abbreviation": "AK",
+    "citiesData": [
+      {
+        "city": "Anchorage",
+        "population": "291,538",
+        "estimatedNetworkInvestment": "$240",
+        "estimatedGDPGrowth": "$444",
+        "estimatedJobsCreated": "2,721",
+        "selectSmartCityBenefits": "$168.28"
+      },
+      {
+        "city": "Juneau",
+        "population": "32,113",
+        "estimatedNetworkInvestment": "$26",
+        "estimatedGDPGrowth": "$49",
+        "estimatedJobsCreated": "300",
+        "selectSmartCityBenefits": "$9.60"
+      },
+      {
+        "city": "Fairbanks",
+        "population": "31,516",
+        "estimatedNetworkInvestment": "$26",
+        "estimatedGDPGrowth": "$48",
+        "estimatedJobsCreated": "294",
+        "selectSmartCityBenefits": "$9.42"
+      },
+      {
+        "city": "Wasilla",
+        "population": "10,529",
+        "estimatedNetworkInvestment": "$9",
+        "estimatedGDPGrowth": "$16",
+        "estimatedJobsCreated": "98",
+        "selectSmartCityBenefits": "$3.15"
+      },
+      {
+        "city": "Sitka",
+        "population": "8,647",
+        "estimatedNetworkInvestment": "$7",
+        "estimatedGDPGrowth": "$13",
+        "estimatedJobsCreated": "81",
+        "selectSmartCityBenefits": "$2.59"
+      },
+      {
+        "city": "Ketchikan",
+        "population": "8,289",
+        "estimatedNetworkInvestment": "$7",
+        "estimatedGDPGrowth": "$13",
+        "estimatedJobsCreated": "77",
+        "selectSmartCityBenefits": "$2.48"
+      },
+      {
+        "city": "Kenai",
+        "population": "7,778",
+        "estimatedNetworkInvestment": "$6",
+        "estimatedGDPGrowth": "$12",
+        "estimatedJobsCreated": "73",
+        "selectSmartCityBenefits": "$2.33"
+      },
+      {
+        "city": "Palmer",
+        "population": "7,306",
+        "estimatedNetworkInvestment": "$6",
+        "estimatedGDPGrowth": "$11",
+        "estimatedJobsCreated": "68",
+        "selectSmartCityBenefits": "$2.18"
+      },
+      {
+        "city": "Bethel",
+        "population": "6,493",
+        "estimatedNetworkInvestment": "$5",
+        "estimatedGDPGrowth": "$10",
+        "estimatedJobsCreated": "61",
+        "selectSmartCityBenefits": "$1.94"
+      },
+      {
+        "city": "Kodiak",
+        "population": "5,968",
+        "estimatedNetworkInvestment": "$5",
+        "estimatedGDPGrowth": "$9",
+        "estimatedJobsCreated": "56",
+        "selectSmartCityBenefits": "$1.78"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 9384.413045656462,
+      "GCP": 1079532701.471213,
+      "mobileWireless": 700000,
+      "adultsInWirelessOnly": 0.573,
+      "householdsWithSmartphones": 0.8335681053495823,
+      "totalWagesDependentOnWireless": 466256370.420499
+    }
+  },
+  {
+    "name": "Arizona",
+    "abbreviation": "AZ",
+    "citiesData": [
+      {
+        "city": "Phoenix",
+        "population": "1,660,272",
+        "estimatedNetworkInvestment": "$1,365",
+        "estimatedGDPGrowth": "$2,528",
+        "estimatedJobsCreated": "15,497",
+        "selectSmartCityBenefits": "$958.33"
+      },
+      {
+        "city": "Tucson",
+        "population": "545,975",
+        "estimatedNetworkInvestment": "$449",
+        "estimatedGDPGrowth": "$831",
+        "estimatedJobsCreated": "5,096",
+        "selectSmartCityBenefits": "$315.14"
+      },
+      {
+        "city": "Mesa",
+        "population": "508,958",
+        "estimatedNetworkInvestment": "$418",
+        "estimatedGDPGrowth": "$775",
+        "estimatedJobsCreated": "4,751",
+        "selectSmartCityBenefits": "$293.78"
+      },
+      {
+        "city": "Chandler",
+        "population": "257,165",
+        "estimatedNetworkInvestment": "$211",
+        "estimatedGDPGrowth": "$392",
+        "estimatedJobsCreated": "2,400",
+        "selectSmartCityBenefits": "$148.44"
+      },
+      {
+        "city": "Scottsdale",
+        "population": "255,310",
+        "estimatedNetworkInvestment": "$210",
+        "estimatedGDPGrowth": "$389",
+        "estimatedJobsCreated": "2,383",
+        "selectSmartCityBenefits": "$147.37"
+      },
+      {
+        "city": "Glendale",
+        "population": "250,702",
+        "estimatedNetworkInvestment": "$206",
+        "estimatedGDPGrowth": "$382",
+        "estimatedJobsCreated": "2,340",
+        "selectSmartCityBenefits": "$114.71"
+      },
+      {
+        "city": "Gilbert",
+        "population": "248,279",
+        "estimatedNetworkInvestment": "$204",
+        "estimatedGDPGrowth": "$378",
+        "estimatedJobsCreated": "2,317",
+        "selectSmartCityBenefits": "$143.31"
+      },
+      {
+        "city": "Tempe",
+        "population": "192,364",
+        "estimatedNetworkInvestment": "$158",
+        "estimatedGDPGrowth": "$293",
+        "estimatedJobsCreated": "1,796",
+        "selectSmartCityBenefits": "$111.03"
+      },
+      {
+        "city": "Peoria",
+        "population": "172,259",
+        "estimatedNetworkInvestment": "$142",
+        "estimatedGDPGrowth": "$262",
+        "estimatedJobsCreated": "1,608",
+        "selectSmartCityBenefits": "$99.43"
+      },
+      {
+        "city": "Surprise",
+        "population": "138,161",
+        "estimatedNetworkInvestment": "$114",
+        "estimatedGDPGrowth": "$210",
+        "estimatedJobsCreated": "1,290",
+        "selectSmartCityBenefits": "$79.75"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 132486.6138777347,
+      "GCP": 11308320177.02405,
+      "mobileWireless": 7000000,
+    "adultsInWirelessOnly": 0.649,
+      "householdsWithSmartphones": 0.7924127806809863,
+      "totalWagesDependentOnWireless": 5664751153.875281
+    }
+  },
+  {
+    "name": "Arkansas",
+    "abbreviation": "AR",
+    "citiesData": [
+      {
+        "city": "Little Rock",
+        "population": "197,881",
+        "estimatedNetworkInvestment": "$163",
+        "estimatedGDPGrowth": "$301",
+        "estimatedJobsCreated": "1,847",
+        "selectSmartCityBenefits": "$114.22"
+      },
+      {
+        "city": "Fort Smith",
+        "population": "87,845",
+        "estimatedNetworkInvestment": "$72",
+        "estimatedGDPGrowth": "$134",
+        "estimatedJobsCreated": "820",
+        "selectSmartCityBenefits": "$50.71"
+      },
+      {
+        "city": "Fayetteville",
+        "population": "86,751",
+        "estimatedNetworkInvestment": "$71",
+        "estimatedGDPGrowth": "$132",
+        "estimatedJobsCreated": "810",
+        "selectSmartCityBenefits": "$50.07"
+      },
+      {
+        "city": "Springdale",
+        "population": "81,029",
+        "estimatedNetworkInvestment": "$67",
+        "estimatedGDPGrowth": "$123",
+        "estimatedJobsCreated": "756",
+        "selectSmartCityBenefits": "$46.77"
+      },
+      {
+        "city": "Jonesboro",
+        "population": "76,990",
+        "estimatedNetworkInvestment": "$63",
+        "estimatedGDPGrowth": "$117",
+        "estimatedJobsCreated": "719",
+        "selectSmartCityBenefits": "$44.44"
+      },
+      {
+        "city": "Rogers",
+        "population": "67,600",
+        "estimatedNetworkInvestment": "$56",
+        "estimatedGDPGrowth": "$103",
+        "estimatedJobsCreated": "631",
+        "selectSmartCityBenefits": "$39.02"
+      },
+      {
+        "city": "North Little Rock",
+        "population": "66,127",
+        "estimatedNetworkInvestment": "$54",
+        "estimatedGDPGrowth": "$101",
+        "estimatedJobsCreated": "617",
+        "selectSmartCityBenefits": "$38.17"
+      },
+      {
+        "city": "Conway",
+        "population": "66,426",
+        "estimatedNetworkInvestment": "$55",
+        "estimatedGDPGrowth": "$101",
+        "estimatedJobsCreated": "620",
+        "selectSmartCityBenefits": "$38.34"
+      },
+      {
+        "city": "Bentonville",
+        "population": "51,111",
+        "estimatedNetworkInvestment": "$42",
+        "estimatedGDPGrowth": "$78",
+        "estimatedJobsCreated": "447",
+        "selectSmartCityBenefits": "$29.50"
+      },
+      {
+        "city": "Pine Bluff",
+        "population": "42,271",
+        "estimatedNetworkInvestment": "$35",
+        "estimatedGDPGrowth": "$64",
+        "estimatedJobsCreated": "395",
+        "selectSmartCityBenefits": "$12.64"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 41260.44351085338,
+      "GCP": 4925329656.319368,
+      "mobileWireless": 3100000,
+    "adultsInWirelessOnly": 0.664,
+      "householdsWithSmartphones": 0.725687352435159,
+      "totalWagesDependentOnWireless": 1624781818.828103
+    }
+  },
+  {
+    "name": "California",
+    "abbreviation": "CA",
+    "citiesData": [
+      {
+        "city": "Los Angeles",
+        "population": "3,990,456",
+        "estimatedNetworkInvestment": "$3,280",
+        "estimatedGDPGrowth": "$6,076",
+        "estimatedJobsCreated": "37,248",
+        "selectSmartCityBenefits": "$2,303.34"
+      },
+      {
+        "city": "San Diego",
+        "population": "1,425,976",
+        "estimatedNetworkInvestment": "$1,172",
+        "estimatedGDPGrowth": "$2,171",
+        "estimatedJobsCreated": "13,310",
+        "selectSmartCityBenefits": "$823.09"
+      },
+      {
+        "city": "San Jose",
+        "population": "1,030,119",
+        "estimatedNetworkInvestment": "$847",
+        "estimatedGDPGrowth": "$1,569",
+        "estimatedJobsCreated": "9,615",
+        "selectSmartCityBenefits": "$594.60"
+      },
+      {
+        "city": "San Francisco",
+        "population": "883,305",
+        "estimatedNetworkInvestment": "$726",
+        "estimatedGDPGrowth": "$1,345",
+        "estimatedJobsCreated": "8,245",
+        "selectSmartCityBenefits": "$509.85"
+      },
+      {
+        "city": "Fresno",
+        "population": "530,093",
+        "estimatedNetworkInvestment": "$436",
+        "estimatedGDPGrowth": "$807",
+        "estimatedJobsCreated": "4,948",
+        "selectSmartCityBenefits": "$305.98"
+      },
+      {
+        "city": "Sacramento",
+        "population": "508,529",
+        "estimatedNetworkInvestment": "$418",
+        "estimatedGDPGrowth": "$774",
+        "estimatedJobsCreated": "4,747",
+        "selectSmartCityBenefits": "$293.53"
+      },
+      {
+        "city": "Long Beach",
+        "population": "467,354",
+        "estimatedNetworkInvestment": "$384",
+        "estimatedGDPGrowth": "$712",
+        "estimatedJobsCreated": "4,362",
+        "selectSmartCityBenefits": "$269.76"
+      },
+      {
+        "city": "Oakland",
+        "population": "429,082",
+        "estimatedNetworkInvestment": "$353",
+        "estimatedGDPGrowth": "$653",
+        "estimatedJobsCreated": "4,005",
+        "selectSmartCityBenefits": "$247.67"
+      },
+      {
+        "city": "Bakersfield",
+        "population": "383,579",
+        "estimatedNetworkInvestment": "$315",
+        "estimatedGDPGrowth": "$584",
+        "estimatedJobsCreated": "3,580",
+        "selectSmartCityBenefits": "$221.41"
+      },
+      {
+        "city": "Anaheim",
+        "population": "352,005",
+        "estimatedNetworkInvestment": "$289",
+        "estimatedGDPGrowth": "$536",
+        "estimatedJobsCreated": "3,286",
+        "selectSmartCityBenefits": "$203.18"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 581738.8610432483,
+      "GCP": 72979259268.67818,
+      "mobileWireless": 43300000,
+      "adultsInWirelessOnly": 0.554,
+      "householdsWithSmartphones": 0.817879435835941,
+      "totalWagesDependentOnWireless": 31482590790.08688
+    }
+  },
+  {
+    "name": "Colorado",
+    "abbreviation": "CO",
+    "citiesData": [
+      {
+        "city": "Denver",
+        "population": "716,492",
+        "estimatedNetworkInvestment": "$589",
+        "estimatedGDPGrowth": "$1,091",
+        "estimatedJobsCreated": "6,688",
+        "selectSmartCityBenefits": "$413.57"
+      },
+      {
+        "city": "Colorado Springs",
+        "population": "472,688",
+        "estimatedNetworkInvestment": "$389",
+        "estimatedGDPGrowth": "$720",
+        "estimatedJobsCreated": "4,412",
+        "selectSmartCityBenefits": "$272.84"
+      },
+      {
+        "city": "Aurora",
+        "population": "374,114",
+        "estimatedNetworkInvestment": "$308",
+        "estimatedGDPGrowth": "$570",
+        "estimatedJobsCreated": "3,492",
+        "selectSmartCityBenefits": "$215.94"
+      },
+      {
+        "city": "Fort Collins",
+        "population": "167,830",
+        "estimatedNetworkInvestment": "$138",
+        "estimatedGDPGrowth": "$256",
+        "estimatedJobsCreated": "1,567",
+        "selectSmartCityBenefits": "$96.87"
+      },
+      {
+        "city": "Lakewood",
+        "population": "156,798",
+        "estimatedNetworkInvestment": "$129",
+        "estimatedGDPGrowth": "$239",
+        "estimatedJobsCreated": "1,464",
+        "selectSmartCityBenefits": "$90.51"
+      },
+      {
+        "city": "Thornton",
+        "population": "139,436",
+        "estimatedNetworkInvestment": "$115",
+        "estimatedGDPGrowth": "$212",
+        "estimatedJobsCreated": "1,302",
+        "selectSmartCityBenefits": "$80.48"
+      },
+      {
+        "city": "Arvada",
+        "population": "120,492",
+        "estimatedNetworkInvestment": "$99",
+        "estimatedGDPGrowth": "$183",
+        "estimatedJobsCreated": "1,125",
+        "selectSmartCityBenefits": "$69.55"
+      },
+      {
+        "city": "Westminster",
+        "population": "113,479",
+        "estimatedNetworkInvestment": "$93",
+        "estimatedGDPGrowth": "$173",
+        "estimatedJobsCreated": "1,059",
+        "selectSmartCityBenefits": "$65.50"
+      },
+      {
+        "city": "Pueblo",
+        "population": "111,750",
+        "estimatedNetworkInvestment": "$92",
+        "estimatedGDPGrowth": "$170",
+        "estimatedJobsCreated": "1,043",
+        "selectSmartCityBenefits": "$64.50"
+      },
+      {
+        "city": "Centennial",
+        "population": "110,831",
+        "estimatedNetworkInvestment": "$91",
+        "estimatedGDPGrowth": "$169",
+        "estimatedJobsCreated": "1,035",
+        "selectSmartCityBenefits": "$63.97"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 81476.2665889812,
+      "GCP": 8254448528.804825,
+      "mobileWireless": 5900000,
+      "adultsInWirelessOnly": 0.614,
+      "householdsWithSmartphones": 0.8187243005189209,
+      "totalWagesDependentOnWireless": 3518320897.845573
+    }
+  },
+  {
+    "name": "Connecticut",
+    "abbreviation": "CT",
+    "citiesData": [
+      {
+        "city": "Bridgeport",
+        "population": "144,900",
+        "estimatedNetworkInvestment": "$119",
+        "estimatedGDPGrowth": "$221",
+        "estimatedJobsCreated": "1,353",
+        "selectSmartCityBenefits": "$83.64"
+      },
+      {
+        "city": "New Haven",
+        "population": "130,418",
+        "estimatedNetworkInvestment": "$107",
+        "estimatedGDPGrowth": "$199",
+        "estimatedJobsCreated": "1,217",
+        "selectSmartCityBenefits": "$75.28"
+      },
+      {
+        "city": "Stamford",
+        "population": "129,775",
+        "estimatedNetworkInvestment": "$107",
+        "estimatedGDPGrowth": "$198",
+        "estimatedJobsCreated": "1,211",
+        "selectSmartCityBenefits": "$74.91"
+      },
+      {
+        "city": "Hartford",
+        "population": "122,587",
+        "estimatedNetworkInvestment": "$101",
+        "estimatedGDPGrowth": "$187",
+        "estimatedJobsCreated": "1,144",
+        "selectSmartCityBenefits": "$70.76"
+      },
+      {
+        "city": "Waterbury",
+        "population": "108,093",
+        "estimatedNetworkInvestment": "$89",
+        "estimatedGDPGrowth": "$165",
+        "estimatedJobsCreated": "1,009",
+        "selectSmartCityBenefits": "$62.39"
+      },
+      {
+        "city": "Norwalk",
+        "population": "89,047",
+        "estimatedNetworkInvestment": "$73",
+        "estimatedGDPGrowth": "$136",
+        "estimatedJobsCreated": "831",
+        "selectSmartCityBenefits": "$51.40"
+      },
+      {
+        "city": "Danbury",
+        "population": "84,730",
+        "estimatedNetworkInvestment": "$70",
+        "estimatedGDPGrowth": "$129",
+        "estimatedJobsCreated": "791",
+        "selectSmartCityBenefits": "$48.91"
+      },
+      {
+        "city": "New Britain",
+        "population": "72,453",
+        "estimatedNetworkInvestment": "$60",
+        "estimatedGDPGrowth": "$110",
+        "estimatedJobsCreated": "676",
+        "selectSmartCityBenefits": "$41.82"
+      },
+      {
+        "city": "Bristol",
+        "population": "60,032",
+        "estimatedNetworkInvestment": "$49",
+        "estimatedGDPGrowth": "$91",
+        "estimatedJobsCreated": "560",
+        "selectSmartCityBenefits": "$34.65"
+      },
+      {
+        "city": "Meriden",
+        "population": "59,540",
+        "estimatedNetworkInvestment": "$49",
+        "estimatedGDPGrowth": "$91",
+        "estimatedJobsCreated": "556",
+        "selectSmartCityBenefits": "$34.37"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 31136.6114588727,
+      "GCP": 3309237394.679139,
+      "mobileWireless": 3700000,
+    "adultsInWirelessOnly": 0.408,
+      "householdsWithSmartphones": 0.7511038710822984,
+      "totalWagesDependentOnWireless": 1667872869.983011
+    }
+  },
+  {
+    "name": "Delaware",
+    "abbreviation": "DE",
+    "citiesData": [
+      {
+        "city": "Wilmington",
+        "population": "70,635",
+        "estimatedNetworkInvestment": "$58",
+        "estimatedGDPGrowth": "$108",
+        "estimatedJobsCreated": "659",
+        "selectSmartCityBenefits": "$40.77"
+      },
+      {
+        "city": "Dover",
+        "population": "38,079",
+        "estimatedNetworkInvestment": "$31",
+        "estimatedGDPGrowth": "$58",
+        "estimatedJobsCreated": "355",
+        "selectSmartCityBenefits": "$11.38"
+      },
+      {
+        "city": "Newark",
+        "population": "33,673",
+        "estimatedNetworkInvestment": "$28",
+        "estimatedGDPGrowth": "$51",
+        "estimatedJobsCreated": "314",
+        "selectSmartCityBenefits": "$10.07"
+      },
+      {
+        "city": "Middletown",
+        "population": "22,582",
+        "estimatedNetworkInvestment": "$19",
+        "estimatedGDPGrowth": "$34",
+        "estimatedJobsCreated": "211",
+        "selectSmartCityBenefits": "$6.75"
+      },
+      {
+        "city": "Smyrna",
+        "population": "11,580",
+        "estimatedNetworkInvestment": "$10",
+        "estimatedGDPGrowth": "$18",
+        "estimatedJobsCreated": "108",
+        "selectSmartCityBenefits": "$3.46"
+      },
+      {
+        "city": "Milford",
+        "population": "11,353",
+        "estimatedNetworkInvestment": "$9",
+        "estimatedGDPGrowth": "$17",
+        "estimatedJobsCreated": "106",
+        "selectSmartCityBenefits": "$3.39"
+      },
+      {
+        "city": "Seaford",
+        "population": "7,861",
+        "estimatedNetworkInvestment": "$6",
+        "estimatedGDPGrowth": "$12",
+        "estimatedJobsCreated": "73",
+        "selectSmartCityBenefits": "$2.35"
+      },
+      {
+        "city": "Georgetown",
+        "population": "7,427",
+        "estimatedNetworkInvestment": "$6",
+        "estimatedGDPGrowth": "$11",
+        "estimatedJobsCreated": "69",
+        "selectSmartCityBenefits": "$2.22"
+      },
+      {
+        "city": "Elsmere",
+        "population": "5,981",
+        "estimatedNetworkInvestment": "$5",
+        "estimatedGDPGrowth": "$9",
+        "estimatedJobsCreated": "56",
+        "selectSmartCityBenefits": "$1.79"
+      },
+      {
+        "city": "New Castle",
+        "population": "5,529",
+        "estimatedNetworkInvestment": "$5",
+        "estimatedGDPGrowth": "$8",
+        "estimatedJobsCreated": "52",
+        "selectSmartCityBenefits": "$1.65"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 7089.150268527356,
+      "GCP": 659301766.6510817,
+      "mobileWireless": 1000000,
+    "adultsInWirelessOnly": 0.459,
+      "householdsWithSmartphones": 0.7691385277069656,
+      "totalWagesDependentOnWireless": 324321792.3643658
+    }
+  },
+  {
+    "name": "District Of Columbia",
+    "abbreviation": "DC",
+    "citiesData": [
+      {
+        "city": "",
+        "population": "702,455",
+        "estimatedNetworkInvestment": "$577",
+        "estimatedGDPGrowth": "$1,070",
+        "estimatedJobsCreated": "6,557",
+        "selectSmartCityBenefits": "$405.47"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 11785,
+      "GCP": 1700000000,
+      "mobileWireless": 1500000,
+    "adultsInWirelessOnly": 0.574,
+      "householdsWithSmartphones": 0.0,
+      "totalWagesDependentOnWireless": 930400000
+    }
+  },
+  {
+    "name": "Florida",
+    "abbreviation": "FL",
+    "citiesData": [
+      {
+        "city": "Jacksonville",
+        "population": "903,889",
+        "estimatedNetworkInvestment": "$743",
+        "estimatedGDPGrowth": "$1,376",
+        "estimatedJobsCreated": "8,437",
+        "selectSmartCityBenefits": "$521.74"
+      },
+      {
+        "city": "Miami",
+        "population": "470,914",
+        "estimatedNetworkInvestment": "$387",
+        "estimatedGDPGrowth": "$717",
+        "estimatedJobsCreated": "4,396",
+        "selectSmartCityBenefits": "$271.82"
+      },
+      {
+        "city": "Tampa",
+        "population": "392,890",
+        "estimatedNetworkInvestment": "$323",
+        "estimatedGDPGrowth": "$598",
+        "estimatedJobsCreated": "3,667",
+        "selectSmartCityBenefits": "$226.78"
+      },
+      {
+        "city": "Orlando",
+        "population": "285,713",
+        "estimatedNetworkInvestment": "$235",
+        "estimatedGDPGrowth": "$435",
+        "estimatedJobsCreated": "2,667",
+        "selectSmartCityBenefits": "$164.92"
+      },
+      {
+        "city": "St. Petersburg",
+        "population": "265,098",
+        "estimatedNetworkInvestment": "$218",
+        "estimatedGDPGrowth": "$404",
+        "estimatedJobsCreated": "2,474",
+        "selectSmartCityBenefits": "$153.02"
+      },
+      {
+        "city": "Hialeah",
+        "population": "238,942",
+        "estimatedNetworkInvestment": "$196",
+        "estimatedGDPGrowth": "$364",
+        "estimatedJobsCreated": "2,230",
+        "selectSmartCityBenefits": "$137.92"
+      },
+      {
+        "city": "Port St. Lucie",
+        "population": "195,248",
+        "estimatedNetworkInvestment": "$161",
+        "estimatedGDPGrowth": "$297",
+        "estimatedJobsCreated": "1,822",
+        "selectSmartCityBenefits": "$112.70"
+      },
+      {
+        "city": "Tallahassee",
+        "population": "193,551",
+        "estimatedNetworkInvestment": "$159",
+        "estimatedGDPGrowth": "$295",
+        "estimatedJobsCreated": "1,807",
+        "selectSmartCityBenefits": "$111.72"
+      },
+      {
+        "city": "Fort Lauderdale",
+        "population": "182,595",
+        "estimatedNetworkInvestment": "$150",
+        "estimatedGDPGrowth": "$278",
+        "estimatedJobsCreated": "1,704",
+        "selectSmartCityBenefits": "$105.40"
+      },
+      {
+        "city": "Pembroke Pines",
+        "population": "172,374",
+        "estimatedNetworkInvestment": "$142",
+        "estimatedGDPGrowth": "$262",
+        "estimatedJobsCreated": "1,609",
+        "selectSmartCityBenefits": "$99.50"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 270999.7546072279,
+      "GCP": 25089695049.6637,
+      "mobileWireless": 21900000,
+    "adultsInWirelessOnly": 0.609,
+      "householdsWithSmartphones": 0.7658899715004616,
+      "totalWagesDependentOnWireless": 10882044579.5426
+    }
+  },
+  {
+    "name": "Georgia",
+    "abbreviation": "GA",
+    "citiesData": [
+      {
+        "city": "Atlanta",
+        "population": "498,044",
+        "estimatedNetworkInvestment": "$409",
+        "estimatedGDPGrowth": "$758",
+        "estimatedJobsCreated": "4,649",
+        "selectSmartCityBenefits": "$287.48"
+      },
+      {
+        "city": "Augusta",
+        "population": "196,939",
+        "estimatedNetworkInvestment": "$162",
+        "estimatedGDPGrowth": "$300",
+        "estimatedJobsCreated": "1,838",
+        "selectSmartCityBenefits": "$113.68"
+      },
+      {
+        "city": "Columbus",
+        "population": "194,160",
+        "estimatedNetworkInvestment": "$160",
+        "estimatedGDPGrowth": "$296",
+        "estimatedJobsCreated": "1,812",
+        "selectSmartCityBenefits": "$112.07"
+      },
+      {
+        "city": "Macon-Bibb",
+        "population": "153,095",
+        "estimatedNetworkInvestment": "$126",
+        "estimatedGDPGrowth": "$233",
+        "estimatedJobsCreated": "1,429",
+        "selectSmartCityBenefits": "$88.37"
+      },
+      {
+        "city": "Savannah",
+        "population": "145,862",
+        "estimatedNetworkInvestment": "$120",
+        "estimatedGDPGrowth": "$222",
+        "estimatedJobsCreated": "1,362",
+        "selectSmartCityBenefits": "$84.19"
+      },
+      {
+        "city": "Athens",
+        "population": "125,964",
+        "estimatedNetworkInvestment": "$104",
+        "estimatedGDPGrowth": "$192",
+        "estimatedJobsCreated": "1,176",
+        "selectSmartCityBenefits": "$72.71"
+      },
+      {
+        "city": "Sandy Springs",
+        "population": "108,797",
+        "estimatedNetworkInvestment": "$89",
+        "estimatedGDPGrowth": "$166",
+        "estimatedJobsCreated": "1,016",
+        "selectSmartCityBenefits": "$62.80"
+      },
+      {
+        "city": "Roswell",
+        "population": "94,650",
+        "estimatedNetworkInvestment": "$78",
+        "estimatedGDPGrowth": "$144",
+        "estimatedJobsCreated": "883",
+        "selectSmartCityBenefits": "$54.63"
+      },
+      {
+        "city": "Johns Creek",
+        "population": "84,310",
+        "estimatedNetworkInvestment": "$69",
+        "estimatedGDPGrowth": "$128",
+        "estimatedJobsCreated": "787",
+        "selectSmartCityBenefits": "$48.66"
+      },
+      {
+        "city": "Albany",
+        "population": "75,249",
+        "estimatedNetworkInvestment": "$62",
+        "estimatedGDPGrowth": "$115",
+        "estimatedJobsCreated": "702",
+        "selectSmartCityBenefits": "$43.43"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 236012.0263483107,
+      "GCP": 28388111736.5014,
+      "mobileWireless": 11100000,
+      "adultsInWirelessOnly": 0.59,
+      "householdsWithSmartphones": 0.7888246089738982,
+      "totalWagesDependentOnWireless": 12131297258.13339
+    }
+  },
+  {
+    "name": "Hawaii",
+    "abbreviation": "HI",
+    "citiesData": [
+      {
+        "city": "Urban Honolulu (2016)",
+        "population": "347,397",
+        "estimatedNetworkInvestment": "$286",
+        "estimatedGDPGrowth": "$529",
+        "estimatedJobsCreated": "3,243",
+        "selectSmartCityBenefits": "$200.52"
+      },
+      {
+        "city": "East Honolulu (2010)",
+        "population": "49,914",
+        "estimatedNetworkInvestment": "$41",
+        "estimatedGDPGrowth": "$76",
+        "estimatedJobsCreated": "466",
+        "selectSmartCityBenefits": "$14.92"
+      },
+      {
+        "city": "Pearl City (2010)",
+        "population": "47,698",
+        "estimatedNetworkInvestment": "$39",
+        "estimatedGDPGrowth": "$73",
+        "estimatedJobsCreated": "445",
+        "selectSmartCityBenefits": "$14.26"
+      },
+      {
+        "city": "Hilo (2010)",
+        "population": "43,263",
+        "estimatedNetworkInvestment": "$36",
+        "estimatedGDPGrowth": "$66",
+        "estimatedJobsCreated": "404",
+        "selectSmartCityBenefits": "$12.93"
+      },
+      {
+        "city": "Kailua (Honolulu County) (2010)",
+        "population": "38,635",
+        "estimatedNetworkInvestment": "$32",
+        "estimatedGDPGrowth": "$59",
+        "estimatedJobsCreated": "361",
+        "selectSmartCityBenefits": "$11.55"
+      },
+      {
+        "city": "Waipahu (2010)",
+        "population": "38,216",
+        "estimatedNetworkInvestment": "$31",
+        "estimatedGDPGrowth": "$58",
+        "estimatedJobsCreated": "357",
+        "selectSmartCityBenefits": "$11.42"
+      },
+      {
+        "city": "Kaneohe (2010)",
+        "population": "34,597",
+        "estimatedNetworkInvestment": "$28",
+        "estimatedGDPGrowth": "$53",
+        "estimatedJobsCreated": "323",
+        "selectSmartCityBenefits": "$10.34"
+      },
+      {
+        "city": "Mililani Town (2010)",
+        "population": "27,629",
+        "estimatedNetworkInvestment": "$23",
+        "estimatedGDPGrowth": "$42",
+        "estimatedJobsCreated": "258",
+        "selectSmartCityBenefits": "$8.26"
+      },
+      {
+        "city": "Kahului (2010)",
+        "population": "26,337",
+        "estimatedNetworkInvestment": "$22",
+        "estimatedGDPGrowth": "$40",
+        "estimatedJobsCreated": "246",
+        "selectSmartCityBenefits": "$7.87"
+      },
+      {
+        "city": "Ewa Gentry (2010)",
+        "population": "22,690",
+        "estimatedNetworkInvestment": "$19",
+        "estimatedGDPGrowth": "$35",
+        "estimatedJobsCreated": "212",
+        "selectSmartCityBenefits": "$6.78"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 22643.57482546504,
+      "GCP": 2119330095.275103,
+      "mobileWireless": 1600000,
+    "adultsInWirelessOnly": 0.516,
+      "householdsWithSmartphones": 0.7806996762220643,
+      "totalWagesDependentOnWireless": 960540945.7140985
+    }
+  },
+  {
+    "name": "Idaho",
+    "abbreviation": "ID",
+    "citiesData": [
+      {
+        "city": "Boise City",
+        "population": "228,790",
+        "estimatedNetworkInvestment": "$188",
+        "estimatedGDPGrowth": "$348",
+        "estimatedJobsCreated": "2,136",
+        "selectSmartCityBenefits": "$132.06"
+      },
+      {
+        "city": "Meridian",
+        "population": "106,804",
+        "estimatedNetworkInvestment": "$88",
+        "estimatedGDPGrowth": "$163",
+        "estimatedJobsCreated": "997",
+        "selectSmartCityBenefits": "$61.65"
+      },
+      {
+        "city": "Nampa",
+        "population": "96,252",
+        "estimatedNetworkInvestment": "$79",
+        "estimatedGDPGrowth": "$147",
+        "estimatedJobsCreated": "898",
+        "selectSmartCityBenefits": "$55.56"
+      },
+      {
+        "city": "Idaho Falls",
+        "population": "61,535",
+        "estimatedNetworkInvestment": "$51",
+        "estimatedGDPGrowth": "$94",
+        "estimatedJobsCreated": "574",
+        "selectSmartCityBenefits": "$35.52"
+      },
+      {
+        "city": "Pocatello",
+        "population": "56,266",
+        "estimatedNetworkInvestment": "$46",
+        "estimatedGDPGrowth": "$86",
+        "estimatedJobsCreated": "525",
+        "selectSmartCityBenefits": "$32.48"
+      },
+      {
+        "city": "Caldwell",
+        "population": "56,541",
+        "estimatedNetworkInvestment": "$46",
+        "estimatedGDPGrowth": "$86",
+        "estimatedJobsCreated": "528",
+        "selectSmartCityBenefits": "$32.64"
+      },
+      {
+        "city": "Coeur d'Alene",
+        "population": "51,303",
+        "estimatedNetworkInvestment": "$42",
+        "estimatedGDPGrowth": "$78",
+        "estimatedJobsCreated": "479",
+        "selectSmartCityBenefits": "$29.61"
+      },
+      {
+        "city": "Twin Falls",
+        "population": "49,764",
+        "estimatedNetworkInvestment": "$41",
+        "estimatedGDPGrowth": "$76",
+        "estimatedJobsCreated": "465",
+        "selectSmartCityBenefits": "$14.88"
+      },
+      {
+        "city": "Post Falls",
+        "population": "34,691",
+        "estimatedNetworkInvestment": "$29",
+        "estimatedGDPGrowth": "$53",
+        "estimatedJobsCreated": "324",
+        "selectSmartCityBenefits": "$10.37"
+      },
+      {
+        "city": "Lewiston",
+        "population": "32,817",
+        "estimatedNetworkInvestment": "$27",
+        "estimatedGDPGrowth": "$50",
+        "estimatedJobsCreated": "306",
+        "selectSmartCityBenefits": "$9.81"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 22317.47592956167,
+      "GCP": 1696181545.433555,
+      "mobileWireless": 1700000,
+    "adultsInWirelessOnly": 0.722,
+      "householdsWithSmartphones": 0.7321239146662476,
+      "totalWagesDependentOnWireless": 906970229.2549043
+    }
+  },
+  {
+    "name": "Illinois",
+    "abbreviation": "IL",
+    "citiesData": [
+      {
+        "city": "Chicago",
+        "population": "2,705,994",
+        "estimatedNetworkInvestment": "$2,224",
+        "estimatedGDPGrowth": "$4,120",
+        "estimatedJobsCreated": "25,258",
+        "selectSmartCityBenefits": "$1,561.93"
+      },
+      {
+        "city": "Aurora",
+        "population": "199,602",
+        "estimatedNetworkInvestment": "$164",
+        "estimatedGDPGrowth": "$304",
+        "estimatedJobsCreated": "1,863",
+        "selectSmartCityBenefits": "$115.21"
+      },
+      {
+        "city": "Joliet",
+        "population": "148,099",
+        "estimatedNetworkInvestment": "$122",
+        "estimatedGDPGrowth": "$226",
+        "estimatedJobsCreated": "1,382",
+        "selectSmartCityBenefits": "$85.48"
+      },
+      {
+        "city": "Naperville",
+        "population": "148,304",
+        "estimatedNetworkInvestment": "$122",
+        "estimatedGDPGrowth": "$226",
+        "estimatedJobsCreated": "1,384",
+        "selectSmartCityBenefits": "$85.60"
+      },
+      {
+        "city": "Rockford",
+        "population": "146,526",
+        "estimatedNetworkInvestment": "$120",
+        "estimatedGDPGrowth": "$223",
+        "estimatedJobsCreated": "1,368",
+        "selectSmartCityBenefits": "$84.58"
+      },
+      {
+        "city": "Springfield",
+        "population": "114,694",
+        "estimatedNetworkInvestment": "$94",
+        "estimatedGDPGrowth": "$175",
+        "estimatedJobsCreated": "1,071",
+        "selectSmartCityBenefits": "$66.20"
+      },
+      {
+        "city": "Peoria",
+        "population": "111,388",
+        "estimatedNetworkInvestment": "$92",
+        "estimatedGDPGrowth": "$170",
+        "estimatedJobsCreated": "1,040",
+        "selectSmartCityBenefits": "$64.29"
+      },
+      {
+        "city": "Elgin",
+        "population": "111,683",
+        "estimatedNetworkInvestment": "$92",
+        "estimatedGDPGrowth": "$170",
+        "estimatedJobsCreated": "1,042",
+        "selectSmartCityBenefits": "$64.46"
+      },
+      {
+        "city": "Waukegan",
+        "population": "86,792",
+        "estimatedNetworkInvestment": "$71",
+        "estimatedGDPGrowth": "$132",
+        "estimatedJobsCreated": "810",
+        "selectSmartCityBenefits": "$50.10"
+      },
+      {
+        "city": "Champaign",
+        "population": "88,029",
+        "estimatedNetworkInvestment": "$72",
+        "estimatedGDPGrowth": "$134",
+        "estimatedJobsCreated": "822",
+        "selectSmartCityBenefits": "$50.81"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 221067.3370052277,
+      "GCP": 22856548493.93877,
+      "mobileWireless": 14000000,
+    "adultsInWirelessOnly": 0.598,
+      "householdsWithSmartphones": 0.7694128177126472,
+      "totalWagesDependentOnWireless": 10601183207.61028
+    }
+  },
+  {
+    "name": "Indiana",
+    "abbreviation": "IN",
+    "citiesData": [
+      {
+        "city": "Indianapolis",
+        "population": "867,125",
+        "estimatedNetworkInvestment": "$713",
+        "estimatedGDPGrowth": "$1,320",
+        "estimatedJobsCreated": "8,094",
+        "selectSmartCityBenefits": "$500.51"
+      },
+      {
+        "city": "Fort Wayne",
+        "population": "267,633",
+        "estimatedNetworkInvestment": "$220",
+        "estimatedGDPGrowth": "$408",
+        "estimatedJobsCreated": "2,498",
+        "selectSmartCityBenefits": "$154.48"
+      },
+      {
+        "city": "Evansville",
+        "population": "117,963",
+        "estimatedNetworkInvestment": "$97",
+        "estimatedGDPGrowth": "$180",
+        "estimatedJobsCreated": "1,101",
+        "selectSmartCityBenefits": "$68.09"
+      },
+      {
+        "city": "South Bend",
+        "population": "101,860",
+        "estimatedNetworkInvestment": "$84",
+        "estimatedGDPGrowth": "$155",
+        "estimatedJobsCreated": "951",
+        "selectSmartCityBenefits": "$58.79"
+      },
+      {
+        "city": "Carmel",
+        "population": "93,510",
+        "estimatedNetworkInvestment": "$77",
+        "estimatedGDPGrowth": "$142",
+        "estimatedJobsCreated": "873",
+        "selectSmartCityBenefits": "$53.98"
+      },
+      {
+        "city": "Fishers",
+        "population": "93,362",
+        "estimatedNetworkInvestment": "$77",
+        "estimatedGDPGrowth": "$142",
+        "estimatedJobsCreated": "871",
+        "selectSmartCityBenefits": "$53.89"
+      },
+      {
+        "city": "Bloomington",
+        "population": "84,981",
+        "estimatedNetworkInvestment": "$70",
+        "estimatedGDPGrowth": "$129",
+        "estimatedJobsCreated": "793",
+        "selectSmartCityBenefits": "$49.05"
+      },
+      {
+        "city": "Hammond",
+        "population": "75,795",
+        "estimatedNetworkInvestment": "$62",
+        "estimatedGDPGrowth": "$115",
+        "estimatedJobsCreated": "707",
+        "selectSmartCityBenefits": "$43.75"
+      },
+      {
+        "city": "Gary",
+        "population": "75,282",
+        "estimatedNetworkInvestment": "$62",
+        "estimatedGDPGrowth": "$115",
+        "estimatedJobsCreated": "703",
+        "selectSmartCityBenefits": "$43.45"
+      },
+      {
+        "city": "Lafayette",
+        "population": "72,168",
+        "estimatedNetworkInvestment": "$59",
+        "estimatedGDPGrowth": "$110",
+        "estimatedJobsCreated": "674",
+        "selectSmartCityBenefits": "$41.66"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 57789.60268530664,
+      "GCP": 4930822432.243402,
+      "mobileWireless": 6500000,
+    "adultsInWirelessOnly": 0.633,
+      "householdsWithSmartphones": 0.7322452798162059,
+      "totalWagesDependentOnWireless": 2409306009.084567
+    }
+  },
+  {
+    "name": "Iowa",
+    "abbreviation": "IA",
+    "citiesData": [
+      {
+        "city": "Des Moines",
+        "population": "216,853",
+        "estimatedNetworkInvestment": "$79",
+        "estimatedGDPGrowth": "$330",
+        "estimatedJobsCreated": "2,024",
+        "selectSmartCityBenefits": "$125.17"
+      },
+      {
+        "city": "Cedar Rapids",
+        "population": "133,174",
+        "estimatedNetworkInvestment": "$109",
+        "estimatedGDPGrowth": "$203",
+        "estimatedJobsCreated": "1,243",
+        "selectSmartCityBenefits": "$76.87"
+      },
+      {
+        "city": "Davenport",
+        "population": "102,085",
+        "estimatedNetworkInvestment": "$84",
+        "estimatedGDPGrowth": "$155",
+        "estimatedJobsCreated": "953",
+        "selectSmartCityBenefits": "$58.92"
+      },
+      {
+        "city": "Sioux City",
+        "population": "82,396",
+        "estimatedNetworkInvestment": "$68",
+        "estimatedGDPGrowth": "$125",
+        "estimatedJobsCreated": "769",
+        "selectSmartCityBenefits": "$47.56"
+      },
+      {
+        "city": "Iowa City",
+        "population": "76,290",
+        "estimatedNetworkInvestment": "$63",
+        "estimatedGDPGrowth": "$116",
+        "estimatedJobsCreated": "712",
+        "selectSmartCityBenefits": "$44.04"
+      },
+      {
+        "city": "Waterloo",
+        "population": "67,798",
+        "estimatedNetworkInvestment": "$56",
+        "estimatedGDPGrowth": "$103",
+        "estimatedJobsCreated": "633",
+        "selectSmartCityBenefits": "$39.13"
+      },
+      {
+        "city": "Ames",
+        "population": "67,154",
+        "estimatedNetworkInvestment": "$55",
+        "estimatedGDPGrowth": "$102",
+        "estimatedJobsCreated": "627",
+        "selectSmartCityBenefits": "$38.76"
+      },
+      {
+        "city": "West Des Moines",
+        "population": "66,641",
+        "estimatedNetworkInvestment": "$55",
+        "estimatedGDPGrowth": "$101",
+        "estimatedJobsCreated": "622",
+        "selectSmartCityBenefits": "$38.47"
+      },
+      {
+        "city": "Ankeny",
+        "population": "65,284",
+        "estimatedNetworkInvestment": "$54",
+        "estimatedGDPGrowth": "$99",
+        "estimatedJobsCreated": "609",
+        "selectSmartCityBenefits": "$37.68"
+      },
+      {
+        "city": "Council Bluffs",
+        "population": "62,421",
+        "estimatedNetworkInvestment": "$51",
+        "estimatedGDPGrowth": "$95",
+        "estimatedJobsCreated": "583",
+        "selectSmartCityBenefits": "$36.03"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 34667.53420636085,
+      "GCP": 3035999323.839395,
+      "mobileWireless": 3100000,
+    "adultsInWirelessOnly": 0.613,
+      "householdsWithSmartphones": 0.7247053525352343,
+      "totalWagesDependentOnWireless": 1394854750.745931
+    }
+  },
+  {
+    "name": "Kansas",
+    "abbreviation": "KS",
+    "citiesData": [
+      {
+        "city": "Wichita",
+        "population": "389,255",
+        "estimatedNetworkInvestment": "$320",
+        "estimatedGDPGrowth": "$593",
+        "estimatedJobsCreated": "3,633",
+        "selectSmartCityBenefits": "$224.68"
+      },
+      {
+        "city": "Overland Park",
+        "population": "192,536",
+        "estimatedNetworkInvestment": "$158",
+        "estimatedGDPGrowth": "$293",
+        "estimatedJobsCreated": "1,797",
+        "selectSmartCityBenefits": "$111.13"
+      },
+      {
+        "city": "Kansas City",
+        "population": "152,958",
+        "estimatedNetworkInvestment": "$126",
+        "estimatedGDPGrowth": "$233",
+        "estimatedJobsCreated": "1,428",
+        "selectSmartCityBenefits": "$88.29"
+      },
+      {
+        "city": "Olathe",
+        "population": "139,605",
+        "estimatedNetworkInvestment": "$115",
+        "estimatedGDPGrowth": "$213",
+        "estimatedJobsCreated": "1,303",
+        "selectSmartCityBenefits": "$80.58"
+      },
+      {
+        "city": "Topeka",
+        "population": "125,904",
+        "estimatedNetworkInvestment": "$103",
+        "estimatedGDPGrowth": "$192",
+        "estimatedJobsCreated": "1,175",
+        "selectSmartCityBenefits": "$72.67"
+      },
+      {
+        "city": "Lawrence",
+        "population": "97,286",
+        "estimatedNetworkInvestment": "$80",
+        "estimatedGDPGrowth": "$148",
+        "estimatedJobsCreated": "908",
+        "selectSmartCityBenefits": "$56.15"
+      },
+      {
+        "city": "Shawnee",
+        "population": "65,845",
+        "estimatedNetworkInvestment": "$54",
+        "estimatedGDPGrowth": "$100",
+        "estimatedJobsCreated": "615",
+        "selectSmartCityBenefits": "$38.01"
+      },
+      {
+        "city": "Manhattan",
+        "population": "54,959",
+        "estimatedNetworkInvestment": "$45",
+        "estimatedGDPGrowth": "$84",
+        "estimatedJobsCreated": "513",
+        "selectSmartCityBenefits": "$31.72"
+      },
+      {
+        "city": "Lenexa",
+        "population": "55,294",
+        "estimatedNetworkInvestment": "$45",
+        "estimatedGDPGrowth": "$84",
+        "estimatedJobsCreated": "516",
+        "selectSmartCityBenefits": "$31.92"
+      },
+      {
+        "city": "Salina",
+        "population": "46,716",
+        "estimatedNetworkInvestment": "$38",
+        "estimatedGDPGrowth": "$71",
+        "estimatedJobsCreated": "436",
+        "selectSmartCityBenefits": "$13.97"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 63039.35060322552,
+      "GCP": 6966134287.2193,
+      "mobileWireless": 3200000,
+    "adultsInWirelessOnly": 0.646,
+      "householdsWithSmartphones": 0.7429483063417287,
+      "totalWagesDependentOnWireless": 2865105118.835474
+    }
+  },
+  {
+    "name": "Kentucky",
+    "abbreviation": "KY",
+    "citiesData": [
+      {
+        "city": "Louisville",
+        "population": "620,118",
+        "estimatedNetworkInvestment": "$510",
+        "estimatedGDPGrowth": "$944",
+        "estimatedJobsCreated": "5,788",
+        "selectSmartCityBenefits": "$357.94"
+      },
+      {
+        "city": "Lexington",
+        "population": "323,780",
+        "estimatedNetworkInvestment": "$266",
+        "estimatedGDPGrowth": "$493",
+        "estimatedJobsCreated": "3,022",
+        "selectSmartCityBenefits": "$186.89"
+      },
+      {
+        "city": "Bowling Green",
+        "population": "68,401",
+        "estimatedNetworkInvestment": "$56",
+        "estimatedGDPGrowth": "$104",
+        "estimatedJobsCreated": "638",
+        "selectSmartCityBenefits": "$39.48"
+      },
+      {
+        "city": "Owensboro",
+        "population": "59,809",
+        "estimatedNetworkInvestment": "$49",
+        "estimatedGDPGrowth": "$91",
+        "estimatedJobsCreated": "558",
+        "selectSmartCityBenefits": "$34.52"
+      },
+      {
+        "city": "Covington",
+        "population": "40,366",
+        "estimatedNetworkInvestment": "$33",
+        "estimatedGDPGrowth": "$61",
+        "estimatedJobsCreated": "377",
+        "selectSmartCityBenefits": "$12.07"
+      },
+      {
+        "city": "Richmond",
+        "population": "35,894",
+        "estimatedNetworkInvestment": "$30",
+        "estimatedGDPGrowth": "$55",
+        "estimatedJobsCreated": "335",
+        "selectSmartCityBenefits": "$10.73"
+      },
+      {
+        "city": "Georgetown",
+        "population": "34,395",
+        "estimatedNetworkInvestment": "$28",
+        "estimatedGDPGrowth": "$52",
+        "estimatedJobsCreated": "321",
+        "selectSmartCityBenefits": "$10.28"
+      },
+      {
+        "city": "Florence",
+        "population": "32,479",
+        "estimatedNetworkInvestment": "$27",
+        "estimatedGDPGrowth": "$49",
+        "estimatedJobsCreated": "303",
+        "selectSmartCityBenefits": "$9.71"
+      },
+      {
+        "city": "Hopkinsville",
+        "population": "31,026",
+        "estimatedNetworkInvestment": "$26",
+        "estimatedGDPGrowth": "$47",
+        "estimatedJobsCreated": "290",
+        "selectSmartCityBenefits": "$9.28"
+      },
+      {
+        "city": "Nicholasville",
+        "population": "30,829",
+        "estimatedNetworkInvestment": "$25",
+        "estimatedGDPGrowth": "$47",
+        "estimatedJobsCreated": "288",
+        "selectSmartCityBenefits": "$9.22"
+      },
+      {
+        "city": "Frankfort",
+        "population": "27,679",
+        "estimatedNetworkInvestment": "$23",
+        "estimatedGDPGrowth": "$42",
+        "estimatedJobsCreated": "258",
+        "selectSmartCityBenefits": "$8.27"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 53837.07455657882,
+      "GCP": 4734198679.494452,
+      "mobileWireless": 4300000,
+    "adultsInWirelessOnly": 0.619,
+      "householdsWithSmartphones": 0.7073771646603085,
+      "totalWagesDependentOnWireless": 2137150697.237091
+    }
+  },
+  {
+    "name": "Louisiana",
+    "abbreviation": "LA",
+    "citiesData": [
+      {
+        "city": "Jefferson Parish",
+        "population": "434,051",
+        "estimatedNetworkInvestment": "$357",
+        "estimatedGDPGrowth": "$661",
+        "estimatedJobsCreated": "4,052",
+        "selectSmartCityBenefits": "$250.54"
+      },
+      {
+        "city": "New Orleans",
+        "population": "391,006",
+        "estimatedNetworkInvestment": "$321",
+        "estimatedGDPGrowth": "$595",
+        "estimatedJobsCreated": "3,650",
+        "selectSmartCityBenefits": "$225.69"
+      },
+      {
+        "city": "St. Tammany Parish",
+        "population": "258,111",
+        "estimatedNetworkInvestment": "$212",
+        "estimatedGDPGrowth": "$393",
+        "estimatedJobsCreated": "2,409",
+        "selectSmartCityBenefits": "$148.98"
+      },
+      {
+        "city": "Baton Rouge",
+        "population": "221,599",
+        "estimatedNetworkInvestment": "$182",
+        "estimatedGDPGrowth": "$337",
+        "estimatedJobsCreated": "2,068",
+        "selectSmartCityBenefits": "$127.91"
+      },
+      {
+        "city": "Shreveport",
+        "population": "188,987",
+        "estimatedNetworkInvestment": "$155",
+        "estimatedGDPGrowth": "$288",
+        "estimatedJobsCreated": "1,764",
+        "selectSmartCityBenefits": "$109.09"
+      },
+      {
+        "city": "Lafayette",
+        "population": "126,143",
+        "estimatedNetworkInvestment": "$104",
+        "estimatedGDPGrowth": "$192",
+        "estimatedJobsCreated": "117",
+        "selectSmartCityBenefits": "$72.81"
+      },
+      {
+        "city": "Lake Charles",
+        "population": "78,001",
+        "estimatedNetworkInvestment": "$64",
+        "estimatedGDPGrowth": "$119",
+        "estimatedJobsCreated": "728",
+        "selectSmartCityBenefits": "$45.02"
+      },
+      {
+        "city": "Bossier City",
+        "population": "68,235",
+        "estimatedNetworkInvestment": "$56",
+        "estimatedGDPGrowth": "$104",
+        "estimatedJobsCreated": "637",
+        "selectSmartCityBenefits": "$39.39"
+      },
+      {
+        "city": "Kenner",
+        "population": "66,657",
+        "estimatedNetworkInvestment": "$55",
+        "estimatedGDPGrowth": "$101",
+        "estimatedJobsCreated": "622",
+        "selectSmartCityBenefits": "$38.48"
+      },
+      {
+        "city": "Monroe",
+        "population": "47,877",
+        "estimatedNetworkInvestment": "$39",
+        "estimatedGDPGrowth": "$73",
+        "estimatedJobsCreated": "447",
+        "selectSmartCityBenefits": "$14.31"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 36506.88299638632,
+      "GCP": 3006977863.603467,
+      "mobileWireless": 5400000,
+    "adultsInWirelessOnly": 0.576,
+      "householdsWithSmartphones": 0.7419498245293906,
+      "totalWagesDependentOnWireless": 1469082633.285192
+    }
+  },
+  {
+    "name": "Maine",
+    "abbreviation": "ME",
+    "citiesData": [
+      {
+        "city": "Portland",
+        "population": "66,417",
+        "estimatedNetworkInvestment": "$55",
+        "estimatedGDPGrowth": "$101",
+        "estimatedJobsCreated": "620",
+        "selectSmartCityBenefits": "$38.34"
+      },
+      {
+        "city": "Lewiston",
+        "population": "35,944",
+        "estimatedNetworkInvestment": "$30",
+        "estimatedGDPGrowth": "$55",
+        "estimatedJobsCreated": "336",
+        "selectSmartCityBenefits": "$10.75"
+      },
+      {
+        "city": "Bangor",
+        "population": "31,997",
+        "estimatedNetworkInvestment": "$26",
+        "estimatedGDPGrowth": "$49",
+        "estimatedJobsCreated": "299",
+        "selectSmartCityBenefits": "$9.57"
+      },
+      {
+        "city": "South Portland",
+        "population": "25,606",
+        "estimatedNetworkInvestment": "$21",
+        "estimatedGDPGrowth": "$39",
+        "estimatedJobsCreated": "239",
+        "selectSmartCityBenefits": "$7.65"
+      },
+      {
+        "city": "Auburn",
+        "population": "23,196",
+        "estimatedNetworkInvestment": "$19",
+        "estimatedGDPGrowth": "$35",
+        "estimatedJobsCreated": "217",
+        "selectSmartCityBenefits": "$6.93"
+      },
+      {
+        "city": "Biddeford",
+        "population": "21,514",
+        "estimatedNetworkInvestment": "$18",
+        "estimatedGDPGrowth": "$33",
+        "estimatedJobsCreated": "201",
+        "selectSmartCityBenefits": "$6.43"
+      },
+      {
+        "city": "Sanford",
+        "population": "21,183",
+        "estimatedNetworkInvestment": "$17",
+        "estimatedGDPGrowth": "$32",
+        "estimatedJobsCreated": "198",
+        "selectSmartCityBenefits": "$6.33"
+      },
+      {
+        "city": "Saco",
+        "population": "19,748",
+        "estimatedNetworkInvestment": "$16",
+        "estimatedGDPGrowth": "$30",
+        "estimatedJobsCreated": "184",
+        "selectSmartCityBenefits": "$5.90"
+      },
+      {
+        "city": "Westbrook",
+        "population": "18,974",
+        "estimatedNetworkInvestment": "$16",
+        "estimatedGDPGrowth": "$29",
+        "estimatedJobsCreated": "177",
+        "selectSmartCityBenefits": "$5.67"
+      },
+      {
+        "city": "Augusta",
+        "population": "18,681",
+        "estimatedNetworkInvestment": "$15",
+        "estimatedGDPGrowth": "$28",
+        "estimatedJobsCreated": "174",
+        "selectSmartCityBenefits": "$5.58"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 14048.77715910859,
+      "GCP": 1097104443.739111,
+      "mobileWireless": 1300000,
+    "adultsInWirelessOnly": 0.477,
+      "householdsWithSmartphones": 0.6727984049956739,
+      "totalWagesDependentOnWireless": 527065776.6077496
+    }
+  },
+  {
+    "name": "Maryland",
+    "abbreviation": "MD",
+    "citiesData": [
+      {
+        "city": "Baltimore",
+        "population": "602,495",
+        "estimatedNetworkInvestment": "$495",
+        "estimatedGDPGrowth": "$917",
+        "estimatedJobsCreated": "5,624",
+        "selectSmartCityBenefits": "$347.77"
+      },
+      {
+        "city": "Frederick",
+        "population": "72,146",
+        "estimatedNetworkInvestment": "$59",
+        "estimatedGDPGrowth": "$110",
+        "estimatedJobsCreated": "673",
+        "selectSmartCityBenefits": "$41.64"
+      },
+      {
+        "city": "Gaithersburg",
+        "population": "68,289",
+        "estimatedNetworkInvestment": "$56",
+        "estimatedGDPGrowth": "$104",
+        "estimatedJobsCreated": "637",
+        "selectSmartCityBenefits": "$39.42"
+      },
+      {
+        "city": "Rockville",
+        "population": "68,268",
+        "estimatedNetworkInvestment": "$56",
+        "estimatedGDPGrowth": "$104",
+        "estimatedJobsCreated": "637",
+        "selectSmartCityBenefits": "$39.41"
+      },
+      {
+        "city": "Bowie",
+        "population": "58,682",
+        "estimatedNetworkInvestment": "$48",
+        "estimatedGDPGrowth": "$89",
+        "estimatedJobsCreated": "548",
+        "selectSmartCityBenefits": "$33.87"
+      },
+      {
+        "city": "Hagerstown",
+        "population": "40,205",
+        "estimatedNetworkInvestment": "$33",
+        "estimatedGDPGrowth": "$61",
+        "estimatedJobsCreated": "375",
+        "selectSmartCityBenefits": "$12.02"
+      },
+      {
+        "city": "Annapolis",
+        "population": "39,174",
+        "estimatedNetworkInvestment": "$32",
+        "estimatedGDPGrowth": "$60",
+        "estimatedJobsCreated": "366",
+        "selectSmartCityBenefits": "$11.71"
+      },
+      {
+        "city": "Salisbury",
+        "population": "32,809",
+        "estimatedNetworkInvestment": "$27",
+        "estimatedGDPGrowth": "$50",
+        "estimatedJobsCreated": "306",
+        "selectSmartCityBenefits": "$9.81"
+      },
+      {
+        "city": "College Park",
+        "population": "32,196",
+        "estimatedNetworkInvestment": "$26",
+        "estimatedGDPGrowth": "$49",
+        "estimatedJobsCreated": "301",
+        "selectSmartCityBenefits": "$9.63"
+      },
+      {
+        "city": "Laurel",
+        "population": "25,723",
+        "estimatedNetworkInvestment": "$21",
+        "estimatedGDPGrowth": "$39",
+        "estimatedJobsCreated": "240",
+        "selectSmartCityBenefits": "$7.69"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 96052.31376214503,
+      "GCP": 10241527767.69706,
+      "mobileWireless": 6700000,
+    "adultsInWirelessOnly": 0.394,
+      "householdsWithSmartphones": 0.7959590040721626,
+      "totalWagesDependentOnWireless": 4504909200.308469
+    }
+  },
+  {
+    "name": "Massachusetts",
+    "abbreviation": "MA",
+    "citiesData": [
+      {
+        "city": "Boston",
+        "population": "694,583",
+        "estimatedNetworkInvestment": "$571",
+        "estimatedGDPGrowth": "$1,058",
+        "estimatedJobsCreated": "6,483",
+        "selectSmartCityBenefits": "$400.92"
+      },
+      {
+        "city": "Worcester",
+        "population": "185,877",
+        "estimatedNetworkInvestment": "$153",
+        "estimatedGDPGrowth": "$283",
+        "estimatedJobsCreated": "1,735",
+        "selectSmartCityBenefits": "$107.29"
+      },
+      {
+        "city": "Springfield",
+        "population": "155,032",
+        "estimatedNetworkInvestment": "$127",
+        "estimatedGDPGrowth": "$236",
+        "estimatedJobsCreated": "1,447",
+        "selectSmartCityBenefits": "$89.49"
+      },
+      {
+        "city": "Cambridge",
+        "population": "118,977",
+        "estimatedNetworkInvestment": "$98",
+        "estimatedGDPGrowth": "$181",
+        "estimatedJobsCreated": "1,111",
+        "selectSmartCityBenefits": "$68.67"
+      },
+      {
+        "city": "Lowell",
+        "population": "111,670",
+        "estimatedNetworkInvestment": "$92",
+        "estimatedGDPGrowth": "$170",
+        "estimatedJobsCreated": "1,042",
+        "selectSmartCityBenefits": "$64.46"
+      },
+      {
+        "city": "Brockton",
+        "population": "95,777",
+        "estimatedNetworkInvestment": "$79",
+        "estimatedGDPGrowth": "$146",
+        "estimatedJobsCreated": "894",
+        "selectSmartCityBenefits": "$55.28"
+      },
+      {
+        "city": "New Bedford",
+        "population": "95,315",
+        "estimatedNetworkInvestment": "$78",
+        "estimatedGDPGrowth": "$145",
+        "estimatedJobsCreated": "890",
+        "selectSmartCityBenefits": "$55.02"
+      },
+      {
+        "city": "Quincy",
+        "population": "94,580",
+        "estimatedNetworkInvestment": "$78",
+        "estimatedGDPGrowth": "$144",
+        "estimatedJobsCreated": "883",
+        "selectSmartCityBenefits": "$54.59"
+      },
+      {
+        "city": "Lynn",
+        "population": "94,654",
+        "estimatedNetworkInvestment": "$78",
+        "estimatedGDPGrowth": "$144",
+        "estimatedJobsCreated": "884",
+        "selectSmartCityBenefits": "$54.64"
+      },
+      {
+        "city": "Newton",
+        "population": "88,904",
+        "estimatedNetworkInvestment": "$73",
+        "estimatedGDPGrowth": "$135",
+        "estimatedJobsCreated": "830",
+        "selectSmartCityBenefits": "$51.32"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 110778.6921064773,
+      "GCP": 11817296147.50074,
+      "mobileWireless": 7800000,
+    "adultsInWirelessOnly": 0.399,
+      "householdsWithSmartphones": 0.7659329812615192,
+      "totalWagesDependentOnWireless": 5923079735.803556
+    }
+  },
+  {
+    "name": "Michigan",
+    "abbreviation": "MI",
+    "citiesData": [
+      {
+        "city": "Detroit",
+        "population": "672,662",
+        "estimatedNetworkInvestment": "$553",
+        "estimatedGDPGrowth": "$1,024",
+        "estimatedJobsCreated": "6,279",
+        "selectSmartCityBenefits": "$388.27"
+      },
+      {
+        "city": "Grand Rapids",
+        "population": "200,217",
+        "estimatedNetworkInvestment": "$165",
+        "estimatedGDPGrowth": "$305",
+        "estimatedJobsCreated": "1,869",
+        "selectSmartCityBenefits": "$115.57"
+      },
+      {
+        "city": "Warren",
+        "population": "134,587",
+        "estimatedNetworkInvestment": "$111",
+        "estimatedGDPGrowth": "$205",
+        "estimatedJobsCreated": "1,256",
+        "selectSmartCityBenefits": "$77.69"
+      },
+      {
+        "city": "Sterling Heights",
+        "population": "132,694",
+        "estimatedNetworkInvestment": "$109",
+        "estimatedGDPGrowth": "$202",
+        "estimatedJobsCreated": "1,241",
+        "selectSmartCityBenefits": "$76.75"
+      },
+      {
+        "city": "Ann Arbor",
+        "population": "121,890",
+        "estimatedNetworkInvestment": "$100",
+        "estimatedGDPGrowth": "$186",
+        "estimatedJobsCreated": "1,138",
+        "selectSmartCityBenefits": "$70.36"
+      },
+      {
+        "city": "Lansing",
+        "population": "118,427",
+        "estimatedNetworkInvestment": "$97",
+        "estimatedGDPGrowth": "$180",
+        "estimatedJobsCreated": "1,105",
+        "selectSmartCityBenefits": "$68.36"
+      },
+      {
+        "city": "Clinton Township",
+        "population": "100,800",
+        "estimatedNetworkInvestment": "$83",
+        "estimatedGDPGrowth": "$153",
+        "estimatedJobsCreated": "941",
+        "selectSmartCityBenefits": "$58.18"
+      },
+      {
+        "city": "Flint",
+        "population": "95,943",
+        "estimatedNetworkInvestment": "$79",
+        "estimatedGDPGrowth": "$146",
+        "estimatedJobsCreated": "896",
+        "selectSmartCityBenefits": "$55.38"
+      },
+      {
+        "city": "Dearborn",
+        "population": "94,333",
+        "estimatedNetworkInvestment": "$78",
+        "estimatedGDPGrowth": "$144",
+        "estimatedJobsCreated": "881",
+        "selectSmartCityBenefits": "$54.45"
+      },
+      {
+        "city": "Livonia",
+        "population": "93,971",
+        "estimatedNetworkInvestment": "$77",
+        "estimatedGDPGrowth": "$143",
+        "estimatedJobsCreated": "878",
+        "selectSmartCityBenefits": "$54.32"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 99879.68064575194,
+      "GCP": 8357654732.435542,
+      "mobileWireless": 10600000,
+    "adultsInWirelessOnly": 0.573,
+      "householdsWithSmartphones": 0.7376292849432038,
+      "totalWagesDependentOnWireless": 4241356948.788843
+    }
+  },
+  {
+    "name": "Minnesota",
+    "abbreviation": "MN",
+    "citiesData": [
+      {
+        "city": "Minneapolis",
+        "population": "425,403",
+        "estimatedNetworkInvestment": "$350",
+        "estimatedGDPGrowth": "$648",
+        "estimatedJobsCreated": "3,971",
+        "selectSmartCityBenefits": "$345.55"
+      },
+      {
+        "city": "St. Paul",
+        "population": "307,695",
+        "estimatedNetworkInvestment": "$253",
+        "estimatedGDPGrowth": "$469",
+        "estimatedJobsCreated": "2,872",
+        "selectSmartCityBenefits": "$177.61"
+      },
+      {
+        "city": "Rochester",
+        "population": "116,961",
+        "estimatedNetworkInvestment": "$96",
+        "estimatedGDPGrowth": "$178",
+        "estimatedJobsCreated": "1,092",
+        "selectSmartCityBenefits": "$67.51"
+      },
+      {
+        "city": "Duluth",
+        "population": "85,884",
+        "estimatedNetworkInvestment": "$71",
+        "estimatedGDPGrowth": "$131",
+        "estimatedJobsCreated": "802",
+        "selectSmartCityBenefits": "$49.57"
+      },
+      {
+        "city": "Bloomington",
+        "population": "85,578",
+        "estimatedNetworkInvestment": "$70",
+        "estimatedGDPGrowth": "$130",
+        "estimatedJobsCreated": "799",
+        "selectSmartCityBenefits": "$49.40"
+      },
+      {
+        "city": "Brooklyn Park",
+        "population": "80,610",
+        "estimatedNetworkInvestment": "$66",
+        "estimatedGDPGrowth": "$123",
+        "estimatedJobsCreated": "752",
+        "selectSmartCityBenefits": "$46.53"
+      },
+      {
+        "city": "Plymouth",
+        "population": "79,450",
+        "estimatedNetworkInvestment": "$65",
+        "estimatedGDPGrowth": "$121",
+        "estimatedJobsCreated": "742",
+        "selectSmartCityBenefits": "$45.86"
+      },
+      {
+        "city": "Maple Grove",
+        "population": "71,807",
+        "estimatedNetworkInvestment": "$59",
+        "estimatedGDPGrowth": "$109",
+        "estimatedJobsCreated": "670",
+        "selectSmartCityBenefits": "$41.45"
+      },
+      {
+        "city": "Woodbury",
+        "population": "71,306",
+        "estimatedNetworkInvestment": "$59",
+        "estimatedGDPGrowth": "$109",
+        "estimatedJobsCreated": "666",
+        "selectSmartCityBenefits": "$41.16"
+      },
+      {
+        "city": "St. Cloud",
+        "population": "68,043",
+        "estimatedNetworkInvestment": "$56",
+        "estimatedGDPGrowth": "$104",
+        "estimatedJobsCreated": "635",
+        "selectSmartCityBenefits": "$39.28"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 56597.82826706795,
+      "GCP": 5655494089.061242,
+      "mobileWireless": 5900000,
+    "adultsInWirelessOnly": 0.562,
+      "householdsWithSmartphones": 0.7554545137232545,
+      "totalWagesDependentOnWireless": 2607773075.770422
+    }
+  },
+  {
+    "name": "Mississippi",
+    "abbreviation": "MS",
+    "citiesData": [
+      {
+        "city": "Jackson",
+        "population": "164,422",
+        "estimatedNetworkInvestment": "$135",
+        "estimatedGDPGrowth": "$250",
+        "estimatedJobsCreated": "1,535",
+        "selectSmartCityBenefits": "$94.91"
+      },
+      {
+        "city": "Gulfport",
+        "population": "71,870",
+        "estimatedNetworkInvestment": "$59",
+        "estimatedGDPGrowth": "$109",
+        "estimatedJobsCreated": "671",
+        "selectSmartCityBenefits": "$41.48"
+      },
+      {
+        "city": "Southaven",
+        "population": "54,944",
+        "estimatedNetworkInvestment": "$45",
+        "estimatedGDPGrowth": "$84",
+        "estimatedJobsCreated": "513",
+        "selectSmartCityBenefits": "$31.71"
+      },
+      {
+        "city": "Hattiesburg",
+        "population": "45,951",
+        "estimatedNetworkInvestment": "$38",
+        "estimatedGDPGrowth": "$70",
+        "estimatedJobsCreated": "429",
+        "selectSmartCityBenefits": "$13.74"
+      },
+      {
+        "city": "Biloxi",
+        "population": "45,968",
+        "estimatedNetworkInvestment": "$38",
+        "estimatedGDPGrowth": "$70",
+        "estimatedJobsCreated": "429",
+        "selectSmartCityBenefits": "$13.74"
+      },
+      {
+        "city": "Tupelo",
+        "population": "38,206",
+        "estimatedNetworkInvestment": "$31",
+        "estimatedGDPGrowth": "$58",
+        "estimatedJobsCreated": "357",
+        "selectSmartCityBenefits": "$11.42"
+      },
+      {
+        "city": "Meridian",
+        "population": "37,325",
+        "estimatedNetworkInvestment": "$31",
+        "estimatedGDPGrowth": "$57",
+        "estimatedJobsCreated": "348",
+        "selectSmartCityBenefits": "$11.16"
+      },
+      {
+        "city": "Olive Branch",
+        "population": "38,149",
+        "estimatedNetworkInvestment": "$31",
+        "estimatedGDPGrowth": "$58",
+        "estimatedJobsCreated": "356",
+        "selectSmartCityBenefits": "$11.40"
+      },
+      {
+        "city": "Greenville",
+        "population": "29,898",
+        "estimatedNetworkInvestment": "$25",
+        "estimatedGDPGrowth": "$46",
+        "estimatedJobsCreated": "279",
+        "selectSmartCityBenefits": "$8.94"
+      },
+      {
+        "city": "Horn Lake",
+        "population": "27,127",
+        "estimatedNetworkInvestment": "$22",
+        "estimatedGDPGrowth": "$41",
+        "estimatedJobsCreated": "253",
+        "selectSmartCityBenefits": "$8.11"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 48307.51012066467,
+      "GCP": 4029680868.089448,
+      "mobileWireless": 2800000,
+    "adultsInWirelessOnly": 0.665,
+      "householdsWithSmartphones": 0.7248079028998987,
+      "totalWagesDependentOnWireless": 1795843543.361955
+    }
+  },
+  {
+    "name": "Missouri",
+    "abbreviation": "MO",
+    "citiesData": [
+      {
+        "city": "Kansas City",
+        "population": "491,918",
+        "estimatedNetworkInvestment": "$404",
+        "estimatedGDPGrowth": "$749",
+        "estimatedJobsCreated": "4,592",
+        "selectSmartCityBenefits": "$283.94"
+      },
+      {
+        "city": "St. Louis",
+        "population": "302,838",
+        "estimatedNetworkInvestment": "$249",
+        "estimatedGDPGrowth": "$461",
+        "estimatedJobsCreated": "2,827",
+        "selectSmartCityBenefits": "$174.80"
+      },
+      {
+        "city": "Springfield",
+        "population": "168,122",
+        "estimatedNetworkInvestment": "$138",
+        "estimatedGDPGrowth": "$256",
+        "estimatedJobsCreated": "1,569",
+        "selectSmartCityBenefits": "$97.04"
+      },
+      {
+        "city": "Columbia",
+        "population": "123,180",
+        "estimatedNetworkInvestment": "$101",
+        "estimatedGDPGrowth": "$188",
+        "estimatedJobsCreated": "1,150",
+        "selectSmartCityBenefits": "$71.10"
+      },
+      {
+        "city": "Independence",
+        "population": "116,925",
+        "estimatedNetworkInvestment": "$96",
+        "estimatedGDPGrowth": "$178",
+        "estimatedJobsCreated": "1,091",
+        "selectSmartCityBenefits": "$67.49"
+      },
+      {
+        "city": "Lee's Summit",
+        "population": "98,461",
+        "estimatedNetworkInvestment": "$81",
+        "estimatedGDPGrowth": "$150",
+        "estimatedJobsCreated": "919",
+        "selectSmartCityBenefits": "$56.83"
+      },
+      {
+        "city": "O'Fallon",
+        "population": "88,472",
+        "estimatedNetworkInvestment": "$73",
+        "estimatedGDPGrowth": "$135",
+        "estimatedJobsCreated": "826",
+        "selectSmartCityBenefits": "$51.07"
+      },
+      {
+        "city": "St. Joseph",
+        "population": "75,959",
+        "estimatedNetworkInvestment": "$62",
+        "estimatedGDPGrowth": "$116",
+        "estimatedJobsCreated": "709",
+        "selectSmartCityBenefits": "$43.84"
+      },
+      {
+        "city": "St. Charles",
+        "population": "70,764",
+        "estimatedNetworkInvestment": "$58",
+        "estimatedGDPGrowth": "$108",
+        "estimatedJobsCreated": "661",
+        "selectSmartCityBenefits": "$40.85"
+      },
+      {
+        "city": "St. Peters",
+        "population": "57,127",
+        "estimatedNetworkInvestment": "$47",
+        "estimatedGDPGrowth": "$87",
+        "estimatedJobsCreated": "533",
+        "selectSmartCityBenefits": "$32.97"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 133982.5584681285,
+      "GCP": 12188485139.20853,
+      "mobileWireless": 6300000,
+    "adultsInWirelessOnly": 0.642,
+      "householdsWithSmartphones": 0.7414431390402961,
+      "totalWagesDependentOnWireless": 5614808969.68632
+    }
+  },
+  {
+    "name": "Montana",
+    "abbreviation": "MT",
+    "citiesData": [
+      {
+        "city": "Billings",
+        "population": "109,550",
+        "estimatedNetworkInvestment": "$90",
+        "estimatedGDPGrowth": "$167",
+        "estimatedJobsCreated": "1,023",
+        "selectSmartCityBenefits": "$63.23"
+      },
+      {
+        "city": "Missoula",
+        "population": "74,428",
+        "estimatedNetworkInvestment": "$61",
+        "estimatedGDPGrowth": "$113",
+        "estimatedJobsCreated": "695",
+        "selectSmartCityBenefits": "$42.96"
+      },
+      {
+        "city": "Great Falls",
+        "population": "58,701",
+        "estimatedNetworkInvestment": "$48",
+        "estimatedGDPGrowth": "$89",
+        "estimatedJobsCreated": "548",
+        "selectSmartCityBenefits": "$33.88"
+      },
+      {
+        "city": "Bozeman",
+        "population": "48,532",
+        "estimatedNetworkInvestment": "$40",
+        "estimatedGDPGrowth": "$74",
+        "estimatedJobsCreated": "453",
+        "selectSmartCityBenefits": "$14.51"
+      },
+      {
+        "city": "Butte",
+        "population": "34,284",
+        "estimatedNetworkInvestment": "$28",
+        "estimatedGDPGrowth": "$52",
+        "estimatedJobsCreated": "320",
+        "selectSmartCityBenefits": "$10.25"
+      },
+      {
+        "city": "Helena",
+        "population": "32,315",
+        "estimatedNetworkInvestment": "$27",
+        "estimatedGDPGrowth": "$49",
+        "estimatedJobsCreated": "302",
+        "selectSmartCityBenefits": "$9.66"
+      },
+      {
+        "city": "Kalispell",
+        "population": "23,938",
+        "estimatedNetworkInvestment": "$20",
+        "estimatedGDPGrowth": "$36",
+        "estimatedJobsCreated": "223",
+        "selectSmartCityBenefits": "$7.16"
+      },
+      {
+        "city": "Havre",
+        "population": "9,715",
+        "estimatedNetworkInvestment": "$8",
+        "estimatedGDPGrowth": "$15",
+        "estimatedJobsCreated": "91",
+        "selectSmartCityBenefits": "$2.90"
+      },
+      {
+        "city": "Anaconda",
+        "population": "9,131",
+        "estimatedNetworkInvestment": "$8",
+        "estimatedGDPGrowth": "$14",
+        "estimatedJobsCreated": "85",
+        "selectSmartCityBenefits": "$2.73"
+      },
+      {
+        "city": "Miles City",
+        "population": "8,393",
+        "estimatedNetworkInvestment": "$7",
+        "estimatedGDPGrowth": "$13",
+        "estimatedJobsCreated": "78",
+        "selectSmartCityBenefits": "$2.51"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 8370.846251147585,
+      "GCP": 577385308.2226582,
+      "mobileWireless": 1000000,
+    "adultsInWirelessOnly": 0.519,
+      "householdsWithSmartphones": 0.6782745569240012,
+      "totalWagesDependentOnWireless": 291239943.0822169
+    }
+  },
+  {
+    "name": "Nebraska",
+    "abbreviation": "NE",
+    "citiesData": [
+      {
+        "city": "Omaha",
+        "population": "468,262",
+        "estimatedNetworkInvestment": "$385",
+        "estimatedGDPGrowth": "$713",
+        "estimatedJobsCreated": "4,371",
+        "selectSmartCityBenefits": "$270.29"
+      },
+      {
+        "city": "Lincoln",
+        "population": "287,401",
+        "estimatedNetworkInvestment": "$236",
+        "estimatedGDPGrowth": "$438",
+        "estimatedJobsCreated": "2,683",
+        "selectSmartCityBenefits": "$165.89"
+      },
+      {
+        "city": "Bellevue",
+        "population": "53,627",
+        "estimatedNetworkInvestment": "$44",
+        "estimatedGDPGrowth": "$82",
+        "estimatedJobsCreated": "501",
+        "selectSmartCityBenefits": "$30.95"
+      },
+      {
+        "city": "Grand Island",
+        "population": "51,478",
+        "estimatedNetworkInvestment": "$42",
+        "estimatedGDPGrowth": "$78",
+        "estimatedJobsCreated": "481",
+        "selectSmartCityBenefits": "$29.71"
+      },
+      {
+        "city": "Kearney",
+        "population": "33,761",
+        "estimatedNetworkInvestment": "$28",
+        "estimatedGDPGrowth": "$51",
+        "estimatedJobsCreated": "315",
+        "selectSmartCityBenefits": "$10.09"
+      },
+      {
+        "city": "Fremont",
+        "population": "26,509",
+        "estimatedNetworkInvestment": "$22",
+        "estimatedGDPGrowth": "$40",
+        "estimatedJobsCreated": "247",
+        "selectSmartCityBenefits": "$7.92"
+      },
+      {
+        "city": "Hastings",
+        "population": "24,822",
+        "estimatedNetworkInvestment": "$20",
+        "estimatedGDPGrowth": "$38",
+        "estimatedJobsCreated": "232",
+        "selectSmartCityBenefits": "$7.42"
+      },
+      {
+        "city": "Norfolk",
+        "population": "24,651",
+        "estimatedNetworkInvestment": "$20",
+        "estimatedGDPGrowth": "$38",
+        "estimatedJobsCreated": "230",
+        "selectSmartCityBenefits": "$7.37"
+      },
+      {
+        "city": "North Platte",
+        "population": "23,814",
+        "estimatedNetworkInvestment": "$20",
+        "estimatedGDPGrowth": "$36",
+        "estimatedJobsCreated": "222",
+        "selectSmartCityBenefits": "$7.12"
+      },
+      {
+        "city": "Columbus",
+        "population": "23,274",
+        "estimatedNetworkInvestment": "$19",
+        "estimatedGDPGrowth": "$35",
+        "estimatedJobsCreated": "217",
+        "selectSmartCityBenefits": "$6.96"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 17261.69288151282,
+      "GCP": 1416729109.433228,
+      "mobileWireless": 2000000,
+    "adultsInWirelessOnly": 0.587,
+      "householdsWithSmartphones": 0.7390156267975098,
+      "totalWagesDependentOnWireless": 684156136.3690062
+    }
+  },
+  {
+    "name": "Nevada",
+    "abbreviation": "NV",
+    "citiesData": [
+      {
+        "city": "Las Vegas",
+        "population": "644,644",
+        "estimatedNetworkInvestment": "$530",
+        "estimatedGDPGrowth": "$982",
+        "estimatedJobsCreated": "6,017",
+        "selectSmartCityBenefits": "$372.10"
+      },
+      {
+        "city": "Henderson",
+        "population": "310,390",
+        "estimatedNetworkInvestment": "$255",
+        "estimatedGDPGrowth": "$473",
+        "estimatedJobsCreated": "2,897",
+        "selectSmartCityBenefits": "$179.16"
+      },
+      {
+        "city": "Reno",
+        "population": "250,998",
+        "estimatedNetworkInvestment": "$206",
+        "estimatedGDPGrowth": "$382",
+        "estimatedJobsCreated": "2,343",
+        "selectSmartCityBenefits": "$144.88"
+      },
+      {
+        "city": "North Las Vegas",
+        "population": "245,949",
+        "estimatedNetworkInvestment": "$202",
+        "estimatedGDPGrowth": "$374",
+        "estimatedJobsCreated": "2,296",
+        "selectSmartCityBenefits": "$141.96"
+      },
+      {
+        "city": "Sparks",
+        "population": "104,246",
+        "estimatedNetworkInvestment": "$86",
+        "estimatedGDPGrowth": "$159",
+        "estimatedJobsCreated": "973",
+        "selectSmartCityBenefits": "$60.17"
+      },
+      {
+        "city": "Carson City",
+        "population": "55,414",
+        "estimatedNetworkInvestment": "$46",
+        "estimatedGDPGrowth": "$84",
+        "estimatedJobsCreated": "517",
+        "selectSmartCityBenefits": "$31.99"
+      },
+      {
+        "city": "Elko",
+        "population": "20,341",
+        "estimatedNetworkInvestment": "$17",
+        "estimatedGDPGrowth": "$31",
+        "estimatedJobsCreated": "190",
+        "selectSmartCityBenefits": "$6.08"
+      },
+      {
+        "city": "Fernley",
+        "population": "20,692",
+        "estimatedNetworkInvestment": "$17",
+        "estimatedGDPGrowth": "$32",
+        "estimatedJobsCreated": "193",
+        "selectSmartCityBenefits": "$6.19"
+      },
+      {
+        "city": "Mesquite",
+        "population": "19,079",
+        "estimatedNetworkInvestment": "$16",
+        "estimatedGDPGrowth": "$29",
+        "estimatedJobsCreated": "178",
+        "selectSmartCityBenefits": "$5.70"
+      },
+      {
+        "city": "Boulder City",
+        "population": "15,977",
+        "estimatedNetworkInvestment": "$13",
+        "estimatedGDPGrowth": "$24",
+        "estimatedJobsCreated": "149",
+        "selectSmartCityBenefits": "$4.78"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 26539.84746598931,
+      "GCP": 2306350579.307252,
+      "mobileWireless": 3100000,
+    "adultsInWirelessOnly": 0.627,
+      "householdsWithSmartphones": 0.7943000005686353,
+      "totalWagesDependentOnWireless": 1031770968.38397
+    }
+  },
+  {
+    "name": "New Hampshire",
+    "abbreviation": "NH",
+    "citiesData": [
+      {
+        "city": "Manchester",
+        "population": "112,525",
+        "estimatedNetworkInvestment": "$93",
+        "estimatedGDPGrowth": "$171",
+        "estimatedJobsCreated": "1,050",
+        "selectSmartCityBenefits": "$64.95"
+      },
+      {
+        "city": "Nashua",
+        "population": "89,246",
+        "estimatedNetworkInvestment": "$73",
+        "estimatedGDPGrowth": "$136",
+        "estimatedJobsCreated": "833",
+        "selectSmartCityBenefits": "$51.51"
+      },
+      {
+        "city": "Concord",
+        "population": "43,412",
+        "estimatedNetworkInvestment": "$36",
+        "estimatedGDPGrowth": "$66",
+        "estimatedJobsCreated": "405",
+        "selectSmartCityBenefits": "$12.98"
+      },
+      {
+        "city": "Derry",
+        "population": "33,667",
+        "estimatedNetworkInvestment": "$28",
+        "estimatedGDPGrowth": "$51",
+        "estimatedJobsCreated": "314",
+        "selectSmartCityBenefits": "$10.06"
+      },
+      {
+        "city": "Dover",
+        "population": "31,771",
+        "estimatedNetworkInvestment": "$26",
+        "estimatedGDPGrowth": "$48",
+        "estimatedJobsCreated": "297",
+        "selectSmartCityBenefits": "$9.50"
+      },
+      {
+        "city": "Rochester",
+        "population": "31,366",
+        "estimatedNetworkInvestment": "$26",
+        "estimatedGDPGrowth": "$48",
+        "estimatedJobsCreated": "293",
+        "selectSmartCityBenefits": "$9.38"
+      },
+      {
+        "city": "Salem",
+        "population": "29,554",
+        "estimatedNetworkInvestment": "$24",
+        "estimatedGDPGrowth": "$45",
+        "estimatedJobsCreated": "276",
+        "selectSmartCityBenefits": "$8.84"
+      },
+      {
+        "city": "Londonderry",
+        "population": "26,302",
+        "estimatedNetworkInvestment": "$22",
+        "estimatedGDPGrowth": "$40",
+        "estimatedJobsCreated": "246",
+        "selectSmartCityBenefits": "$7.86"
+      },
+      {
+        "city": "Merrimack",
+        "population": "25,969",
+        "estimatedNetworkInvestment": "$21",
+        "estimatedGDPGrowth": "$40",
+        "estimatedJobsCreated": "242",
+        "selectSmartCityBenefits": "$7.76"
+      },
+      {
+        "city": "Hudson",
+        "population": "25,559",
+        "estimatedNetworkInvestment": "$21",
+        "estimatedGDPGrowth": "$39",
+        "estimatedJobsCreated": "239",
+        "selectSmartCityBenefits": "$7.64"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 12650.20753794384,
+      "GCP": 1043824535.665824,
+      "mobileWireless": 1300000,
+    "adultsInWirelessOnly": 0.46,
+      "householdsWithSmartphones": 0.7375284023793656,
+      "totalWagesDependentOnWireless": 627169566.6812598
+    }
+  },
+  {
+    "name": "New Jersey",
+    "abbreviation": "NJ",
+    "citiesData": [
+      {
+        "city": "Newark",
+        "population": "282,090",
+        "estimatedNetworkInvestment": "$232",
+        "estimatedGDPGrowth": "$430",
+        "estimatedJobsCreated": "2,633",
+        "selectSmartCityBenefits": "$162.83"
+      },
+      {
+        "city": "Jersey City",
+        "population": "265,549",
+        "estimatedNetworkInvestment": "$218",
+        "estimatedGDPGrowth": "$404",
+        "estimatedJobsCreated": "2,479",
+        "selectSmartCityBenefits": "$153.28"
+      },
+      {
+        "city": "Paterson",
+        "population": "145,627",
+        "estimatedNetworkInvestment": "$120",
+        "estimatedGDPGrowth": "$222",
+        "estimatedJobsCreated": "1,359",
+        "selectSmartCityBenefits": "$84.06"
+      },
+      {
+        "city": "Elizabeth",
+        "population": "128,885",
+        "estimatedNetworkInvestment": "$106",
+        "estimatedGDPGrowth": "$196",
+        "estimatedJobsCreated": "1,203",
+        "selectSmartCityBenefits": "$74.39"
+      },
+      {
+        "city": "Lakewood Township",
+        "population": "104,157",
+        "estimatedNetworkInvestment": "$86",
+        "estimatedGDPGrowth": "$159",
+        "estimatedJobsCreated": "972",
+        "selectSmartCityBenefits": "$60.12"
+      },
+      {
+        "city": "Edison Township",
+        "population": "100,693",
+        "estimatedNetworkInvestment": "$83",
+        "estimatedGDPGrowth": "$153",
+        "estimatedJobsCreated": "940",
+        "selectSmartCityBenefits": "$58.12"
+      },
+      {
+        "city": "Woodbridge Township",
+        "population": "100,450",
+        "estimatedNetworkInvestment": "$83",
+        "estimatedGDPGrowth": "$153",
+        "estimatedJobsCreated": "938",
+        "selectSmartCityBenefits": "$57.98"
+      },
+      {
+        "city": "Tom's River Township",
+        "population": "93,717",
+        "estimatedNetworkInvestment": "$77",
+        "estimatedGDPGrowth": "$143",
+        "estimatedJobsCreated": "875",
+        "selectSmartCityBenefits": "$54.09"
+      },
+      {
+        "city": "Clifton",
+        "population": "85,273",
+        "estimatedNetworkInvestment": "$70",
+        "estimatedGDPGrowth": "$130",
+        "estimatedJobsCreated": "796",
+        "selectSmartCityBenefits": "$49.22"
+      },
+      {
+        "city": "Trenton",
+        "population": "83,974",
+        "estimatedNetworkInvestment": "$69",
+        "estimatedGDPGrowth": "$128",
+        "estimatedJobsCreated": "784",
+        "selectSmartCityBenefits": "$48.47"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 111777.3060356603,
+      "GCP": 11141536499.73812,
+      "mobileWireless": 10100000,
+    "adultsInWirelessOnly": 0.381,
+      "householdsWithSmartphones": 0.787245591589845,
+      "totalWagesDependentOnWireless": 5655533543.169991
+    }
+  },
+  {
+    "name": "New Mexico",
+    "abbreviation": "NM",
+    "citiesData": [
+      {
+        "city": "Albuquerque",
+        "population": "560,218",
+        "estimatedNetworkInvestment": "$461",
+        "estimatedGDPGrowth": "$853",
+        "estimatedJobsCreated": "5,229",
+        "selectSmartCityBenefits": "$323.36"
+      },
+      {
+        "city": "Las Cruces",
+        "population": "102,926",
+        "estimatedNetworkInvestment": "$85",
+        "estimatedGDPGrowth": "$157",
+        "estimatedJobsCreated": "961",
+        "selectSmartCityBenefits": "$59.41"
+      },
+      {
+        "city": "Rio Rancho",
+        "population": "98,023",
+        "estimatedNetworkInvestment": "$81",
+        "estimatedGDPGrowth": "$149",
+        "estimatedJobsCreated": "915",
+        "selectSmartCityBenefits": "$56.58"
+      },
+      {
+        "city": "Santa Fe",
+        "population": "84,612",
+        "estimatedNetworkInvestment": "$70",
+        "estimatedGDPGrowth": "$129",
+        "estimatedJobsCreated": "790",
+        "selectSmartCityBenefits": "$48.84"
+      },
+      {
+        "city": "Roswell",
+        "population": "47,635",
+        "estimatedNetworkInvestment": "$39",
+        "estimatedGDPGrowth": "$73",
+        "estimatedJobsCreated": "445",
+        "selectSmartCityBenefits": "$14.24"
+      },
+      {
+        "city": "Farmington",
+        "population": "44,788",
+        "estimatedNetworkInvestment": "$37",
+        "estimatedGDPGrowth": "$68",
+        "estimatedJobsCreated": "418",
+        "selectSmartCityBenefits": "$13.39"
+      },
+      {
+        "city": "South Valley (2010)",
+        "population": "40,976",
+        "estimatedNetworkInvestment": "$34",
+        "estimatedGDPGrowth": "$62",
+        "estimatedJobsCreated": "382",
+        "selectSmartCityBenefits": "$12.25"
+      },
+      {
+        "city": "Clovis",
+        "population": "38,680",
+        "estimatedNetworkInvestment": "$32",
+        "estimatedGDPGrowth": "$59",
+        "estimatedJobsCreated": "361",
+        "selectSmartCityBenefits": "$11.56"
+      },
+      {
+        "city": "Hobbs",
+        "population": "38,277",
+        "estimatedNetworkInvestment": "$31",
+        "estimatedGDPGrowth": "$58",
+        "estimatedJobsCreated": "357",
+        "selectSmartCityBenefits": "$11.44"
+      },
+      {
+        "city": "Alamorgordo",
+        "population": "31,701",
+        "estimatedNetworkInvestment": "$26",
+        "estimatedGDPGrowth": "$48",
+        "estimatedJobsCreated": "296",
+        "selectSmartCityBenefits": "$9.48"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 63364.71786420443,
+      "GCP": 5306282462.913363,
+      "mobileWireless": 2000000,
+    "adultsInWirelessOnly": 0.664,
+      "householdsWithSmartphones": 0.7115975969323438,
+      "totalWagesDependentOnWireless": 2547772396.312201
+    }
+  },
+  {
+    "name": "New York",
+    "abbreviation": "NY",
+    "citiesData": [
+      {
+        "city": "New York City",
+        "population": "8,398,748",
+        "estimatedNetworkInvestment": "$6,904",
+        "estimatedGDPGrowth": "$12,788",
+        "estimatedJobsCreated": "78,396",
+        "selectSmartCityBenefits": "$4,847.86"
+      },
+      {
+        "city": "Hempstead",
+        "population": "768,103",
+        "estimatedNetworkInvestment": "$631",
+        "estimatedGDPGrowth": "$1,170",
+        "estimatedJobsCreated": "7,170",
+        "selectSmartCityBenefits": "$443.36"
+      },
+      {
+        "city": "Brookhaven",
+        "population": "482,436",
+        "estimatedNetworkInvestment": "$397",
+        "estimatedGDPGrowth": "$735",
+        "estimatedJobsCreated": "4,503",
+        "selectSmartCityBenefits": "$278.47"
+      },
+      {
+        "city": "Islip",
+        "population": "330,914",
+        "estimatedNetworkInvestment": "$272",
+        "estimatedGDPGrowth": "$504",
+        "estimatedJobsCreated": "3,089",
+        "selectSmartCityBenefits": "$191.01"
+      },
+      {
+        "city": "Oyster Bay",
+        "population": "298,388",
+        "estimatedNetworkInvestment": "$245",
+        "estimatedGDPGrowth": "$454",
+        "estimatedJobsCreated": "2,785",
+        "selectSmartCityBenefits": "$172.23"
+      },
+      {
+        "city": "Buffalo",
+        "population": "256,304",
+        "estimatedNetworkInvestment": "$211",
+        "estimatedGDPGrowth": "$390",
+        "estimatedJobsCreated": "2,392",
+        "selectSmartCityBenefits": "$147.94"
+      },
+      {
+        "city": "Rochester",
+        "population": "206,284",
+        "estimatedNetworkInvestment": "$170",
+        "estimatedGDPGrowth": "$314",
+        "estimatedJobsCreated": "1,925",
+        "selectSmartCityBenefits": "$119.07"
+      },
+      {
+        "city": "Yonkers",
+        "population": "199,663",
+        "estimatedNetworkInvestment": "$164",
+        "estimatedGDPGrowth": "$304",
+        "estimatedJobsCreated": "1,864",
+        "selectSmartCityBenefits": "$115.25"
+      },
+      {
+        "city": "Syracuse",
+        "population": "142,749",
+        "estimatedNetworkInvestment": "$117",
+        "estimatedGDPGrowth": "$217",
+        "estimatedJobsCreated": "1,332",
+        "selectSmartCityBenefits": "$82.40"
+      },
+      {
+        "city": "Albany",
+        "population": "97,279",
+        "estimatedNetworkInvestment": "$80",
+        "estimatedGDPGrowth": "$148",
+        "estimatedJobsCreated": "908",
+        "selectSmartCityBenefits": "$56.15"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 193096.768372264,
+      "GCP": 28206724794.59138,
+      "mobileWireless": 23900000,
+    "adultsInWirelessOnly": 0.388,
+      "householdsWithSmartphones": 0.7522566761186696,
+      "totalWagesDependentOnWireless": 11782020712.91702
+    }
+  },
+  {
+    "name": "North Carolina",
+    "abbreviation": "NC",
+    "citiesData": [
+      {
+        "city": "Charlotte",
+        "population": "872,498",
+        "estimatedNetworkInvestment": "$717",
+        "estimatedGDPGrowth": "$1,329",
+        "estimatedJobsCreated": "8,144",
+        "selectSmartCityBenefits": "$503.62"
+      },
+      {
+        "city": "Raleigh",
+        "population": "469,298",
+        "estimatedNetworkInvestment": "$386",
+        "estimatedGDPGrowth": "$715",
+        "estimatedJobsCreated": "4,381",
+        "selectSmartCityBenefits": "$270.88"
+      },
+      {
+        "city": "Greensboro",
+        "population": "294,722",
+        "estimatedNetworkInvestment": "$242",
+        "estimatedGDPGrowth": "$449",
+        "estimatedJobsCreated": "2,751",
+        "selectSmartCityBenefits": "$170.12"
+      },
+      {
+        "city": "Durham",
+        "population": "274,291",
+        "estimatedNetworkInvestment": "$225",
+        "estimatedGDPGrowth": "$418",
+        "estimatedJobsCreated": "2,560",
+        "selectSmartCityBenefits": "$158.32"
+      },
+      {
+        "city": "Winston-Salem",
+        "population": "246,328",
+        "estimatedNetworkInvestment": "$202",
+        "estimatedGDPGrowth": "$375",
+        "estimatedJobsCreated": "2,299",
+        "selectSmartCityBenefits": "$142.18"
+      },
+      {
+        "city": "Fayetteville",
+        "population": "209,468",
+        "estimatedNetworkInvestment": "$172",
+        "estimatedGDPGrowth": "$319",
+        "estimatedJobsCreated": "1,955",
+        "selectSmartCityBenefits": "$120.91"
+      },
+      {
+        "city": "Cary",
+        "population": "168,160",
+        "estimatedNetworkInvestment": "$138",
+        "estimatedGDPGrowth": "$256",
+        "estimatedJobsCreated": "1,570",
+        "selectSmartCityBenefits": "$97.06"
+      },
+      {
+        "city": "Wilmington",
+        "population": "122,607",
+        "estimatedNetworkInvestment": "$101",
+        "estimatedGDPGrowth": "$187",
+        "estimatedJobsCreated": "1,144",
+        "selectSmartCityBenefits": "$70.77"
+      },
+      {
+        "city": "High Point",
+        "population": "112,316",
+        "estimatedNetworkInvestment": "$92",
+        "estimatedGDPGrowth": "$171",
+        "estimatedJobsCreated": "1,048",
+        "selectSmartCityBenefits": "$64.83"
+      },
+      {
+        "city": "Greenville",
+        "population": "93,137",
+        "estimatedNetworkInvestment": "$77",
+        "estimatedGDPGrowth": "$142",
+        "estimatedJobsCreated": "869",
+        "selectSmartCityBenefits": "$53.76"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 175469.216953664,
+      "GCP": 15343651796.47922,
+      "mobileWireless": 10200000,
+    "adultsInWirelessOnly": 0.573,
+      "householdsWithSmartphones": 0.7524674668370757,
+      "totalWagesDependentOnWireless": 7298105329.157245
+    }
+  },
+  {
+    "name": "North Dakota",
+    "abbreviation": "ND",
+    "citiesData": [
+      {
+        "city": "Fargo",
+        "population": "124,844",
+        "estimatedNetworkInvestment": "$103",
+        "estimatedGDPGrowth": "$190",
+        "estimatedJobsCreated": "1,165",
+        "selectSmartCityBenefits": "$72.06"
+      },
+      {
+        "city": "Bismarck",
+        "population": "73,112",
+        "estimatedNetworkInvestment": "$60",
+        "estimatedGDPGrowth": "$111",
+        "estimatedJobsCreated": "682",
+        "selectSmartCityBenefits": "$42.20"
+      },
+      {
+        "city": "Grand Forks",
+        "population": "56,948",
+        "estimatedNetworkInvestment": "$47",
+        "estimatedGDPGrowth": "$87",
+        "estimatedJobsCreated": "532",
+        "selectSmartCityBenefits": "$32.87"
+      },
+      {
+        "city": "Minot",
+        "population": "47,370",
+        "estimatedNetworkInvestment": "$39",
+        "estimatedGDPGrowth": "$72",
+        "estimatedJobsCreated": "442",
+        "selectSmartCityBenefits": "$14.12"
+      },
+      {
+        "city": "West Fargo",
+        "population": "36,566",
+        "estimatedNetworkInvestment": "$30",
+        "estimatedGDPGrowth": "$56",
+        "estimatedJobsCreated": "341",
+        "selectSmartCityBenefits": "$10.93"
+      },
+      {
+        "city": "Williston",
+        "population": "27,096",
+        "estimatedNetworkInvestment": "$22",
+        "estimatedGDPGrowth": "$41",
+        "estimatedJobsCreated": "253",
+        "selectSmartCityBenefits": "$8.10"
+      },
+      {
+        "city": "Mandan",
+        "population": "22,519",
+        "estimatedNetworkInvestment": "$19",
+        "estimatedGDPGrowth": "$34",
+        "estimatedJobsCreated": "210",
+        "selectSmartCityBenefits": "$6.73"
+      },
+      {
+        "city": "Dickinson",
+        "population": "22,739",
+        "estimatedNetworkInvestment": "$19",
+        "estimatedGDPGrowth": "$35",
+        "estimatedJobsCreated": "212",
+        "selectSmartCityBenefits": "$6.80"
+      },
+      {
+        "city": "Jamestown",
+        "population": "15,226",
+        "estimatedNetworkInvestment": "$13",
+        "estimatedGDPGrowth": "$23",
+        "estimatedJobsCreated": "142",
+        "selectSmartCityBenefits": "$4.55"
+      },
+      {
+        "city": "Wahpeton",
+        "population": "7,753",
+        "estimatedNetworkInvestment": "$6",
+        "estimatedGDPGrowth": "$12",
+        "estimatedJobsCreated": "72",
+        "selectSmartCityBenefits": "$2.32"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 4199.619088699223,
+      "GCP": 284257439.221112,
+      "mobileWireless": 800000,
+    "adultsInWirelessOnly": 0.584,
+      "householdsWithSmartphones": 0.0952261577614602,
+      "totalWagesDependentOnWireless": 175953691.9978074
+    }
+  },
+  {
+    "name": "Ohio",
+    "abbreviation": "OH",
+    "citiesData": [
+      {
+        "city": "Columbus",
+        "population": "892,533",
+        "estimatedNetworkInvestment": "$734",
+        "estimatedGDPGrowth": "$1,359",
+        "estimatedJobsCreated": "8,331",
+        "selectSmartCityBenefits": "$515.18"
+      },
+      {
+        "city": "Cleveland",
+        "population": "383,793",
+        "estimatedNetworkInvestment": "$315",
+        "estimatedGDPGrowth": "$584",
+        "estimatedJobsCreated": "3,582",
+        "selectSmartCityBenefits": "$221.53"
+      },
+      {
+        "city": "Cincinnati",
+        "population": "302,605",
+        "estimatedNetworkInvestment": "$249",
+        "estimatedGDPGrowth": "$461",
+        "estimatedJobsCreated": "2,825",
+        "selectSmartCityBenefits": "$174.67"
+      },
+      {
+        "city": "Toledo",
+        "population": "274,975",
+        "estimatedNetworkInvestment": "$226",
+        "estimatedGDPGrowth": "$419",
+        "estimatedJobsCreated": "2,567",
+        "selectSmartCityBenefits": "$158.72"
+      },
+      {
+        "city": "Akron",
+        "population": "198,006",
+        "estimatedNetworkInvestment": "$163",
+        "estimatedGDPGrowth": "$301",
+        "estimatedJobsCreated": "1,848",
+        "selectSmartCityBenefits": "$114.29"
+      },
+      {
+        "city": "Dayton",
+        "population": "140,640",
+        "estimatedNetworkInvestment": "$116",
+        "estimatedGDPGrowth": "$214",
+        "estimatedJobsCreated": "1,313",
+        "selectSmartCityBenefits": "$81.18"
+      },
+      {
+        "city": "Parma",
+        "population": "78,751",
+        "estimatedNetworkInvestment": "$65",
+        "estimatedGDPGrowth": "$120",
+        "estimatedJobsCreated": "735",
+        "selectSmartCityBenefits": "$45.46"
+      },
+      {
+        "city": "Canton",
+        "population": "70,458",
+        "estimatedNetworkInvestment": "$58",
+        "estimatedGDPGrowth": "$107",
+        "estimatedJobsCreated": "658",
+        "selectSmartCityBenefits": "$40.67"
+      },
+      {
+        "city": "Youngstown",
+        "population": "64,958",
+        "estimatedNetworkInvestment": "$53",
+        "estimatedGDPGrowth": "$99",
+        "estimatedJobsCreated": "606",
+        "selectSmartCityBenefits": "$37.49"
+      },
+      {
+        "city": "Lorain",
+        "population": "64,028",
+        "estimatedNetworkInvestment": "$53",
+        "estimatedGDPGrowth": "$97",
+        "estimatedJobsCreated": "598",
+        "selectSmartCityBenefits": "$36.96"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 100144.119126302,
+      "GCP": 9093165044.0076,
+      "mobileWireless": 12500000,
+    "adultsInWirelessOnly": 0.585,
+      "householdsWithSmartphones": 0.09243122737671526,
+      "totalWagesDependentOnWireless": 4081408357.479677
+    }
+  },
+  {
+    "name": "Oklahoma",
+    "abbreviation": "OK",
+    "citiesData": [
+      {
+        "city": "Oklahoma City",
+        "population": "649,021",
+        "estimatedNetworkInvestment": "$534",
+        "estimatedGDPGrowth": "$998",
+        "estimatedJobsCreated": "6,058",
+        "selectSmartCityBenefits": "$374.62"
+      },
+      {
+        "city": "Tulsa",
+        "population": "400,669",
+        "estimatedNetworkInvestment": "$329",
+        "estimatedGDPGrowth": "$610",
+        "estimatedJobsCreated": "3,740",
+        "selectSmartCityBenefits": "$231.27"
+      },
+      {
+        "city": "Norman",
+        "population": "123,471",
+        "estimatedNetworkInvestment": "$101",
+        "estimatedGDPGrowth": "$188",
+        "estimatedJobsCreated": "1,153",
+        "selectSmartCityBenefits": "$71.27"
+      },
+      {
+        "city": "Broken Arrow",
+        "population": "109,171",
+        "estimatedNetworkInvestment": "$90",
+        "estimatedGDPGrowth": "$166",
+        "estimatedJobsCreated": "1,019",
+        "selectSmartCityBenefits": "$63.01"
+      },
+      {
+        "city": "Lawton",
+        "population": "92,859",
+        "estimatedNetworkInvestment": "$76",
+        "estimatedGDPGrowth": "$141",
+        "estimatedJobsCreated": "867",
+        "selectSmartCityBenefits": "$53.60"
+      },
+      {
+        "city": "Edmond",
+        "population": "93,127",
+        "estimatedNetworkInvestment": "$77",
+        "estimatedGDPGrowth": "$142",
+        "estimatedJobsCreated": "869",
+        "selectSmartCityBenefits": "$53.75"
+      },
+      {
+        "city": "Moore",
+        "population": "62,103",
+        "estimatedNetworkInvestment": "$51",
+        "estimatedGDPGrowth": "$95",
+        "estimatedJobsCreated": "580",
+        "selectSmartCityBenefits": "$35.85"
+      },
+      {
+        "city": "Midwest City",
+        "population": "57,325",
+        "estimatedNetworkInvestment": "$47",
+        "estimatedGDPGrowth": "$87",
+        "estimatedJobsCreated": "535",
+        "selectSmartCityBenefits": "$33.09"
+      },
+      {
+        "city": "Enid",
+        "population": "49,585",
+        "estimatedNetworkInvestment": "$41",
+        "estimatedGDPGrowth": "$76",
+        "estimatedJobsCreated": "463",
+        "selectSmartCityBenefits": "$14.82"
+      },
+      {
+        "city": "Muskogee",
+        "population": "37,402",
+        "estimatedNetworkInvestment": "$31",
+        "estimatedGDPGrowth": "$57",
+        "estimatedJobsCreated": "349",
+        "selectSmartCityBenefits": "$11.18"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 54133.23953014432,
+      "GCP": 4713718988.156063,
+      "mobileWireless": 3800000,
+      "adultsInWirelessOnly": 0.667,
+      "householdsWithSmartphones": 0.7633369222413843,
+      "totalWagesDependentOnWireless": 2227592314.909235
+    }
+  },
+  {
+    "name": "Oregon",
+    "abbreviation": "OR",
+    "citiesData": [
+      {
+        "city": "Portland",
+        "population": "653,115",
+        "estimatedNetworkInvestment": "$537",
+        "estimatedGDPGrowth": "$994",
+        "estimatedJobsCreated": "6,096",
+        "selectSmartCityBenefits": "$376.99"
+      },
+      {
+        "city": "Salem",
+        "population": "173,442",
+        "estimatedNetworkInvestment": "$143",
+        "estimatedGDPGrowth": "$264",
+        "estimatedJobsCreated": "1,619",
+        "selectSmartCityBenefits": "$100.11"
+      },
+      {
+        "city": "Eugene",
+        "population": "171,245",
+        "estimatedNetworkInvestment": "$141",
+        "estimatedGDPGrowth": "$261",
+        "estimatedJobsCreated": "1,598",
+        "selectSmartCityBenefits": "$98.84"
+      },
+      {
+        "city": "Gresham",
+        "population": "110,158",
+        "estimatedNetworkInvestment": "$91",
+        "estimatedGDPGrowth": "$168",
+        "estimatedJobsCreated": "1,028",
+        "selectSmartCityBenefits": "$63.58"
+      },
+      {
+        "city": "Hillsboro",
+        "population": "108,389",
+        "estimatedNetworkInvestment": "$89",
+        "estimatedGDPGrowth": "$165",
+        "estimatedJobsCreated": "1,012",
+        "selectSmartCityBenefits": "$62.56"
+      },
+      {
+        "city": "Beaverton",
+        "population": "98,962",
+        "estimatedNetworkInvestment": "$81",
+        "estimatedGDPGrowth": "$151",
+        "estimatedJobsCreated": "924",
+        "selectSmartCityBenefits": "$57.12"
+      },
+      {
+        "city": "Bend",
+        "population": "97,590",
+        "estimatedNetworkInvestment": "$80",
+        "estimatedGDPGrowth": "$149",
+        "estimatedJobsCreated": "911",
+        "selectSmartCityBenefits": "$56.33"
+      },
+      {
+        "city": "Medford",
+        "population": "82,347",
+        "estimatedNetworkInvestment": "$68",
+        "estimatedGDPGrowth": "$125",
+        "estimatedJobsCreated": "769",
+        "selectSmartCityBenefits": "$47.53"
+      },
+      {
+        "city": "Springfield",
+        "population": "62,979",
+        "estimatedNetworkInvestment": "$52",
+        "estimatedGDPGrowth": "$96",
+        "estimatedJobsCreated": "588",
+        "selectSmartCityBenefits": "$36.35"
+      },
+      {
+        "city": "Corvallis",
+        "population": "58,641",
+        "estimatedNetworkInvestment": "$48",
+        "estimatedGDPGrowth": "$89",
+        "estimatedJobsCreated": "547",
+        "selectSmartCityBenefits": "$33.85"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 46454.74106237378,
+      "GCP": 5586722385.51918,
+      "mobileWireless": 4300000,
+    "adultsInWirelessOnly": 0.634,
+      "householdsWithSmartphones": 0.769943970711558,
+      "totalWagesDependentOnWireless": 2253553281.387402
+    }
+  },
+  {
+    "name": "Pennsylvania",
+    "abbreviation": "PA",
+    "citiesData": [
+      {
+        "city": "Philadelphia",
+        "population": "1,584,138",
+        "estimatedNetworkInvestment": "$1,302",
+        "estimatedGDPGrowth": "$2,412",
+        "estimatedJobsCreated": "14,787",
+        "selectSmartCityBenefits": "$914.38"
+      },
+      {
+        "city": "Pittsburgh",
+        "population": "301,048",
+        "estimatedNetworkInvestment": "$247",
+        "estimatedGDPGrowth": "$458",
+        "estimatedJobsCreated": "2,810",
+        "selectSmartCityBenefits": "$173.77"
+      },
+      {
+        "city": "Allentown",
+        "population": "121,433",
+        "estimatedNetworkInvestment": "$100",
+        "estimatedGDPGrowth": "$185",
+        "estimatedJobsCreated": "1,133",
+        "selectSmartCityBenefits": "$70.09"
+      },
+      {
+        "city": "Erie",
+        "population": "96,471",
+        "estimatedNetworkInvestment": "$79",
+        "estimatedGDPGrowth": "$147",
+        "estimatedJobsCreated": "900",
+        "selectSmartCityBenefits": "$55.68"
+      },
+      {
+        "city": "Reading",
+        "population": "88,495",
+        "estimatedNetworkInvestment": "$73",
+        "estimatedGDPGrowth": "$135",
+        "estimatedJobsCreated": "826",
+        "selectSmartCityBenefits": "$51.08"
+      },
+      {
+        "city": "Upper Darby",
+        "population": "82,716",
+        "estimatedNetworkInvestment": "$68",
+        "estimatedGDPGrowth": "$126",
+        "estimatedJobsCreated": "772",
+        "selectSmartCityBenefits": "$47.74"
+      },
+      {
+        "city": "Scranton",
+        "population": "77,182",
+        "estimatedNetworkInvestment": "$63",
+        "estimatedGDPGrowth": "$118",
+        "estimatedJobsCreated": "720",
+        "selectSmartCityBenefits": "$44.55"
+      },
+      {
+        "city": "Bethlehem",
+        "population": "75,790",
+        "estimatedNetworkInvestment": "$62",
+        "estimatedGDPGrowth": "$115",
+        "estimatedJobsCreated": "707",
+        "selectSmartCityBenefits": "$43.75"
+      },
+      {
+        "city": "Bensalem",
+        "population": "60,622",
+        "estimatedNetworkInvestment": "$50",
+        "estimatedGDPGrowth": "$92",
+        "estimatedJobsCreated": "566",
+        "selectSmartCityBenefits": "$34.99"
+      },
+      {
+        "city": "Lancaster",
+        "population": "59,420",
+        "estimatedNetworkInvestment": "$49",
+        "estimatedGDPGrowth": "$90",
+        "estimatedJobsCreated": "555",
+        "selectSmartCityBenefits": "$34.30"
+      },
+      {
+        "city": "Harrisburg",
+        "population": "49,229",
+        "estimatedNetworkInvestment": "$40",
+        "estimatedGDPGrowth": "$75",
+        "estimatedJobsCreated": "460",
+        "selectSmartCityBenefits": "$14.72"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 102628.5242651615,
+      "GCP": 16212733924.82348,
+      "mobileWireless": 13600000,
+    "adultsInWirelessOnly": 0.434,
+      "householdsWithSmartphones": 0.7075131673785601,
+      "totalWagesDependentOnWireless": 5446193540.781785
+    }
+  },
+  {
+    "name": "Rhode Island",
+    "abbreviation": "RI",
+    "citiesData": [
+      {
+        "city": "Providence",
+        "population": "179,335",
+        "estimatedNetworkInvestment": "$147",
+        "estimatedGDPGrowth": "$273",
+        "estimatedJobsCreated": "1,674",
+        "selectSmartCityBenefits": "$103.51"
+      },
+      {
+        "city": "Cranston",
+        "population": "81,274",
+        "estimatedNetworkInvestment": "$67",
+        "estimatedGDPGrowth": "$124",
+        "estimatedJobsCreated": "759",
+        "selectSmartCityBenefits": "$46.91"
+      },
+      {
+        "city": "Warwick",
+        "population": "80,847",
+        "estimatedNetworkInvestment": "$66",
+        "estimatedGDPGrowth": "$123",
+        "estimatedJobsCreated": "755",
+        "selectSmartCityBenefits": "$46.67"
+      },
+      {
+        "city": "Pawtucket",
+        "population": "71,847",
+        "estimatedNetworkInvestment": "$59",
+        "estimatedGDPGrowth": "$109",
+        "estimatedJobsCreated": "671",
+        "selectSmartCityBenefits": "$41.47"
+      },
+      {
+        "city": "East Providence",
+        "population": "47,476",
+        "estimatedNetworkInvestment": "$39",
+        "estimatedGDPGrowth": "$72",
+        "estimatedJobsCreated": "443",
+        "selectSmartCityBenefits": "$14.19"
+      },
+      {
+        "city": "Woonsocket",
+        "population": "41,603",
+        "estimatedNetworkInvestment": "$34",
+        "estimatedGDPGrowth": "$63",
+        "estimatedJobsCreated": "388",
+        "selectSmartCityBenefits": "$12.44"
+      },
+      {
+        "city": "Coventry",
+        "population": "34,698",
+        "estimatedNetworkInvestment": "$29",
+        "estimatedGDPGrowth": "$53",
+        "estimatedJobsCreated": "324",
+        "selectSmartCityBenefits": "$10.37"
+      },
+      {
+        "city": "Cumberland",
+        "population": "34,977",
+        "estimatedNetworkInvestment": "$29",
+        "estimatedGDPGrowth": "$53",
+        "estimatedJobsCreated": "326",
+        "selectSmartCityBenefits": "$10.46"
+      },
+      {
+        "city": "North Providence",
+        "population": "32,559",
+        "estimatedNetworkInvestment": "$27",
+        "estimatedGDPGrowth": "$50",
+        "estimatedJobsCreated": "304",
+        "selectSmartCityBenefits": "$9.73"
+      },
+      {
+        "city": "South Kingstown",
+        "population": "30,650",
+        "estimatedNetworkInvestment": "$25",
+        "estimatedGDPGrowth": "$47",
+        "estimatedJobsCreated": "286",
+        "selectSmartCityBenefits": "$9.16"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 10203.04877826351,
+      "GCP": 950350182.4967768,
+      "mobileWireless": 1000000,
+    "adultsInWirelessOnly": 0.456,
+      "householdsWithSmartphones": 0.7326615046578108,
+      "totalWagesDependentOnWireless": 448888730.1564614
+    }
+  },
+  {
+    "name": "South Carolina",
+    "abbreviation": "SC",
+    "citiesData": [
+      {
+        "city": "Charleston",
+        "population": "136,208",
+        "estimatedNetworkInvestment": "$112",
+        "estimatedGDPGrowth": "$207",
+        "estimatedJobsCreated": "1,271",
+        "selectSmartCityBenefits": "$78.62"
+      },
+      {
+        "city": "Columbia",
+        "population": "133,451",
+        "estimatedNetworkInvestment": "$110",
+        "estimatedGDPGrowth": "$203",
+        "estimatedJobsCreated": "1,246",
+        "selectSmartCityBenefits": "$77.03"
+      },
+      {
+        "city": "North Charleston",
+        "population": "113,237",
+        "estimatedNetworkInvestment": "$93",
+        "estimatedGDPGrowth": "$172",
+        "estimatedJobsCreated": "1,057",
+        "selectSmartCityBenefits": "$65.36"
+      },
+      {
+        "city": "Mount Pleasant",
+        "population": "89,338",
+        "estimatedNetworkInvestment": "$73",
+        "estimatedGDPGrowth": "$136",
+        "estimatedJobsCreated": "834",
+        "selectSmartCityBenefits": "$51.57"
+      },
+      {
+        "city": "Rock Hill",
+        "population": "74,309",
+        "estimatedNetworkInvestment": "$61",
+        "estimatedGDPGrowth": "$113",
+        "estimatedJobsCreated": "694",
+        "selectSmartCityBenefits": "$42.89"
+      },
+      {
+        "city": "Greenville",
+        "population": "68,563",
+        "estimatedNetworkInvestment": "$56",
+        "estimatedGDPGrowth": "$104",
+        "estimatedJobsCreated": "640",
+        "selectSmartCityBenefits": "$39.58"
+      },
+      {
+        "city": "Summerville",
+        "population": "51,692",
+        "estimatedNetworkInvestment": "$42",
+        "estimatedGDPGrowth": "$79",
+        "estimatedJobsCreated": "483",
+        "selectSmartCityBenefits": "$29.84"
+      },
+      {
+        "city": "Hilton Head Island",
+        "population": "39,639",
+        "estimatedNetworkInvestment": "$33",
+        "estimatedGDPGrowth": "$60",
+        "estimatedJobsCreated": "370",
+        "selectSmartCityBenefits": "$11.85"
+      },
+      {
+        "city": "Sumter",
+        "population": "39,656",
+        "estimatedNetworkInvestment": "$33",
+        "estimatedGDPGrowth": "$60",
+        "estimatedJobsCreated": "370",
+        "selectSmartCityBenefits": "$11.86"
+      },
+      {
+        "city": "Florence",
+        "population": "37,625",
+        "estimatedNetworkInvestment": "$31",
+        "estimatedGDPGrowth": "$57",
+        "estimatedJobsCreated": "351",
+        "selectSmartCityBenefits": "$11.25"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 89858.29158059851,
+      "GCP": 7466589228.880684,
+      "mobileWireless": 4900000,
+    "adultsInWirelessOnly": 0.557,
+      "householdsWithSmartphones": 0.745613553957187,
+      "totalWagesDependentOnWireless": 3556934198.44559
+    }
+  },
+  {
+    "name": "South Dakota",
+    "abbreviation": "SD",
+    "citiesData": [
+      {
+        "city": "Sioux Falls",
+        "population": "181,883",
+        "estimatedNetworkInvestment": "$150",
+        "estimatedGDPGrowth": "$277",
+        "estimatedJobsCreated": "1,698",
+        "selectSmartCityBenefits": "$104.99"
+      },
+      {
+        "city": "Rapid City",
+        "population": "75,443",
+        "estimatedNetworkInvestment": "$62",
+        "estimatedGDPGrowth": "$115",
+        "estimatedJobsCreated": "704",
+        "selectSmartCityBenefits": "$43.55"
+      },
+      {
+        "city": "Aberdeen",
+        "population": "28,562",
+        "estimatedNetworkInvestment": "$23",
+        "estimatedGDPGrowth": "$43",
+        "estimatedJobsCreated": "267",
+        "selectSmartCityBenefits": "$8.54"
+      },
+      {
+        "city": "Brookings",
+        "population": "24,509",
+        "estimatedNetworkInvestment": "$20",
+        "estimatedGDPGrowth": "$37",
+        "estimatedJobsCreated": "229",
+        "selectSmartCityBenefits": "$7.33"
+      },
+      {
+        "city": "Watertown",
+        "population": "22,153",
+        "estimatedNetworkInvestment": "$18",
+        "estimatedGDPGrowth": "$34",
+        "estimatedJobsCreated": "207",
+        "selectSmartCityBenefits": "$6.62"
+      },
+      {
+        "city": "Mitchell",
+        "population": "15,680",
+        "estimatedNetworkInvestment": "$13",
+        "estimatedGDPGrowth": "$24",
+        "estimatedJobsCreated": "146",
+        "selectSmartCityBenefits": "$4.69"
+      },
+      {
+        "city": "Yankton",
+        "population": "14,700",
+        "estimatedNetworkInvestment": "$12",
+        "estimatedGDPGrowth": "$22",
+        "estimatedJobsCreated": "137",
+        "selectSmartCityBenefits": "$4.39"
+      },
+      {
+        "city": "Pierre",
+        "population": "13,900",
+        "estimatedNetworkInvestment": "$11",
+        "estimatedGDPGrowth": "$21",
+        "estimatedJobsCreated": "130",
+        "selectSmartCityBenefits": "$4.16"
+      },
+      {
+        "city": "Huron",
+        "population": "13,696",
+        "estimatedNetworkInvestment": "$11",
+        "estimatedGDPGrowth": "$20",
+        "estimatedJobsCreated": "128",
+        "selectSmartCityBenefits": "$4.09"
+      },
+      {
+        "city": "Spearfish",
+        "population": "11,688",
+        "estimatedNetworkInvestment": "$10",
+        "estimatedGDPGrowth": "$18",
+        "estimatedJobsCreated": "109",
+        "selectSmartCityBenefits": "$3.49"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 6760.769213167637,
+      "GCP": 586759264.9463134,
+      "mobileWireless": 800000,
+    "adultsInWirelessOnly": 0.609,
+      "householdsWithSmartphones": 0.713385807911905,
+      "totalWagesDependentOnWireless": 274265625.6609499
+    }
+  },
+  {
+    "name": "Tennessee",
+    "abbreviation": "TN",
+    "citiesData": [
+      {
+        "city": "Nashville",
+        "population": "669,053",
+        "estimatedNetworkInvestment": "$550",
+        "estimatedGDPGrowth": "$1,019",
+        "estimatedJobsCreated": "6,245",
+        "selectSmartCityBenefits": "$386.19"
+      },
+      {
+        "city": "Memphis",
+        "population": "650,618",
+        "estimatedNetworkInvestment": "$535",
+        "estimatedGDPGrowth": "$991",
+        "estimatedJobsCreated": "6,073",
+        "selectSmartCityBenefits": "$375.54"
+      },
+      {
+        "city": "Knoxville",
+        "population": "187,500",
+        "estimatedNetworkInvestment": "$154",
+        "estimatedGDPGrowth": "$285",
+        "estimatedJobsCreated": "1,750",
+        "selectSmartCityBenefits": "$108.23"
+      },
+      {
+        "city": "Chattanooga",
+        "population": "180,557",
+        "estimatedNetworkInvestment": "$148",
+        "estimatedGDPGrowth": "$275",
+        "estimatedJobsCreated": "1,685",
+        "selectSmartCityBenefits": "$104.22"
+      },
+      {
+        "city": "Clarksville",
+        "population": "156,794",
+        "estimatedNetworkInvestment": "$129",
+        "estimatedGDPGrowth": "$239",
+        "estimatedJobsCreated": "1,464",
+        "selectSmartCityBenefits": "$90.50"
+      },
+      {
+        "city": "Murfreesboro",
+        "population": "141,344",
+        "estimatedNetworkInvestment": "$116",
+        "estimatedGDPGrowth": "$215",
+        "estimatedJobsCreated": "1,319",
+        "selectSmartCityBenefits": "$81.59"
+      },
+      {
+        "city": "Franklin",
+        "population": "80,914",
+        "estimatedNetworkInvestment": "$67",
+        "estimatedGDPGrowth": "$123",
+        "estimatedJobsCreated": "755",
+        "selectSmartCityBenefits": "$46.70"
+      },
+      {
+        "city": "Jackson",
+        "population": "66,903",
+        "estimatedNetworkInvestment": "$55",
+        "estimatedGDPGrowth": "$102",
+        "estimatedJobsCreated": "624",
+        "selectSmartCityBenefits": "$38.62"
+      },
+      {
+        "city": "Johnson City",
+        "population": "66,778",
+        "estimatedNetworkInvestment": "$55",
+        "estimatedGDPGrowth": "$102",
+        "estimatedJobsCreated": "623",
+        "selectSmartCityBenefits": "$38.55"
+      },
+      {
+        "city": "Bartlett",
+        "population": "59,315",
+        "estimatedNetworkInvestment": "$49",
+        "estimatedGDPGrowth": "$90",
+        "estimatedJobsCreated": "554",
+        "selectSmartCityBenefits": "$34.24"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 109850.1423688561,
+      "GCP": 9379568369.45896,
+      "mobileWireless": 7300000,
+    "adultsInWirelessOnly": 0.612,
+      "householdsWithSmartphones": 0.7281475958521819,
+      "totalWagesDependentOnWireless": 4665110079.130289
+    }
+  },
+  {
+    "name": "Texas",
+    "abbreviation": "TX",
+    "citiesData": [
+      {
+        "city": "Houston",
+        "population": "2,325,502",
+        "estimatedNetworkInvestment": "$1,912",
+        "estimatedGDPGrowth": "$3,541",
+        "estimatedJobsCreated": "21,707",
+        "selectSmartCityBenefits": "$1,342.31"
+      },
+      {
+        "city": "San Antonio",
+        "population": "1,532,233",
+        "estimatedNetworkInvestment": "$1,260",
+        "estimatedGDPGrowth": "$2,333",
+        "estimatedJobsCreated": "14,302",
+        "selectSmartCityBenefits": "$884.42"
+      },
+      {
+        "city": "Dallas",
+        "population": "1,345,047",
+        "estimatedNetworkInvestment": "$1,106",
+        "estimatedGDPGrowth": "$2,048",
+        "estimatedJobsCreated": "12,555",
+        "selectSmartCityBenefits": "$776.38"
+      },
+      {
+        "city": "Austin",
+        "population": "964,254",
+        "estimatedNetworkInvestment": "$793",
+        "estimatedGDPGrowth": "$1,468",
+        "estimatedJobsCreated": "9,001",
+        "selectSmartCityBenefits": "$556.58"
+      },
+      {
+        "city": "Fort Worth",
+        "population": "895,008",
+        "estimatedNetworkInvestment": "$736",
+        "estimatedGDPGrowth": "$1,363",
+        "estimatedJobsCreated": "8,354",
+        "selectSmartCityBenefits": "$516.61"
+      },
+      {
+        "city": "El Paso",
+        "population": "682,669",
+        "estimatedNetworkInvestment": "$561",
+        "estimatedGDPGrowth": "$1,039",
+        "estimatedJobsCreated": "6,372",
+        "selectSmartCityBenefits": "$394.04"
+      },
+      {
+        "city": "Arlington",
+        "population": "398,112",
+        "estimatedNetworkInvestment": "$327",
+        "estimatedGDPGrowth": "$606",
+        "estimatedJobsCreated": "3,716",
+        "selectSmartCityBenefits": "$229.79"
+      },
+      {
+        "city": "Corpus Christi",
+        "population": "326,554",
+        "estimatedNetworkInvestment": "$268",
+        "estimatedGDPGrowth": "$497",
+        "estimatedJobsCreated": "3,048",
+        "selectSmartCityBenefits": "$188.49"
+      },
+      {
+        "city": "Plano",
+        "population": "288,061",
+        "estimatedNetworkInvestment": "$237",
+        "estimatedGDPGrowth": "$439",
+        "estimatedJobsCreated": "2,689",
+        "selectSmartCityBenefits": "$166.27"
+      },
+      {
+        "city": "Laredo",
+        "population": "261,639",
+        "estimatedNetworkInvestment": "$215",
+        "estimatedGDPGrowth": "$398",
+        "estimatedJobsCreated": "2,442",
+        "selectSmartCityBenefits": "$151.02"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 461823.6566824883,
+      "GCP": 50852445178.08972,
+      "mobileWireless": 29400000,
+    "adultsInWirelessOnly": 0.679,
+      "householdsWithSmartphones": 0.8093744795824327,
+      "totalWagesDependentOnWireless": 21583236442.50652
+    }
+  },
+  {
+    "name": "Utah",
+    "abbreviation": "UT",
+    "citiesData": [
+      {
+        "city": "Salt Lake City",
+        "population": "200,591",
+        "estimatedNetworkInvestment": "$165",
+        "estimatedGDPGrowth": "$305",
+        "estimatedJobsCreated": "1,872",
+        "selectSmartCityBenefits": "$115.78"
+      },
+      {
+        "city": "West Valley City",
+        "population": "136,401",
+        "estimatedNetworkInvestment": "$112",
+        "estimatedGDPGrowth": "$208",
+        "estimatedJobsCreated": "1,273",
+        "selectSmartCityBenefits": "$78.73"
+      },
+      {
+        "city": "Provo",
+        "population": "116,702",
+        "estimatedNetworkInvestment": "$96",
+        "estimatedGDPGrowth": "$178",
+        "estimatedJobsCreated": "1,089",
+        "selectSmartCityBenefits": "$67.36"
+      },
+      {
+        "city": "West Jordan",
+        "population": "116,046",
+        "estimatedNetworkInvestment": "$95",
+        "estimatedGDPGrowth": "$177",
+        "estimatedJobsCreated": "1,083",
+        "selectSmartCityBenefits": "$66.98"
+      },
+      {
+        "city": "Orem",
+        "population": "97,521",
+        "estimatedNetworkInvestment": "$80",
+        "estimatedGDPGrowth": "$148",
+        "estimatedJobsCreated": "910",
+        "selectSmartCityBenefits": "$56.29"
+      },
+      {
+        "city": "Sandy",
+        "population": "96,901",
+        "estimatedNetworkInvestment": "$80",
+        "estimatedGDPGrowth": "$148",
+        "estimatedJobsCreated": "904",
+        "selectSmartCityBenefits": "$55.93"
+      },
+      {
+        "city": "Ogden",
+        "population": "87,325",
+        "estimatedNetworkInvestment": "$72",
+        "estimatedGDPGrowth": "$133",
+        "estimatedJobsCreated": "815",
+        "selectSmartCityBenefits": "$50.41"
+      },
+      {
+        "city": "St. George",
+        "population": "87,178",
+        "estimatedNetworkInvestment": "$72",
+        "estimatedGDPGrowth": "$133",
+        "estimatedJobsCreated": "814",
+        "selectSmartCityBenefits": "$50.32"
+      },
+      {
+        "city": "Layton",
+        "population": "77,303",
+        "estimatedNetworkInvestment": "$64",
+        "estimatedGDPGrowth": "$118",
+        "estimatedJobsCreated": "722",
+        "selectSmartCityBenefits": "$44.62"
+      },
+      {
+        "city": "Millcreek",
+        "population": "61,270",
+        "estimatedNetworkInvestment": "$50",
+        "estimatedGDPGrowth": "$93",
+        "estimatedJobsCreated": "572",
+        "selectSmartCityBenefits": "$35.37"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 29021.30707906476,
+      "GCP": 2237134702.431417,
+      "mobileWireless": 2900000,
+    "adultsInWirelessOnly": 0.69,
+      "householdsWithSmartphones": 0.836058491933849,
+      "totalWagesDependentOnWireless": 1170192814.814172
+    }
+  },
+  {
+    "name": "Vermont",
+    "abbreviation": "VT",
+    "citiesData": [
+      {
+        "city": "Burlington",
+        "population": "42,899",
+        "estimatedNetworkInvestment": "$35",
+        "estimatedGDPGrowth": "$64",
+        "estimatedJobsCreated": "400",
+        "selectSmartCityBenefits": "$12.82"
+      },
+      {
+        "city": "Essex",
+        "population": "21,911",
+        "estimatedNetworkInvestment": "$18",
+        "estimatedGDPGrowth": "$33",
+        "estimatedJobsCreated": "205",
+        "selectSmartCityBenefits": "$6.55"
+      },
+      {
+        "city": "South Burlington",
+        "population": "19,486",
+        "estimatedNetworkInvestment": "$16",
+        "estimatedGDPGrowth": "$30",
+        "estimatedJobsCreated": "182",
+        "selectSmartCityBenefits": "$5.83"
+      },
+      {
+        "city": "Rutland City",
+        "population": "15,325",
+        "estimatedNetworkInvestment": "$13",
+        "estimatedGDPGrowth": "$23",
+        "estimatedJobsCreated": "143",
+        "selectSmartCityBenefits": "$4.58"
+      },
+      {
+        "city": "Bennington",
+        "population": "15,002",
+        "estimatedNetworkInvestment": "$12",
+        "estimatedGDPGrowth": "$23",
+        "estimatedJobsCreated": "140",
+        "selectSmartCityBenefits": "$4.48"
+      },
+      {
+        "city": "Montpelier",
+        "population": "7,436",
+        "estimatedNetworkInvestment": "$6",
+        "estimatedGDPGrowth": "$11",
+        "estimatedJobsCreated": "69",
+        "selectSmartCityBenefits": "$2.22"
+      },
+      {
+        "city": "Winooski",
+        "population": "7,337",
+        "estimatedNetworkInvestment": "$6",
+        "estimatedGDPGrowth": "$11",
+        "estimatedJobsCreated": "68",
+        "selectSmartCityBenefits": "$2.19"
+      },
+      {
+        "city": "St. Albans",
+        "population": "6,813",
+        "estimatedNetworkInvestment": "$6",
+        "estimatedGDPGrowth": "$10",
+        "estimatedJobsCreated": "64",
+        "selectSmartCityBenefits": "$2.04"
+      },
+      {
+        "city": "Newport",
+        "population": "4,589",
+        "estimatedNetworkInvestment": "$4",
+        "estimatedGDPGrowth": "$7",
+        "estimatedJobsCreated": "43",
+        "selectSmartCityBenefits": "$1.37"
+      },
+      {
+        "city": "Vergennes",
+        "population": "2,558",
+        "estimatedNetworkInvestment": "$2",
+        "estimatedGDPGrowth": "$4",
+        "estimatedJobsCreated": "24",
+        "selectSmartCityBenefits": "$0.76"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 6734.712525462496,
+      "GCP": 495495726.4559612,
+      "mobileWireless": 600000,
+    "adultsInWirelessOnly": 0.48,
+      "householdsWithSmartphones": 0.6601151260932859,
+      "totalWagesDependentOnWireless": 279374291.854357
+    }
+  },
+  {
+    "name": "Virginia",
+    "abbreviation": "VA",
+    "citiesData": [
+      {
+        "city": "Virginia Beach",
+        "population": "450,189",
+        "estimatedNetworkInvestment": "$370",
+        "estimatedGDPGrowth": "$685",
+        "estimatedJobsCreated": "4,202",
+        "selectSmartCityBenefits": "$259.85"
+      },
+      {
+        "city": "Norfolk",
+        "population": "244,076",
+        "estimatedNetworkInvestment": "$201",
+        "estimatedGDPGrowth": "$372",
+        "estimatedJobsCreated": "2,278",
+        "selectSmartCityBenefits": "$140.88"
+      },
+      {
+        "city": "Chesapeake",
+        "population": "242,634",
+        "estimatedNetworkInvestment": "$199",
+        "estimatedGDPGrowth": "$369",
+        "estimatedJobsCreated": "2,265",
+        "selectSmartCityBenefits": "$140.05"
+      },
+      {
+        "city": "Richmond",
+        "population": "228,783",
+        "estimatedNetworkInvestment": "$188",
+        "estimatedGDPGrowth": "$348",
+        "estimatedJobsCreated": "2,136",
+        "selectSmartCityBenefits": "$132.06"
+      },
+      {
+        "city": "Newport News",
+        "population": "178,626",
+        "estimatedNetworkInvestment": "$147",
+        "estimatedGDPGrowth": "$272",
+        "estimatedJobsCreated": "1,667",
+        "selectSmartCityBenefits": "$103.11"
+      },
+      {
+        "city": "Alexandria",
+        "population": "160,530",
+        "estimatedNetworkInvestment": "$132",
+        "estimatedGDPGrowth": "$244",
+        "estimatedJobsCreated": "1,498",
+        "selectSmartCityBenefits": "$92.66"
+      },
+      {
+        "city": "Hampton",
+        "population": "134,313",
+        "estimatedNetworkInvestment": "$110",
+        "estimatedGDPGrowth": "$205",
+        "estimatedJobsCreated": "1,254",
+        "selectSmartCityBenefits": "$77.53"
+      },
+      {
+        "city": "Roanoke",
+        "population": "99,920",
+        "estimatedNetworkInvestment": "$82",
+        "estimatedGDPGrowth": "$152",
+        "estimatedJobsCreated": "933",
+        "selectSmartCityBenefits": "$57.68"
+      },
+      {
+        "city": "Portsmouth",
+        "population": "94,632",
+        "estimatedNetworkInvestment": "$78",
+        "estimatedGDPGrowth": "$144",
+        "estimatedJobsCreated": "883",
+        "selectSmartCityBenefits": "$54.62"
+      },
+      {
+        "city": "Suffolk",
+        "population": "91,185",
+        "estimatedNetworkInvestment": "$75",
+        "estimatedGDPGrowth": "$139",
+        "estimatedJobsCreated": "851",
+        "selectSmartCityBenefits": "$52.63"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 103000.5383656555,
+      "GCP": 10612702186.58299,
+      "mobileWireless": 8600000,
+    "adultsInWirelessOnly": 0.491,
+      "householdsWithSmartphones": 0.7801609386636041,
+      "totalWagesDependentOnWireless": 4635615830.072587
+    }
+  },
+  {
+    "name": "Washington",
+    "abbreviation": "WA",
+    "citiesData": [
+      {
+        "city": "Seattle",
+        "population": "744,955",
+        "estimatedNetworkInvestment": "$612",
+        "estimatedGDPGrowth": "$1,134",
+        "estimatedJobsCreated": "6,954",
+        "selectSmartCityBenefits": "$430.00"
+      },
+      {
+        "city": "Spokane",
+        "population": "219,190",
+        "estimatedNetworkInvestment": "$180",
+        "estimatedGDPGrowth": "$334",
+        "estimatedJobsCreated": "2,046",
+        "selectSmartCityBenefits": "$126.52"
+      },
+      {
+        "city": "Tacoma",
+        "population": "216,279",
+        "estimatedNetworkInvestment": "$178",
+        "estimatedGDPGrowth": "$329",
+        "estimatedJobsCreated": "2,019",
+        "selectSmartCityBenefits": "$124.84"
+      },
+      {
+        "city": "Vancouver",
+        "population": "183,012",
+        "estimatedNetworkInvestment": "$150",
+        "estimatedGDPGrowth": "$279",
+        "estimatedJobsCreated": "1,708",
+        "selectSmartCityBenefits": "$105.64"
+      },
+      {
+        "city": "Bellevue",
+        "population": "147,599",
+        "estimatedNetworkInvestment": "$121",
+        "estimatedGDPGrowth": "$225",
+        "estimatedJobsCreated": "1,378",
+        "selectSmartCityBenefits": "$85.20"
+      },
+      {
+        "city": "Kent",
+        "population": "129,618",
+        "estimatedNetworkInvestment": "$107",
+        "estimatedGDPGrowth": "$197",
+        "estimatedJobsCreated": "1,210",
+        "selectSmartCityBenefits": "$74.82"
+      },
+      {
+        "city": "Everett",
+        "population": "111,262",
+        "estimatedNetworkInvestment": "$91",
+        "estimatedGDPGrowth": "$169",
+        "estimatedJobsCreated": "1,039",
+        "selectSmartCityBenefits": "$64.22"
+      },
+      {
+        "city": "Renton",
+        "population": "102,153",
+        "estimatedNetworkInvestment": "$84",
+        "estimatedGDPGrowth": "$156",
+        "estimatedJobsCreated": "954",
+        "selectSmartCityBenefits": "$58.96"
+      },
+      {
+        "city": "Spokane Valley",
+        "population": "99,703",
+        "estimatedNetworkInvestment": "$82",
+        "estimatedGDPGrowth": "$152",
+        "estimatedJobsCreated": "931",
+        "selectSmartCityBenefits": "$57.55"
+      },
+      {
+        "city": "Federal Way",
+        "population": "97,044",
+        "estimatedNetworkInvestment": "$80",
+        "estimatedGDPGrowth": "$148",
+        "estimatedJobsCreated": "906",
+        "selectSmartCityBenefits": "$56.01"
+      },
+      {
+        "city": "Olympia",
+        "population": "52,555",
+        "estimatedNetworkInvestment": "$43",
+        "estimatedGDPGrowth": "$80",
+        "estimatedJobsCreated": "491",
+        "selectSmartCityBenefits": "$30.34"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 201498.0918681749,
+      "GCP": 21252500594.8198,
+      "mobileWireless": 7600000,
+    "adultsInWirelessOnly": 0.582,
+      "householdsWithSmartphones": 0.7906869733632536,
+      "totalWagesDependentOnWireless": 10185532486.23043
+    }
+  },
+  {
+    "name": "West Virginia",
+    "abbreviation": "WV",
+    "citiesData": [
+      {
+        "city": "Charleston",
+        "population": "47,215",
+        "estimatedNetworkInvestment": "$39",
+        "estimatedGDPGrowth": "$72",
+        "estimatedJobsCreated": "441",
+        "selectSmartCityBenefits": "$14.11"
+      },
+      {
+        "city": "Huntington",
+        "population": "46,048",
+        "estimatedNetworkInvestment": "$38",
+        "estimatedGDPGrowth": "$70",
+        "estimatedJobsCreated": "430",
+        "selectSmartCityBenefits": "$13.77"
+      },
+      {
+        "city": "Morgantown",
+        "population": "30,955",
+        "estimatedNetworkInvestment": "$25",
+        "estimatedGDPGrowth": "$47",
+        "estimatedJobsCreated": "289",
+        "selectSmartCityBenefits": "$9.25"
+      },
+      {
+        "city": "Parkersburg",
+        "population": "29,675",
+        "estimatedNetworkInvestment": "$24",
+        "estimatedGDPGrowth": "$45",
+        "estimatedJobsCreated": "277",
+        "selectSmartCityBenefits": "$8.87"
+      },
+      {
+        "city": "Wheeling",
+        "population": "26,771",
+        "estimatedNetworkInvestment": "$22",
+        "estimatedGDPGrowth": "$41",
+        "estimatedJobsCreated": "250",
+        "selectSmartCityBenefits": "$8.00"
+      },
+      {
+        "city": "Weirton",
+        "population": "18,449",
+        "estimatedNetworkInvestment": "$15",
+        "estimatedGDPGrowth": "$28",
+        "estimatedJobsCreated": "172",
+        "selectSmartCityBenefits": "$5.52"
+      },
+      {
+        "city": "Fairmont",
+        "population": "18,411",
+        "estimatedNetworkInvestment": "$15",
+        "estimatedGDPGrowth": "$28",
+        "estimatedJobsCreated": "172",
+        "selectSmartCityBenefits": "$5.50"
+      },
+      {
+        "city": "Martinsburg",
+        "population": "17,465",
+        "estimatedNetworkInvestment": "$14",
+        "estimatedGDPGrowth": "$27",
+        "estimatedJobsCreated": "163",
+        "selectSmartCityBenefits": "$5.22"
+      },
+      {
+        "city": "Beckley",
+        "population": "16,183",
+        "estimatedNetworkInvestment": "$13",
+        "estimatedGDPGrowth": "$25",
+        "estimatedJobsCreated": "151",
+        "selectSmartCityBenefits": "$4.84"
+      },
+      {
+        "city": "Clarksburg",
+        "population": "15,480",
+        "estimatedNetworkInvestment": "$13",
+        "estimatedGDPGrowth": "$24",
+        "estimatedJobsCreated": "144",
+        "selectSmartCityBenefits": "$4.63"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 9266.95939768631,
+      "GCP": 668855248.8362092,
+      "mobileWireless": 1600000,
+    "adultsInWirelessOnly": 0.526,
+      "householdsWithSmartphones": 0.6437541976804569,
+      "totalWagesDependentOnWireless": 368003875.8128913
+    }
+  },
+  {
+    "name": "Wisconsin",
+    "abbreviation": "WI",
+    "citiesData": [
+      {
+        "city": "Milwaukee",
+        "population": "592,025",
+        "estimatedNetworkInvestment": "$487",
+        "estimatedGDPGrowth": "$901",
+        "estimatedJobsCreated": "5,526",
+        "selectSmartCityBenefits": "$341.72"
+      },
+      {
+        "city": "Madison",
+        "population": "258,054",
+        "estimatedNetworkInvestment": "$212",
+        "estimatedGDPGrowth": "$393",
+        "estimatedJobsCreated": "2,409",
+        "selectSmartCityBenefits": "$148.95"
+      },
+      {
+        "city": "Green Bay",
+        "population": "104,879",
+        "estimatedNetworkInvestment": "$86",
+        "estimatedGDPGrowth": "$160",
+        "estimatedJobsCreated": "979",
+        "selectSmartCityBenefits": "$60.54"
+      },
+      {
+        "city": "Kenosha",
+        "population": "100,164",
+        "estimatedNetworkInvestment": "$82",
+        "estimatedGDPGrowth": "$153",
+        "estimatedJobsCreated": "935",
+        "selectSmartCityBenefits": "$57.82"
+      },
+      {
+        "city": "Racine",
+        "population": "77,432",
+        "estimatedNetworkInvestment": "$64",
+        "estimatedGDPGrowth": "$118",
+        "estimatedJobsCreated": "723",
+        "selectSmartCityBenefits": "$44.69"
+      },
+      {
+        "city": "Appleton",
+        "population": "74,526",
+        "estimatedNetworkInvestment": "$61",
+        "estimatedGDPGrowth": "$113",
+        "estimatedJobsCreated": "696",
+        "selectSmartCityBenefits": "$43.02"
+      },
+      {
+        "city": "Waukesha",
+        "population": "72,549",
+        "estimatedNetworkInvestment": "$60",
+        "estimatedGDPGrowth": "$110",
+        "estimatedJobsCreated": "677",
+        "selectSmartCityBenefits": "$41.88"
+      },
+      {
+        "city": "Eau Claire",
+        "population": "68,866",
+        "estimatedNetworkInvestment": "$57",
+        "estimatedGDPGrowth": "$105",
+        "estimatedJobsCreated": "643",
+        "selectSmartCityBenefits": "$39.75"
+      },
+      {
+        "city": "Oshkosh",
+        "population": "66,729",
+        "estimatedNetworkInvestment": "$55",
+        "estimatedGDPGrowth": "$102",
+        "estimatedJobsCreated": "623",
+        "selectSmartCityBenefits": "$38.52"
+      },
+      {
+        "city": "Janesville",
+        "population": "64,565",
+        "estimatedNetworkInvestment": "$53",
+        "estimatedGDPGrowth": "$98",
+        "estimatedJobsCreated": "603",
+        "selectSmartCityBenefits": "$37.27"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 52593.1404368135,
+      "GCP": 4655654409.352545,
+      "mobileWireless": 5700000,
+    "adultsInWirelessOnly": 0.54,
+      "householdsWithSmartphones": 0.7181175059024546,
+      "totalWagesDependentOnWireless": 2073620565.880626
+    }
+  },
+  {
+    "name": "Wyoming",
+    "abbreviation": "WY",
+    "citiesData": [
+      {
+        "city": "Cheyenne",
+        "population": "63,957",
+        "estimatedNetworkInvestment": "$53",
+        "estimatedGDPGrowth": "$97",
+        "estimatedJobsCreated": "597",
+        "selectSmartCityBenefits": "$36.92"
+      },
+      {
+        "city": "Casper",
+        "population": "57,461",
+        "estimatedNetworkInvestment": "$47",
+        "estimatedGDPGrowth": "$87",
+        "estimatedJobsCreated": "536",
+        "selectSmartCityBenefits": "$33.17"
+      },
+      {
+        "city": "Laramie",
+        "population": "32,473",
+        "estimatedNetworkInvestment": "$27",
+        "estimatedGDPGrowth": "$49",
+        "estimatedJobsCreated": "303",
+        "selectSmartCityBenefits": "$9.71"
+      },
+      {
+        "city": "Gillette",
+        "population": "31,903",
+        "estimatedNetworkInvestment": "$26",
+        "estimatedGDPGrowth": "$49",
+        "estimatedJobsCreated": "298",
+        "selectSmartCityBenefits": "$9.54"
+      },
+      {
+        "city": "Rock Springs",
+        "population": "23,082",
+        "estimatedNetworkInvestment": "$19",
+        "estimatedGDPGrowth": "$35",
+        "estimatedJobsCreated": "215",
+        "selectSmartCityBenefits": "$6.90"
+      },
+      {
+        "city": "Sheridan",
+        "population": "17,849",
+        "estimatedNetworkInvestment": "$15",
+        "estimatedGDPGrowth": "$27",
+        "estimatedJobsCreated": "167",
+        "selectSmartCityBenefits": "$5.34"
+      },
+      {
+        "city": "Green River",
+        "population": "11,978",
+        "estimatedNetworkInvestment": "$10",
+        "estimatedGDPGrowth": "$18",
+        "estimatedJobsCreated": "112",
+        "selectSmartCityBenefits": "$3.58"
+      },
+      {
+        "city": "Evanston",
+        "population": "11,704",
+        "estimatedNetworkInvestment": "$10",
+        "estimatedGDPGrowth": "$18",
+        "estimatedJobsCreated": "109",
+        "selectSmartCityBenefits": "$5.50"
+      },
+      {
+        "city": "Riverton",
+        "population": "10,996",
+        "estimatedNetworkInvestment": "$9",
+        "estimatedGDPGrowth": "$17",
+        "estimatedJobsCreated": "103",
+        "selectSmartCityBenefits": "$3.29"
+      },
+      {
+        "city": "Jackson",
+        "population": "10,429",
+        "estimatedNetworkInvestment": "$9",
+        "estimatedGDPGrowth": "$16",
+        "estimatedJobsCreated": "97",
+        "selectSmartCityBenefits": "$3.12"
+      }
+    ],
+    "stateData": {
+      "totalWirelessRelatedJobs": 6557.574602495305,
+      "GCP": 574635147.378834,
+      "mobileWireless": 600000,
+      "adultsInWirelessOnly": 0.695,
+      "householdsWithSmartphones": 0.753831293405301,
+      "totalWagesDependentOnWireless": 257343529.184527
+    }
+  }
+]

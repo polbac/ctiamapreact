@@ -1,0 +1,135 @@
+@import '~styles/config';
+
+.shortcut {
+  @include will-animate;
+
+  margin-bottom: 4px;
+  padding: 45px 45px 35px;
+  overflow: hidden;
+  background: #fff;
+
+  box-shadow: 0 0 46px 0 rgba(62, 62, 62, 0.09);
+
+  &__header {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    @include reset-heading;
+    @include responsive-font(24, 42);
+
+    margin-bottom: (25 / 42) * 1em;
+
+    max-width: 11.666666666666667em;
+
+    letter-spacing: -0.015;
+    color: $color-dark;
+    font-weight: 600;
+    line-height: (48 / 42);
+
+    &::after {
+      content: '.';
+
+      color: $color-primary;
+    }
+  }
+
+  &__button {
+    @include reset-button;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    cursor: pointer;
+
+    background-color: $color-dark;
+    border-radius: 50%;
+
+    transition: background-color 300ms;
+
+    &:hover {
+      background-color: lighten($color-dark, 20%);
+    }
+  }
+
+  &__arrow {
+    position: relative;
+    top: 1px;
+
+    width: 12px;
+
+    transform: rotate(90deg);
+
+    path { // stylelint-disable-line
+      stroke: #fff;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__image {
+    .section-1 & { // stylelint-disable-line
+      margin-top: -40px;
+      margin-right: 20px;
+      margin-bottom: 15px;
+
+      width: 87px;
+      height: 142px;
+    }
+
+    .section-2 & { // stylelint-disable-line
+      margin-top: -40px;
+      margin-right: 10px;
+
+      width: 76px;
+      height: 108px;
+    }
+
+    .section-3 & { // stylelint-disable-line
+      width: 145px;
+    }
+
+    .section-4 & { // stylelint-disable-line
+      margin-top: -110px;
+      margin-right: -55px;
+      margin-bottom: -145px;
+
+      width: 163px;
+      height: 280px;
+    }
+
+    .section-5 & { // stylelint-disable-line
+      margin-top: 30px;
+      margin-right: 20px;
+
+      width: 105px;
+      height: 260px;
+    }
+
+    .section-6 & { // stylelint-disable-line
+      margin-top: -170px;
+      margin-bottom: -200px;
+
+      width: 57px;
+      height: 478px;
+
+      @media (min-width: $min-1280) {
+        margin-right: 145px;
+      }
+    }
+  }
+
+  &.section-1 {
+    @media (min-width: $min-880) {
+      margin-left: percentage(1 / 4.5);
+    }
+  }
+}

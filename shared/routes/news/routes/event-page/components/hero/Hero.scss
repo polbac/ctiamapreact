@@ -1,0 +1,51 @@
+@import '~styles/config';
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: calc(50vh - 115px);
+
+  @media print, (min-width: $min-1080) {
+    //height: calc(100vh - 115px);
+    height: calc(100vw * .5625);
+  }
+
+  &__container {
+    @include container;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    justify-content: center;
+    //align-items: center;
+    position: relative;
+
+    h1 {
+      @include h1($min-size: 42);
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    div {
+      @include h2(31, 32);
+      margin-bottom: 8px;
+      color: #fff;
+    }
+  }
+
+  &__background {
+    @include fit;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__video {
+    @include fit;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+}

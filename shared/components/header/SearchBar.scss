@@ -1,0 +1,63 @@
+@import '~styles/config';
+
+.searchbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  opacity: 0;
+
+  &__container {
+    @include container;
+  }
+
+  &__input {
+    @include reset-input;
+    @include h2;
+
+    margin-top: 105px;
+    margin-bottom: 10px;
+
+    width: 100%;
+
+    background-color: transparent;
+
+    caret-color: $color-blue;
+
+    @media print, (min-height: $min-840) and (min-width: $min-1080) {
+      margin-top: 111px;
+    }
+  }
+
+  &__result {
+    @include reset-button;
+    @include h2;
+    @include ellipsis;
+
+    display: block;
+
+    margin-bottom: 12px;
+
+
+    line-height: 1.25;
+    color: $color-gray;
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: color 300ms ease;
+
+    &:focus,
+    &:hover {
+      color: $color-dark;
+    }
+
+    em { // stylelint-disable-line
+      font-style: normal;
+      color: $color-dark;
+
+      background-color: rgba($color-blue, 0.25);
+    }
+  }
+}

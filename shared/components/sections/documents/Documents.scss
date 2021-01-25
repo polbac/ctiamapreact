@@ -1,0 +1,15 @@
+@import '~styles/config';
+
+.documents {
+  border-radius: $border-radius;
+  background-color: #fff;
+  box-shadow: 0 0 46px 0 rgba(62, 62, 62, 0.09);
+
+  > *:first-child {
+    padding-top: 25px;
+  }
+
+  > *:last-child {
+    padding-bottom: 25px;
+  }
+}

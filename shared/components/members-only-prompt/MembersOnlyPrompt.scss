@@ -1,0 +1,142 @@
+@import '~styles/config';
+
+.prompt {
+  display: block;
+
+  width: 100%;
+  max-width: 1200px;
+
+  @media print, (min-width: $min-840) {
+    display: flex;
+  }
+
+  &__left,
+  &__right {
+    padding: $gutter * 3 $gutter * 2;
+
+    @media print, (min-width: $min-840) {
+      flex: 1 1 50%;
+    }
+
+    @media print, (min-width: $min-1080) {
+      padding: $gutter * 3 $gutter * 5;
+    }
+  }
+
+  &__right {
+    background: #f8fafa;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+
+  &__headline {
+    @include h3(20, 36);
+
+    margin-bottom: $gutter;
+  }
+
+  &__copy {
+    @include responsive-font(20, 24);
+
+    margin: 0 0 $gutter * 2;
+    max-width: 600px;
+
+    line-height: (36 / 24);
+    color: rgba(#000, 0.7);
+  }
+
+  &__footer {
+    @include reset-all;
+
+    display: block;
+
+    font-size: 14px;
+    color: rgba(#000, 0.3);
+    line-height: (20 / 14);
+
+    a { // stylelint-disable-line
+      @include reset-anchor;
+      @include link-hover;
+
+      color: $color-blue;
+    }
+  }
+
+  &__form {
+    margin: 0 0 $gutter;
+  }
+
+  &__label {
+    @include responsive-font(18, 22);
+
+    display: block;
+
+    margin: 0 0 $gutter / 2;
+
+    font-weight: 600;
+  }
+
+  &__input {
+    @include reset-input;
+    @include responsive-font(18, 28);
+
+    padding: 0 1em;
+    margin-bottom: $gutter * 2;
+
+    width: 100%;
+    height: 3em;
+
+    background: #fff;
+
+    &.emailError {
+      box-shadow: inset 0 0 0 1px $color-red;
+    }
+  }
+
+  &__overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include fit;
+    z-index: 1;
+
+    padding: $gutter * 2;
+
+    text-align: center;
+
+    background: rgba(#fff, 0.9);
+  }
+
+  &__badge {
+    $size: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: -$size / 2;
+    left: ($gutter * 2) - ($size / 2);
+    z-index: 100;
+
+    width: $size;
+    height: $size;
+
+    background: $color-blue;
+    border-radius: 50%;
+
+    @media print, (min-width: $min-1080) {
+      left: ($gutter * 5) - ($size / 2);
+    }
+
+    svg {
+      width: $size * 0.6;
+
+      path { // stylelint-disable-line
+        fill: #fff;
+      }
+    }
+  }
+}

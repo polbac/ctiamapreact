@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" aria-labelledby="linkedinOptimIconTitle linkedinOptimIconDesc">
+  <title>Icon for LinkedIn button</title>
+  <desc>Icon for LinkedIn button</desc>
+  <g data-name="Share : TW">
+    <path fill-rule="evenodd" d="M22 0A22 22 0 1 1 0 22 22 22 0 0 1 22 0z"/>
+    <path fill="#fff" d="M18.05 28.08h-3.3v-9.86H18zm-1.73-11.15a1.67 1.67 0 1 1 0-3.33 1.65 1.65 0 0 1 1.79 1.66 1.68 1.68 0 0 1-1.79 1.67zm13.15 11.15h-3.32v-5.36c0-1.3-.34-2.18-1.5-2.18a1.69 1.69 0 0 0-1.6 1.17 2.3 2.3 0 0 0-.11.78v5.59H19.6v-9.86h3.34v1.39A3.09 3.09 0 0 1 25.78 18c2.11 0 3.69 1.37 3.69 4.33v5.73z"/>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+@import '~styles/config';
+
+.text {
+  flex: 0 1 auto;
+  @include segment(35px, 35px, 25px, 25px);
+
+  &__container {
+    @include container;
+  }
+
+  &__content {
+    @include content;
+
+    &.isCenter {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@import '~styles/config';
+
+.item {
+  flex: 0 0 33.3%;
+
+  // @media print, (min-width: $min-720) {
+  //   flex: 0 0 25%;
+  // }
+
+  position: relative;
+
+  margin: 0 0 -1px 0;
+  padding: $gutter;
+
+  // &::before {
+  //   content: '';
+  //   display: block;
+  //   position: absolute;
+  //   top: $gutter / 2;
+  //   bottom: $gutter / 2;
+  //   right: 0;
+
+  //   width: 1px;
+  //   background: $color-border;
+  // }
+
+  // &::after {
+  //   content: '';
+  //   display: block;
+  //   position: absolute;
+  //   left: $gutter / 2;
+  //   right: $gutter / 2;
+  //   bottom: 0;
+
+  //   height: 1px;
+  //   background: $color-border;
+  // }
+
+  // &:nth-child(4n)::before {
+  //   display: none;
+  // }
+
+  &__link {
+    display: block;
+    max-width: 200px;
+    margin: auto;
+
+    filter: grayscale(0);
+
+    transition: filter 300ms;
+
+    &:hover {
+      filter: grayscale(100%);
+    }
+  }
+
+  &__wrapper {
+    max-width: 200px;
+    margin: auto;
+  }
+
+  &__image {
+    padding-top: 100%;
+
+    background: center no-repeat;
+    background-size: contain;
+  }
+}

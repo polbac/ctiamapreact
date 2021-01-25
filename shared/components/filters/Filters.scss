@@ -1,0 +1,65 @@
+@import '~styles/config';
+
+.filters {
+  @include segment(0, 90px, 0, 30px);
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    @media print, (min-width: $min-840) {
+      @include grid-col(10);
+      @include grid-offset-left(1);
+    }
+
+    @media print, (min-width: $min-1080) {
+      @include grid-col(8);
+      @include grid-offset-left(2);
+    }
+  }
+
+  &.wide &__col {
+    @include grid-col;
+
+    @media print, (min-width: $min-840) {
+      @include grid-col;
+      @include grid-offset-left(0);
+    }
+
+    @media print, (min-width: $min-1080) {
+      @include grid-col(10);
+      @include grid-offset-left(1);
+    }
+  }
+
+  &__wrap {
+    @include supports-grid {
+      display: grid;
+      grid-auto-flow: row;
+      grid-gap: $gutter;
+      grid-auto-columns: 1fr;
+
+      @media print, (min-width: $min-720) { // stylelint-disable-line
+        grid-auto-flow: column;
+      }
+    }
+
+    @include no-supports-grid {
+      @include grid-row;
+
+      > * { // stylelint-disable-line
+        flex: 1 1 auto;
+        margin-left: ($gutter / 2);
+        margin-right: ($gutter / 2);
+        width: calc(#{percentage(1 / 4)} - #{$gutter});
+      }
+    }
+  }
+}

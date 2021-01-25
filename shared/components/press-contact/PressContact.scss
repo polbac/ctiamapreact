@@ -1,0 +1,38 @@
+@import '~styles/config';
+
+.pressContact {
+  @include segment(40px, 40px, 40px, 40px);
+
+  background: #fff;
+
+  &__container {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-bottom: 20px;
+    width: 55px;
+    height: 32px;
+  }
+
+  &__heading {
+    @include h4;
+  }
+
+  &__email {
+    @include reset-anchor;
+    display: inline-block;
+    margin-bottom: (30 / 18) * 1em;
+    color: $color-gray-dark;
+  }
+
+  &__link {
+    @include reset-anchor;
+    font-weight: 600;
+    color: $color-primary;
+  }
+}

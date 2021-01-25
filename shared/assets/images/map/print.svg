@@ -1,0 +1,9 @@
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+<style type="text/css">
+   .printBtn{fill:#D4ECED;}
+</style>
+<circle cx="8" cy="8" r="8"/>
+<path class="printBtn" d="M12.4,8.4c0.2-0.2,0.2-0.5,0-0.7L9.2,4.5C9,4.3,8.7,4.3,8.5,4.5S8.3,5,8.5,5.2L11.3,8l-2.8,2.8
+   c-0.2,0.2-0.2,0.5,0,0.7s0.5,0.2,0.7,0L12.4,8.4z M4,8.5h8v-1H4V8.5z"/>
+</svg>

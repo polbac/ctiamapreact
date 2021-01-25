@@ -1,0 +1,474 @@
+// Customs
+@mixin selection($background, $color) {
+  ::-moz-selection {
+    color: $color;
+
+    background: $background;
+  }
+
+  ::selection {
+    color: $color;
+
+    background: $background;
+  }
+}
+
+@mixin bullet($font-size: 12px, $color: #d3d3d3) {
+  &::after {
+    content: '•';
+
+    position: relative;
+    top: -2px;
+
+    margin-left: 12px;
+    margin-right: 12px;
+
+    font-size: $font-size;
+    color: $color;
+  }
+}
+
+@mixin underline($opacity: 1, $position: bottom) {
+  position: relative;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    opacity: $opacity;
+
+    width: 100%;
+    height: 2px;
+
+    background-image: url('!file-loader!assets/images/underline.svg');
+    background-repeat: repeat-x;
+
+    @if $position == top {
+      top: 0;
+    }
+
+    @else if $position == bottom {
+      bottom: 0;
+    }
+  }
+}
+
+@mixin ellipsis($width: 100%) {
+  max-width: $width;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin link-hover() {
+  border-bottom: 1px solid transparent;
+
+  transition: border 200ms ease;
+
+  &:hover {
+    border-bottom: 1px solid $color-blue;
+  }
+}
+
+@mixin widthify($width, $min-width: inherit) {
+  width: percentage($width / $graphic-limit);
+  max-width: $width;
+  min-width: $min-width;
+}
+
+@keyframes placeholderAnim {
+  0% { background-position: -500px 0; }
+  100% { background-position: 500px 0; }
+}
+
+@mixin loading($bg: #f6f6f6, $bgSliding: #f0f0f0, $delay: 0ms) {
+  display: block;
+
+  position: relative;
+
+  margin-bottom: 0.3em;
+
+  color: transparent;
+
+  background: $bg;
+  background: linear-gradient(to right, $bg 6%, $bgSliding 23%, $bg 46%);
+  background-size: 1000px 100px;
+
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeholderAnim;
+  animation-timing-function: linear;
+  animation-delay: $delay;
+
+  @media print {
+    color: #000;
+  }
+}
+
+@mixin link-button($size: 47px) {
+  @include reset-button;
+  @include reset-anchor;
+  @include responsive-font(16, 18);
+
+  flex: 0 1 auto;
+
+  margin-right: 30px;
+
+  padding: 0 17px 0 43px;
+
+  overflow: hidden;
+
+  height: $size;
+  max-width: 100%;
+
+  font-weight: 200;
+  white-space: nowrap;
+  line-height: $size - 5px;
+  text-overflow: ellipsis;
+  text-align: left;
+
+  cursor: pointer;
+
+  border: 2px solid #000;
+  border-radius: $size;
+
+  background-image: url('!file-loader!assets/images/icons/icon-link.svg');
+  background-position: 17px center;
+  background-repeat: no-repeat;
+  background-size: 18px 19px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// Default
+@mixin fit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// defaults to standard heading size
+@mixin responsive-font($min-size: ($font-size - 2), $size: $font-size, $limit: $page-limit) {
+  $baseline: $min-mobile;
+  $font-multiplier: (($size - $min-size) / (strip-unit($limit) - strip-unit($baseline)));
+  $font-baseline: ($min-size - $font-multiplier * strip-unit($baseline));
+
+  @if $min-size >= $size {
+    @warn 'Responsive font: min-size equal or greater than size';
+  }
+
+  font-size: #{$min-size}px;
+  font-size: calc(#{$min-size}px * #{var(--scale-multiplier)});
+
+  @media (min-width: $baseline) {
+    font-size: #{$min-size}px;
+    font-size: calc((#{$font-multiplier} * #{100vw} + (#{$font-baseline}px)) * #{var(--scale-multiplier)});
+  }
+
+  @media (min-width: $limit) {
+    font-size: #{$size}px;
+    font-size: calc(#{$size}px * #{var(--scale-multiplier)});
+  }
+
+  @media print {
+    font-size: #{$size}px;
+  }
+}
+
+@mixin responsive-line-height($min-size: ($font-size - 2), $size: $font-size, $limit: $page-limit) {
+  $baseline: $min-mobile;
+  $font-multiplier: (($size - $min-size) / (strip-unit($limit) - strip-unit($baseline)));
+  $font-baseline: ($min-size - $font-multiplier * strip-unit($baseline));
+
+  @if $min-size >= $size {
+    @warn 'Responsive line-height: min-size equal or greater than size';
+  }
+
+  line-height: #{$min-size}px;
+  line-height: calc(#{$min-size}px * #{var(--scale-multiplier)});
+
+  @media (min-width: $baseline) {
+    line-height: #{$min-size}px;
+    line-height: calc((#{$font-multiplier} * #{100vw} + (#{$font-baseline}px)) * #{var(--scale-multiplier)});
+  }
+
+  @media (min-width: $limit) {
+    line-height: #{$size}px;
+    line-height: calc(#{$size}px * #{var(--scale-multiplier)});
+  }
+
+  @media print {
+    line-height: #{$size}px;
+  }
+}
+
+@mixin viewport($media) {
+  @warn 'viewport mixin is deprecated and will be removed in a future version';
+
+  @if $media == handset {
+    @media only screen and (max-width: $min-600) { @content; }
+  }
+
+  @else if $media == tablet {
+    @media only screen and (min-width: $min-tablet) { @content; }
+  }
+
+  @else if $media == desktop {
+    @media only screen and (min-width: $min-desktop) { @content; }
+  }
+
+  /* stylelint-disable */
+  @else if $media == retina {
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+      only screen and (-o-min-device-pixel-ratio: 13/10),
+      only screen and (min-resolution: 120dpi) {
+      @content;
+    }
+  }
+
+  @else if $media == oldIE {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      @content;
+    }
+  }
+}
+
+@mixin retina {
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+    only screen and (-o-min-device-pixel-ratio: 13/10),
+    only screen and (min-resolution: 120dpi) {
+    @content;
+  }
+}
+
+// segment customisable per-component / instance rather than being forced to work around defaults.
+@mixin segment($padding-top: $segment-padding, $padding-bottom: $segment-padding, $padding-top-mobile: $segment-padding-mobile, $padding-bottom-mobile: $segment-padding-mobile) {
+  padding-top: $padding-top-mobile;
+  padding-bottom: $padding-bottom-mobile;
+
+  @media print, (min-width: $min-tablet) {
+    padding-top: percentage(strip-unit($padding-top) / strip-unit($page-limit));
+    padding-bottom: percentage(strip-unit($padding-bottom) / strip-unit($page-limit));
+  }
+
+  @media print, (min-width: $page-limit) {
+    padding-top: strip-unit($padding-top) * 1px;
+    padding-bottom: strip-unit($padding-bottom) * 1px;
+  }
+}
+
+@mixin container() {
+  margin: 0 auto;
+
+  padding-left: $container-gutter-mobile;
+  padding-right: $container-gutter-mobile;
+
+  max-width: $page-width + $container-gutter-mobile * 1;
+
+  @media print, (min-width: $min-mobile) {
+    max-width: $page-width + $container-gutter-mobile * 2;
+  }
+
+  @media print, (min-width: $min-tablet) {
+    padding-left: $container-gutter-tablet;
+    padding-right: $container-gutter-tablet;
+    max-width: $page-width + $container-gutter-tablet * 2;
+  }
+
+  @media print, (min-width: $min-desktop) {
+    padding-left: $container-gutter-desktop;
+    padding-right: $container-gutter-desktop;
+    max-width: $page-width + $container-gutter-desktop * 2;
+  }
+}
+
+// html.js / html.no-js will not compile?!
+// hence these workaround selectors
+@mixin js-only {
+  html:not(:global(.no-js)) & {
+    @content;
+  }
+}
+
+@mixin no-js {
+  html:not(:global(.js)) & {
+    @content;
+  }
+}
+
+// gsap trans-in defaults
+@mixin will-animate($opacity: true, $transform: true) {
+  @include js-only {
+    @if $opacity == true {
+      opacity: 0;
+
+      @media print {
+        opacity: 1;
+      }
+    }
+
+    @if $transform == true {
+      will-change: opacity, transform;
+    }
+
+    @else {
+      will-change: opacity;
+    }
+  }
+}
+
+// typography
+@mixin h1($min-size: 46, $max-size: 80) {
+  @include reset-heading;
+  @include responsive-font($min-size, $max-size);
+
+  margin-bottom: (56 / 80) * 1em;
+
+  letter-spacing: -0.022em;
+  color: $color-dark;
+  font-weight: 700;
+  line-height: 1;
+}
+
+@mixin h2($min-size: 34, $max-size: 48) {
+  @include reset-heading;
+  @include responsive-font($min-size, $max-size);
+
+  margin-bottom: (46 / 48) * 1em;
+
+  color: $color-dark;
+  font-weight: 600;
+  line-height: (46 / 48);
+}
+
+@mixin h3($min-size: 24, $max-size: 28) {
+  @include reset-heading;
+  @include responsive-font($min-size, $max-size);
+
+  margin-bottom: (38 / 28) * 1em;
+
+  color: $color-dark;
+  font-weight: 600;
+  line-height: (38 / 28);
+}
+
+@mixin h4($min-size: 16, $max-size: 18) {
+  @include reset-heading;
+  @include responsive-font($min-size, $max-size);
+
+  margin-bottom: 0;
+
+  color: $color-dark;
+  font-weight: 600;
+  line-height: (28 / 18);
+}
+
+@mixin copy($min-size: 18, $max-size: 22) {
+  @include reset-paragraph;
+  @include responsive-font($min-size, $max-size);
+
+  margin-bottom: (46 / 22) * 1em;
+
+  letter-spacing: -0.005em;
+  font-family: $font-serif;
+  color: $color-dark;
+  line-height: (46 / 22);
+}
+
+@mixin ul() {
+  @include reset-list;
+
+  > * {
+    @include copy;
+    position: relative;
+    padding-left: ((30 / 22) + (11 / 22)) * 1em;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+
+      top: ((46 / 22) - ((11 / 2) / 22)) / 2 * 1em;
+      left: 0;
+
+      width: 11px;
+      height: 11px;
+
+      background: $color-primary;
+
+      border-radius: 11px;
+    }
+  }
+}
+
+@mixin list() {
+  @warn 'list mixin is deprecated, use ul';
+  @include ul;
+}
+
+@mixin ol() {
+  @include reset-list;
+  counter-reset: ol-counter;
+
+  > * {
+    @include copy;
+    position: relative;
+    padding-left: ((30 / 22) + (11 / 22)) * 1em;
+
+    &::before {
+      content: counter(ol-counter);
+
+      counter-increment: ol-counter;
+
+      position: absolute;
+      top: -0.2em;
+      left: 0;
+
+      font-family: $font-default;
+      font-weight: 600;
+      font-size: 1.3em;
+
+      color: $color-primary;
+    }
+  }
+}
+
+@mixin label($min-size: 16, $max-size: 18) {
+  @include reset-paragraph;
+  @include responsive-font($min-size, $max-size);
+
+  color: $color-gray;
+}
+
+// feature query mixin for css-grid
+@mixin no-supports-grid {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+
+  @supports not (display: grid) {
+    @content;
+  }
+}
+
+@mixin supports-grid {
+  @supports (display: grid) {
+    @content;
+  }
+}

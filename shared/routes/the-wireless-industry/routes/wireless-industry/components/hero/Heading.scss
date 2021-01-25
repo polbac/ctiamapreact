@@ -1,0 +1,28 @@
+@import '~styles/config';
+
+.heading {
+  $height: (54 / 28);
+
+  position: relative;
+
+  &__svg {
+    @include will-animate;
+  }
+
+  &__subheading {
+    @include will-animate;
+    @include copy(20, 28);
+
+    position: absolute;
+    right: 0;
+    bottom: -$height;
+
+    margin-bottom: 0;
+
+    font-style: italic;
+    line-height: $height;
+    color: rgba($color-shuttle-gray, 0.8);
+
+    transform: translateX(-20px);
+  }
+}

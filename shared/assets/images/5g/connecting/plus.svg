@@ -1,0 +1,10 @@
+<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.21 52.21" role="presentation" aria-labelledby="plusIconTitle plusIconDesc">
+<title>Plus icon</title>
+<desc>Small plus sign</desc>
+<defs>
+  <style>.cls-1,.cls-2{fill:#fa7a47;fill-rule:evenodd;}.cls-1{opacity:0.2;}.cls-3{fill:#fff;}</style>
+</defs>
+  <path class="cls-1" d="M960.43,514a26.11,26.11,0,1,1-26.11,26.11A26.1,26.1,0,0,1,960.43,514Z" transform="translate(-934.32 -514)"/>
+  <path class="cls-2" d="M960.43,516.61a23.5,23.5,0,1,1-23.5,23.5A23.5,23.5,0,0,1,960.43,516.61Z" transform="translate(-934.32 -514)"/>
+  <path class="cls-3" d="M967.69,538.61h-5.76v-5.77a1.5,1.5,0,0,0-3,0v5.77h-5.77a1.5,1.5,0,0,0,0,3h5.77v5.76a1.5,1.5,0,0,0,3,0v-5.76h5.76a1.5,1.5,0,0,0,0-3Z" transform="translate(-934.32 -514)"/>
+</svg>

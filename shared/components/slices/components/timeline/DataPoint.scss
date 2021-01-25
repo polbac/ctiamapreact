@@ -1,0 +1,21 @@
+@import '~styles/config';
+
+.datapoint {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform:translateY(-30%);
+  width: 11px;
+  border-radius: 42%;
+  height: 30px;
+  background-color: #78cdd1;
+  transition: background-color 0.6s, height 0.6s, margin 0.6s;
+  border-right: 1px solid #f6f6f6;
+  border-left: 1px solid #f6f6f6;
+
+  &:hover, &.isActive {
+    background-color: #c4d439;
+    height: 40px;
+    margin-top: 2px;
+  }
+}

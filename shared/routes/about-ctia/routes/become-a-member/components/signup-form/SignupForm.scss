@@ -1,0 +1,43 @@
+@import '~styles/config';
+
+.signupForm {
+  @include segment;
+  border-top: 1px solid $color-border;
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    @media print, (min-width: $min-840) {
+      @include grid-col(10);
+      @include grid-offset-left(1);
+    }
+
+    @media print, (min-width: $min-desktop) {
+      @include grid-col(8);
+      @include grid-offset-left(2);
+    }
+  }
+
+  &__header {
+    text-align: center;
+  }
+
+  &__title {
+    @include h2;
+    margin-bottom: 0.42em;
+  }
+
+  &__subtitle {
+    @include reset-paragraph;
+    @include responsive-font(18, 24);
+    margin-bottom: 3.5em;
+  }
+}

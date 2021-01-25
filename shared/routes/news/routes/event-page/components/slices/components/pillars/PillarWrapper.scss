@@ -1,0 +1,14 @@
+@import '~styles/config';
+
+.pillars {
+  @include segment(35px, 35px, 25px, 25px);
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+    justify-content: space-around;
+  }
+}

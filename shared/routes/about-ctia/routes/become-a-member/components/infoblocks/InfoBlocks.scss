@@ -1,0 +1,21 @@
+@import '~styles/config';
+
+.infoBlocks {
+  @include segment;
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    &:not(:last-child) {
+      @include segment(0, 190px, 0, 90px);
+    }
+  }
+}

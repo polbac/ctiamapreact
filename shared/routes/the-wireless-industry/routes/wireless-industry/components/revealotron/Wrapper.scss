@@ -1,0 +1,75 @@
+@import '~styles/config';
+
+.wrapper {
+  @include segment(190px, 0, 50px, 0);
+
+  &__footer {
+    position: relative;
+    z-index: 1;
+
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    background-color: $color-blue-light;
+    border-top: 1px solid rgba(#ccc, 0.8);
+
+    .gray & {
+      background-color: $color-gray-light;
+    }
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media (min-width: $min-720) {
+      @include grid-col(8);
+      @include grid-offset-left(2);
+    }
+
+    @media (min-width: $min-1200) {
+      @include grid-col(6);
+      @include grid-offset-left(3);
+    }
+  }
+
+  &__list {
+    @include reset-list;
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    @include reset-button;
+
+    position: relative;
+
+    margin-right: 10px;
+
+    width: 36px;
+    height: 36px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

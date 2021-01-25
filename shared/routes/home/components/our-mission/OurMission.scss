@@ -1,0 +1,34 @@
+@import '~styles/config';
+
+.mission {
+  @include segment(190px, 190px, 75px, 75px);
+
+  position: relative;
+
+  overflow: hidden;
+
+  &__container {
+    @include container;
+
+    height: inherit;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__svg {
+    position: absolute;
+    right: -35vw;
+    bottom: -20px;
+    z-index: 0;
+
+    width: 80%;
+
+    @media print, (min-width: $min-720) {
+      top: 160px;
+      bottom: inherit;
+    }
+  }
+}

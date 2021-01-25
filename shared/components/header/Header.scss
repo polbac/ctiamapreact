@@ -1,0 +1,101 @@
+@import '~styles/config';
+
+.header {
+  display: block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-index-base + 1;
+
+  margin: 0 0 $gutter;
+
+  backface-visibility: hidden;
+
+  &:not(.transparent),
+  &.isDetached {
+    background-color: #fff;
+
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.125);
+  }
+
+  &.isDetached {
+    position: fixed;
+
+    transform: translateY(-150%);
+  }
+
+  &.isAnimating {
+    transition: transform 250ms;
+  }
+
+  &.isScrollingUp {
+    position: fixed;
+
+    transform: translateY(0%);
+  }
+
+  &.noSpacing {
+    margin-bottom: 0;
+  }
+
+  &__sub {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    z-index: $z-index-base + 1;
+    opacity: 0;
+    pointer-events: none;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+
+    background: #f8fafa;
+    box-shadow: 0 0 150px rgba(0, 0, 0, 0.3);
+
+    .transparent & {
+      border-top-width: 0;
+    }
+
+    &Item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      opacity: 0;
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    top: $height-desktop;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: $z-index-base;
+    opacity: 0;
+    pointer-events: none;
+
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  &__dummy {
+    height: $height-mobile;
+
+    @media (min-width: $mobile-breakpoint) {
+      height: $height-desktop;
+    }
+
+    @media print {
+      height: 0;
+    }
+  }
+
+  @media print {
+    display: none;
+  }
+}

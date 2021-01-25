@@ -1,0 +1,117 @@
+
+.footer {
+    display: grid;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 500;
+    width:430px;
+    height: 100%;
+    background: $bg-dark;
+    transform: translate3d(100%,0,0);
+    transition: transform 0.45s;
+    text-align: center;
+  
+    grid-template-rows: auto 1fr auto;
+    justify-content: center;
+    align-items: center;
+    padding: 85px 30px 30px 30px;
+    overflow-y: auto;
+    &__logo {
+        img {
+            width: 145px;
+        }
+    }
+    &__body {
+        padding: 40px 0;
+        h4 {
+            margin-bottom: 30px;
+            font-size: 23px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+    }
+    &__bottom {
+        i {
+            font-size: 14px;
+            color:$primary-color;
+        }
+        &__social {
+            margin: 40px 0;
+
+            padding-top: 10px;
+            border-top:1px solid rgba(#439fa1, .65);
+
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                li {
+                    padding: 0 5px;
+                    a {
+                    
+                    }
+                    svg {
+                       transform: scale(.85);
+                       transform-origin: center;
+                       &:hover {
+                           path {
+                               stroke:$primary-color;
+                           }
+                       }
+                    }
+                }
+            }
+        }
+        &__links {
+            color:rgba(#fff, 0.35);
+            font-size: 13px;
+            margin-bottom: 30px;
+            p {
+                margin-bottom: 10px;
+            }
+            & .footer-nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include responsive("mobile-h"){
+                    flex-direction: column; 
+                }
+                a {
+                    color:rgba(#fff, 0.35);
+                    font-size: 13px;
+                    padding: 0 5px; 
+                    line-height: 1.5; 
+                    @include responsive("mobile-h"){
+                        padding: 5px; 
+                    }
+                    &:hover {
+                        color:$primary-color;
+                    }
+                }
+
+            }
+         
+        }
+    }
+    @include responsive("tablet-h"){
+        position: relative;
+        width: 100%;
+        height: auto;
+        transform: none;
+        z-index: 10;          
+    } 
+
+    &.isopen {
+        transform: translate3d(0,0,0);
+    }
+
+}
+.js_active_footer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    width:115px;
+    height: 100%;
+}

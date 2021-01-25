@@ -1,0 +1,71 @@
+Installation instructions for setting up CTIA-www site on a new Windows 10 install
+
+Setting up site build dependencies and project code
+
+1) Install NodeJS version 8.11.1 LTS
+- Package download location: https://nodejs.org/dist/v8.11.1/node-v8.11.1-x64.msi
+- When running the installer accept all of the default options.
+
+2) Install Git for Windows
+- Package download location: https://git-scm.com/download/win
+- When running the installer accept all of the default options.
+
+3) Clone the CTIA-www site from GitHub
+- Using windows explorer navigate to a folder where you would like to check out the site code.
+  An example would be the My Documents folder for the currently logged in user.
+- Right click inside the folder window and select "Git Bash Here" in the popup.
+- In the Git Bash command line window that opens, enter: git clone https://github.com/CTIA-IT/ctia-www.git
+- A popup window may appear asking for you GitHub credentials or the command line will request you to enter
+  your Username and Password for 'https://github.com'
+- If the credentials are accepted you will see the message "Cloning into 'ctia-www'" and additional info about
+  the transfer of objects and files.
+
+4) Installing Yarn and the site's code dependencies
+- In the same Git Bash command line window, type "cd ctia-www" to change directory to the project that was just
+  cloned.  It should have the text "(master)" at the end of the prompt.  This informs you that the contents of
+  this folder are a GIT repository and the text in the parenthesis indicates the current checked out branch.
+- Type "npm install -g yarn" This installs yarn as a global system package and only needs to be run once.
+  If the installation was successful you will see a message like: "+ yarn@1.6.0 added 1 package in 1.016s"
+- Type "yarn" to install of the node package dependencies.  This process may take a few minutes.  If successful
+  the last line should say "Done" and list the time taken to complete in seconds.
+
+7) Running the local dev site
+- In the same Git Bash command line window, type "yarn dev".  If a Windows Security Alert popup appears for
+  Firewall access for node.exe, grant it access then re-run "yarn dev" (Should only happen the first time
+  the command is run)
+- It will take a few minutes for Webpack to compile the client and server javascript runtimes.
+- If successful you will see a message in blue stating
+  "SERVER: Server started on port 3000. Available on http://localhost:3000"
+- Open a browser and enter http://localhost:3000 in the url bar to view the development site.
+- While this dev process is running, any change to the source code will automatically be recompiled and
+  hot-loaded into the running site.  If the changes don't automatically appear, hitting F5 or clicking the
+  reload button in the browser should pickup the changes.  (Make sure your browser's cache is disabled,
+  otherwise it might continue to use the old cached javascript files instead of the newly compiled changes.
+  The process for this differs from browser to browser.  In Chrome it is done by opening the Developer
+  Toolbar (F12), clicking the network tab, and checking the "Disable cache" box.  This will disable the
+  cache for tab the Developer Toolbar was opened for as long as it is running.)
+
+
+
+Setting up Editor Tools for development
+
+1) Install Visual Studio Code
+- Package download location: https://code.visualstudio.com/
+- When running installer additionaly select the "Add Open with Code" for both file and directory options.
+
+2) Load the CTIA-www project into VS Code
+- Use windows explorer to navigate to the folder where the ctia-www project is checked out.
+- In the folder window Right-click and select "Open with Code" in the popup.
+- VS Code should launch ready to edit the project.
+- The project can also be manually loaded by opening VS Code, clicking on File -> Open Folder and selecting
+the ctia-www project folder from within.
+
+3) Install Visual Studio Code Extensions
+- In a running copy of VS Code, click the "Extensions" button on left icon panel
+- Search and install the extensions "ESLint" and "EditorConfig for VS Code"
+- ESLint sets rules on code formating and usage to keep the source consistent as defined in the .eslintrc.json
+  file in the project root.
+- EditorConfig sets configuration options for VS Code for consistent indentation, line endings, trailing
+  whitesapce, etc defined in the .editorconfig file in the project root.
+
+Install Tortoise Git

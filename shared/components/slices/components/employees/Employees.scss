@@ -1,0 +1,51 @@
+@import '~styles/config';
+
+.employees {
+  flex: 0 1 auto;
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    @media print, (min-width: $min-720) {
+      @include grid-col(8);
+      @include grid-offset-left(2);
+    }
+
+    @media print, (min-width: $min-1200) {
+      @include grid-col(6);
+      @include grid-offset-left(5);
+
+      .isCenter & { // stylelint-disable-line
+        @include grid-offset-left(3);
+      }
+    }
+
+    .isWide & {
+      @include grid-col(8);
+      @include grid-offset-left(2);
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-column-gap: $gutter;
+    grid-row-gap: $gutter * 3;
+    grid-template-columns: 1fr;
+
+    @media print, (min-width: $min-560) {
+      grid-template-columns: repeat(3, 1fr);
+
+      .isEven & { // stylelint-disable-line
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}

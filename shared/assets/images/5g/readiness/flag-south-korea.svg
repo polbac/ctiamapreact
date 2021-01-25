@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 350 201">
+  <metadata><?xpacket begin="﻿"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c140 79.160451, 2017/05/06-01:08:21        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #1639d7;
+      }
+
+      .cls-3 {
+        fill: #db0b1c;
+      }
+    </style>
+  </defs>
+  <image width="350" height="201" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAV4AAADJAQAAAABDRGf4AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiAwwNOwpOkUA0AAAANklEQVRo3u3KsQ0AAAgDoP5/s4l9wV2Yyd5NZFmWZVmWZVmWZVmWZVmWZVmWZVmWZVmWZflBLkeaaRge35AHAAAAAElFTkSuQmCC"/>
+  <path class="cls-1" d="M73.481,137.114l5.032-3.268,27.232,41.933-5.032,3.268Zm8.387-5.447L86.9,128.4l27.232,41.934L109.1,173.6Zm8.387-5.446,5.032-3.268,27.232,41.933-5.032,3.268Zm-4.791,29.343L90.5,152.3l3.268,5.032L88.731,160.6Zm16.774-10.892,5.032-3.268,3.268,5.032-5.032,3.268Z"/>
+  <path class="cls-1" d="M228.481,37.114l5.032-3.268,27.232,41.934-5.032,3.268Zm8.387-5.446L241.9,28.4l27.232,41.934L264.1,73.6Zm8.387-5.446,5.032-3.268,27.232,41.934-5.032,3.268Zm-4.792,29.344L245.5,52.3l3.268,5.032L243.731,60.6Zm16.774-10.893,5.032-3.268,3.268,5.032L260.505,49.7Z"/>
+  <path class="cls-1" d="M255.713,122.953l5.032,3.268-27.232,41.933-5.032-3.268ZM264.1,128.4l5.032,3.268L241.9,173.6l-5.032-3.268Zm8.387,5.447,5.032,3.268-27.232,41.933-5.032-3.268ZM243.731,141.4l5.032,3.268L245.5,149.7l-5.032-3.268ZM260.505,152.3l5.032,3.268-3.268,5.032-5.032-3.268Zm-8.387-5.446,5.032,3.268-3.268,5.032-5.032-3.268Z"/>
+  <path class="cls-1" d="M98.713,22.953l5.032,3.268L76.513,68.154l-5.032-3.268ZM107.1,28.4l5.032,3.268L84.9,73.6l-5.032-3.268Zm8.387,5.446,5.032,3.268L93.287,79.047l-5.032-3.268Z"/>
+  <circle class="cls-2" cx="174.5" cy="100.5" r="51.5"/>
+  <path class="cls-3" d="M174.5,49a51.526,51.526,0,0,1,46.985,72.618C215.709,81.92,189.624,84.376,170,104c-12.147,11.251-40.614,13.659-43.51-22.174A51.518,51.518,0,0,1,174.5,49Z"/>
+  <path class="cls-3" d="M-56,61"/>
+</svg>

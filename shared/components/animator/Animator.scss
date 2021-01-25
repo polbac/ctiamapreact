@@ -1,0 +1,7 @@
+@import '~styles/config';
+
+.animator {
+  &.hasAnimation {
+    @include will-animate;
+  }
+}

@@ -1,0 +1,283 @@
+@import '~styles/config';
+$graphic-limit: 1860px;
+$graphic-gutter: 40px;
+
+.stateModal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 60px;
+
+  background: #fff;
+  border-radius: 4px 8px 8px 4px;
+  box-shadow: 0 53px 120px 0 rgba(0, 0, 0, 0.13);
+
+  &__wrapper {
+    position: relative;
+    padding: 80px 0 35px;
+
+    @media (min-width: $min-tablet) {
+      padding: 115px 0 75px;
+    }
+  }
+
+  &__container {
+    position: relative;
+
+    @media (min-width: $min-desktop) {
+      @include container;
+    }
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    display: block;
+
+    &Content {
+      @include grid-col(10);
+      @include grid-offset-left;
+      @include grid-offset-right;
+
+      @media (min-width: $min-desktop) {
+        @include grid-col(3);
+        @include grid-offset-left(0);
+        @include grid-offset-right;
+      }
+    }
+
+    &Statistics {
+      @include grid-col(10);
+      @include grid-offset-left;
+      @include grid-offset-right;
+
+      @media (min-width: $min-desktop) {
+        @include grid-col(8);
+        @include grid-offset-left(0);
+        @include grid-offset-right(0);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__heading {
+    display: flex;
+  }
+
+  &__stateName {
+    @include h1($max-size: 58);
+
+    font-weight: 600;
+  }
+
+  &__abbreviation {
+    @include h1(34, 48);
+
+    color: $color-gray;
+    font-weight: 300;
+  }
+
+  &__text {
+    @include reset-paragraph;
+    @include responsive-font(16, 18);
+
+    margin-bottom: 20px;
+
+    line-height: (30 / 18);
+
+    color: $color-gray;
+
+  }
+
+  &__resources {
+    display: flex;
+    flex-flow: wrap;
+
+    padding-top: 50px;
+
+    border-top: 1px solid #e5e6e6;
+
+    @media (min-width: $min-desktop) {
+      margin-top: 0;
+    }
+  }
+
+  &__resource {
+    display: flex;
+    flex: 0 0 (100% / 2);
+
+    margin-bottom: $gutter;
+  }
+
+  &__download {
+    @include reset-anchor;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &__icon {
+      opacity: 0.3;
+
+      margin-right: 16px;
+
+      width: 48px;
+      height: 48px;
+    }
+
+    &__label {
+      @include responsive-font(16, 18);
+
+      margin-top: -4px;
+
+      color: $color-gray;
+    }
+  }
+
+  &__print {
+    @include reset-anchor;
+    @include responsive-font(16, 18);
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &Icon {
+      margin-left: 13px;
+      width: 21px;
+    }
+  }
+
+  &__svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    @media (min-width: $min-desktop) {
+      top: -184px;
+      left: -40px;
+      right: -25px;
+    }
+
+    z-index: 100;
+  }
+
+  &__resourceNumber {
+    @include reset-paragraph;
+    @include responsive-font(14, 16);
+
+    margin-right: 5px;
+
+    color: $color-blue;
+  }
+
+  &__resourceName {
+    @include reset-paragraph;
+    @include responsive-font(14, 16);
+
+    color: $color-gray;
+  }
+
+  &__numberBlock {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: $gutter * 2;
+
+    @media (min-width: $min-desktop) {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__number {
+    display: flex;
+  }
+
+  &__numberSvg {
+    display: flex;
+
+    height: 47px;
+
+    svg { // stylelint-disable-line
+      margin-right: 3px;
+    }
+  }
+
+  &__copy {
+    @include reset-paragraph;
+    @include responsive-font(18, 20);
+
+    margin-top: 15px;
+
+    color: $color-dark;
+  }
+
+  @mixin widthify($width) {
+    width: percentage($width / 1540px);
+    max-width: $width;
+  }
+
+  &__left,
+  &__right {
+    position: absolute;
+    z-index: 0;
+
+    pointer-events: none;
+  }
+
+  &__left {
+    $width: 1000px;
+
+    @include widthify($width);
+
+    top: -7px;
+    left: percentage(-70px / $graphic-limit);
+
+    @media (min-width: $min-tablet) {
+      $width: 537px;
+
+      @include widthify($width);
+    }
+  }
+
+  &__right {
+    display: none;
+
+    $width: 528px;
+
+    @include widthify($width);
+
+    top: -7px;
+    right: percentage(-100px / $graphic-limit);
+
+    @media (min-width: $min-tablet) {
+      display: block;
+    }
+  }
+
+  &__resourceLink {
+    @include reset-anchor;
+
+    margin-left: 5px;
+  }
+
+  &.is5g {
+    .stateModal__right {
+      display: none;
+    }
+  }
+}

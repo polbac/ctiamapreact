@@ -1,0 +1,37 @@
+@import '~styles/config';
+
+.block {
+  width: 100%;
+
+  &__kicker {
+    @include reset-paragraph;
+
+    margin-bottom: 1em;
+  }
+
+  &__heading {
+    @include h2($min-size: 42);
+
+    margin-bottom: 30px;
+
+    max-width: 10em;
+
+    font-weight: 700;
+
+    &Dot {
+      color: $color-primary;
+    }
+  }
+
+  &__copy {
+    @include copy;
+
+    opacity: 0.7;
+
+    margin-bottom: 40px;
+
+    max-width: 20em;
+
+    line-height: (40 / 22);
+  }
+}

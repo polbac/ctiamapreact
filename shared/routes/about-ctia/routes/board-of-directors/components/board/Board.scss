@@ -1,0 +1,37 @@
+@import '~styles/config';
+
+.board {
+  @include segment;
+  margin-bottom: -105px;
+  min-height: 105px;
+
+  & + & {
+    @include segment($padding-top: 0, $padding-top-mobile: 0);
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    @media print, (min-width: $min-720) {
+      @include grid-col(6);
+    }
+
+    @media print, (min-width: $min-1200) {
+      @include grid-col(4);
+    }
+  }
+
+  &__title {
+    @include h2;
+
+    margin-bottom: 105px;
+  }
+}

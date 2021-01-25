@@ -1,0 +1,28 @@
+@import '~styles/config';
+
+.textArea {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    @include responsive-font(18, 22);
+
+    margin-bottom: 0.5em;
+
+    font-weight: 600;
+  }
+
+  &__input {
+    @include reset-input;
+    @include responsive-font(18, 28);
+
+    padding: 1em;
+    margin-bottom: 1.6em;
+
+    height: 3.4em * 4;
+
+    &.isInvalid {
+      border: 1px solid rgb(151, 18, 18);
+    }
+  }
+}

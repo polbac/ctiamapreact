@@ -1,0 +1,164 @@
+@import '~styles/config';
+
+.experience {
+  $height: 1080px;
+
+  position: relative;
+  margin: 30px 0;
+  padding-top: 60px;
+
+  background: #eaf3f3;
+
+  @media print, (min-width: $min-840) {
+    padding-top: 90px;
+    margin-top: 80px;
+  }
+
+  &__animationContainer {
+    position: relative;
+    z-index: 0;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    &::after {
+      content: '';
+      display: block;
+      padding-bottom: percentage(440px/$page-width);
+
+      @media print, (min-width: $min-840) {
+        padding-bottom: percentage(340px/$page-width);
+      }
+    }
+  }
+
+  @mixin image-size($width) {
+    width: percentage($width / $page-width);
+
+    @media print, (min-width: $page-limit) {
+      width: $width;
+    }
+  }
+
+  &__figure {
+    @include will-animate;
+
+    position: absolute;
+
+    pointer-events: none;
+
+    &:nth-child(1) {
+      @include image-size(606px);
+      top: 0;
+      margin-left: -(percentage(180px/$page-width));
+    }
+
+    &:nth-child(2) {
+      @include image-size(256px);
+      top: 40px;
+      left: 45%;
+    }
+
+    &:nth-child(3) {
+      @include image-size(389px);
+      top: 35%;
+      right: 0;
+      margin-right: -(percentage(220px/$page-width));
+    }
+
+    &:nth-child(4) {
+      @include image-size(731px);
+      top: percentage(2000px/$height);
+      right: 0;
+      opacity: 0.9;
+      margin-right: -(percentage(390px/$page-width));
+    }
+
+    &:nth-child(5) {
+      @include image-size(230px);
+      display: none;
+      top: percentage(50px/$height);
+      left: 0;
+      z-index: -1;
+
+      margin-left: (percentage(300px/$page-width));
+
+      @media print, (min-width: $min-840) {
+        display: inline-block;
+      }
+
+    }
+
+    &:nth-child(6) {
+      @include image-size(250px);
+      top: percentage(350px/$height);
+      left: 42%;
+      z-index: -1;
+    }
+
+    &:nth-child(7) {
+      @include image-size(220px);
+      top: percentage(440px/$height);
+      left: 0;
+      z-index: -1;
+
+      margin-left: -(percentage(160px/$page-width));
+    }
+
+    &:nth-child(8) {
+      @include image-size(490px);
+      top: percentage(500px/$height);
+      right: 0;
+      z-index: -1;
+    }
+  }
+
+  &__container {
+    @include container;
+    position: relative;
+  }
+
+  &__row {
+    @include grid-row;
+    position: relative;
+  }
+
+  &__cta {
+    position: relative;
+    bottom: -25px;
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  &__list {
+    @include grid-col;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 100px;
+
+    @media print, (min-width: $min-840) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @media print, (min-width: $min-1280) {
+      @include grid-col(10);
+      @include grid-offset-left(1);
+    }
+  }
+
+  &__item {
+    @include will-animate;
+
+    position: relative;
+
+    margin-bottom: $gutter;
+
+    @media print, (min-width: $min-840) {
+      max-width: 30%;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import '~styles/config';
+
+.select {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    @include responsive-font(18, 22);
+
+    margin-bottom: 0.5em;
+
+    font-weight: 600;
+  }
+
+  &__wrap {
+    @include responsive-font(18, 28);
+
+    flex: 1 1 auto;
+    display: flex;
+    position: relative;
+
+    margin-bottom: 1.6em;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      right: 25px;
+      bottom: 0;
+
+      width: 30px;
+
+      pointer-events: none;
+
+      background: #fff url('!file-loader!assets/images/icons/icon-down-crop.svg') no-repeat;
+      background-position: center;
+      background-size: 13px 8px;
+    }
+  }
+
+  &__select {
+    @include reset-input;
+
+    flex: 1 1 auto;
+
+    padding: 0 1em;
+
+    height: 3.4em;
+
+    font-size: inherit;
+
+    background: #fff;
+  }
+}

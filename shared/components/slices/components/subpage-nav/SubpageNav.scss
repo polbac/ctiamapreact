@@ -1,0 +1,63 @@
+@import '~styles/config';
+
+.subpageNav {
+  flex: 0 1 auto;
+
+  padding: 54px 0 96px;
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    @media print, (min-width: $min-720) {
+      @include grid-col(10);
+      @include grid-offset-left(1);
+    }
+
+    @media print, (min-width: $min-1200) {
+      @include grid-col(8);
+      @include grid-offset-left(3);
+
+      .isCenter & { // stylelint-disable-line
+        @include grid-offset-left(2);
+      }
+    }
+  }
+
+  &__grid {
+    @include no-supports-grid {
+      @include grid-row;
+      margin-bottom: -60px;
+
+      > * {
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 60px;
+        width: calc(#{percentage(1 / 3)} - 30px);
+      }
+    }
+
+    @include supports-grid {
+      display: grid;
+      grid-column-gap: $gutter * 1.5;
+      grid-row-gap: $gutter;
+      grid-template-columns: 1fr;
+
+      @media print, (min-width: $min-560) {
+        grid-row-gap: $gutter * 3;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media print, (min-width: $min-960) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}

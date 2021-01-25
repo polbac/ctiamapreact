@@ -1,0 +1,29 @@
+@import '~styles/config';
+
+.numberBlock {
+  display: flex;
+  flex-direction: column;
+
+  &__number {
+    display: flex;
+  }
+
+  &__Svg {
+    display: flex;
+
+    height: 47px;
+
+    svg { // stylelint-disable-line
+      margin-right: 3px;
+    }
+  }
+
+  &__copy {
+    @include reset-paragraph;
+    @include responsive-font(18, 20);
+
+    margin-top: 15px;
+
+    color: $color-dark;
+  }
+}

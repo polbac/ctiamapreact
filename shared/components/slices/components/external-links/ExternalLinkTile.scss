@@ -1,0 +1,171 @@
+@import '~styles/config';
+
+.linkTile {
+  width: 100%;
+  margin-bottom: 50px;
+  font-size: 10px; // base font size for each card
+  text-align: center;
+
+  @media (min-width: $min-tablet) {
+    min-height: 395px;
+  }
+
+  @media print, (min-width: $min-1024) {
+    text-align: left;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
+    background-color: #fff;
+    min-height: 195px;
+  }
+
+  &__container {
+    @include container
+
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+  }
+
+  & a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  &__mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    @media print, (min-width: $min-1024) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__imageContainer {
+
+    @media print, (min-width: $min-1024) {
+      @include grid-col(4);
+      max-height: 100%;
+      max-width: 70%;
+      display: inline-block;
+      position: relative;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__imagePadding {
+    max-width: 100%;
+    padding-top: 54.25%;
+    position: relative;
+    top: 0;
+    bottom: 0;
+
+    & img {
+      @include grid-col(12);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__textContainer {
+    width: 100%;
+    min-height: 200px;
+    display:flex;
+    flex-direction: column;
+  }
+
+  &__source {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 0;
+    text-transform: uppercase;
+
+    @media print, (min-width: $min-1024) {
+      display: none;
+    }
+  }
+
+  &__headingContainer {
+    width: 100%;
+    position: relative;
+
+    @media print, (min-width: $min-1024) {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 15px;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
+
+  &__heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: .1em;
+    margin-bottom: 0;
+    color: #000;
+  }
+
+  &__logo {
+    display: none;
+
+    @media print, (min-width: $min-1024) {
+      display: inline-block;
+      width: 5em;
+      height: 100%;
+    }
+  }
+
+  &__blurb {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+
+    @media print, (min-width: $min-tablet) {
+      text-align: left;
+    }
+
+    @media print, (min-width: $min-1024) {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+    }
+  }
+
+  &__tagContainer {
+    // Tags invisible until 1024px
+    display: none;
+    transition: all .3s;
+    margin-top:auto;
+
+    @media print, (min-width: $min-1024) {
+      display: flex;
+      padding-left: 20px;
+    }
+  }
+
+  &__tag {
+    color: #78cdd1;
+    font-size: 1.4em;
+    margin: 14px 20px;
+
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+}

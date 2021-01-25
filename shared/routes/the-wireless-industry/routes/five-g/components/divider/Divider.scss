@@ -1,0 +1,13 @@
+@import '~styles/config';
+
+.divider {
+  @include segment(240px, 240px, 80px, 80px);
+
+  &__container {
+    @include container;
+  }
+
+  &__line {
+    border-bottom: 1px solid #ddd;
+  }
+}

@@ -1,0 +1,78 @@
+@import '~styles/config';
+
+.map {
+  @include segment(190px, 190px, 100px, 100px);
+
+  &__layout {
+    @include supports-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: minmax(72px, auto) auto;
+      grid-template-areas:
+        'top'
+        'main';
+
+      align-items: center;
+      max-width: 100%;
+
+      > * {
+        grid-area: main;
+        overflow: hidden;
+      }
+    }
+
+    @include no-supports-grid {
+      min-height: 100vh;
+    }
+  }
+
+  &__container {
+    @include container;
+
+    position: relative;
+  }
+
+  &__header {
+    grid-area: top;
+    overflow: visible;
+  }
+
+  &__modal {
+    grid-area: main;
+    position: relative;
+    z-index: 2;
+    overflow: visible;
+  }
+
+  &__overlay {
+    position: relative;
+    z-index: 1;
+  }
+
+  @include supports-grid {
+    &__background {
+      @media (min-width: $min-desktop) {
+        margin: -36px -100px 0 -70px;
+      }
+    }
+  }
+
+  @include no-supports-grid {
+    &__background {
+      @include fit;
+    }
+  }
+
+  &.isMobile:not(.isIntroVisible) {
+    .map__background {
+      display: none;
+    }
+  }
+
+  &.isNew5g {
+    background-color: rgba(216,233,234,.5);
+    background-image: linear-gradient(180deg, rgba(216,233,234,.5) 0%, rgba(221,234,235,.5) 100%), url('!file-loader!assets/images/dots.svg');
+    // background-image: url('!file-loader!assets/images/dots.svg');
+    background-blend-mode: multiply;
+  }
+}

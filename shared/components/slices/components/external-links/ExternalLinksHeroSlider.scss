@@ -1,0 +1,106 @@
+@import '~styles/config';
+
+.heroSlider {
+  @include grid-col(12);
+  margin-bottom: $container-gutter-mobile;
+  position: relative;
+  background: #ffffff;
+
+  margin-top:-50px; // to compensate for Header component's margin-bottom
+
+  @media print, (min-width: $min-540) {
+    margin-top: unset;
+  }
+
+  @media print, (min-width: $min-tablet) {
+    @include grid-col(12);
+    margin-bottom: $container-gutter-tablet;
+  }
+
+  @media print, (min-width: $min-desktop) {
+    @include grid-col(12);
+    margin-bottom: $container-gutter-desktop;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+    @include grid-row(20);
+  }
+
+  &__col {
+    @include grid-col;
+    padding-left: 0px;
+    padding-right: 0px;
+
+  }
+
+  &__loading {
+    overflow: hidden;
+  }
+
+  .isWide & {
+    @include grid-offset-left(0);
+    @include grid-col(12);
+  }
+
+  &__buttonLeft, &__buttonRight {
+    @media (max-width: $max-420) {
+      display: none;
+    }
+
+    @include reset-button;
+    opacity: .8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    cursor: pointer;
+    transform: rotate(-90deg);
+
+    &.isHidden {
+      opacity: 0.3;
+      cursor:not-allowed;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__buttonLeft {
+    transform: rotate(90deg);
+  }
+
+  :global {
+    a:-webkit-any-link{
+      text-decoration: none;
+    }
+
+    div.slider-control-bottomcenter ul li button {
+      font-size: 40px !important;
+
+      @media print,(max-width: 449px){
+      padding: 0;
+      }
+
+      @media print, (min-width: 450px) {
+        color: #fff !important;
+      }
+
+      @media print, (min-width: 1200px) {
+        font-size: 50px !important;
+      }
+    }
+
+    .paging-dot {
+      width: 15px !important;
+      height: 15px !important;
+      border: 3px solid #fff;
+    }
+  }
+}

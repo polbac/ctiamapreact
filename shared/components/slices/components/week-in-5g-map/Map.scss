@@ -1,0 +1,104 @@
+@import '~styles/config';
+
+.map {
+  // @include segment(40px, 40px, 20px, 20px);
+
+  &__topBorder{
+    margin-bottom: 60px;
+  }
+  &__bottomBorder{
+    @media (min-width: $min-1080) {
+      margin-top: 100px;
+    }
+  }
+  &__topBorder,
+  &__bottomBorder{
+        @media(max-width: $max-720){
+          visibility: hidden;
+        }
+    hr{
+      @media (min-width: $min-720) {
+        border: 0;
+        border-top: 1px solid #ccc;
+        width: calc(100% - 30px);
+      }
+    }
+  }
+  &__error{
+    margin: 0 auto;
+    height: 1rem;
+  }
+
+  &__layout {
+    @include supports-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: minmax(72px, auto) auto;
+      grid-template-areas:
+        'top'
+        'main';
+
+      align-items: center;
+      max-width: 100%;
+
+      > * {
+        grid-area: main;
+        overflow: hidden;
+      }
+    }
+
+    @include no-supports-grid {
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+
+
+    }
+  }
+
+  &__container {
+    @include container;
+    @media print, (max-width: 1480px){
+    padding-left: 0;
+    padding-right: 0;
+    }
+    position: relative;
+  }
+
+  &__header {
+    grid-area: top;
+    overflow: visible;
+  }
+
+  &__modal {
+    grid-area: main;
+    position: relative;
+    z-index: 2;
+    overflow: visible;
+  }
+
+  &__overlay {
+    position: relative;
+    z-index: 1;
+  }
+
+  // @include supports-grid {
+  //   &__background {
+  //     @media (min-width: $min-desktop) {
+  //       margin: -36px -100px 0 -70px;
+  //     }
+  //   }
+  // }
+
+  @include no-supports-grid {
+    &__background {
+      @include fit;
+    }
+  }
+
+  &.isMobile:not(.isIntroVisible) {
+    .map__background {
+      display: none;
+    }
+  }
+}

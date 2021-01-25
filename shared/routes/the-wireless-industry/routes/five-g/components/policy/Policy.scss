@@ -1,0 +1,120 @@
+@import '~styles/config';
+
+.policy {
+  margin: 30px 0;
+
+  @media print, (min-width: $min-720) {
+    margin: 65px 0 80px;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    position: relative;
+
+    @media print, (min-width: $min-720) {
+      @include grid-col(10);
+      @include grid-offset-left;
+    }
+
+    @media print, (min-width: $min-1080) {
+      @include grid-col(8);
+      @include grid-offset-left(2);
+    }
+  }
+
+  &__image {
+    display: none;
+    align-self: center;
+
+    position: absolute;
+    right: percentage(-260px/$page-width);
+    top: 0;
+
+    width: percentage(520px/$page-width);
+
+    @media print, (min-width: $min-1080) {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &.bottom {
+      img { // stylelint-disable-line
+        align-self: flex-end;
+      }
+    }
+  }
+
+  &__content {
+    @include will-animate;
+
+    padding: 50px 30px;
+
+    border-radius: 4px;
+    background-color: #fff;
+
+    @media print, (min-width: $min-720) {
+      padding: 100px 0;
+      padding-left: percentage(180px/$page-width);
+      padding-right: percentage(360px/$page-width);
+    }
+  }
+
+  &__number {
+    display: inline-block;
+    @include responsive-font(28, 33);
+    color: #78CDD1;
+    font-weight: 700;
+    margin-bottom: 0;
+
+    // &Svg {
+    //   height: 42px;
+    // }
+  }
+
+  &__heading {
+    @include h2($max-size: 36);
+
+    color: $color-blue-dark;
+    line-height: (46 / 36);
+    letter-spacing: -0.02em;
+  }
+
+  &__copy {
+    @include responsive-font(18, 24);
+
+    padding: 10px 0 40px;
+
+    color: #000;
+    line-height: 1.583;
+  }
+
+  &__link {
+    @include reset-anchor;
+    @include responsive-font(18, 20);
+    @include link-hover;
+
+    display: inline-flex;
+    align-items: center;
+
+    font-weight: 600;
+    color: $color-primary;
+
+    &Icon {
+      margin-right: 7px;
+      width: 10px;
+      height: 16px;
+    }
+  }
+}

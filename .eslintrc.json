@@ -1,0 +1,20 @@
+{
+  "extends": "@ueno",
+  "rules": {
+    "react/jsx-closing-tag-location": 0,
+    "react/no-array-index-key": 0,
+    "import/no-unresolved": ["error", { "ignore": ["^!file-loader!.*"] }],
+    "import/no-webpack-loader-syntax": 0
+  },
+  "settings": {
+    "import/core-modules": [
+      "App",
+      "route",
+      "reactApplication"
+    ]
+  },
+  "globals": {
+    "__CLIENT__": true,
+    "GSDevTools": true
+  }
+}

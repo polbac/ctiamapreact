@@ -1,0 +1,194 @@
+@import '~styles/config';
+
+$illuHeight: 816px;
+
+.connecting {
+  @include segment(0, 0, 50px, 0);
+
+  position: relative;
+
+  overflow: hidden;
+
+  @media print, (min-width: $min-1080) {
+    padding-bottom: 5rem;
+  }
+
+  // &__leftIllu,
+  // &__rightIllu {
+  //   @include will-animate;
+
+  //   display: none;
+
+  //   position: absolute;
+  //   z-index: -1;
+
+  //   @media print, (min-width: $min-1080) {
+  //     display: block;
+  //   }
+  // }
+
+  &__leftIllu {
+    @include widthify(900px);
+
+    top: percentage(-125px / $graphic-limit);
+    left: percentage(-456px / $graphic-limit);
+
+    transform: translateX(-150px);
+  }
+
+  &__rightIllu {
+    @include will-animate;
+    margin-top: -25%;
+    width: 65%;
+    float: right;
+    z-index: -1;
+    position: relative;
+
+    @media print, (min-width: $min-1080) {
+      margin-top: 0;
+      position: absolute;
+      @include widthify(400px);
+    }
+
+    @media print, (min-width: $min-1540) {
+      @include widthify(550px);
+    }
+
+
+    top: percentage(120px / $graphic-limit);
+    // right: percentage(-50px / $graphic-limit);
+    right: -2.1%;
+
+    transform: translateX(150px);
+  }
+
+  &__illustration {
+    position: relative;
+
+    background-image: linear-gradient(#f6f6f6 0, #fff3e8 100%);
+  }
+
+  &__button {
+    @include reset-button;
+
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 2;
+
+    width: 42px;
+    height: 42px;
+
+    cursor: pointer;
+
+    @media print, (min-width: $min-1440) {
+      display: none;
+    }
+
+    &.smartwatch {
+      top: 10px;
+      right: 10px;
+    }
+  }
+
+  &__plus {
+    display: none;
+
+    transition: transform 300ms ease;
+    transform-origin: 50% 50%;
+
+    &.cross {
+      transform: rotate(45deg);
+    }
+
+    @media print, (min-width: $min-1080) {
+      display: block;
+    }
+  }
+
+  &__girlWrapper,
+  &__smartwatchWrapper,
+  &__drone,
+  &__carWrapper {
+    position: absolute;
+    z-index: 1;
+  }
+
+  &__girlWrapper {
+    @include will-animate;
+    @include widthify(420px);
+
+    bottom: 160px;
+    left: percentage(287px / $graphic-limit);
+
+    transform: scale(0);
+
+    @media print, (min-width: $min-1080) {
+      @include widthify(380px);
+
+      top: percentage(95px / $illuHeight);
+      bottom: inherit;
+    }
+  }
+
+  &__smartwatchWrapper {
+    @include will-animate;
+    @include widthify(325px);
+
+    bottom: 80px;
+    left: percentage(807px / $graphic-limit);
+
+    transform: scale(0);
+
+    @media print, (min-width: $min-1080) {
+      @include widthify(280px);
+
+      top: percentage(365px / $illuHeight);
+      bottom: inherit;
+    }
+  }
+
+  &__drone {
+    @include will-animate(false);
+    @include widthify(140px);
+
+    bottom: 15%;
+    right: -20%;
+
+    @media print, (min-width: $min-1080) {
+      top: 0;
+      bottom: inherit;
+    }
+  }
+
+  &__carWrapper {
+    @include widthify(425px);
+
+    right: -20%;
+    bottom: -2px;
+
+    @media print, (min-width: $min-1080) {
+      @include widthify(370px);
+    }
+  }
+
+  &__city {
+    @include will-animate;
+
+    margin-top: 60px;
+
+    width: 150%;
+    max-width: 150%;
+
+    transform: translateX(-10%);
+
+    @media print, (min-width: $min-1080) {
+      margin-top: 120px;
+
+      width: 105%;
+      max-width: 105%;
+
+      transform: translateX(0);
+    }
+  }
+}

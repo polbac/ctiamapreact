@@ -1,0 +1,169 @@
+/* stylelint-disable selector-max-type */
+
+@import '~styles/config';
+
+.footnote {
+  flex: 0 1 auto;
+
+  margin: 50px 0 0;
+
+  @media print, (min-width: $min-720) {
+    margin: 115px 0 0;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    @media print, (min-width: $min-720) {
+      @include grid-col(8);
+      @include grid-offset-left(2);
+
+      .isWide & {
+        @include grid-col(10);
+        @include grid-offset-left;
+      }
+    }
+
+    @media print, (min-width: $min-1200) {
+      @include grid-col(6);
+      @include grid-offset-left(5);
+
+      .isCenter & {
+        @include grid-offset-left(3);
+      }
+
+      .isWide & {
+        @include grid-col(8);
+        @include grid-offset-left(2);
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+
+    padding-top: 50px;
+
+    text-align: left;
+    // color: #888; contrast too light, changing to #666
+    color: #666;
+
+    border-top: 2px solid #e5e5e5;
+
+    @media print, (min-width: $min-720) {
+      padding-top: 110px;
+    }
+
+    .noBorder & {
+      padding-top: 25px;
+
+      border-top: 0;
+
+      @media (min-width: $min-720) {
+        padding-top: 55px;
+      }
+    }
+
+    p {
+      @include reset-all;
+
+      margin-bottom: 1em;
+    }
+
+    span {
+      font-size: inherit !important;
+    }
+
+    b,
+    strong {
+      font-weight: bold;
+    }
+
+    i,
+    em {
+      font-style: italic;
+    }
+
+    a {
+      @include link-hover;
+
+      color: $color-primary;
+      text-decoration: none;
+    }
+
+    ul {
+      @include reset-list;
+    }
+
+    ol {
+      @include reset-list;
+
+      counter-reset: ol-counter;
+    }
+
+    li {
+      @include responsive-font(15, 18);
+
+      position: relative;
+
+      padding-left: 1.5em;
+      margin-bottom: $gutter;
+
+      // color: #7b7b7b; contrast too low, changing to #666
+      color: #666;
+      line-height: 1.667;
+      word-break: break-word;
+    }
+
+    ul li {
+      &::before {
+        content: '*';
+
+        position: absolute;
+
+        top: 0.15em;
+        left: 0;
+
+        color: $color-primary;
+      }
+    }
+
+    ol li {
+      &::before {
+        content: counter(ol-counter);
+
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        color: $color-primary;
+
+        counter-increment: ol-counter;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    hr,
+    blockquote { // stylelint-disable-line
+      display: none;
+    }
+
+    .isLoading & {
+      @include loading(#e6e6e6, #dedede);
+    }
+  }
+}

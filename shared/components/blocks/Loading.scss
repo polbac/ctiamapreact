@@ -1,0 +1,78 @@
+@import '~styles/config';
+
+.loading {
+  @include reset-anchor;
+
+  flex: 0 1 auto;
+
+  display: flex;
+
+  min-height: 290px;
+
+  border-radius: $border-radius;
+  background-color: #fff;
+  box-shadow: 0 0 46px 0 rgba(62, 62, 62, 0.09);
+
+  @media print, (min-width: $min-720) {
+    min-height: 350px;
+  }
+
+  &__inner {
+    flex: 0 1 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 40px;
+
+    @media print, (min-width: $min-1080) {
+      padding: 50px;
+    }
+  }
+
+  &__top {
+    flex: 0 1 auto;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 40px;
+  }
+
+  &__heading {
+    @include h3;
+
+    margin-bottom: 20px;
+
+    letter-spacing: -0.02em;
+  }
+
+  &__date,
+  &__title {
+    flex: 0 1 80%;
+
+    display: block;
+
+    position: relative;
+
+    margin-bottom: 0;
+
+    background-image: linear-gradient(0deg, #eaecf0 80px, hsla(0, 0, 100%, 0) 0);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: -100vw 0;
+
+    will-change: background-position;
+  }
+
+  &__date {
+    @include loading;
+  }
+
+  &__title {
+    @include loading($delay: 100ms);
+  }
+}

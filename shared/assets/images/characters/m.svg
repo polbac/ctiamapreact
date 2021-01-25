@@ -1,0 +1,26 @@
+<svg viewBox="0 0 57.47 63.94">
+  <g style="isolation: isolate;">
+    <path
+      class="color-primary"
+      d="M947.5,501.73a4.13,4.13,0,0,1-6-3.65l7.32-55.68a4.13,4.13,0,1,1,8.26,0L949.73,498A4.13,4.13,0,0,1,947.5,501.73Z"
+      transform="translate(-941.47 -438.25)"
+    />
+    <path
+      class="color-primary"
+      d="M992.9,501.73a4.13,4.13,0,0,0,6-3.65l-7.32-55.68a4.13,4.13,0,0,0-8.26,0L990.67,498A4.13,4.13,0,0,0,992.9,501.73Z"
+      transform="translate(-941.47 -438.25)"
+    />
+    <path
+      style="mix-blend-mode: multiply;"
+      class="color-secondary"
+      d="M974,485.22a4,4,0,0,1-7.47,0l-17.41-41.4a4,4,0,0,1,7.46-3.13L974,482.13A4,4,0,0,1,974,485.22Z"
+      transform="translate(-941.47 -438.25)"
+    />
+    <path
+      style="mix-blend-mode: multiply;"
+      class="color-secondary"
+      d="M966.38,485.22a4,4,0,0,0,7.48,0l17.4-41.4a4,4,0,1,0-7.45-3.13l-17.41,41.4A4,4,0,0,0,966.38,485.22Z"
+      transform="translate(-941.47 -438.25)"
+    />
+  </g>
+</svg>

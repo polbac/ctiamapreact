@@ -1,0 +1,176 @@
+@import '~styles/config';
+
+.healthcare {
+  margin-top: 100px;
+  position: relative;
+
+  overflow: hidden;
+
+  @media print, (min-width: $min-1080) {
+    height: calc(100vh - 115px);
+  }
+
+  &__container {
+    // @include container;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+  }
+
+  &__background {
+    position: relative;
+    z-index: 8;
+    object-fit: cover;
+    object-position: center bottom;
+    max-height: calc(50vh - 70px);
+
+    @media print, (min-width: $min-720) {
+      max-height: calc(100vh - 115px);
+    }
+  }
+
+  &__svg {
+    height: 100%;
+    object-position: 50% 50%;
+  }
+
+  &__wrapper {
+    background-color: rgba($color-background, .95);
+    width: 100%;
+
+    padding: 40px 60px;
+    position: relative;
+    text-align: center;
+    z-index: 9;
+
+    // margin: 100px auto 80px;
+    margin: 0 auto 80px;
+
+    @media print, (min-width: $min-960) {
+      padding: 60px 90px;
+      position: absolute;
+      max-width: 800px;
+      // top: percentage(350px / $page-width);
+      // top: calc(50vh - 115px);
+      top: 50%;
+      left: 50%;
+
+      margin: 0;
+
+      // transform: translateX(-50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__title {
+    @include responsive-font(40, 60);
+    @include responsive-line-height(40, 60);
+
+    font-weight: 900;
+
+    // @include will-animate;
+    // @include widthify(800px, 375px);
+  }
+
+  &__content {
+    @include responsive-font(20, 22);
+    @include responsive-line-height(26, 40);
+  }
+}
+
+// .healthcare {
+//   position: relative;
+
+//   margin-top: 30px;
+
+//   overflow: hidden;
+
+//   background: #f6f6f6;
+
+//   @media print, (min-width: $min-720) {
+//     margin-top: 80px;
+//   }
+
+//   &__wrapper {
+//     position: relative;
+//     z-index: 1;
+
+//     padding-top: percentage(160px/$page-width);
+//     padding-bottom: percentage(260px/$page-width);
+
+//     background: #ecf4ef;
+
+//     @media print, (min-width: $min-720) {
+//       padding-bottom: $gutter;
+//     }
+
+//     @media print, (min-width: $min-1080) {
+//       padding-bottom: $gutter*3;
+//     }
+
+//     @media print, (min-width: $page-limit) {
+//       padding-top: 280px;
+//     }
+//   }
+
+//   &__row {
+//     @media print, (min-width: $min-720) {
+//       margin: 0 -30px;
+//     }
+//   }
+
+//   &__plane {
+//     position: relative;
+//     z-index: 0;
+
+//     padding-bottom: percentage(210px/$page-width);
+
+//     width: 100%;
+//     height: 100%;
+
+//     background: #e1efe6;
+
+//     @media print, (min-width: $min-1080) {
+//       padding-bottom: 215px;
+//     }
+//   }
+
+//   &__left,
+//   &__right {
+//     @include will-animate;
+
+//     position: absolute;
+//     bottom: 0;
+//     z-index: -1;
+
+//     width: calc((100vw - #{percentage(5/12)}) / 2);
+
+//     @media print, (min-width: $min-720) {
+//       width: calc((100vw - #{percentage(7/12)}) / 2);
+//     }
+
+//     @media print, (min-width: $page-limit) {
+//       width: calc((100vw - #{percentage(6/12)}) / 2);
+//     }
+//   }
+
+//   &__left {
+//     left: 0;
+//     bottom: percentage(-90px/$page-width);
+
+//     @media print, (min-width: $min-720) {
+//       bottom: 0;
+//     }
+//   }
+
+//   &__right {
+//     right: 5%;
+//     bottom: percentage(-120px/$page-width);
+
+//     @media print, (min-width: $min-720) {
+//       bottom: percentage(-180px/$page-width);
+//     }
+//   }
+// }

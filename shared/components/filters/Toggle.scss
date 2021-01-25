@@ -1,0 +1,28 @@
+@import '~styles/config';
+
+.toggle {
+  @include reset-button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  & + & {
+    border-left: 1px solid $color-border-light;
+  }
+
+  &.active {
+    border-bottom: 3px solid $color-primary;
+  }
+
+  &__title {
+    @include responsive-font(20, 24);
+    opacity: 0.6;
+    color: $color-font;
+  }
+
+  &.active &__title {
+    font-weight: 600;
+  }
+}

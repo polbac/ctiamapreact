@@ -1,0 +1,145 @@
+@import '~styles/config';
+
+.eventInfo {
+
+  // display: block;
+  // position: relative;
+
+  @media print, (max-width: $max-1200) {
+    flex: 0 1 auto;
+
+    // margin: 85px 0 0;
+    // padding: 115px 0 0;
+    // border-top: 2px solid #e5e5e5;
+  }
+
+  @media print, (max-width: $max-720) {
+    margin: 50px 0 0;
+  }
+
+  &__container {
+    @include container;
+
+    position: relative;
+    z-index: 1;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col(12);
+  }
+
+  &__block {
+    @include grid-col(12);
+
+    @media print, (min-width: $min-600) {
+      @include grid-col(6);
+    }
+
+    @media print, (min-width: $min-1024) {
+      @include grid-col(3);
+    }
+
+    // display: block;
+    // margin-bottom: 80px;
+  }
+
+  &__header {
+    position: relative;
+    padding-bottom: ($gutter * 1.25);
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      height: 2px;
+
+      background-image: linear-gradient(to right, rgba($color-dark, 0.25) 25%, rgba(#fff, 0) 0%);
+      background-position: left;
+      background-size: 8px 2px;
+      background-repeat: repeat-x;
+    }
+  }
+
+  &__title {
+    @include h3;
+    margin: 0;
+    letter-spacing: -0.02em;
+  }
+
+  &__content {
+    @include responsive-font(16, 18);
+    padding: 25px 0;
+  }
+
+  &__date {
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+
+  &__time {
+    color: $color-gray;
+  }
+
+  &__name {
+    font-weight: 600;
+  }
+
+  &__address {
+    // margin-bottom: ($gutter * 1.75);
+    color: $color-gray;
+  }
+
+  &__map {
+    @include reset-anchor;
+    display: block;
+
+    padding-bottom: 68%;
+    width: 100%;
+    height: 0;
+
+    background: center no-repeat #ccc;
+    background-size: cover;
+  }
+
+  &__img {
+    display: none;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    // padding-bottom: $gutter * 2;
+
+    // @media print, (min-width: $min-1200) {
+    //   &::after {
+    //     content: '';
+
+    //     position: absolute;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 17px;
+
+    //     height: 2px;
+
+    //     background-image: linear-gradient(to right, rgba($color-dark, 0.25) 25%, rgba(#fff, 0) 0%);
+    //     background-position: left;
+    //     background-size: 8px 2px;
+    //     background-repeat: repeat-x;
+    //   }
+    // }
+  }
+
+  &__button {
+    margin: $gutter 0;
+  }
+}

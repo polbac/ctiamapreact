@@ -1,0 +1,50 @@
+@import '~styles/config';
+
+.navBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 25px 60px 35px 30px;
+
+  min-height: 245px;
+
+  background: #fff;
+  box-shadow: 0 0 0 2px $color-border-light;
+
+  @media print {
+    border: 1px solid $color-border;
+    box-shadow: none;
+  }
+
+  &__icon {
+    flex: 0 1 auto;
+    margin-bottom: 30px;
+    width: 74px;
+    height: 36px;
+  }
+
+  &__img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  &__text {
+    flex: 0 1 auto;
+  }
+
+  &__title {
+    @include reset-heading;
+    @include responsive-font(18, 22);
+
+    margin-bottom: 0.9em;
+
+    line-height: (24 / 22);
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+
+  &__link {
+    @include reset-anchor;
+  }
+}

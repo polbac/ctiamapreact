@@ -1,0 +1,194 @@
+@import '~styles/config';
+
+.bubble {
+  @include will-animate(false);
+
+  position: relative;
+
+  margin-bottom: 60px;
+
+  width: 280px;
+  height: 280px;
+
+  background-color: #fff;
+
+  border-radius: 50%;
+  box-shadow: 0 19px 50px 0 rgba(53, 54, 66, 0.1);
+
+  transform: scale(0);
+
+  @media (min-width: $min-720) {
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    width: 280px;
+    height: 280px;
+  }
+
+  @media (min-width: $min-1080) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media (min-width: $min-1440) {
+    flex: 1 0 auto;
+
+    margin-bottom: 0;
+
+    width: 336px;
+    height: 336px;
+  }
+
+  &__wrapper {
+    @include will-animate;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100%;
+
+    transform: translateY(-80px);
+  }
+
+  &.bubble-1 {
+    @media (min-width: $min-1440) {
+      top: -160px;
+      right: -40px;
+
+      width: 212px;
+      height: 212px;
+    }
+
+    @media (min-width: $min-1440) {
+      top: -60px;
+      right: 0;
+    }
+  }
+
+  &.bubble-2 {
+    @media (min-width: $min-1440) {
+      bottom: -35px;
+      left: -20px;
+
+      width: 272px;
+      height: 272px;
+    }
+
+    @media (min-width: $min-1440) {
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &.bubble-3 {
+    @media (min-width: $min-1440) {
+      top: -20px;
+      left: -30px;
+
+      width: 336px;
+      height: 336px;
+    }
+
+    @media (min-width: $min-1440) {
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &.bubble-4 {
+    @media (min-width: $min-1440) {
+      top: -280px;
+      left: -145px;
+
+      width: 430px;
+      height: 430px;
+    }
+
+    @media (min-width: $min-1440) {
+      top: -180px;
+      left: -70px;
+    }
+  }
+
+  &__number {
+    padding-left: 50px;
+    padding-right: 50px;
+
+    max-width: 100%;
+
+    @include no-supports-grid {
+      margin-top: -30px;
+      margin-bottom: 30px;
+
+      font-size: 70px;
+
+      .bubble-2 & {
+        margin: 0;
+        font-size: 40px;
+      }
+
+      .bubble-1 & {
+        margin: 0;
+        font-size: 30px;
+      }
+    }
+
+    @supports (-ms-ime-align: auto) {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 20px;
+    }
+
+    .bubble-1 & {
+      @media (min-width: $min-1440) {
+        margin-bottom: -10px;
+      }
+    }
+  }
+
+  &__copy {
+    @include reset-paragraph;
+    @include responsive-font(18, 20);
+
+    padding-left: 60px;
+    padding-right: 60px;
+
+    color: $color-dark;
+    text-align: center;
+  }
+
+  &__image {
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+
+    transform: translateX(-50%);
+
+    .bubble-1 & {
+      max-width: 76px;
+    }
+
+    .bubble-2 & {
+      max-width: 94px;
+    }
+
+    .bubble-3 & {
+      max-width: 124px;
+    }
+
+    .bubble-4 & {
+      bottom: -80px;
+
+      max-width: 65px;
+
+      transform: translateX(-50%) rotate(-15deg);
+    }
+
+    @media (min-width: $min-1440) {
+      bottom: -40px;
+    }
+  }
+}

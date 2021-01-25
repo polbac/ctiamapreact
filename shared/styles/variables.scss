@@ -1,0 +1,127 @@
+$gutter: 20px;
+$container-gutter-mobile: $gutter;
+$container-gutter-tablet: 40px;
+$container-gutter-desktop: 60px;
+
+// grid
+$grid-column-count: 12;
+$grid-baseline: 16px;
+
+// page dimensions
+$page-width: 1420px;
+$page-limit: $page-width + ($container-gutter-desktop * 2);
+
+// Misc
+$border-radius: 4px;
+$graphic-limit: 1860px;
+$graphic-limit-xl: 2500px;
+
+// Z-index
+$z-index-modal: 2000;
+$z-index-header: 1000;
+$z-index-group: 20;
+$z-index-nav-bar: 500;
+
+// Fonts
+$font-default: 'Source Sans Pro', sans-serif;
+$font-serif: 'Noto Serif', sans-serif;
+$font-size: 18px;
+$line-height: 1.5;
+
+// Brands colors
+$color-blue: #78cdd1;
+$color-blue-light: #ddeeef;
+$color-pastel-blue: #e0eced;
+$color-powder-blue: #f0f4f4;
+$color-5g-blue: #deeff0;
+$color-orange: #fa7a47;
+$color-purple: #593c81;
+$color-red: #c00;
+$color-green: #c4d438;
+
+// Colors
+$color-font: #333;
+$color-background: #fff;
+// $color-light: #aeaeae; contrast too light, changing to #666
+$color-light: #666;
+$color-dark: #282828;
+// $color-gray: #999; contrast too light, changing to #666
+$color-gray: #666;
+$color-gray-light: #f6f6f6;
+// $color-gray-dark: #7f7f7f; contrast too light, changing to #666
+$color-gray-dark: #666;
+$color-blue-dark: #202737;
+$color-primary: $color-blue;
+$color-placeholder: #ddd;
+$color-border: #ccc;
+$color-border-light: $color-gray-light;
+$color-oxford-blue: #31394c;
+$color-santas-gray: #969dae;
+$color-shuttle-gray: #5c666f;
+$color-mercury: #e6e6e6;
+
+// Timings
+$transition-enter: 200ms;
+$transition-leave: 500ms;
+
+
+// Custom break point (Min)
+$min-1800: 1800px;
+$min-1540 : 1540px;
+$min-1440: 1440px;
+$min-1280: 1280px;
+$min-1200: 1200px;
+$min-1080: 1080px;
+$min-1024: 1024px;
+$min-960: 960px;
+$min-880: 880px;
+$min-840: 840px;
+$min-768: 768px;
+$min-720: 720px;
+$min-640: 640px;
+$min-600: 600px;
+$min-560: 560px;
+$min-540: 540px;
+$min-480: 480px;
+$min-420: 420px;
+$min-375: 375px;
+$min-360: 360px;
+
+// Custom break points (Max)
+$max-1440: 1439px;
+$max-1280: 1279px;
+$max-1200: 1199px;
+$max-1080: 1079px;
+$max-1024: 1023px;
+$max-960: 959px;
+$max-840: 839px;
+$max-768: 767px;
+$max-720: 719px;
+$max-640: 639px;
+$max-600: 599px;
+$max-540: 539px;
+$max-480: 479px;
+$max-420: 419px;
+$max-375: 374px;
+$max-360: 359px;
+
+// Predefined breakpoints
+$min-mobile: $min-420;
+$min-tablet: $min-720;
+$min-desktop: $min-1080;
+
+// Segment
+$segment-padding-mobile: 90px;
+$segment-padding: 190px; //percentage-based segments spacing
+
+// scale for edge-case wide pages
+// used in :root in base.scss
+$scale: 1;
+$scale-md: 0.9;
+$scale-sm: 0.8;
+
+// Header
+$mobile-breakpoint: $min-840;
+$height-desktop: 115px;
+$height-mobile: 70px;
+$z-index-base: $z-index-header;

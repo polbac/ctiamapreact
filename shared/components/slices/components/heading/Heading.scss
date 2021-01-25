@@ -1,0 +1,67 @@
+@import '~styles/config';
+
+.heading {
+  flex: 0 1 auto;
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+
+    @media print, (min-width: $min-720) {
+      @include grid-col(8);
+      @include grid-offset-left(2);
+    }
+
+    @media print, (min-width: $min-1200) {
+      @include grid-col(6);
+      @include grid-offset-left(5);
+
+      .isCenter & {
+        @include grid-offset-left(3);
+      }
+    }
+
+    .isWide & {
+      @include grid-offset-left(0);
+      @include grid-col(12);
+    }
+
+    .isCentered & {
+      text-align: center;
+    }
+  }
+
+  &__content {
+    @include h2;
+
+    position: relative;
+
+    .isLoading & {
+      @include loading(#e6e6e6, #dedede);
+    }
+  }
+
+  &__number {
+    display: inline-block;
+    margin-bottom: 30px;
+    height: (30 / 48) * 1em;
+    white-space: nowrap;
+
+    @media print, (min-width: $min-720) {
+      position: absolute;
+      top: 0;
+      left: percentage(1 / 6) * -1;
+    }
+
+    &Wrap {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+@import '~styles/config';
+
+.bubbles {
+  @include segment(100px, 80px, 50px, 40px);
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__header {
+    @include will-animate;
+    @include grid-col;
+
+    transform: translateY(60px);
+
+    @media (min-width: $min-720) {
+      @include grid-col(8);
+      @include grid-offset-left(2);
+    }
+
+    @media (min-width: $min-1080) {
+      @include grid-col(6);
+      @include grid-offset-left(3);
+    }
+
+    @media (min-width: $min-1440) {
+      @include grid-col(3);
+    }
+  }
+
+  &__heading {
+    @include underline($position: top);
+    @include reset-heading;
+    @include responsive-font(28, 36);
+
+    position: relative;
+
+    padding-top: 30px;
+    margin-bottom: 15px;
+
+    color: $color-dark;
+    font-weight: 700;
+    line-height: (38 / 36);
+    letter-spacing: -0.02em;
+  }
+
+  &__copy {
+    @include reset-paragraph;
+    @include responsive-font(16, 20);
+
+    color: rgba($color-dark, 0.8);
+    letter-spacing: -0.015em;
+    line-height: (32 / 20);
+  }
+
+  &__col {
+    @include grid-col;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 0;
+    padding-right: 0;
+
+    @media (min-width: $min-720) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (min-width: $min-1080) {
+      justify-content: space-around;
+    }
+
+    @media (min-width: $min-1440) {
+      @include grid-col(10);
+      @include grid-offset-left;
+
+      align-items: flex-end;
+      flex-wrap: nowrap;
+
+      top: -40px;
+      left: 0;
+
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}

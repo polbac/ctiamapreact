@@ -1,0 +1,68 @@
+@import '~styles/config';
+
+.sidelink {
+  &__card {
+    @include reset-anchor;
+
+    display: block;
+    margin: 0 auto $gutter * 2;
+
+    //width: 300px;
+    max-width: 300px;
+
+    @media (min-width: 1300px) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__map {
+    position: relative;
+    margin: 0 0 $gutter * 2;
+
+    &::before {
+      content: '';
+
+      display: block;
+
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      right: 20px;
+      bottom: 10px;
+
+      box-shadow: 0 0 100px rgba(#000, 0.1);
+    }
+  }
+
+  &__image {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  &__title {
+    @include responsive-font(16, 18);
+
+    margin: 0 0 10px;
+
+    font-weight: 600;
+  }
+
+  &__copy {
+    @include responsive-font(16, 18);
+
+    // opacity: 0.5; contrast too light, changing to .8
+    opacity: 0.8;
+    font-style: italic;
+  }
+}

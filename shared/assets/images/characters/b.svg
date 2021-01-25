@@ -1,0 +1,7 @@
+<svg viewBox="0 0 40.22 64.01">
+  <g style="isolation: isolate">
+    <path class="color-primary" d="M994.71,502.18h0a4,4,0,0,1-4-4l.23-55.84a4,4,0,0,1,4-4h0a4,4,0,0,1,4,4l-.24,55.85A4,4,0,0,1,994.71,502.18Z" transform="translate(-990.71 -438.25)"/>
+    <path style="mix-blend-mode:multiply" class="color-secondary" d="M1006.36,474.29H995a4,4,0,1,1,0-8.08h11.38a9.94,9.94,0,0,0,0-19.88h-11.2a4,4,0,1,1,0-8.08h11.2a18,18,0,1,1,0,36Z" transform="translate(-990.71 -438.25)"/>
+    <path style="mix-blend-mode:multiply" class="color-secondary" d="M1012.91,502.26H995a4,4,0,1,1,0-8.08h17.93a9.94,9.94,0,1,0,0-19.88H995a4,4,0,1,1,0-8.08h17.93a18,18,0,1,1,0,36Z" transform="translate(-990.71 -438.25)"/>
+  </g>
+</svg>

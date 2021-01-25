@@ -1,0 +1,166 @@
+@import '~styles/config';
+
+.hero {
+  position: relative;
+
+  height: 60vh;
+
+  overflow: hidden;
+
+  @media (min-width: $min-880) {
+    height: 100vh;
+  }
+
+  &__streak {
+    display: none;
+
+    position: absolute;
+    top: 19.5%;
+    left: 0;
+    z-index: 25;
+
+    transform: translateX(-100%);
+
+    @media (min-width: $min-1080) {
+      display: block;
+    }
+  }
+
+  &__heading {
+    @include widthify(510px, 200px);
+    width: 95%;
+
+    position: absolute;
+    z-index: 1;
+
+    top: percentage(225px / $page-limit);
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+
+  &__cloud1 {
+    @include will-animate;
+    @include widthify(137px);
+
+    position: absolute;
+    top: percentage(100px / $page-limit);
+    left: percentage(250px / $page-limit);
+
+    tranform: translateX(-100px);
+  }
+
+  &__cloud2 {
+    @include will-animate;
+    @include widthify(204px);
+
+    position: absolute;
+    top: percentage(220px / $page-limit);
+    left: percentage(650px / $page-limit);
+
+    tranform: translateX(-100px);
+  }
+
+  &__cloud3 {
+    @include will-animate;
+    @include widthify(140px);
+
+    position: absolute;
+    top: percentage(160px / $page-limit);
+    left: percentage(1024px / $page-limit);
+
+    tranform: translateX(-200px);
+  }
+
+  &__mapWrapper {
+    position: absolute;
+
+    top: 50%;
+
+    width: 100%;
+
+    transform: translateY(-50%);
+  }
+
+  &__mapMask {
+    @include will-animate;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    height: 50vh;
+
+    background-color: $color-blue-light;
+  }
+
+  &__map {
+    @include will-animate;
+
+    position: relative;
+    z-index: 1;
+
+    width: 112%;
+    max-width: 112%;
+
+    transform: translateX(-5%);
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    @include grid-col;
+  }
+
+  &__wrapper {
+    display: none;
+
+    position: absolute;
+    z-index: 4;
+
+    @media (min-width: $min-880) {
+      display: flex;
+
+      bottom: -200px;
+    }
+
+    @media (min-width: $min-1280) {
+      bottom: -40px;
+    }
+  }
+
+  &__alaska,
+  &__hawaii {
+    @include will-animate;
+
+    width: 136px;
+    height: 136px;
+  }
+
+  &__hawaii {
+    position: relative;
+
+    margin-top: 60px;
+    margin-left: -2px;
+  }
+
+  &__mapGradient {
+    @include will-animate;
+
+    position: absolute;
+    top: percentage(715px / $graphic-limit);
+
+    width: 112%;
+    max-width: 112%;
+
+    transform: translateX(-5.25%);
+  }
+}

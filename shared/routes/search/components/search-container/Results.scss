@@ -1,0 +1,52 @@
+@import '~styles/config';
+
+.results {
+  @include grid-col;
+
+  margin-top: 60px;
+
+  @media print, (min-width: $min-1080) {
+    @include grid-col(8);
+
+    margin-top: 0;
+  }
+
+  &__grid {
+    @include supports-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column-gap: $gutter;
+      grid-row-gap: $gutter;
+
+      @media print, (min-width: $min-720) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  &__noResult {
+    grid-column: span 2;
+
+    margin-top: 50px;
+
+    text-align: center;
+
+    &Heading {
+      @include h3;
+
+      opacity: 0.6;
+    }
+
+    &Copy {
+      @include copy;
+
+      opacity: 0.6;
+    }
+  }
+
+  &__button {
+    display: block;
+
+    margin: 80px auto 0;
+  }
+}

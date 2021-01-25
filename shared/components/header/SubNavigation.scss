@@ -1,0 +1,104 @@
+
+@import '~styles/config';
+
+.sub {
+  padding: 60px 0;
+
+  overflow: hidden;
+
+  &.active {
+    display: block;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__row {
+    @include grid-row;
+  }
+
+  &__col {
+    display: block;
+
+    &Content {
+      @include grid-col(3);
+    }
+
+    &Nav {
+      @include grid-col(7);
+    }
+
+    &Extra {
+      @include grid-col(2);
+    }
+  }
+
+  &__border {
+    margin: 0 $gutter * 3;
+    padding: 0 $gutter * 2 0 $gutter * 3;
+
+    height: 100%;
+
+    border: 0 solid #e5e6e6;
+    border-left-width: 2px;
+
+    &.hasExtras {
+      border-right-width: 2px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  &__link {
+    @include reset-button;
+    @include reset-anchor;
+    @include responsive-font(16, 18);
+
+    display: block;
+    flex: 0 0 (100% / 2);
+
+    padding: 8px $gutter 8px 0;
+
+    font-weight: 400;
+    color: #000;
+
+    cursor: pointer;
+
+    transition: color 300ms ease;
+
+    @media print, (min-width: $min-1200) {
+      flex: 0 0 (100% / 3);
+    }
+
+    &.isActive,
+    &:hover {
+      color: $color-primary;
+    }
+
+    &.isFew {
+      flex: 0 0 (100% / 1);
+
+      @media print, (min-width: $min-1200) {
+        flex: 0 0 (100% / 2);
+      }
+    }
+  }
+
+  &__title {
+    @include h3;
+
+    margin: 0 0 $gutter;
+  }
+
+  &__text {
+    @include reset-paragraph;
+    @include responsive-font(14, 18);
+
+    // color: rgba(#000, 0.35); contrast too light, changing to rgba(#000, .8)
+    color: rgba(#000, 0.8);
+  }
+}

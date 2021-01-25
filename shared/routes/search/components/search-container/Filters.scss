@@ -1,0 +1,41 @@
+@import '~styles/config';
+
+.filters {
+  @include grid-col;
+
+  @media print, (min-width: $min-1080) {
+    @include grid-col(3);
+    @include grid-offset-right;
+  }
+
+  &__box {
+    border-radius: $border-radius;
+    background-color: #fff;
+    box-shadow: 0 0 46px 0 rgba(62, 62, 62, 0.09);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 35px 22px 25px;
+
+    width: 100%;
+
+    text-align: left;
+
+    border-bottom: 1px solid #f0f0f0;
+
+    &:last-of-type {
+      border-bottom: 0;
+    }
+  }
+
+  &__number {
+    @include reset-paragraph;
+    @include responsive-font(14, 18);
+
+    color: $color-gray;
+  }
+}

@@ -1,0 +1,152 @@
+@import '~styles/config';
+
+$illuHeight: 816px;
+
+.column {
+  @include grid-col;
+
+  margin-bottom: 80px;
+
+  @media print, (min-width: $min-720) {
+    @include grid-col(8);
+    @include grid-offset-left(2);
+  }
+
+  @media print, (min-width: $min-1024) {
+    @include grid-col(6);
+    @include grid-offset-left(3);
+  }
+
+  @media print, (min-width: $min-1080) {
+    position: absolute;
+    opacity: 0;
+
+    padding: 30px;
+
+    width: 325px;
+
+    border-radius: $border-radius;
+    background-color: #fff;
+    box-shadow: 0 0 46px 0 rgba(62, 62, 62, 0.09);
+
+    transition: transform 350ms ease, opacity 350ms ease;
+    transform: scale(0.95);
+
+    &.isOpen {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @media print, (min-width: $min-1440) {
+    @include grid-col(2);
+    @include grid-offset-left(3);
+
+    position: relative;
+    opacity: 1;
+
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+
+    transform: scale(1);
+  }
+
+  &.column-0 {
+    @media print, (min-width: $min-1080) {
+      top: 10%;
+      left: 33%;
+
+      margin-left: 0;
+
+      transform-origin: 0% 18%;
+    }
+
+    @media print, (min-width: $min-1440) {
+      @include grid-offset-left(1);
+
+      top: 0;
+      left: 0;
+
+      margin-top: auto;
+      margin-bottom: percentage(40px / $illuHeight);
+    }
+  }
+
+  &.column-1 {
+    @media print, (min-width: $min-1080) {
+      top: 42%;
+      left: 32%;
+
+      transform-origin: 0% 18%;
+    }
+
+    @media print, (min-width: $min-1440) {
+      @include grid-offset-left(4);
+
+      top: 0;
+      left: 0;
+
+      margin-top: percentage(40px / $illuHeight);
+    }
+  }
+
+  &.column-2 {
+    @media print, (min-width: $min-1080) {
+      right: 15%;
+      bottom: -18%;
+
+      transform-origin: 100% 82%;
+    }
+
+    @media print, (min-width: $min-1440) {
+      @include grid-offset-left(1);
+
+      right: 0;
+      bottom: 0;
+
+      margin-top: auto;
+      margin-bottom: percentage(120px / $illuHeight);
+    }
+  }
+
+  &__image {
+    @include will-animate;
+
+    display: block;
+
+    margin-bottom: 30px;
+
+    width: 35%;
+
+    @media print, (min-width: $min-1080) {
+      display: none;
+    }
+  }
+
+  &__heading {
+    @include will-animate;
+    @include reset-heading;
+    @include responsive-font(28, 36);
+
+    margin-bottom: 20px;
+
+    color: $color-dark;
+    font-weight: 700;
+    line-height: (38 / 36);
+    letter-spacing: -0.02em;
+  }
+
+  &__copy {
+    @include will-animate;
+    @include reset-paragraph;
+    @include responsive-font(18, 20);
+
+    color: $color-dark;
+    letter-spacing: -0.015em;
+  }
+}

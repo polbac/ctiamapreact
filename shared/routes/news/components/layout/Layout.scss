@@ -1,0 +1,40 @@
+@import '~styles/config';
+
+.layout {
+  @include segment(45px, 90px, 45px, 45px);
+
+  @include supports-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    grid-auto-flow: dense;
+
+    @media print, (min-width: $min-720) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media print, (min-width: $min-1280) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 1690px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (min-width: 2160px) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  @include no-supports-grid {
+    @include grid-row;
+
+    > * {
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-bottom: 30px;
+      width: calc(#{percentage(1 / 4)} - 30px);
+    }
+  }
+}
