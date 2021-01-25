@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import React from 'react';
-import s from './scss/main.scss';
+import s from './assets/scss/main.scss';
 
 class MapSvg extends React.Component {
 

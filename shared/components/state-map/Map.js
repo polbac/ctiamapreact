@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'components/button';
 import MapSvg from 'assets/images/map/intro-map.svg';
-import s from './scss/main.scss';
+import s from './assets/scss/main.scss';
 import MapMain from './Main';
 
 class StateMap extends React.Component {

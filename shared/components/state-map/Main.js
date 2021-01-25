@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import React from 'react';
 import MapSvg from './MapSvg';
-import s from './scss/main.scss';
+import s from './assets/scss/main.scss';
 import allStates from './data.json';
 import Info from './Info';
 
