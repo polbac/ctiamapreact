@@ -58,6 +58,7 @@
               font-size: 65px;
               font-weight: 700;
               margin-bottom: 25px;
+              opacity: 0;
 
               @include responsive('tablet-h') {
                 text-align: center;
@@ -91,6 +92,7 @@
               line-height: 1.5;
               max-width: 590px;
               margin-bottom: 30px;
+              
 
               @include responsive ("tablet-h"){
                   padding: 0 15px;
@@ -279,7 +281,7 @@
     position: absolute;
     top:50%;
     left:50%;
-    background: #fff url('!file-loader!assets/images/map/pin.svg') 10px 10px no-repeat;
+    background: #fff url('!file-loader!../images/map/pin.svg') 10px 10px no-repeat;
     border-radius: 14px;
     padding: 8px 10px 10px 30px;
 
