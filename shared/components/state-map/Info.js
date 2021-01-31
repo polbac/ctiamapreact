@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import PrintModal from './PrintModal';
 import GdpIcon from 'assets/images/map/gdp-icon.svg';
 import JobIcon from 'assets/images/map/job-icon.svg';
 import PrintIcon from 'assets/images/map/print.svg';
@@ -113,7 +113,7 @@ class Info extends React.Component {
 
    return (
      <div className={`${s.map__info} ${show && s.map__info__visible}`}>
-
+       <PrintModal />
        {type === 'states' &&
          <div className={`${s.map__info__column} ${show && s.map__info__column__visible}`}>
            {show && (

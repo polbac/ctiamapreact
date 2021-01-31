@@ -34,6 +34,7 @@ function HTML(props) {
         <div id="app" dangerouslySetInnerHTML={{ __html: appBodyString }} />
         {bodyElements}
         <div id="modal-root" />
+        <div id="portal-modal-print" />
       </body>
     </html>
   );

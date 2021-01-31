@@ -439,6 +439,16 @@
   }
 }
 
+.modal__print{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: red;
+}
+
 .map__info {
   position: absolute;
   top: 0;
@@ -649,7 +659,6 @@
       }
 
       &__print {
-        display: none;
         float: right;
         font-weight: 700;
         font-size: 13px;
@@ -661,6 +670,9 @@
           display: inline-block;
           vertical-align: middle;
           width: 16px;
+          path {
+            fill: #ffffff;
+          }
         }
       }
 
