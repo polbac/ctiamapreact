@@ -448,6 +448,9 @@
   z-index: 9999;
   background-color: #E0F1F2;
   padding: 120px 15px 15px 15px;
+  &__clear {
+    clear: both;
+  }
   &__innerWrapper{
     width: 100%;
     max-width: 1048px;
@@ -495,6 +498,12 @@
   &__cards {
     margin: 50px 0 70px 0;
   }
+  &__metro_table {
+    margin-bottom: 60px;
+  }
+  &__district_table {
+    position: relative;
+  }
   &__table_head {
     width: 100%;
     display: grid;
@@ -505,20 +514,30 @@
       font-weight: 700;
       font-size: 25px;
     }
-    &__title_item {
+  }
+  &__head__item {
+    font-weight: 700;
+    font-size: 16px;
+  }
+  &__item_title {
       font-weight: 700;
       font-size: 16px;
-    }
+      padding-left: 15px;
   }
   &__table_items {
     width: 100%;
     display: grid;
     grid-template-columns: minmax(0, 1fr) 170px 170px;
     align-items: center;
-    &:nth-child(even) div {
-      background: red;
+    height: 50px;
+    div {
+      font-size: 16px;
+    }
+    &:nth-child(odd) {
+      background: #F0F0F0;
     }
   }
+  
 }
 
 .map__info {
@@ -731,13 +750,20 @@
       }
 
       &__print {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 3px;
         float: right;
         font-weight: 700;
         font-size: 13px;
         letter-spacing: 0.145em;
         color: #000000;
         text-transform: uppercase;
-
+        transition: color .2s;
+        &:hover{
+          color: #505050;
+        }
         svg {
           display: inline-block;
           vertical-align: middle;

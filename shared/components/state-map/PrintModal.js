@@ -5,10 +5,8 @@ import CTIALogo from "./assets/images/modal/ctia-logo.svg";
 import GdpIcon from "./assets/images/map/gdp-icon.svg";
 import JobIcon from "./assets/images/map/job-icon.svg";
 import s from "./assets/scss/main.scss";
-import { electron } from "webpack";
 
 export default function PrintModal({ closeModal, data }) {
-  console.log(data);
   return ReactDOM.createPortal(
     <div className={s.modal__print}>
       <div className={s.modal__print__innerWrapper}>
@@ -71,45 +69,54 @@ export default function PrintModal({ closeModal, data }) {
                 </div>
               )}
             </div>
+            <div className={s.modal__print__clear} />
           </div>
 
           {data &&
             data.metro_areas &&
             Object.keys(data.metro_areas).length > 0 && (
-              <div className={s.modal__print__table_head}>
-                <div className={s.modal__print__table_head__title}>
-                  Metro Areas
+              <div className={s.modal__print__metro_table}>
+                <div className={s.modal__print__table_head}>
+                  <div className={s.modal__print__table_head__title}>
+                    Metro Areas
+                  </div>
+                  <div className={s.modal__print__head__item}>GDP Growth</div>
+                  <div className={s.modal__print__head__item}>New Jobs</div>
                 </div>
-                <div className={s.modal__print__table_head__title_item}>
-                  GDP Growth
-                </div>
-                <div className={s.modal__print__table_head__title_item}>
-                  New Jobs
-                </div>
+                {Object.keys(data.metro_areas).map((el, i) => (
+                  <div
+                    className={s.modal__print__table_items}
+                    key={`item-${i}`}
+                  >
+                    <div className={s.modal__print__item_title}>
+                      {data.metro_areas[el].name}
+                    </div>
+                    <div>{data.metro_areas[el].gdp.sum_format}</div>
+                    <div>{data.metro_areas[el].job.sum_format}</div>
+                  </div>
+                ))}
               </div>
             )}
 
           {data && data.districts && Object.keys(data.districts).length > 0 && (
-            <div>
+            <React.Fragment>
               <div className={s.modal__print__table_head}>
                 <div className={s.modal__print__table_head__title}>
                   Congressional Districts
                 </div>
-                <div className={s.modal__print__table_head__title_item}>
-                  GDP Growth
-                </div>
-                <div className={s.modal__print__table_head__title_item}>
-                  New Jobs
-                </div>
+                <div className={s.modal__print__head__item}>GDP Growth</div>
+                <div className={s.modal__print__head__item}>New Jobs</div>
               </div>
               {Object.keys(data.districts).map((el, i) => (
                 <div className={s.modal__print__table_items} key={`item-${i}`}>
-                  <div>{el.name}</div>
-                  <div>{el.name}</div>
-                  <div>{el.name}</div>
+                  <div className={s.modal__print__item_title}>
+                    {data.districts[el].name}
+                  </div>
+                  <div>{data.districts[el].gdp.sum_format}</div>
+                  <div>{data.districts[el].job.sum_format}</div>
                 </div>
               ))}
-            </div>
+            </React.Fragment>
           )}
         </div>
       </div>
