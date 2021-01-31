@@ -5,6 +5,8 @@
 
   @include responsive('tablet-h') {
     display: block;
+    height: auto;
+    min-height: calc(100vh);
   }
 
   &__columnleft {
@@ -41,7 +43,7 @@
 
     &__map__back {
       position: absolute;
-      bottom: 20px;
+      bottom: 95px;
       left: 20px;
       width: 226px;
       z-index: 5;
@@ -103,6 +105,11 @@
           transform: none;
           height: 55px;
           line-height: 55px;
+          position: absolute;
+          z-index: 9999;
+          top: 0;
+          left: 0;
+          bottom: auto;
   
           svg {
             display: inline-block;
@@ -118,7 +125,7 @@
   &__columnright {
     float: left;
     width: calc(100% - 270px);
-    height: calc(100vh );
+    height: calc(100vh);
     position: relative;
 
 
@@ -126,6 +133,10 @@
       width: 100%;
       height: auto;
       position: static;
+
+      &__show{
+        display: block;
+      }
     }
    }
 
@@ -555,11 +566,15 @@
   
   &__visible{
     transform: translateX(0);
+    @include responsive('tablet-h') {
+      transform: none;
+    }
   }
 
   @include responsive('tablet-h') {
     height: auto;
     min-height: 100vh;
+    position: relative;
   }
 
   
@@ -587,6 +602,13 @@
       z-index: 2;
       padding-top: 0;
       border-top: 2px solid #E5E5E5;
+      transition: 0.5s bottom linear;
+    }
+
+    &__mobilenotopen{
+      @include responsive('tablet-h') {
+        bottom: -100vh;
+      }
     }
 
     .tab_list {
@@ -660,7 +682,7 @@
       cursor: pointer;
 
       @include responsive('tablet-h') {
-        font-size: 28px;
+        font-size: 24px;
       }
 
       &:hover,
@@ -714,7 +736,7 @@
     
     @include responsive('tablet-h') {
       padding-top: 150px;
-      padding-bottom: 150px;
+      padding-top: 80px;;
       height: auto;
       min-height: 100vh;
       width: 100%;
@@ -956,17 +978,19 @@
     }
   }
 
-  .select-box__bottom {
+  .selectbox__bottom {
     display: none;
     @include responsive('tablet-h') {
       width: 100%;
       float: left;
       position: fixed;
       bottom: 0;
-      right: 0;
-      border-top: 2px solid #E5E5E5;
+      left: 0;
+      border-top: 2px solid #e5e5e5;
       z-index: 3;
       display: block;
+      height: 68px;
+      background: white;
 
       .filtersbox {
         text-align: left;

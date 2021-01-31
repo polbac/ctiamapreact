@@ -56,12 +56,12 @@ class MapSvg extends React.Component {
   onMouseMove(el) {
     const item = this.mapElement(el);
 
-    const OFFSET_X = 250;
-    const OFFSET_Y = 100;
+    const OFFSET_X = 20;
+    const OFFSET_Y = -70;
 
     this.props.onMouseMove({
-      x: el.screenX - OFFSET_X,
-      y: el.screenY - OFFSET_Y,
+      x: el.screenX + OFFSET_X,
+      y: el.screenY + OFFSET_Y,
       item,
     });
   }
@@ -85,7 +85,7 @@ class MapSvg extends React.Component {
     const { type } = this.props;
 
     if (type === 'states') {
-      console.log(topLevelIds.indexOf(key));
+
       return topLevelIds.indexOf(key) === -1 ?
         'invisible' : '';
     }
