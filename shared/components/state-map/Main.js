@@ -72,7 +72,7 @@ class MapMain extends React.Component {
     const scrollBottom = window.scrollY + (window.innerHeight || document.clientHeight || document.getElementsByTagName('body')[0].clientHeight);
     const sectionPosition = document.querySelector('#section-5').offsetTop;
 
-    if (scrollBottom < sectionPosition + 55 && isMobile) {
+    if (scrollBottom < sectionPosition + 60 && isMobile) {
       this.setState({
         ...this.state,
         isInfoOpen: false,
