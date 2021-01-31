@@ -2,9 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import GdpIcon from 'assets/images/map/gdp-icon.svg';
-import JobIcon from 'assets/images/map/job-icon.svg';
-import PrintIcon from 'assets/images/map/print.svg';
+import GdpIcon from './assets/images/map/gdp-icon.svg';
+import JobIcon from './assets/images/map/job-icon.svg';
+import PrintIcon from './assets/images/map/print.svg';
 import s from './assets/scss/main.scss';
 
 class Info extends React.Component {

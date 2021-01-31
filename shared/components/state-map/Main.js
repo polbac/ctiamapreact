@@ -4,9 +4,8 @@ import MapSvg, { STATE_TYPE } from './MapSvg';
 import s from './assets/scss/main.scss';
 import allStates from './data.json';
 import Info from './Info';
-import ArrowBack from 'assets/images/map/arrow.svg';
+import ArrowBack from './assets/images/map/arrow.svg';
 import MenuItem from './MenuItem';
-import scrollTo from './utils';
 
 class MapMain extends React.Component {
 
@@ -25,7 +24,6 @@ class MapMain extends React.Component {
 
     if (positions.length) {
       if (positions[0] === 'map') {
-
         if (positions[1] === 'states' || 'metro_areas') {
           viewBy = positions[1];
         }
@@ -47,7 +45,20 @@ class MapMain extends React.Component {
       hoverText: null,
       hoverX: null,
       hoverY: null,
+      isAnimationComplete: false,
     };
+  }
+
+  componentDidMount() {
+    const { isInfoOpen } = this.state;
+
+    if (isInfoOpen) {
+      this.scrollToSection();
+    }
+  }
+
+  scrollToSection() {
+
   }
 
   onSelected(item) {
