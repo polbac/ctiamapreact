@@ -6,8 +6,23 @@ import MapMain from './Main';
 
 class StateMap extends React.Component {
 
-  state = {
-    isIntroVisible: true,
+  constructor(props) {
+    super(props);
+    let isIntroVisible = true;
+
+    let { hash } = document.location;
+
+    hash = hash.replace('#', '');
+
+    const positions = hash.split('/');
+
+    if (positions.length && positions[0] === 'map') {
+      isIntroVisible = false;
+    }
+
+    this.state = {
+      isIntroVisible,
+    };
   }
 
   render() {

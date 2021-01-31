@@ -13,10 +13,105 @@
     height: calc(100vh );
     border-right: 2px solid #E5E5E5;
     background: #F6F6F6;
+    position: relative;
+    z-index: 10;
 
     @include responsive('tablet-h') {
       width: 100%;
       height: 100%;
+      position: static;
+    }
+
+    &:before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 160px;
+      background: linear-gradient(180deg, rgba(246, 246, 246, 0) 0%, rgba(246, 246, 246, .95) 100%);
+      content: '';
+      z-index: 2;
+      pointer-events: none;
+      transition:all .3s ease;
+
+      @include responsive('tablet-h') {
+        display: none;
+      }
+    }
+
+    &__map__back {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      width: 226px;
+      z-index: 5;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.145em;
+      color: #fff;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      background: #439FA1;
+      border-radius: 10px;
+      z-index: 11;
+      cursor: pointer;
+  
+      @include responsive('tablet-h') {
+        bottom: auto;
+        left: 0;
+        width: 100%;
+        border-radius: 0;
+        transform: none;
+        display: none;
+      }
+  
+      @include responsive('tablet-h') {
+        align-items: center;
+        height: 55px;
+        justify-content: center;
+      }
+  
+      &:hover {
+        background: #000;
+      }
+  
+      svg {
+        display: inline-block;
+        vertical-align: middle;
+        width: 19px;
+        margin-right: 10px;
+      }
+  
+      &__mobile {
+        display: none;
+        @include responsive('tablet-h') {
+          display: block;
+          text-align: center;
+          position: fixed;
+          z-index: 5;
+          font-weight: 700;
+          font-size: 16px;
+          letter-spacing: 0.145em;
+          color: #fff;
+          text-transform: uppercase;
+          padding: 0 20px;
+          background: #439FA1;
+          bottom: auto;
+          left: 0;
+          width: 100%;
+          border-radius: 0;
+          transform: none;
+          height: 55px;
+          line-height: 55px;
+  
+          svg {
+            display: inline-block;
+            vertical-align: middle;
+            width: 19px;
+            margin-right: 10px;
+          }
+        }
+      }
     }
   }
 
@@ -30,12 +125,14 @@
     @include responsive('tablet-h') {
       width: 100%;
       height: auto;
+      position: static;
     }
    }
 
-  .select-content {
+  .selectcontent {
     position: relative;
     background: #F6F6F6;
+    height: 100vh;
   }
 
 
@@ -230,7 +327,7 @@
       }
     }
 
-  .select-box {
+  .selectbox {
     float: left;
     width: 100%;
     height: 118px;
@@ -265,6 +362,10 @@
     width: 100%;
     height: calc(100vh - 118px);
     position: relative;
+    touch-action: pinch-zoom;
+    overflow: auto;
+    outline: 0;
+    direction: ltr;
 
     @include responsive('tablet-h') {
       height: calc(100vh - 118px);
@@ -272,22 +373,7 @@
       -webkit-overflow-scrolling: touch;
     }
 
-    &:before {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 160px;
-      background: linear-gradient(180deg, rgba(246, 246, 246, 0) 0%, rgba(246, 246, 246, .95) 100%);
-      content: '';
-      z-index: 2;
-      pointer-events: none;
-      transition:all .3s ease;
-
-      @include responsive('tablet-h') {
-        display: none;
-      }
-    }
+    
 
     &.onScrollBottom{
       &:before { opacity:0; }
@@ -305,6 +391,8 @@
       padding-bottom: 0;
       padding-right: 20px;
       color: $black;
+      cursor: pointer;
+      transition: 0.5s color;
 
       @include responsive('tablet-h') {
         text-align: center;
@@ -315,6 +403,7 @@
       div {
         color: $black;
         font-size: 19px;
+        transition: 0.5s color;
 
         span {
           color: $black;
@@ -360,85 +449,19 @@
   background: #fff;
   display: flex;
   align-items: stretch;
+  transition: 0.5s transform linear;
+  transform: translateX(-100%);
+  
+  &__visible{
+    transform: translateX(0);
+  }
 
   @include responsive('tablet-h') {
     height: auto;
     min-height: 100vh;
   }
 
-  .map__back {
-    position: absolute;
-    bottom: 20px;
-    left: -22px;
-    width: 226px;
-    z-index: 5;
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 0.145em;
-    color: #fff;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    background: #439FA1;
-    border-radius: 10px;
-    transform: translate(-100%,0);
-
-    @include responsive('tablet-h') {
-      bottom: auto;
-      left: 0;
-      width: 100%;
-      border-radius: 0;
-      transform: none;
-      display: none;
-    }
-
-    @include responsive('tablet-h') {
-      align-items: center;
-      height: 55px;
-      justify-content: center;
-    }
-
-    &:hover {
-      background: #000;
-    }
-
-    svg {
-      display: inline-block;
-      vertical-align: middle;
-      width: 19px;
-      margin-right: 10px;
-    }
-
-    &__mobile {
-      display: none;
-      @include responsive('tablet-h') {
-        display: block;
-        text-align: center;
-        position: fixed;
-        z-index: 5;
-        font-weight: 700;
-        font-size: 16px;
-        letter-spacing: 0.145em;
-        color: #fff;
-        text-transform: uppercase;
-        padding: 0 20px;
-        background: #439FA1;
-        bottom: auto;
-        left: 0;
-        width: 100%;
-        border-radius: 0;
-        transform: none;
-        height: 55px;
-        line-height: 55px;
-
-        svg {
-          display: inline-block;
-          vertical-align: middle;
-          width: 19px;
-          margin-right: 10px;
-        }
-      }
-    }
-  }
+  
 
   &__column {
     float: left;
@@ -449,6 +472,7 @@
     padding-top: 0;
     height: 100%;
     position: relative;
+
 
     @include responsive('tablet-h') {
       float: left;
@@ -470,6 +494,12 @@
       max-height: calc(100vh - 200px);
       position: relative;
       margin-top: 25px;
+      overflow: auto;
+      
+      span{
+        color: black;
+        cursor: pointer;
+      }
 
       @include responsive('tablet-h') {
         max-height: calc(100vh - 340px);
@@ -580,6 +610,7 @@
     background-repeat: no-repeat;
     position: relative;
 
+    
     @include responsive('tablet-h') {
       padding-top: 150px;
       padding-bottom: 150px;
@@ -713,9 +744,16 @@
             border-radius: 50%;
             background: #439FA1;
 
+
+            
+                        
+
             svg {
               float: left;
+              
             }
+
+            path{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3;}
           }
 
           &__title {
@@ -744,7 +782,7 @@
             text-transform: uppercase;
           }
 
-          &.box_green {
+          &__box_green {
             background: #F9FBE3;
             border: 2px solid #C5D800;
 

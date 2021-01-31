@@ -4,7 +4,7 @@
   "description": "ctia-www",
   "main": "build/server/index.js",
   "engines": {
-    "node": ">=8 <=10"
+    "node": "10.x"
   },
   "scripts": {
     "analyze:client": "babel-node internal/scripts/analyze -- --client",
