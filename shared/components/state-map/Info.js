@@ -6,13 +6,12 @@ import GdpIcon from './assets/images/map/gdp-icon.svg';
 import JobIcon from './assets/images/map/job-icon.svg';
 import PrintIcon from './assets/images/map/print.svg';
 import s from './assets/scss/main.scss';
+import ArrowBack from './assets/images/map/arrow.svg';
 
 class Info extends React.Component {
 
   constructor(props) {
     super(props);
-
-    console.log(props);
 
     this.state = {
       navigationType: 'Overall',
@@ -20,6 +19,7 @@ class Info extends React.Component {
       selectedItem: false,
       infoTitle: 'Overall',
       isMobile: false,
+      isMenuMobileOpen: false,
     };
   }
 
@@ -34,6 +34,7 @@ class Info extends React.Component {
 
  onResize = () => {
    this.setState({
+     ...this.state,
      isMobile: window.matchMedia('(max-width: 1080px)').matches,
    });
  }
@@ -42,6 +43,7 @@ class Info extends React.Component {
    if (this.props.data !== prevProps.data) {
      // eslint-disable-next-line react/no-did-update-set-state
      this.setState({
+       ...this.state,
        navigationType: 'Overall',
        selectedType: false,
        selectedItem: false,
@@ -52,9 +54,11 @@ class Info extends React.Component {
 
  onSelected(item, type, title) {
    this.setState({
+     ...this.state,
      selectedType: type,
      selectedItem: item,
      infoTitle: title,
+     isMenuMobileOpen: false,
    });
  }
 
@@ -62,11 +66,13 @@ class Info extends React.Component {
    let selectedItem;
    let infoTitle;
    let selectedType;
+   let isMenuMobileOpen = true;
 
    if (type === 'Overall') {
      infoTitle = 'Overall';
      selectedItem = false;
      selectedType = false;
+     isMenuMobileOpen = false;
    }
 
    if (type === 'Congressional District') {
@@ -85,12 +91,21 @@ class Info extends React.Component {
    }
 
    this.setState({
+     ...this.state,
      navigationType: type,
      selectedType,
      infoTitle,
      selectedItem,
+     isMenuMobileOpen,
    });
 
+ }
+
+ toggleMenuMobile() {
+   this.setState({
+     ...this.state,
+     isMenuMobileOpen: !this.state.isMenuMobileOpen,
+   });
  }
 
  render() {
@@ -115,7 +130,7 @@ class Info extends React.Component {
      <div className={`${s.map__info} ${show && s.map__info__visible}`}>
 
        {type === 'states' &&
-         <div className={`${s.map__info__column} ${show && s.map__info__column__visible}`}>
+         <div className={`${s.map__info__column} ${show && s.map__info__column__visible} ${!this.state.isMenuMobileOpen && s.map__info__column__mobilenotopen}`}>
            {show && (
              <div>
                <div
@@ -218,24 +233,32 @@ class Info extends React.Component {
              </div>
            </div>
 
-           {(type === 'state' && this.state.isMobile) &&
-             <div className={s.select_box__bottom}>
-               <div className={s.filtersbox}>
-                 <div className={`${s.selects} ${s.filters}`}>
-                   <div className={`${s.filter} ${s.drop}`}>
-                     <div className={`${s.option} ${s.selected}`}>
-                       <span className={s.text} data-text="Data">
-                          Data:
-                          <span id="mobile-title">{this.state.navigationType.replace('Congressional', '')}</span>
-                       </span>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-             </div>}
          </div>
        </div>
+
+       {(type === 'states' && this.state.isMobile) &&
+         <div className={s.selectbox__bottom} onClick={this.toggleMenuMobile.bind(this)}>
+           <div className={s.filtersbox}>
+             <div className={`${s.selects} ${s.filters}`}>
+               <div className={`${s.filter} ${s.drop}`}>
+                 <div className={`${s.option} ${s.selected}`}>
+                   <span className={s.text} data-text="Data">
+                          Data:
+                          <span id="mobile-title">{this.state.navigationType.replace('Congressional', '')}</span>
+                   </span>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>}
+
+       <a className={s.map_page__columnleft__map__back__mobile} onClick={this.props.onExit}>
+         <ArrowBack />
+              Back to filter
+          </a>
+
      </div>
+
    );
  }
 }
