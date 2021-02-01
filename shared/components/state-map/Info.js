@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import PrintModal from './PrintModal';
 import GdpIcon from './assets/images/map/gdp-icon.svg';
 import JobIcon from './assets/images/map/job-icon.svg';
 import PrintIcon from './assets/images/map/print.svg';
@@ -19,6 +19,7 @@ class Info extends React.Component {
       selectedItem: false,
       infoTitle: 'Overall',
       isMobile: false,
+      showModal: false,
       isMenuMobileOpen: false,
     };
   }
@@ -61,6 +62,18 @@ class Info extends React.Component {
      isMenuMobileOpen: false,
    });
  }
+
+  handleClickOpenModal() {
+    this.setState({
+      showModal: true,
+    });
+  }
+
+  handleCloseModal() {
+    this.setState({
+      showModal: false,
+    });
+  }
 
  onTypeChange(type) {
    let selectedItem;
@@ -128,7 +141,6 @@ class Info extends React.Component {
 
    return (
      <div className={`${s.map__info} ${show && s.map__info__visible}`}>
-
        {type === 'states' &&
          <div className={`${s.map__info__column} ${show && s.map__info__column__visible} ${!this.state.isMenuMobileOpen && s.map__info__column__mobilenotopen}`}>
            {show && (
@@ -198,10 +210,14 @@ class Info extends React.Component {
        <div className={`${s.map__info__content} ${show && s.map__info__content__visible}`}>
          <div className={s.map__info__content__list}>
            <div className={s.map__info__content__list__state}>{title}</div>
-           <a className={s.map__info__content__list__print}>
-                PRINT
-                <PrintIcon />
+            <a 
+              className={s.map__info__content__list__print} 
+              onClick={() => this.handleClickOpenModal()}
+            >
+              PRINT
+              <PrintIcon />
            </a>
+           {this.state.showModal && <PrintModal data={data} closeModal={() => this.handleCloseModal()} />}
            <div className={s.map__info__content__list__title}>
              {type === 'states' && this.state.infoTitle}
              {(type !== 'states' && data) && data.name}

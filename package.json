@@ -159,6 +159,7 @@
     "react-router-dom": "4.2.2",
     "react-slick": "^0.25.2",
     "react-textfit": "^1.1.0",
+    "react-to-pdf": "0.0.13",
     "react-transition-group": "2.2.1",
     "react-universal-component": "2.7.0",
     "react-waypoint": "^8.0.1",
