@@ -477,11 +477,18 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color .2s;
+    &:hover{
+      color: #505050;
+    }
   }
   &__modal_body {
     background-color: #ffffff;
     border-radius: 15px;
-    padding: 80px 70px;
+    padding: 0 90px 70px 90px;
     overflow: auto;
     height: calc(100vh - 250px);
   }
@@ -490,6 +497,7 @@
     max-width: 533px;
   }
   &__header {
+    padding-top: 80px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -507,15 +515,31 @@
     }
   }
   &__cards {
-    margin: 50px 0 70px 0;
+    margin: 25px 0 70px 0;
+    position: relative;
+    &__shape {
+      position: absolute;
+      z-index: 1;
+      top: 85px;
+      left: -50px;
+    }
   }
   &__metro_table {
     margin-bottom: 60px;
   }
   &__district_table {
     position: relative;
+    &__shape {
+      position: absolute;
+      top: -39px;
+      right: -28px;
+      z-index: 2;
+    }
   }
   &__table_head {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
     width: 100%;
     display: grid;
     grid-template-columns: minmax(0, 1fr) 170px 170px;

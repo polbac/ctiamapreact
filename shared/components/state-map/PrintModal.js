@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Button from "components/button";
 import CTIALogo from "./assets/images/modal/ctia-logo.svg";
+import ShapeOne from "./assets/images/modal/shape-1.svg";
+import ShapeTwo from "./assets/images/modal/shape-2.svg";
 import GdpIcon from "./assets/images/map/gdp-icon.svg";
 import JobIcon from "./assets/images/map/job-icon.svg";
 import s from "./assets/scss/main.scss";
@@ -35,6 +37,9 @@ export default function PrintModal({ closeModal, data }) {
           </p>
 
           <div className={s.modal__print__cards}>
+            <div className={s.modal__print__cards__shape}>
+              <ShapeTwo />
+            </div>
             <div className={s.map__info__content__list__boxes}>
               {data && data.gdp && data.gdp.sum_format && (
                 <div className={`${s.content__box} ${s.box__blue}`}>
@@ -99,7 +104,10 @@ export default function PrintModal({ closeModal, data }) {
             )}
 
           {data && data.districts && Object.keys(data.districts).length > 0 && (
-            <React.Fragment>
+            <div className={s.modal__print__district_table}>
+              <div className={s.modal__print__district_table__shape}>
+                <ShapeOne />
+              </div>
               <div className={s.modal__print__table_head}>
                 <div className={s.modal__print__table_head__title}>
                   Congressional Districts
@@ -116,7 +124,7 @@ export default function PrintModal({ closeModal, data }) {
                   <div>{data.districts[el].job.sum_format}</div>
                 </div>
               ))}
-            </React.Fragment>
+            </div>
           )}
         </div>
       </div>
