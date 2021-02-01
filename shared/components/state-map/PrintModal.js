@@ -5,17 +5,23 @@ import CTIALogo from "./assets/images/modal/ctia-logo.svg";
 import ShapeOne from "./assets/images/modal/shape-1.svg";
 import ShapeTwo from "./assets/images/modal/shape-2.svg";
 import GdpIcon from "./assets/images/map/gdp-icon.svg";
+import LeftArrow from './assets/images/map/left-arrow.svg';
+import ShapeBottom from './assets/images/modal/bottom-modal.svg';
 import JobIcon from "./assets/images/map/job-icon.svg";
+
 import s from "./assets/scss/main.scss";
 
 export default function PrintModal({ closeModal, data }) {
   return ReactDOM.createPortal(
     <div className={s.modal__print}>
+      <div className={s.modal__print__shape_bottom}>
+        <ShapeBottom />
+      </div>
       <div className={s.modal__print__innerWrapper}>
         <div className={s.modal__print__action_buttons}>
           <Button className={s.button}>Download PDF</Button>
           <buton className={s.modal__print__back} onClick={closeModal}>
-            Back
+            <LeftArrow /> Back
           </buton>
         </div>
         <div className={s.modal__print__modal_body}>
@@ -126,6 +132,10 @@ export default function PrintModal({ closeModal, data }) {
               ))}
             </div>
           )}
+        </div>
+        <div className={s.modal__print__navigation}>
+          <button className={`${s.modal__print__navigation__button} ${s.modal__print__navigation__button__active}`}>1</button>
+          <button className={s.modal__print__navigation__button}>2</button>
         </div>
       </div>
     </div>,
