@@ -7,7 +7,7 @@ import JobIcon from './assets/images/map/job-icon.svg';
 import PrintIcon from './assets/images/map/print.svg';
 import s from './assets/scss/main.scss';
 import ArrowBack from './assets/images/map/arrow.svg';
-
+import {printDocument} from './utils'
 class Info extends React.Component {
 
   constructor(props) {
@@ -64,6 +64,10 @@ class Info extends React.Component {
  }
 
   handleClickOpenModal() {
+    if (1) {
+      printDocument(this.props.data);
+      return
+    }
     this.setState({
       showModal: true,
     });

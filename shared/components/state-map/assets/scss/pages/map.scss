@@ -458,13 +458,16 @@
   right: 0;
   z-index: 9999;
   background-color: #E0F1F2;
-  padding: 120px 15px 15px 15px;
+  padding: 60px 15px 15px 15px;
+  overflow: scroll;
+
   &__clear {
     clear: both;
   }
   &__innerWrapper{
     width: 100%;
-    max-width: 1048px;
+    width: 1048px;
+    
     margin: 0 auto;
   }
   &__action_buttons {
@@ -490,7 +493,9 @@
     border-radius: 15px;
     padding: 0 90px 70px 90px;
     overflow: auto;
-    height: calc(100vh - 250px);
+    height: 1298px;
+    margin-bottom: 120px;
+    
   }
   &__impact {
     font-size: 16px;
@@ -512,6 +517,8 @@
       font-size: 75px;
       margin: 0;
       line-height: 1;
+      
+      
     }
   }
   &__cards {
@@ -565,6 +572,7 @@
     grid-template-columns: minmax(0, 1fr) 170px 170px;
     align-items: center;
     height: 50px;
+
     div {
       font-size: 16px;
     }
