@@ -64,7 +64,7 @@ class Info extends React.Component {
  }
 
   handleClickOpenModal() {
-    if (1) {
+    if (window.matchMedia('(max-width: 1080px)').matches) {
       printDocument(this.props.data);
       return
     }
